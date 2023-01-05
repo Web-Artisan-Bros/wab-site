@@ -1,7 +1,15 @@
 $primary: #F6E077;
 $secondary: #95363E;
-$dark: #1E1516;
 $light: #FAF8E5;
+$dark: #1E1516;
+$primary-text: $primary;
+$secondary-text: $secondary;
+$light-text: $light;
+$dark-text: $dark;
+
+$body-color: $light;
+$body-bg: $dark;
+$headings-color: $light;
 
 $font-size-base: 1rem;
 $font-family-sans-serif: 'Kanit', sans-serif;
@@ -13,3 +21,4 @@ $h3-font-size: $font-size-base * 2.25;
 $h4-font-size: $font-size-base * 1.75;
 $h5-font-size: $font-size-base * 1.25;
 $h6-font-size: $font-size-base;
+
