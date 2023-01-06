@@ -12,6 +12,7 @@ class FormInput extends Component {
   public $placeholder = "";
   public $type = "text";
   public $value = "ciao";
+  public $bindValue = true;
   public $name;
   
   public function render() {

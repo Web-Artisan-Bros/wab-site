@@ -1,0 +1,15 @@
+@use "./variables";
+
+.list-transparent{
+  .list-group-item{
+    background-color: transparent;
+  }
+}
+
+.list-light{
+  .list-group-item{
+    color: variables.$dark-text;
+    background-color: transparent;
+    border-color: variables.$secondary;
+  }
+}

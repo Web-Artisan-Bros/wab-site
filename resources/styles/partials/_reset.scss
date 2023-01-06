@@ -3,3 +3,8 @@
 h1, h2, h3 {
   font-family: variables.$font-family-titles;
 }
+
+hr {
+  border-color: variables.$primary;
+  border-width: 3px;
+}

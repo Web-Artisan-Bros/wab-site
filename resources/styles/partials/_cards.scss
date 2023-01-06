@@ -1,6 +1,7 @@
 .card {
   --outline-offset-x: var(--outline-offset);
   --outline-offset-y: var(--outline-offset);
+  --bs-card-spacer-y: 2rem;
 
   &:before {
     content: "";
