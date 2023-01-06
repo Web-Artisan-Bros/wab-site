@@ -1,7 +1,7 @@
 $primary: #F6E077;
 $secondary: #95363E;
 $light: #FAF8E5;
-$dark: #1E1516;
+$dark: #1D1D1D;
 $primary-text: $primary;
 $secondary-text: $secondary;
 $light-text: $light;
@@ -10,6 +10,24 @@ $dark-text: $dark;
 $body-color: $light;
 $body-bg: $dark;
 $headings-color: $light;
+$border-color: $light;
+$border-color-translucent: $light;
+$border-radius: 0;
+$box-shadow: none;
+$box-shadow-inset: none;
+$link-color: $secondary;
+
+$input-bg: transparent;
+$input-color: $dark;
+$input-border-color: $dark;
+$input-border-width: 1px;
+$input-focus-color: $dark;
+$input-btn-focus-box-shadow: none;
+$input-focus-border-color: $secondary;
+$form-floating-label-disabled-color: $dark;
+
+$card-bg: $light;
+$card-color: $dark;
 
 $font-size-base: 1rem;
 $font-family-sans-serif: 'Kanit', sans-serif;
