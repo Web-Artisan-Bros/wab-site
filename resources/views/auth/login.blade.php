@@ -40,7 +40,7 @@
       </div>--}}
 
       <div class="text-center mb-4">
-        <button class="btn btn-primary w-100">
+        <button class="btn btn-outline-primary w-100">
           {{ __('Log in') }}
         </button>
       </div>
