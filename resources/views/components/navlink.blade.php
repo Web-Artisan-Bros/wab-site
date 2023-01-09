@@ -1,0 +1,15 @@
+
+<div>
+
+  questo viene dalla nav
+
+</div>
+
+
+{{-- @props([
+  "active" => false,
+]) --}}
+
+{{-- <a class="nav-link {{ $active ? 'active' : ''  }}" href="{{ $href }}">
+  {{ $slot }}
+</a> --}}

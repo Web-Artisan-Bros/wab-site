@@ -1,4 +1,4 @@
-<!DOCTYPE html >
+<!-- <!DOCTYPE html >
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}"
 
 >
@@ -24,4 +24,10 @@
   <button class="btn btn-primary">Ciao</button>
 </div>
 </body>
-</html>
+</html> -->
+
+@extends('./layouts/pubblic')
+
+@section ('content')
+Hello
+@endsection
