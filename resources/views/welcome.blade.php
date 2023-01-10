@@ -26,7 +26,7 @@
 </body>
 </html> -->
 
-@extends('./layouts/pubblic')
+@extends('./layouts/public')
 
 @section ('content')
 Hello

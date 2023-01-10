@@ -19,7 +19,8 @@
 </head>
 
 <body class="antialiased">
-<x-header/>
+  <x-navlink/>
+<x-jumbo/>
   @yield('content')
 <x-footer/>
 
