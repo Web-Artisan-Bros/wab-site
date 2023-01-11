@@ -1,0 +1,59 @@
+@use "./variables";
+
+.white-square{
+ 
+box-sizing: border-box;
+width: 234.49px;
+height: 234.49px;
+// background: url("/assets/JumboHomeColor.png");
+
+// position: absolute;
+// left: 47.57%;
+// right: -1.85%;
+// top: 0%;
+// bottom: 18.35%;
+
+border: 3px solid #FFFFFF;
+transform: rotate(15deg);
+
+.yellow-arrow {
+transform: rotate(-15deg);
+}
+}
+
+.rotate-90 {
+transform: rotate(90deg);
+}
+.rotate-270 {
+transform: rotate(270deg);
+}
+
+.txt-img {
+ display: flex;
+ align-items: center;
+}
+
+.red-square {
+
+width: 234.49px;
+
+height: 234.49px;
+background-color: #95363E;
+transform: rotate(15deg);
+
+}
+
+.btn-hover:hover {
+
+ .white-square {
+ rotate: -7deg; 
+ translate: -77px;
+ transition:all ease 1s;
+ }
+
+ .red-square {
+ rotate: 7deg; 
+ translate: 65px;
+ transition:all ease 1s;
+ }
+}

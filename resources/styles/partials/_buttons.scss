@@ -43,6 +43,10 @@
   }
 
   &:hover {
+    img {
+      rotate: 45deg;
+      transition: rotate 300ms;
+    }
     &:before {
       //top: calc(0px - (var(--outline-offset-y) * .4));
       //right: calc(0px - (var(--outline-offset-x) * .4));
