@@ -29,5 +29,7 @@
 @extends('./layouts/public')
 
 @section ('content')
-Hello
+<x-contact/>
+<x-accordion/>
+
 @endsection

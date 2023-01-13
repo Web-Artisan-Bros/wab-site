@@ -1,59 +1,81 @@
 @use "./variables";
 
-.white-square{
- 
-box-sizing: border-box;
-width: 234.49px;
-height: 234.49px;
-// background: url("/assets/JumboHomeColor.png");
-
-// position: absolute;
-// left: 47.57%;
-// right: -1.85%;
-// top: 0%;
-// bottom: 18.35%;
-
-border: 3px solid #FFFFFF;
-transform: rotate(15deg);
-
-.yellow-arrow {
-transform: rotate(-15deg);
-}
+.bordeTextWhite {
+    border: 3px solid #ffffff;
+    color: white;
 }
 
-.rotate-90 {
-transform: rotate(90deg);
-}
-.rotate-270 {
-transform: rotate(270deg);
+.bordeTextBlack {
+    border: 3px solid #1d1d1d;
+    color: #1d1d1d;
 }
 
-.txt-img {
- display: flex;
- align-items: center;
+.white-square {
+    .inside-arrow {
+        transform: rotate(-15deg);
+    }
 }
 
 .red-square {
-
-width: 234.49px;
-
-height: 234.49px;
-background-color: #95363E;
-transform: rotate(15deg);
-
+    background-color: #95363e;
 }
 
-.btn-hover:hover {
+.btn-sqr {
+    width: 234.49px;
+    height: 234.49px;
+    transform: rotate(15deg);
+    transition: all ease 1s;
+}
 
- .white-square {
- rotate: -7deg; 
- translate: -77px;
- transition:all ease 1s;
+.rotate-90 {
+    transform: rotate(90deg);
+}
+.rotate-270 {
+    transform: rotate(270deg);
+}
+
+.txt-img {
+    display: flex;
+    align-items: center;
+}
+
+.btn-hover {
+ .red-square{
+        margin-right: -91px;
+
  }
 
- .red-square {
- rotate: 7deg; 
- translate: 65px;
- transition:all ease 1s;
- }
+    &:hover {
+        .white-square {
+            rotate: -7deg;
+            translate: -77px;
+        }
+
+        .red-square {
+            rotate: 7deg;
+            translate: 65px;
+        }
+    }
+}
+
+.btn-reverse-white {
+    // transform: rotate(15deg);
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+
+    .white-square {
+        margin-right: -91px;
+    }
+
+    &:hover {
+        .red-square {
+            rotate: -7deg;
+            translate: -77px;
+        }
+
+        .white-square {
+            rotate: 7deg;
+            translate: 65px;
+        }
+    }
 }
