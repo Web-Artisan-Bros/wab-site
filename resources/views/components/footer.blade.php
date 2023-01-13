@@ -1,4 +1,4 @@
-<div class="container border py-5">
+<div class="container py-5">
     <div class="py-md-5">
         <div class="row py-md-5">
             <div class="col">
