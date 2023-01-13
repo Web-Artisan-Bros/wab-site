@@ -29,6 +29,7 @@
 @extends('./layouts/public')
 
 @section ('content')
+<x-services/>
 <x-contact/>
 <x-accordion/>
 
