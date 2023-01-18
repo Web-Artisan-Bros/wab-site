@@ -31,6 +31,6 @@
 @section ('content')
 <x-services/>
 <x-contact/>
-<x-accordion/>
+<x-accordion :entries="$accordionWhyUs"/>
 
 @endsection

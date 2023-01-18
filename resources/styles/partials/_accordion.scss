@@ -1,84 +1,86 @@
 .wab-accordion {
-    border-top: 3px solid #{$primary};
-    border-bottom: 3px solid #{$primary};
-    --bs-accordion-color: #{$dark};
-    --bs-accordion-border-color: #{$primary};
-    --bs-accordion-border-width: #{3px};
-    --bs-accordion-btn-active-icon: src= "";
-    --bs-accordion-btn-color: #{$dark};
-    --bs-accordion-bg: #{$light};
-    --bs-accordion-active-bg: transparent;
-    --bs-accordion-active-color: transparent;
+  border-top: 3px solid #{$primary};
+  border-bottom: 3px solid #{$primary};
+  --bs-accordion-color: #{$dark};
+  --bs-accordion-border-color: #{$primary};
+  --bs-accordion-border-width: #{3px};
+  --bs-accordion-btn-active-icon: src= "";
+  --bs-accordion-btn-color: #{$dark};
+  --bs-accordion-bg: #{$light};
+  --bs-accordion-active-bg: transparent;
+  --bs-accordion-active-color: transparent;
+  --bs-accordion-btn-padding-y: 2rem;
 
-    .accordion-item:has(.show) {
-        background-color: #{$primary};
-        --bs-accordion-active-color: #{$dark};
-        // border-top: 3px solid #{$dark};
-        // border-color: #{$dark} 
+  .accordion-item:has(.show) {
+    background-color: #{$primary};
+    --bs-accordion-active-color: #{$dark};
+    // border-top: 3px solid #{$dark};
+    // border-color: #{$dark}
+  }
+
+  .accordion-item {
+    transition: all ease .5s;
+    position: relative;
+
+    .cup {
+      opacity: 0;
+      transition: opacity .3s ease;
+      margin-top: 0;
     }
 
-    .accordion-item {
-        // position: relative;
-        transition: all ease 1s;
-
-        .cup {
-            opacity: 0;
-        }
-        span {
-            background-color: #{$light};
-            padding: 5px 0;
-        }
-        img,
-        span {
-            transition: all ease 1s;
-        }
-
-        &:hover {
-            background-color: #f6e077;
-            span {
-                padding-left: 20px;
-                translate: -2vw;
-                background-color: #f6e077;
-            }
-
-            .arrow {
-                translate: 40vw;
-                rotate: -45deg;
-            }
-        }
-
-        .accordion-button {
-            color: #{$dark-text};
-            background-color: transparent;
-            box-shadow: none;
-            &::after {
-                background-image: none;
-            }
-            &:not(.collapsed) {
-                span {
-                padding-left: 20px;
-
-                    translate: -2vw;
-                    background-color: #f6e077;
-                }
-
-                .arrow {
-                    translate: 40vw;
-                    rotate: -45deg;
-                }
-            }
-        }
+    .text {
+      position: relative;
+      padding-left: 70px;
+      transition: padding ease .5s;
     }
 
-    .show {
-        .cup {
-            opacity: 100%;
-        }
-        img {
-            // position: absolute;
-            // top: 0%;
-            // right: 1rem;
-            margin-top: -5rem;
-        }
+    .arrow {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%);
+      transition: transform ease .5s, left ease .5s;
+      transform-origin: center;
     }
+
+    &:hover {
+      background-color: #f6e077;
+
+      .arrow {
+        transform: translate(20%, -50%) rotate(-45deg);
+      }
+    }
+
+    .accordion-button {
+      color: #{$dark-text};
+      background-color: transparent;
+      box-shadow: none;
+      display: flex;
+      column-gap: 1rem;
+
+      &::after {
+        background-image: none;
+      }
+
+      &:not(.collapsed) {
+        .text {
+          padding-left: 20px;
+        }
+
+        .arrow {
+          left: 100%;
+          transform: translate(100%, -50%) rotate(135deg);
+        }
+      }
+    }
+  }
+
+  .show {
+    .cup {
+      opacity: 100%;
+      // NON possiamo usare il margin negativo perchè il padre ha la classe collapse e quindi ha un overflow quando
+      // si apre e si chiude, quindi risulterebbe in un effetto brutto e scattoso
+      //margin-top: -10%;
+    }
+  }
 }

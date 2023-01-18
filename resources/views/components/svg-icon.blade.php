@@ -1,3 +1,3 @@
-<i class="icon" {{ $attributes }}>
+<i {{ $attributes->merge(['class' => 'icon'])  }}>
   {!! $fileContent !!}
 </i>
