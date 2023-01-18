@@ -13,11 +13,15 @@
                 <div class="mb-5">
                     <h1 class="">WEB DESIGN</h1>
                     <h2 class="fs-3 f-spacing ">PERSONALIZZATO</h2>
-                    <h2 class="">E <span class="highlight">ARTIGIANALE</span></h2>
+                    <h2 class="">E <span class="position-relative text-dark">
+                    <img class="highlightXXL  position-absolute top-50 start-50 translate-middle" src="/assets/EvidenziatoXXL.svg" alt="">    
+                    ARTIGIANALE</span></h2>
                 </div>
                 <div>
                     <div class="d-flex">
-                        <p class="lead">Aiutiamo il tuo business a farsi <span class="highlight">notare</span> in un mondo digitale</p>
+                        <p class="lead">Aiutiamo il tuo business a farsi <span class="position-relative text-dark">
+                        <img class="position-absolute top-50 start-50 translate-middle z-index-1" src="/assets/EvidenziatoSM.svg" alt="">    
+                        notare</span> in un mondo digitale</p>
                         <!-- <div class="w-25 ps-2"> -->
                             <hr class="w-25 opacity-100">
                         <!-- </div> -->

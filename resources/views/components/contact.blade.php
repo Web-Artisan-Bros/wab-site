@@ -12,8 +12,12 @@
             <div class="col">
                 <div class="mb-5">
 
-                    <h2 class="fs-3 f-spacing text-start text-dark">La tua <span class="highlightRed">storia</span> attraverso
-                        un sito che parli di <span class="highlightRed">te</span></h2>
+                    <h2 class="fs-3 f-spacing text-start text-dark position-relative z-index1">La tua <span class="position-relative ">
+                    <img class="position-absolute top-50 start-50 translate-middle z-index-1 " src="/assets/EvidenziaStoria.svg" alt="">    
+                    storia</span> attraverso
+                        un sito che <br>parli di <span class="position-relative">
+                        <img class="position-absolute top-50 start-50 translate-middle z-index-1 " src="/assets/EvidenziaTe.svg" alt="">    
+                        te</span></h2>
                     <hr class="border-dark opacity-100 w-75">
 
                 </div>

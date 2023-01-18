@@ -1,57 +1,84 @@
 .wab-accordion {
-    border-top: 3px solid #f6e077;
-    border-bottom: 3px solid #f6e077;
+    border-top: 3px solid #{$primary};
+    border-bottom: 3px solid #{$primary};
     --bs-accordion-color: #{$dark};
-    --bs-accordion-bg: #{$light};
     --bs-accordion-border-color: #{$primary};
     --bs-accordion-border-width: #{3px};
     --bs-accordion-btn-active-icon: src= "";
+    --bs-accordion-btn-color: #{$dark};
+    --bs-accordion-bg: #{$light};
+    --bs-accordion-active-bg: transparent;
+    --bs-accordion-active-color: transparent;
 
-
-    .accordion-collapse {
-        background-color: $primary;
+    .accordion-item:has(.show) {
+        background-color: #{$primary};
+        --bs-accordion-active-color: #{$dark};
+        // border-top: 3px solid #{$dark};
+        // border-color: #{$dark} 
     }
 
-    .accordion-collapse{
-      // display: flex;
-      // align-content: center;
-    }
     .accordion-item {
+        // position: relative;
+        transition: all ease 1s;
+
+        .cup {
+            opacity: 0;
+        }
+        span {
+            background-color: #{$light};
+            padding: 5px 0;
+        }
+        img,
+        span {
+            transition: all ease 1s;
+        }
+
         &:hover {
-            // --bs-accordion-bg: #{$primary};
-            .arrow {
-                translate: 500px;
-                rotate: -45deg;
-            }
-            .accordion-button {
+            background-color: #f6e077;
+            span {
+                padding-left: 20px;
+                translate: -2vw;
                 background-color: #f6e077;
+            }
+
+            .arrow {
+                translate: 40vw;
+                rotate: -45deg;
             }
         }
 
         .accordion-button {
             color: #{$dark-text};
-            background-color: none;
+            background-color: transparent;
             box-shadow: none;
             &::after {
                 background-image: none;
             }
+            &:not(.collapsed) {
+                span {
+                padding-left: 20px;
+
+                    translate: -2vw;
+                    background-color: #f6e077;
+                }
+
+                .arrow {
+                    translate: 40vw;
+                    rotate: -45deg;
+                }
+            }
         }
     }
 
-    .accordion-item img {
-    transition: all ease 1s;
-}
-
-.accordion {
-    --bs-accordion-active-bg: none;
-    --bs-accordion-active-color: none;
-}
-
-.accordion .show {
-    .accordion-button {
-        color: #{$primary-text};
+    .show {
+        .cup {
+            opacity: 100%;
+        }
+        img {
+            // position: absolute;
+            // top: 0%;
+            // right: 1rem;
+            margin-top: -5rem;
+        }
     }
 }
-}
-
-

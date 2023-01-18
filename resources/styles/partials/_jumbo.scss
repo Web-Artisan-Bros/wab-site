@@ -7,11 +7,8 @@
  position: absolute;
     bottom: 36px;
     left: 36px;
-    z-index: -1;
+    // z-index: -1;
 }
-
-
-
 
 .img-bw {
     filter: grayscale(100%);
@@ -21,4 +18,8 @@
 .img-bw:hover {
     filter: grayscale(0%);
     cursor: pointer;
+}
+
+.highlightXXL {
+    z-index: -1;
 }

@@ -1,10 +1,14 @@
-<div class="container py-5">
+<div class="container py-5 wab-footer">
     <div class="py-md-5">
         <div class="row py-md-5">
             <div class="col">
                 <div class="mb-5">
                     <div class="d-flex align-items-center border-bottom border-3 border-primary div-with-title">
-                        <h3 class="">PRONTO PER COLLABORARE</h3>
+                        <h3 class="position-relative">
+                            <span class="position-relative text-dark">
+                                <img class="position-absolute top-50 start-50 translate-middle z-index-1 " src="/assets/EvidenziatoPronto.svg" alt="">PRONTO</span>
+                            PER COLLABORARE
+                        </h3>
                         <h2 class="fs-max">?</h2>
                     </div>
                 </div>
@@ -36,11 +40,18 @@
                 </div>
                 <div class="d-flex justify-content-between mb-2">
                     <p class="lead">Info:</p>
-                    <div class="align-bottom">
-                        <img src="/assets/VectorMail.svg" alt="Mail Icon" class="me-2">
-                        <img src="/assets/VectorInsta.svg" alt="Instagram Icon" class="me-2">
-                        <img src="/assets/VectorGit.svg" alt="Git Hub Icon" class="me-2">
-                        <img src="/assets/VectorInsta.svg" alt="Instagram Icon">
+                    <div class="align-bottom social">
+                        <a class="text-decoration-none" href="#">
+                            <img src="/assets/VectorMail.svg" alt="Mail Icon" class="me-2">
+                        </a>
+                        <a class="text-decoration-none" href="https://www.instagram.com/webartisanbros/">
+                            <img src="/assets/VectorInsta.svg" alt="Instagram Icon" class="me-2">
+                        </a>
+                        <a class="text-decoration-none" href="#">
+                            <img src="/assets/VectorGit.svg" alt="Git Hub Icon" class="me-2"></a>
+                        <a class="text-decoration-none" href="#">
+                            <img src="/assets/VectorInsta.svg" alt="Instagram Icon">
+                        </a>
                     </div>
                 </div>
                 <p>Web Artisan Bros

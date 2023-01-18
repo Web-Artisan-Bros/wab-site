@@ -1,0 +1,16 @@
+@use "./variables";
+
+.service-card {
+ h4,h5, .border-bottom{
+  transition: all ease 1s;
+ }
+  &:hover{
+
+   h4,h5 {
+    color: variables.$primary-text !important;
+   }
+   .border-bottom{
+    border-color: variables.$dark !important;
+   }
+  }
+}

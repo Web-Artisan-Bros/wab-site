@@ -1,72 +1,72 @@
 @use "./variables";
 
 .btn {
-  --outline-offset-x: var(--outline-offset);
-  --outline-offset-y: var(--outline-offset);
-  --outline-color: #{variables.$secondary};
+    --outline-offset-x: var(--outline-offset);
+    --outline-offset-y: var(--outline-offset);
+    --outline-color: #{variables.$secondary};
 
-  position: relative;
-  z-index: 0;
+    position: relative;
+    z-index: 0;
 
-  &:after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--bs-btn-bg);
-    transition: all .3s;
-    z-index: -1;
-  }
-
-  &:hover {
     &:after {
-      color: var(--bs-btn-hover-color);
-      background-color: var(--bs-btn-hover-bg);
-      border-color: var(--bs-btn-hover-border-color);
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--bs-btn-bg);
+        transition: all 0.3s;
+        z-index: -1;
     }
-  }
 
-  &:before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: calc(0px - var(--outline-offset-y));
-    right: calc(0px - var(--outline-offset-x));
-    width: 100%;
-    height: 100%;
-    border: 3px solid var(--outline-color);
-    transition: all .3s;
-    z-index: -1;
-  }
+    &:hover {
+        &:after {
+            color: var(--bs-btn-hover-color);
+            background-color: var(--bs-btn-hover-bg);
+            border-color: var(--bs-btn-hover-border-color);
+        }
+    }
 
-  &:hover {
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: calc(0px - var(--outline-offset-y));
+        right: calc(0px - var(--outline-offset-x));
+        width: 100%;
+        height: 100%;
+        border: 3px solid var(--outline-color);
+        transition: all 0.3s;
+        z-index: -1;
+    }
     img {
-      rotate: 45deg;
-      transition: rotate 300ms;
+        transition: rotate 300ms;
     }
-    &:before {
-      //top: calc(0px - (var(--outline-offset-y) * .4));
-      //right: calc(0px - (var(--outline-offset-x) * .4));
-      top: 0;
-      right: 0;
+    &:hover {
+        img {
+            rotate: 45deg;
+        }
+        &:before {
+            //top: calc(0px - (var(--outline-offset-y) * .4));
+            //right: calc(0px - (var(--outline-offset-x) * .4));
+            top: 0;
+            right: 0;
+        }
     }
-  }
 
-  &:active {
-    &:before {
-      top: 0;
-      right: 0;
+    &:active {
+        &:before {
+            top: 0;
+            right: 0;
+        }
     }
-  }
 }
 
-
 .btn-outline-primary {
-  --bs-btn-bg: #{variables.$light};
-  --bs-btn-border-color: #{variables.$dark};
-  --bs-btn-color: #{variables.$dark};
-  --outline-color: #{variables.$primary};
+    --bs-btn-bg: #{variables.$light};
+    --bs-btn-border-color: #{variables.$dark};
+    --bs-btn-color: #{variables.$dark};
+    --outline-color: #{variables.$primary};
 }

@@ -1,6 +1,23 @@
 @use "./variables";
 
-.div-with-title {
- min-height: 130px;
+.wab-footer {
+ .btn{
+        --outline-color:#{$primary};
+        --bs-btn-bg:#{$dark};
+        --bs-btn-border-color:#{$light};
+        --bs-btn-color:#{$light};
+    }
 
+    .div-with-title {
+ min-height: 130px;
 }
+
+.social img {
+ transition: all 300ms ease-in-out;
+ &:hover{
+  rotate: 15deg;
+ }
+}
+}
+
+
