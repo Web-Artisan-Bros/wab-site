@@ -31,7 +31,8 @@
           <div
               class="d-flex align-items-end justify-content-between  border-bottom border-3 border-primary  div-with-title">
 
-            <img class="me-2" src="/assets/Logo.svg" style="max-width: 170px; max-height: 113px;" alt="logo">
+            <x-svg-icon class="me-2" icon="Logo" style="max-width: 170px; max-height: 113px;"
+                        alt="logo web artian bros"></x-svg-icon>
 
             <p class="fs-3  mt-auto"><span class="text-primary">W</span>eb <span class="text-primary">A</span>rtisan
               <span class="text-primary">B</span>ros</p>
@@ -43,15 +44,16 @@
           <p class="lead">Info:</p>
           <div class="align-bottom social">
             <a class="text-decoration-none" href="#">
-              <img src="/assets/VectorMail.svg" alt="Mail Icon" class="me-2">
+              <x-svg-icon icon="VectorMail" alt="Mail Icon" class="me-2 wab-highlight"/>
             </a>
             <a class="text-decoration-none" href="https://www.instagram.com/webartisanbros/">
-              <img src="/assets/VectorInsta.svg" alt="Instagram Icon" class="me-2">
+              <x-svg-icon icon="VectorInsta" alt="Instagram Icon" class="me-2 wab-highlight"/>
             </a>
             <a class="text-decoration-none" href="#">
-              <img src="/assets/VectorGit.svg" alt="Git Hub Icon" class="me-2"></a>
+              <x-svg-icon icon="VectorGit" alt="Git Hub Icon" class="me-2 wab-highlight"/>
+            </a>
             <a class="text-decoration-none" href="#">
-              <img src="/assets/VectorInsta.svg" alt="Instagram Icon">
+              <x-svg-icon icon="VectorInsta" alt="Instagram Icon" class="wab-highlight"/>
             </a>
           </div>
         </div>
