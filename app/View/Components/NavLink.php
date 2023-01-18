@@ -12,7 +12,7 @@ class NavLink extends Component {
    *
    * @return void
    */
-  public function __construct($href) {
+  public function __construct($href = '') {
     $this->href = $href;
   }
   
@@ -22,6 +22,6 @@ class NavLink extends Component {
    * @return \Illuminate\Contracts\View\View|\Closure|string
    */
   public function render() {
-    return view('components.nav-link');
+    return view('components.navlink');
   }
 }

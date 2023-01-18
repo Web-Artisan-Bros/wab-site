@@ -15,13 +15,16 @@
   @vite(["resources/js/app.js", "resources/styles/app.scss"])
 
   <!-- Styles -->
-  
+
 </head>
 
 <body class="antialiased">
-  <x-navlink/>
+
+<x-navlink/>
+
 <x-jumbo/>
-  @yield('content')
+
+@yield('content')
 <x-footer/>
 
 </body>
