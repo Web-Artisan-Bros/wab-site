@@ -41,11 +41,11 @@
         transition: all 0.3s;
         z-index: -1;
     }
-    img {
+    img, .icon {
         transition: rotate 300ms;
     }
     &:hover {
-        img {
+        img, .icon {
             rotate: 45deg;
         }
         &:before {

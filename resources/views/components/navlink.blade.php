@@ -12,41 +12,54 @@
       <a class="navbar-brand" href="#">
         <img src="/assets/NavLogoYW.svg" alt="">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">
-              <img class="navHighlight position-absolute top-50 start-50 translate-middle" src="/assets/NavHighlight.svg" alt="">
+              <img class="navHighlight position-absolute top-50 start-50 translate-middle"
+                   src="/assets/NavHighlight.svg" alt="">
               HOME</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle position-relative" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <img class="navHighlight position-absolute top-50 start-50 translate-middle" src="/assets/NavHighlight.svg" alt="">
+            <a class="nav-link dropdown-toggle position-relative" href="#" role="button" data-bs-toggle="dropdown"
+               aria-expanded="false">
+              <img class="navHighlight position-absolute top-50 start-50 translate-middle"
+                   src="/assets/NavHighlight.svg" alt="">
               SERVIZI
-              <img class="imgWhite" src="/assets/VectorArrowWhite.svg" alt="">
+              <x-svg-icon class="imgWhite" icon="VectorArrowBlack"></x-svg-icon>
+              {{--              <img class="imgWhite" src="/assets/VectorArrowWhite.svg" alt="">--}}
               <!-- <img class="imgBlack" src="/assets/VectorArrowBlack.svg" alt=""> -->
 
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">SITI WEB<img class="imgWhite ms-2" src="/assets/VectorArrowWhite.svg" alt=""></a></li>
+              <li><a class="dropdown-item" href="#">SITI WEB <img class="imgWhite ms-2"
+                                                                  src="/assets/VectorArrowWhite.svg" alt=""></a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="#">SEO<img class="imgWhite ms-2" src="/assets/VectorArrowWhite.svg" alt=""></a></li>
+              <li><a class="dropdown-item" href="#">SEO<img class="imgWhite ms-2" src="/assets/VectorArrowWhite.svg"
+                                                            alt=""></a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="#">SOCIAL MARKETING<img class="imgWhite ms-2" src="/assets/VectorArrowWhite.svg" alt=""></a>
+              <li><a class="dropdown-item" href="#">SOCIAL MARKETING<img class="imgWhite ms-2"
+                                                                         src="/assets/VectorArrowWhite.svg" alt=""></a>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="#">WEB DESIGN<img class="imgWhite ms-2" src="/assets/VectorArrowWhite.svg" alt=""></a></li>
+              <li><a class="dropdown-item" href="#">WEB DESIGN<img class="imgWhite ms-2"
+                                                                   src="/assets/VectorArrowWhite.svg" alt=""></a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="#">PACHETTO BUSINESS<img class="imgWhite ms-2" src="/assets/VectorArrowWhite.svg" alt=""></a></li>
+              <li><a class="dropdown-item" href="#">PACHETTO BUSINESS<img class="imgWhite ms-2"
+                                                                          src="/assets/VectorArrowWhite.svg" alt=""></a>
+              </li>
             </ul>
           </li>
           <li class="nav-item">
@@ -55,7 +68,7 @@
         </ul>
         <button class="btn btn-primary ms-1">
           SCRIVICI
-          <img src="/assets/VectorArrow.svg" alt="">
+          <x-svg-icon icon="VectorArrow"></x-svg-icon>
         </button>
       </div>
     </div>
