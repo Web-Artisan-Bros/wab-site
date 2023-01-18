@@ -1,6 +1,40 @@
 @use "./variables";
 
 
-.fs-max{
- font-size: 6rem;
+.fs-max {
+  font-size: 6rem;
+}
+
+.wab-highlight {
+  --x-offset: -.15em;
+  --y-offset: 0;
+
+  position: relative;
+  display: inline-block;
+  line-height: 1.4;
+  white-space: nowrap;
+
+  &:after {
+    content: "";
+    background-image: url("/public/assets/highlight_primary.svg");
+    background-repeat: repeat-x;
+    background-size: contain;
+    position: absolute;
+    top: var(--y-offset);
+    bottom: var(--y-offset);
+    left: var(--x-offset);
+    right: var(--x-offset);
+    z-index: -1;
+    transform: skewX(33deg);
+    // Fixes jagged lines in chrome
+    -webkit-backface-visibility: hidden;
+  }
+
+  &.wab-highlight--secondary {
+    color: variables.$light;
+
+    &:after {
+      background-image: url("/public/assets/highlight_secondary.svg");
+    }
+  }
 }

@@ -5,9 +5,7 @@
         <div class="mb-5">
           <div class="d-flex align-items-center border-bottom border-3 border-primary div-with-title">
             <h3 class="position-relative">
-                            <span class="position-relative text-dark">
-                                <img class="position-absolute top-50 start-50 translate-middle z-index-1 "
-                                     src="/assets/EvidenziatoPronto.svg" alt="">PRONTO</span>
+              <span class="wab-highlight text-dark">PRONTO</span>
               PER COLLABORARE
             </h3>
             <h2 class="fs-max">?</h2>

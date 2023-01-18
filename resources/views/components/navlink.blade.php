@@ -21,9 +21,7 @@
 
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">
-              <img class="navHighlight position-absolute top-50 start-50 translate-middle"
-                   src="/assets/NavHighlight.svg" alt="">
+            <a class="nav-link active wab-highlight" aria-current="page" href="#">
               HOME</a>
           </li>
           <li class="nav-item dropdown">
