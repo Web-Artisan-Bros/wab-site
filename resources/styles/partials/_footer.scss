@@ -1,49 +1,138 @@
 @use "./variables";
 
 .wab-footer {
-  .btn {
-    --outline-color: #{$primary};
-    --bs-btn-bg: #{$dark};
-    --bs-btn-border-color: #{$light};
-    --bs-btn-color: #{$light};
-  }
+    .btn {
+        --outline-color: #{$primary};
+        --bs-btn-bg: #{$dark};
+        --bs-btn-border-color: #{$light};
+        --bs-btn-color: #{$light};
+    }
 
-  .div-with-title {
-    min-height: 130px;
-  }
+    .div-with-title {
+        min-height: 130px;
+    }
 
-  .social .icon {
-    transition: color 0.3s ease-in-out;
-    color: var(--bs-primary);
+    .social .icon {
+        transition: color 0.3s ease-in-out;
+        color: var(--bs-primary);
 
-    &.wab-highlight {
-      --x-offset: -.35em;
-      --y-offset: -.35em;
+        &.wab-highlight {
+            --x-offset: -0.35em;
+            --y-offset: -0.35em;
 
-      &:after {
-        opacity: 0;
-        transition: opacity 300ms ease-in-out;
-      }
+            &:after {
+                opacity: 0;
+                transition: opacity 300ms ease-in-out;
+            }
 
-      &:hover {
-        &:after {
-          opacity: 1;
+            &:hover {
+                &:after {
+                    opacity: 1;
+                }
+            }
         }
-      }
+
+        svg {
+            transition: transform 300ms ease-in-out;
+        }
+
+        &:hover {
+            color: var(--bs-dark);
+
+            svg {
+                transform: rotate(15deg);
+            }
+        }
     }
 
-    svg {
-      transition: transform 300ms ease-in-out;
+    &.dark-footer {
+        background-color: transparent;
+        h3,
+        a {
+            --bs-link-color-rgb: #{$light};
+        }
+
+        .accent-color {
+            color: #{$primary} !important;
+        }
+
+        .separator {
+            border-color: #{$primary} !important;
+        }
     }
 
-    &:hover {
-      color: var(--bs-dark);
+    &.yellow-footer {
+        background-color: #{$primary};
+        color: #{$dark};
+        h3,
+        h2,
+        a {
+            color: #{$dark};
+        }
 
-      svg {
-        transform: rotate(15deg);
-      }
+        .wab-highlight:after {
+            background-image: url(http://127.0.0.1:5173/public/assets/highlight_secondary.svg);
+        }
+
+        .separator {
+            border-color: #{$secondary} !important;
+        }
+
+        .accent-color {
+            color: #{$secondary} !important;
+        }
+
+        .btn {
+            --outline-color: #{$secondary};
+            --bs-btn-bg: #{$primary};
+            --bs-btn-border-color: #{$dark};
+            --bs-btn-color: #{$dark};
+            --bs-btn-hover-bg: #{$primary};
+            --bs-btn-hover-border-color: #{$dark};
+        }
+
+        .social .icon {
+            color: var(--bs-secondary);
+
+            &:hover {
+                color: var(--bs-dark);
+            }
+        }
     }
-  }
+
+    &.white-footer {
+        background-color: #{$light};
+
+        .separator {
+            border-color: #{$primary} !important;
+        }
+
+        color: #{$dark};
+        h3,
+        h2,
+        a {
+            color: #{$dark};
+        }
+
+        .accent-color {
+            color: #{$primary} !important;
+        }
+
+        .btn {
+            --outline-color: #{$primary};
+            --bs-btn-bg: #{$light};
+            --bs-btn-border-color: #{$dark};
+            --bs-btn-color: #{$dark};
+            --bs-btn-hover-bg: #{$primary};
+            --bs-btn-hover-border-color: #{$dark};
+        }
+
+        .social .icon {
+            color: var(--bs-dark);
+
+            &:hover {
+                color: var(--bs-dark);
+            }
+        }
+    }
 }
-
-

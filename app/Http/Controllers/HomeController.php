@@ -12,40 +12,41 @@ class HomeController extends Controller {
       [
         "id"      => 1,
         "num"     => "01",
-        "title"   => "Why Us",
+        "title"   => "ESPERIENZA CONSOLIDATA",
         "icon"    => "",
         "content" => "il nostro team vanta anni di esperienza nel settore e un team altamente qualificato, garantendo risultati di alta qualità."
       ],
       [
         "id"      => 2,
         "num"     => "02",
-        "title"   => "Why Us",
+        "title"   => "METODO ARTIGIANALE",
         "icon"    => "",
         "content" => "il nostro team vanta anni di esperienza nel settore e un team altamente qualificato, garantendo risultati di alta qualità."
       ],
       [
         "id"      => 3,
         "num"     => "03",
-        "title"   => "Why Us",
+        "title"   => "AUMENTO DEI PROFITTI",
         "icon"    => "",
         "content" => "il nostro team vanta anni di esperienza nel settore e un team altamente qualificato, garantendo risultati di alta qualità."
       ],
       [
         "id"      => 4,
         "num"     => "04",
-        "title"   => "Why Us",
+        "title"   => "ASSISTENZA POST-LANCIO",
         "icon"    => "",
         "content" => "il nostro team vanta anni di esperienza nel settore e un team altamente qualificato, garantendo risultati di alta qualità."
       ],
       [
         "id"      => 5,
         "num"     => "05",
-        "title"   => "Why Us",
+        "title"   => "GIUSTO PREZZO",
         "icon"    => "",
         "content" => "il nostro team vanta anni di esperienza nel settore e un team altamente qualificato, garantendo risultati di alta qualità."
       ]
     ];
-    
+
+    // $class = 'black-nav';
     return view('home', compact('accordionWhyUs'));
   }
 }

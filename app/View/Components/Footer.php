@@ -6,20 +6,24 @@ use Illuminate\View\Component;
 
 class Footer extends Component
 {
+    public $background;
+
+
     /**
      * Create a new component instance.
      *
-     * @return void
+     * @param mixed $background
      */
-    public function __construct()
+    public function __construct($background)
     {
-        //
+        $this->background = $background;
+        
     }
 
     /**
      * Get the view / contents that represent the component.
      *
-     * @return \Illuminate\Contracts\View\View|\Closure|string
+     * @return \Closure|\Illuminate\Contracts\View\View|string
      */
     public function render()
     {

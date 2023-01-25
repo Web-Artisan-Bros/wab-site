@@ -4,7 +4,7 @@
                     </div>
                     <div class="card-body">
                         <h5 class="card-title h-100">{{ $title }}</h5>
-                        <a href="#" class="btn btn-primary">Scopri di più
+                        <a href="{{url('servizi')}}" class="btn btn-primary">Scopri di più
                             <img src="/assets/VectorArrow.svg" alt="">
                         </a>
                     </div>

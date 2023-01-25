@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,12 +21,11 @@
 
 <body class="antialiased">
 
-<x-navlink/>
+  
 
-<x-jumbo/>
-
-@yield('content')
-<x-footer/>
+  @yield('content')
+  
 
 </body>
+
 </html>
