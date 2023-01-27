@@ -1,0 +1,29 @@
+@use "./variables";
+
+.light-contact {
+ background: #{$light};
+
+ .row {
+  flex-direction: row-reverse;
+ }
+
+ .wab-highlight--secondary {
+  color: #{$dark} !important;
+
+  &::after {
+   background-image: url(http://127.0.0.1:5173/public/assets/highlight_primary.svg);
+  }
+ }
+}
+
+.reverse-contact {
+ background-color: #{$light};
+
+ .row {
+  flex-direction: row-reverse;
+ }
+
+ .btn-hover {
+  justify-content: end;
+ }
+}

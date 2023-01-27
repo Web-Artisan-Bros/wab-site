@@ -1,3 +1,5 @@
+@props(['type'])
+
 <div class="wab-footer {{ $background }} ">
   <div class="container py-5">
     <div class="py-md-5">

@@ -1,0 +1,18 @@
+.wab-img {
+ display: flex;
+ justify-content: end;
+
+ img {
+  max-width: 40vw;
+  max-height: 600px;
+ }
+
+ .img-border {
+  position: absolute;
+  bottom: 36px;
+  right: -20px;
+  left: auto;
+ }
+
+
+}

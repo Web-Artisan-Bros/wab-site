@@ -1,9 +1,6 @@
 @use "./variables";
 
-.bordeTextWhite {
-    border: 3px solid #ffffff;
-    color: white;
-}
+
 
 .bordeTextBlack {
     border: 3px solid #1d1d1d;
@@ -16,6 +13,10 @@
     }
 }
 
+.bordeTextWhite {
+    border: 3px solid #{$light};
+    color: #{$light};
+}
 .red-square {
     background-color: #95363e;
 }
@@ -60,7 +61,7 @@
 .btn-reverse-white {
     // transform: rotate(15deg);
     flex-direction: row-reverse;
-    justify-content: flex-end;
+    justify-content: flex-start;
 
     .white-square {
         margin-right: -91px;

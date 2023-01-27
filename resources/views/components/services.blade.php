@@ -47,19 +47,19 @@
     </div>
     <div class="row g-2  flex-wrap">
       <div class="col">
-        <x-service-card number="01" title="COSTRUIAMO SITI WEB UNICI"/>
+        <x-service-card number="01" title="COSTRUIAMO SITI WEB UNICI" />
       </div>
       <div class="col">
-        <x-service-card number="02" title="MARKETING MIRATO SUI SOCIAL MEDIA"/>
+        <x-service-card number="02" title="MARKETING MIRATO SUI SOCIAL MEDIA" />
       </div>
       <div class="col">
-        <x-service-card number="03" title="OTTIMIZAZIONE PER IL MOTORI DI RICERCA (SEO)"/>
+        <x-service-card number="03" title="OTTIMIZAZIONE PER IL MOTORI DI RICERCA (SEO)" />
       </div>
       <div class="col">
-        <x-service-card number="04" title="CREAZIONE DESIGN UNICI"/>
+        <x-service-card number="04" title="CREAZIONE DESIGN UNICI" />
       </div>
       <div class="col">
-        <x-service-card number="05" title="PACHETTI BUSINESS "/>
+        <x-service-card number="05" title="PACHETTI BUSINESS " />
       </div>
     </div>
   </div>

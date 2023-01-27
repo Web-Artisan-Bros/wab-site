@@ -4,8 +4,8 @@
 @import "bootstrap/scss/bootstrap";
 
 @import "./css_variables";
-@import "./chisiamo";
 
+$enable-responsive-font-sizes: true;
 
 @import "./partials/reset";
 @import "./partials/inputs";
@@ -15,13 +15,17 @@
 @import "./partials/spacing";
 @import "./partials/typography";
 @import "./partials/footer";
-@import "./partials/jumbo";
 @import "./partials/squarebtn";
+@import "./partials/jumbo";
 @import "./partials/utility";
 @import "./partials/accordion";
 @import "./partials/service-card";
 @import "./partials/navlink";
 @import "./partials/offcanvas";
+@import "./partials/contact";
+@import "./chisiamo";
+@import "./servizi";
+// @import "./partials/chisiamo";
 
 
 
