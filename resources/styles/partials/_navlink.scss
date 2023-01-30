@@ -59,8 +59,8 @@
 
         // changes the default highlight size
         &.wab-highlight {
-            --x-offset: 0.2rem;
-            --y-offset: 0.2rem;
+            --x-offset: 0.8rem;
+                --y-offset: 0.2rem;
         }
     }
 
@@ -122,6 +122,7 @@
 
     &.yellow-nav {
         background-color: #{$primary};
+
         .btn {
             --outline-color: #{$secondary};
             --bs-btn-bg: #{$primary};

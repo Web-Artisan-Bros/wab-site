@@ -1,0 +1,23 @@
+@use "./variables";
+
+
+.wabDa {
+
+ .nav {
+  --bs-nav-link-color:#{$light};
+  --bs-nav-link-hover-color: #{$primary};
+  display: flex;
+  text-align: start;
+  width: 100%;
+
+  .nav-link {
+   border-bottom: 3px solid #{$primary};
+  }
+ }
+
+ .nav-pills .nav-link.active,
+ .nav-pills .show>.nav-link {
+  color: #{$primary};
+  background-color: transparent;
+ }
+}

@@ -39,6 +39,8 @@
 
 <x-accordion :entries="$accordionWhyUs" />
 
+<x-services />
+
 <x-contact class="mt-4" background="bg-primary">
  <x-slot:reverse>
   btn-hover
@@ -47,6 +49,8 @@
   /assets/WhiteArrow.svg
  </x-slot:imgCenter>
 </x-contact>
+
+<x-accordion :entries="$accordionWhyUs" />
 
 <x-footer background="white-footer" />
 @endsection

@@ -20,18 +20,16 @@
 
 
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active wab-highlight" aria-current="page" href="{{url('/')}}">
-              HOME</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle position-relative" href="{{url('servizi')}}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <li class="nav-item d-flex align-items-center">
+            <x-navigation-link :href="route('home')" :active="request()->routeIs('home')">
 
+              HOME
+            </x-navigation-link>
+          </li>
+          <li class="nav-item dropdown  d-flex align-items-center">
+            <a class="nav-link dropdown-toggle position-relative" href="{{url('servizi')}}  {{ $attributes }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               SERVIZI
               <x-svg-icon class="imgWhite" icon="VectorArrowBlack"></x-svg-icon>
-
-
-
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="{{url('servizi')}}">SITI WEB<x-svg-icon icon="VectorArrowS" /></a></li>
@@ -53,11 +51,11 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{url('chisiamo')}}">CHI SIAMO</a>
+          <li class="nav-item  d-flex align-items-center">
+            <x-navigation-link :href="route('chisiamo')" :active="request()->routeIs('chisiamo')" {{ $attributes }}>CHI SIAMO</x-navigation-link>
           </li>
         </ul>
-        <button class="btn btn-primary ms-1" type="button" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+        <button class=" btn btn-primary ms-1" type="button" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
           SCRIVICI
           <x-svg-icon icon="VectorArrow"></x-svg-icon>
         </button>
