@@ -36,7 +36,7 @@
         <label for="floatingInput" class="form-label">Telefono:</label>
       </div>
       <div class="form-floating mb-3">
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Il tuo messaggio"></textarea>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Il tuo messaggio" contenteditable></textarea>
         <label for="exampleFormControlTextarea1" class="form-label">Inserisci il tuo messaggio:<span class="text-primary">*</span></label>
       </div>
       <div class="d-flex flex-column align-items-strech">

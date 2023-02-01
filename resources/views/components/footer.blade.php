@@ -81,7 +81,7 @@
           <div class="d-flex justify-content-between mb-2">
             <p class="lead">Info:</p>
             <div class="align-bottom social">
-              <a class="text-decoration-none" href="#">
+              <a class="text-decoration-none" href="mailto:Info@webartisan.com">
                 <x-svg-icon icon="VectorMail" alt="Mail Icon" class="me-2 wab-highlight" />
               </a>
               <a class="text-decoration-none" href="https://www.instagram.com/webartisanbros/">
@@ -97,8 +97,8 @@
           </div>
           <p>Web Artisan Bros
             Via San Rocco, 34/D - 36016 Thiene (VI)</p>
-          <p>Telefono: 3290241530</p>
-          <p>E-mail: Info@webartisan.com</p>
+          <p>Telefono: <a href="3290241530">3290241530</a></p>
+          <p>E-mail: <a href="mailto:Info@webartisan.com">Info@webartisan.com</a></p>
           <p>
             P. IVA 04439020241</p>
         </div>
