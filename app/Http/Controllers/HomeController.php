@@ -46,7 +46,44 @@ class HomeController extends Controller {
       ]
     ];
 
-    // $class = 'black-nav';
-    return view('home', compact('accordionWhyUs'));
+    $cardsHome = [
+      [
+        "id"      => 1,
+        "num"     => "01",
+        "title"   => "COSTRUIAMO SITI WEB UNICI",
+        "icon"    => "",
+        "content" => ""
+      ],
+      [
+        "id"      => 2,
+        "num"     => "02",
+        "title"   => "MARKETING MIRATO SUI SOCIAL MEDIA",
+        "icon"    => "",
+        "content" => ""
+      ],
+      [
+        "id"      => 3,
+        "num"     => "03",
+        "title"   => "OTTIMIZAZIONE PER IL MOTORI DI RICERCA (SEO)",
+        "icon"    => "",
+        "content" => ""
+      ],
+      [
+        "id"      => 4,
+        "num"     => "04",
+        "title"   => "CREAZIONE DESIGN UNICI",
+        "icon"    => "",
+        "content" => ""
+      ],
+      [
+        "id"      => 5,
+        "num"     => "05",
+        "title"   => "PACHETTI BUSINESS ",
+        "icon"    => "",
+        "content" => ""
+      ]
+    ];
+
+    return view('home', compact('accordionWhyUs', 'cardsHome'));
   }
 }
