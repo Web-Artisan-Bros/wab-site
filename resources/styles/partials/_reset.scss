@@ -1,15 +1,17 @@
 @use "./variables";
 
-h1, h2, h3 {
-  font-family: variables.$font-family-titles;
+h1,
+h2,
+h3 {
+    font-family: variables.$font-family-titles;
 }
 
 hr {
-  border-color: variables.$primary;
-  border-width: 3px;
-  opacity: 100%;
+    border-color: variables.$primary;
+    border-width: 3px;
+    opacity: 100%;
 }
 
-.icon{
-  display: inline-block;
+.icon {
+    display: inline-block;
 }

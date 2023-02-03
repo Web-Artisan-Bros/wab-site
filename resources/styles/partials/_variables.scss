@@ -1,7 +1,7 @@
-$primary: #F6E077;
-$secondary: #95363E;
-$light: #FAF8E5;
-$dark: #1D1D1D;
+$primary: #f6e077;
+$secondary: #95363e;
+$light: #faf8e5;
+$dark: #1d1d1d;
 $primary-text: $primary;
 $secondary-text: $secondary;
 $light-text: $light;
@@ -32,8 +32,8 @@ $card-bg: $light;
 $card-color: $dark;
 
 $font-size-base: 1rem;
-$font-family-sans-serif: 'Kanit', sans-serif;
-$font-family-titles: 'Zen Dots', sans-serif;
+$font-family-sans-serif: "Kanit", sans-serif;
+$font-family-titles: "Zen Dots", sans-serif;
 
 $h1-font-size: $font-size-base * 4;
 $h2-font-size: $font-size-base * 3.25;
@@ -42,4 +42,6 @@ $h4-font-size: $font-size-base * 1.75;
 $h5-font-size: $font-size-base * 1.25;
 $h6-font-size: $font-size-base;
 
-$enable-negative-margins: true
+$enable-negative-margins: true;
+
+$ease: 0.3s ease-in-out;

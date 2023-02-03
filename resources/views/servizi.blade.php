@@ -44,13 +44,11 @@
   <div class="services pt-3">
    <div class="d-flex align-content-center">
     <div class="wrapper">
-     <div class="eye">
+     <div class="arrowM">
       <img src="/assets/BigArrow.svg" alt="">
      </div>
     </div>
-    <!-- <div class="align-self-center">
-     <img src="/assets/BigArrow.svg" alt="big arrow">
-    </div> -->
+
     <div class="tab-content row ps-5 ms-1" id="v-pills-tabContent">
      @foreach($cardsServices as $entry)
      <div class="tab-pane fade" id="v-pills-{{ $entry['id'] }}" role="tabpanel" aria-labelledby="v-pills-{{ $entry['id'] }}-tab" tabindex="{{ $entry['id'] }}">
@@ -157,81 +155,9 @@
  </div>
 </section>
 
-<!-- <section class="body">
- <div class="box">
-  <div class="eye"></div>
-  <div class="eye"></div>
- </div>
-</section> -->
-
-<!-- <section class="moovingArrow">
- <img src="/assets/BigArrow.png" alt="" class="arrow">
-
-</section> -->
-
-
-<!-- <section class="body position-relative">
- <div class="container">
-
-  <img src="/assets/BigArrow.png" alt="" class="iris">
- </div>
-</section> -->
-
-
-<!-- <section class="body">
- <div class="container">
-  <div class="eyeBall">
-   <div class="iris"></div>
-  </div>
-  <div class=""></div>
-  <div class="lid"></div>
- </div>
-</section> -->
-
-<!-- <script type="text/javascript">
- const eye = document.querySelector('.iris');
- window.addEventListener('mousemove', (event) => {
-  const x = -(window.innerWidth / 2 - event.pageX) / 35;
-  const y = -(window.innerHeight / 2 - event.pageY) / 35;
-  eye.style.transform = `rotate(-45deg) translateY(${y}px) translateX(${x}px)`;
- });
- // document.querySelector('body').addEventListener('mousemove', eyeball);
-
- // function eyeball() {
- //  const eye = document.querySelectorAll('.eye');
- //  eye.forEach(function(eye) {
- //   let x = (eye.getBoundingClientRect().left) + (eye.clientWidth / 2);
- //   let y = (eye.getBoundingClientRect().top) + (eye.clientHeight / 2);
- //   let radian = Math.atan2(event.pageX - x, event.pageY - y);
- //   let rotation = (radian * (180 / Math.PI) * -1) + 270;
- //   eye.style.transform = "rotate(" + rotation + "deg)"
-
- //  });
- // }
-
-
-
-
-
- // document.querySelector('.moovingArrow').addEventListener('mousemove', rotateArrow);
-
- // function rotateArrow() {
- // let arrow = document.querySelectorAll('.arrow');
-
- // arrow.forEach(function(arrow) {
- // let x = (arrow.getBoundingClientRect().left) + (arrow.clientWidth / 2);
- // let y = (arrow.getBoundingClientRect().top) + (arrow.clientHeight / 2);
-
- // let radian = Math.atan2(event.pageX - x, event.pageY - y);
- // let rot = (radian * (180 / Math.PI) * -1) + 270;
- // arrow.style.transform = "rotate(" + rot + "deg)";
- // })
- // }
-</script> -->
-
 <script>
- //Selecting the eye div
- let eye_ref = document.querySelectorAll(".eye");
+ //Selecting the arrow div
+ let arrow_ref = document.querySelectorAll(".arrowM");
 
  //mousemove for devices with mouse aand touchmove for touchcreen devices
  let events = ["mousemove", "touchmove"];
@@ -249,25 +175,25 @@
  //Same function for both events
  events.forEach((eventType) => {
   document.body.addEventListener(eventType, (event) => {
-   eye_ref.forEach((eye) => {
+   arrow_ref.forEach((arrowM) => {
     /* getBoundingClientRect() method returns the position relative to the viewport */
-    let eyeX = eye.getBoundingClientRect().left + eye.clientWidth / 2;
-    let eyeY = eye.getBoundingClientRect().top + eye.clientHeight / 2;
+    let arrowX = arrowM.getBoundingClientRect().left + arrowM.clientWidth / 2;
+    let arrowY = arrowM.getBoundingClientRect().top + arrowM.clientHeight / 2;
 
     /* ClientX and ClientY return the position of clients cursor from top left of the screen*/
     var x = !isTouchDevice() ? event.clientX : event.touches[0].clientX;
     var y = !isTouchDevice() ? event.clientY : event.touches[0].clientY;
 
     /* 
-    Subtract x position of mouse from x position of eye and y position of mouse from y position of eye.
+    Subtract x position of mouse from x position of arrow and y position of mouse from y position of arrow.
     Use atan2(returns angle in radians)
     */
 
-    let radian = Math.atan2(x - eyeX, y - eyeY);
+    let radian = Math.atan2(x - arrowX, y - arrowY);
     //Convert Radians to Degrees
     let rotationDegrees = radian * (180 / Math.PI) * -1 + 40;
-    //Rotate the eye
-    eye.style.transform = "rotate(" + rotationDegrees + "deg)";
+    //Rotate the arrow
+    arrowM.style.transform = "rotate(" + rotationDegrees + "deg)";
    });
   });
  });

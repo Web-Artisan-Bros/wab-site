@@ -1,20 +1,19 @@
+.f-spacing {
+    letter-spacing: 6px;
+}
 
-        .f-spacing {
-            letter-spacing: 6px;
-        }
+.img-border {
+    position: absolute;
+    bottom: 36px;
+    left: 36px;
+}
 
-                .img-border {
-                    position: absolute;
-                    bottom: 36px;
-                    left: 36px;
-                }
+.img-bw {
+    filter: grayscale(100%);
+    transition: filter 1s cubic-bezier(0.87, -0.41, 0.19, 1.44);
 
-                .img-bw {
-                    filter: grayscale(100%);
-                    transition: filter 1s ease-in-out;
-
-        &:hover {
-                filter: grayscale(0%);
-                cursor: pointer;
-            }
-                }
+    &:hover {
+        filter: grayscale(0%);
+        cursor: pointer;
+    }
+}

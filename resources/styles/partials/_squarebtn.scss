@@ -1,7 +1,5 @@
 @use "./variables";
 
-
-
 .bordeTextBlack {
     border: 3px solid #1d1d1d;
     color: #1d1d1d;
@@ -23,9 +21,10 @@
 
 .btn-sqr {
     width: 234.49px;
-    height: 234.49px;
+    aspect-ratio: 1/1;
+    // min-height: 234.49px;
     transform: rotate(15deg);
-    transition: all ease 1s;
+    transition: rotate ease 1s, translate ease 1s;
 }
 
 .rotate-90 {
@@ -77,59 +76,5 @@
             rotate: 7deg;
             translate: 65px;
         }
-    }
-}
-
-
-
-.wbaOffCanvas {
-    --bs-offcanvas-color: #{$dark};
-    --bs-offcanvas-bg: #{$light};
-    --bs-offcanvas-width: 500px;
-
-    .offcanvas-form {
-        --outline-offset-x: var(--outline-offset);
-        --outline-offset-y: var(--outline-offset);
-        --outline-color: #{variables.$primary};
-        position: relative;
-        z-index: 0;
-        background-color: #{$light};
-
-        &:after {
-            content: "";
-            border: 3px solid $dark;
-            display: block;
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            background: #{$light};
-            transition: all 0.3s;
-            z-index: -1;
-        }
-
-        &:before {
-            content: "";
-            display: block;
-            position: absolute;
-            top: calc(0px - var(--outline-offset-y));
-            right: calc(0px - var(--outline-offset-x));
-            width: 100%;
-            height: 100%;
-            border: 3px solid var(--outline-color);
-            transition: all 0.3s;
-            z-index: -1;
-        }
-    }
-
-    .btn-close {
-        --bs-btn-close-opacity: 1;
-    }
-    .btn {
-        --outline-color: #{$primary};
-        --bs-btn-bg: #{$light};
-        --bs-btn-border-color: #{$dark};
-        --bs-btn-color: #{$dark};
     }
 }

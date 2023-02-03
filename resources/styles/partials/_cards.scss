@@ -1,18 +1,17 @@
 .card {
-  --outline-offset-x: var(--outline-offset);
-  --outline-offset-y: var(--outline-offset);
-  --bs-card-spacer-y: 2rem;
+    --outline-offset-x: var(--outline-offset);
+    --outline-offset-y: var(--outline-offset);
+    --bs-card-spacer-y: 2rem;
 
-  &:before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: calc(0px - var(--outline-offset-y));
-    right: calc(0px - var(--outline-offset-x));
-    width: 100%;
-    height: 100%;
-    border: 3px solid $secondary;
-    transition: all .3s;
-    z-index: -1;
-  }
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: calc(0px - var(--outline-offset-y));
+        right: calc(0px - var(--outline-offset-x));
+        width: 100%;
+        height: 100%;
+        border: 3px solid $secondary;
+        z-index: -1;
+    }
 }

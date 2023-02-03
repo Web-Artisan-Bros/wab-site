@@ -13,7 +13,7 @@
     }
 
     .social .icon {
-        transition: color 0.3s ease-in-out;
+        transition: color #{$ease};
         color: var(--bs-primary);
 
         &.wab-highlight {
@@ -22,7 +22,7 @@
 
             &:after {
                 opacity: 0;
-                transition: opacity 300ms ease-in-out;
+                transition: opacity #{$ease};
             }
 
             &:hover {
@@ -33,7 +33,7 @@
         }
 
         svg {
-            transition: transform 300ms ease-in-out;
+            transition: transform #{$ease};
         }
 
         &:hover {

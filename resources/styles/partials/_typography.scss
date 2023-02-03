@@ -5,7 +5,6 @@
 }
 
 .wab-highlight {
-    
     --x-offset: -0.15em;
     --y-offset: 0;
     position: relative;
@@ -33,7 +32,7 @@
     }
 
     &.wab-highlight--secondary {
-        color: variables.$light!important;
+        color: variables.$light !important;
 
         &:after {
             background-image: url("/public/assets/highlight_secondary.svg");

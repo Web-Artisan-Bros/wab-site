@@ -23,7 +23,7 @@
             width: 100%;
             height: 100%;
             background: #{$light};
-            transition: all 0.3s;
+            // transition: all 0.3s;
             z-index: -1;
         }
 
@@ -36,12 +36,9 @@
             width: 100%;
             height: 100%;
             border: 3px solid var(--outline-color);
-            transition: all 0.3s;
             z-index: -1;
         }
     }
-
-    
 
     .btn-close {
         --bs-btn-close-opacity: 1;

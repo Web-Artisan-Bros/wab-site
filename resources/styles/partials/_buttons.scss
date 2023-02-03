@@ -18,15 +18,15 @@
         width: 100%;
         height: 100%;
         background: var(--bs-btn-bg);
-        transition: all 0.3s;
+        transition: background #{$ease};
         z-index: -1;
     }
 
     &:hover {
         &:after {
-            color: var(--bs-btn-hover-color);
+            // color: var(--bs-btn-hover-color);
             background-color: var(--bs-btn-hover-bg);
-            border-color: var(--bs-btn-hover-border-color);
+            // border-color: var(--bs-btn-hover-border-color);
         }
     }
 
@@ -39,19 +39,19 @@
         width: 100%;
         height: 100%;
         border: 3px solid var(--outline-color);
-        transition: all 0.3s;
+        transition: top #{$ease}, right #{$ease};
         z-index: -1;
     }
-    img, .icon {
-        transition: rotate 300ms;
+    img,
+    .icon {
+        transition: rotate #{$ease};
     }
     &:hover {
-        img, .icon {
+        img,
+        .icon {
             rotate: 45deg;
         }
         &:before {
-            //top: calc(0px - (var(--outline-offset-y) * .4));
-            //right: calc(0px - (var(--outline-offset-x) * .4));
             top: 0;
             right: 0;
         }

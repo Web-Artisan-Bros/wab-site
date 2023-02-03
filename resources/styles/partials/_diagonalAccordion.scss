@@ -21,10 +21,10 @@
             align-content: center;
             border-bottom: 3px solid #{$primary};
             text-align: left;
-            transition: color 300ms ease-in-out, text-shadow 300ms ease-in-out;
+            transition: color #{$ease}, text-shadow #{$ease};
 
             .position-relative:has(.positioning) {
-                height: 100px;
+                min-height: 100px;
 
                 .positioning {
                     display: flex;
@@ -39,13 +39,14 @@
 
             .icon {
                 // margin-bottom: 0.3rem;
-                transition: all 300ms ease-in-out;
+                transition: color #{$ease}, rotate #{$ease};
             }
 
             .number {
                 color: #{$light};
                 transform: translateX(0%);
-                transition: color 300ms ease-in-out, transform 300ms ease-in-out, text-shadow 300ms ease-in-out;
+                transition: color 0.3s #{$ease}, transform #{$ease},
+                    text-shadow #{$ease};
             }
 
             &:hover,
@@ -59,12 +60,11 @@
                     color: #{$dark} !important;
                     transform: translateX(80%);
                     text-shadow: -1px 0 #{$primary}, 0 1px #{$primary},
-                    1px 0 #{$primary}, 0 -1px #{$primary};
+                        1px 0 #{$primary}, 0 -1px #{$primary};
                 }
 
                 .icon {
                     color: #{$primary} !important;
-
                     margin-top: 1rem;
                 }
                 &:first-of-type {
@@ -103,7 +103,7 @@
             }
             &:nth-of-type(2) {
                 margin-left: -4.5rem;
-                width: 109%;
+                min-width: 109%;
 
                 // margin-left: 1rem;
                 .positioning {
@@ -113,7 +113,7 @@
 
             &:nth-of-type(3) {
                 margin-left: -2.5rem;
-                width: 109%;
+                min-width: 109%;
                 .positioning {
                     right: 35%;
                 }
@@ -121,7 +121,7 @@
 
             &:nth-of-type(4) {
                 margin-left: -1.5rem;
-                width: 111%;
+                min-width: 111%;
                 .positioning {
                     right: 4rem;
                 }

@@ -17,7 +17,6 @@ class Footer extends Component
     public function __construct($background)
     {
         $this->background = $background;
-        
     }
 
     /**
