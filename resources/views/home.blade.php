@@ -40,7 +40,47 @@
   </x-slot:jumboImg>
 </x-jumbo>
 
-<x-services />
+<x-services img=/assets/JumboService.png :cards="$cardsHome">
+
+
+  <x-slot:cards>
+    <div class="">
+      <div class="" id="anchor">
+        <div class="" id="box">
+          <img id="arrow" src="/assets/BigArrow.svg" alt="big arrow">
+        </div>
+
+      </div>
+    </div>
+    <div class="row g-2  flex-wrap">
+      @foreach($cardsHome as $card)
+      <div class="col">
+        <x-service-card number="{{ $card['num'] }}" title='{!! $card["title"] !!}'>
+          <a href="{{url('servizi')}}" class="btn btn-primary">Scopri di più
+            <img src="/assets/VectorArrow.svg" alt="">
+          </a>
+        </x-service-card>
+      </div>
+      @endforeach
+    </div>
+  </x-slot:cards>
+  <div class="mb-5">
+    <h2 class="text-dark position-relative z-index1">AI NOSTRI <br>
+      <span class="wab-highlight">CLIENTI</span> OFFRIAMO SEMPRE <br>
+      <span class="wab-highlight">IL MEGLIO</span>
+    </h2>
+  </div>
+  <div>
+    <div class="d-flex">
+      <hr class="w-25 opacity-100">
+      <p class="lead ms-2">Ecco cosa possiamo offrirti</p>
+
+
+      <!-- </div> -->
+    </div>
+    <!-- <p class="lead"></p> -->
+  </div>
+</x-services>
 
 <x-contact class="mt-4" background="bg-primary">
   <x-slot:reverse>
@@ -50,7 +90,7 @@
     /assets/WhiteArrow.svg
   </x-slot:imgCenter>
 </x-contact>
-<x-accordion :entries="$accordionWhyUs" />
+<x-accordion class="light-accordion" :entries="$accordionWhyUs" />
 <x-footer background="dark-footer" />
 
 

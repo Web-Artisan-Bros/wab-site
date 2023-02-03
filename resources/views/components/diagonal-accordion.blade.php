@@ -18,8 +18,8 @@
     </div>
     <div class="tab-content row" id="v-pills-tabContent">
         @foreach($entries as $entry)
-        <div class="tab-pane fade" id="v-pills-{{ $entry['id'] }}" role="tabpanel" aria-labelledby="v-pills-{{ $entry['id'] }}-tab" tabindex="{{ $entry['id'] }}">
-            <div class="d-flex flex-column align-items-end mb-3">
+        <div class="tab-pane fade" id="v-pills-{{ $entry['id'] }}" role="tabpanel" aria-labelledby="v-pills-{{ $entry['id'] }}-tab" tabindex="0">
+            <div class="d-flex flex-column mb-3">
                 <div class="number fs-4 text-primary">{{ $entry["num"] }}.</div>
                 <div class="fs-4 text-primary">{{ strtoupper($entry["title"]) }}</div>
             </div>

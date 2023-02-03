@@ -1,18 +1,211 @@
 .wab-img {
- display: flex;
- justify-content: end;
+    display: flex;
+    justify-content: end;
 
- img {
-  max-width: 40vw;
-  max-height: 600px;
- }
+    img {
+        max-width: 40vw;
+        max-height: 600px;
+    }
 
- .img-border {
-  position: absolute;
-  bottom: 36px;
-  right: -20px;
-  left: auto;
- }
-
-
+    .img-border {
+        position: absolute;
+        bottom: 36px;
+        right: -20px;
+        left: auto;
+    }
 }
+
+.z-index-none {
+    z-index: unset;
+}
+
+.services {
+    .card-body {
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+    }
+
+    // img {
+    //     transform: rotate(0deg);
+    //     transition: transform 0.3ms ease-in-out;
+    // }
+
+    // :has(.active) {
+    //     img {
+    //         transform: rotate(-44deg);
+    //     }
+    // }
+
+    .nav-link.active {
+        background-color: #{$light};
+
+        h4,
+        h5 {
+            color: #{$primary} !important;
+        }
+
+        .border-bottom {
+            border-color: #{$dark} !important;
+        }
+    }
+
+    
+}
+
+// .moovingArrow{
+//     background-color: white;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     min-height: 100vh;
+//     // flex-direction: column;
+//     overflow: hidden;
+
+//     .arrow{
+//         position: absolute;
+//     }
+// }
+
+// .body{
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     min-height: 100vh;
+//     background: radial-gradient(#f2761e, #ef4921);
+// }
+
+// .box{
+//     display: flex;
+// }
+
+// .box .eye{
+//     position: relative;
+//     width: 120px;
+//     height: 120px;
+//     display: block;
+//     background-color: #fff;
+//     margin: 0 20px;
+//     border-radius: 50%;
+//     box-shadow: 0 5px 45px rgba(0,0,0,0.2),
+//     inset 0 0 15px #f2761e,
+//     inset o o 25px #f2761e;
+// }
+
+// .box .eye::before {
+//     content: '';
+//     position: absolute;
+//     top: 50%;
+//     left: 35px;
+//     transform: translate(-50%, -50%);
+//     width: 45px;
+//     height: 45px;
+//     border-radius: 50%;
+//     background-color: black;
+//     border: 10px solid blueviolet;
+//     box-sizing: border-box;
+// }
+
+
+// .body {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 100vh;
+//   background-color: #dab785;
+// }
+
+// .container {
+//   position: relative;
+//   cursor: pointer;
+// }
+
+// .iris {
+//   position: absolute;
+//   width: 70px;
+//   height: 70px;
+//   border: 5px solid #333;
+//   background-color: #0077b6;
+//   border-radius:50%;
+//   left: -90px;
+//     top: -70px;
+// }
+
+// .iris:before {
+//   content:"";
+//   position: absolute;
+//   background-color: #333;
+//   border-radius:50%;
+//   width:40px;
+//   height: 40px;
+//   top:22%;
+//   left:22%;
+// }
+
+// .iris:after {
+//   content:"";
+//   position: absolute;
+//   background-color: rgba(255,255,255,0.4);
+//   border-radius: 50%;
+//   width:15px;
+//   height:15px;
+//   top:35%;
+//   left:65%;
+//   box-shadow: -35px 20px rgba(255,255,255,0.4);
+// }
+
+// .eyeBall {
+//   position: relative;
+//   width: 150px;
+//   height: 150px;
+//   background-color: white;
+//   border: 5px solid #333;
+//   border-radius:100% 0;
+//   box-shadow: inset 5px 5px 5px rgba(0,0,0,0.3);
+//   transform: rotate(45deg);
+//   top:-10px;
+//   z-index:1;
+//   overflow: hidden;
+// }
+
+// .eyeLid {
+//   position: absolute;
+//   border-top: 5px solid #333;
+//   border-left: 5px solid #333;
+//   border-radius:100% 0;
+//   width: 150px;
+//   height: 150px;
+//   top:-30px;
+//   left:3px;
+//   transform: rotate(45deg);
+//   transition: .2s;
+//   z-index:10;
+// }
+
+// .container:hover .eyeLid {
+//   transform: rotate(-45deg) rotateX(160deg);
+// }
+
+// .container:hover .lid {
+//   transform: translateY(90px);
+// }
+
+// .lid {
+//   position: absolute;
+//   z-index:9;
+//   background-color: #dab785;
+//   width: 295px;
+//   height: 270px;
+//   border-radius:50%;
+//   top:-248px;
+//   left:-68px;
+//   transition: .2s;
+// }
+
+.wrapper {
+   width: 100vw;
+   height: 26vh;
+   display: flex;
+   align-items: center;
+   justify-content: start;
+  }

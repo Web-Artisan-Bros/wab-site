@@ -1,10 +1,12 @@
-<section class="bg-light text-dark">
+@props(['class' =>''])
+
+<section class="wab-accordion {{ $class }} ">
   <div class="container container-p-156">
     <div class="row align-items-end pb-3">
       <div class="col-5">
         <h2 class="position-relative z-index1">
           <span class="wab-highlight text-dark">
-            SCEGLI NOI</span> <span class="text-dark"> SENZA ESITARE</span>
+            COSTRUIAMO</span> <span class="">SITI WEB</span>
         </h2>
       </div>
 
@@ -18,7 +20,7 @@
       </div>
     </div>
 
-    <div class="accordion accordion-flush mt-5 wab-accordion" id="accordionWhyUs">
+    <div class="accordion accordion-flush mt-5 " id="accordionWhyUs">
 
       @foreach($entries as $entry)
       <div class="accordion-item d-flex flex-column">
@@ -42,7 +44,7 @@
         </div>
       </div>
       @endforeach
-      
+
     </div>
   </div>
 </section>

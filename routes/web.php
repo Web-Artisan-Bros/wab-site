@@ -19,6 +19,8 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 Route::get('/chisiamo', [App\Http\Controllers\ChiSiamo::class, 'index'])->name('chisiamo');
 
 Route::get('/servizi', [App\Http\Controllers\Servizi::class, 'index'])->name('servizi');
+Route::get('/test', [App\Http\Controllers\Test::class, 'index'])->name('test');
+
 
 Route::middleware([
   'auth:sanctum',
