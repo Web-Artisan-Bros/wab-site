@@ -1,6 +1,6 @@
 .wab-img {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 
     img {
         // max-width: 40vw;
@@ -44,7 +44,7 @@
     //    max-height: 26vh;
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
 }
 
 .arrowM {

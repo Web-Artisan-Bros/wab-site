@@ -1,9 +1,11 @@
-@extends('./layouts/public')
+@extends('layouts.public')
 
-
+@php
+$navbarVariant = "dark";
+$pageTitle = "Home";
+@endphp
 
 @section ('content')
-<x-navlink background="dark-nav" logo="/assets/NavLogoYW.svg" />
 
 <x-jumbo dnone="true">
   <x-slot:textBorderColor>

@@ -1,9 +1,11 @@
 @extends('./layouts/public')
 
+@php
+  $navbarVariant = "yellow";
+  $pageTitle = "Chi siamo";
+@endphp
+
 @section ('content')
-<x-navlink background="yellow-nav" logo="/assets/NavLogoR.svg" />
-
-
 
 <x-jumbo dnone="true" class="bg-primary" reverseJumbo="flex-row-reverse">
   <x-slot:textBorderColor>

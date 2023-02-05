@@ -10,21 +10,16 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
   <link rel="manifest" href="/assets/site.webmanifest">
 
-  <title>{{ 'WAB - Guest' }}</title>
+  <title>{{ isset($pageTitle) ? $pageTitle . " | " :  '' }} Web Artisan Bros</title>
 
   <!-- Scripts -->
   @vite(["resources/js/app.js", "resources/styles/app.scss"])
-
-  <!-- Styles -->
-
 </head>
 
 <body class="antialiased">
+<x-navbar variant="{{ $navbarVariant ?? null }}"/>
 
-
-
-  @yield('content')
-
+@yield('content')
 
 </body>
 

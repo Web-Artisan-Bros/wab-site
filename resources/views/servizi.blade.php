@@ -1,7 +1,11 @@
 @extends('./layouts/public')
 
+@php
+ $navbarVariant = "white";
+ $pageTitle = "Servizi";
+@endphp
+
 @section ('content')
-<x-navlink background="white-nav" logo="/assets/NavLogoYB.svg" />
 
 <x-jumbo class="bg-light" dnone="false" reverseJumbo="">
  <x-slot:textBorderColor>
@@ -184,7 +188,7 @@
     var x = !isTouchDevice() ? event.clientX : event.touches[0].clientX;
     var y = !isTouchDevice() ? event.clientY : event.touches[0].clientY;
 
-    /* 
+    /*
     Subtract x position of mouse from x position of arrow and y position of mouse from y position of arrow.
     Use atan2(returns angle in radians)
     */
