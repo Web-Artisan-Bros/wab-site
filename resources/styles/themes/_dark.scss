@@ -1,0 +1,29 @@
+@use "../partials/variables";
+
+[data-bs-theme="dark"] {
+  --bs-body-color: rgba(255, 255, 255, .8);
+
+  .navbar {
+    --bs-navbar-bg: var(--bs-dark);
+    --bs-navbar-color: var(--bs-light);
+    --bs-navbar-active-color: var(--bs-dark);
+    --bs-navbar-hover-color: var(--bs-white);
+  }
+
+  .dropdown {
+
+    .dropdown-menu {
+      --bs-dropdown-bg: var(--bs-dark);
+      --bs-dropdown-border-color: var(--bs-border-color);
+      --bs-dropdown-link-hover-color: var(--bs-dark);
+      --bs-dropdown-link-active-color: var(--bs-dark);
+      --bs-dropdown-link-hover-bg: var(--bs-primary);
+      --bs-dropdown-link-active-bg: var(--bs-primary);
+    }
+  }
+
+  .wab-highlight {
+    --color: #{variables.$dark};
+    --wab-bg-highlight-url: url("/public/assets/highlight_primary.svg")
+  }
+}

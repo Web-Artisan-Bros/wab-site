@@ -5,6 +5,11 @@
 
 @import "./css_variables";
 
+//different themes
+@import "./themes/dark";
+@import "./themes/light";
+@import "./themes/yellow";
+
 $enable-responsive-font-sizes: true;
 
 @import "./partials/reset";

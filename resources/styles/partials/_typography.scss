@@ -7,6 +7,7 @@
 .wab-highlight {
     --x-offset: -0.15em;
     --y-offset: 0;
+    color: var(--color);
     position: relative;
     display: inline-block;
     line-height: 1.4;
@@ -16,7 +17,7 @@
 
     &:after {
         content: "";
-        background-image: url("/public/assets/highlight_primary.svg");
+        background-image: var(--wab-bg-highlight-url);
 
         background-repeat: repeat-x;
         background-size: contain;
@@ -29,13 +30,5 @@
         transform: skewX(33deg);
         // Fixes jagged lines in chrome
         -webkit-backface-visibility: hidden;
-    }
-
-    &.wab-highlight--secondary {
-        color: variables.$light !important;
-
-        &:after {
-            background-image: url("/public/assets/highlight_secondary.svg");
-        }
     }
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" data-bs-theme="{{ $theme ?? 'dark' }}">
 
 <head>
   <meta charset="utf-8">
@@ -17,10 +17,9 @@
 </head>
 
 <body class="antialiased">
-<x-navbar variant="{{ $navbarVariant ?? null }}"/>
+  <x-navbar variant="{{ $navbarVariant ?? null }}"/>
 
-@yield('content')
+  @yield('content')
 
 </body>
-
 </html>

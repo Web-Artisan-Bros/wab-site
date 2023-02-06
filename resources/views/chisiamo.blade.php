@@ -1,6 +1,7 @@
 @extends('./layouts/public')
 
 @php
+  $theme = "yellow";
   $navbarVariant = "yellow";
   $pageTitle = "Chi siamo";
 @endphp

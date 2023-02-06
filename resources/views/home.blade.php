@@ -1,8 +1,9 @@
 @extends('layouts.public')
 
 @php
-$navbarVariant = "dark";
-$pageTitle = "Home";
+  $theme = "dark";
+  $navbarVariant = "dark";
+  $pageTitle = "Home";
 @endphp
 
 @section ('content')
