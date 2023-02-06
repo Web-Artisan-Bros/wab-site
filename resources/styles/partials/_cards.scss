@@ -1,17 +1,74 @@
+@use "./variables";
+
 .card {
-    --outline-offset-x: var(--outline-offset);
-    --outline-offset-y: var(--outline-offset);
-    --bs-card-spacer-y: 2rem;
+  --outline-offset-x: var(--outline-offset);
+  --outline-offset-y: var(--outline-offset);
+  --bs-card-spacer-y: 2rem;
+  --bs-card-color: var(--bs-body-color);
+
+  &:not(.card-flat):before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: calc(0px - var(--outline-offset-y));
+    right: calc(0px - var(--outline-offset-x));
+    width: 100%;
+    height: 100%;
+    border: 3px solid $secondary;
+    z-index: -1;
+  }
+}
+
+.service-card {
+  --bs-card-border-width: 0;
+  --bs-card-bg: transparent;
+  --bs-card-cap-bg: transparent;
+
+
+  .card-header {
+    //border-bottom: var(--bs-card-border-color) 3px solid;
+    position: relative;
 
     &:before {
-        content: "";
-        display: block;
-        position: absolute;
-        top: calc(0px - var(--outline-offset-y));
-        right: calc(0px - var(--outline-offset-x));
-        width: 100%;
-        height: 100%;
-        border: 3px solid $secondary;
-        z-index: -1;
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 3px;
+      background-color: var(--bs-body-color);
     }
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: calc(100% - 3px);
+      right: 0;
+      width: 100%;
+      height: 3px;
+      background-color: var(--bs-card-border-color);
+      transition: top #{$ease}, height #{$ease}, opacity #{$ease};
+      opacity: 1;
+    }
+  }
+
+  h4, .border-bottom {
+    transition: color #{$ease}, border-color #{$ease};
+  }
+
+  &:hover {
+    .card-header {
+      &:after {
+        top: 0;
+        height: 100%;
+        opacity: 0;
+      }
+    }
+
+    h4 {
+      color: var(--bs-card-border-color) !important;
+    }
+  }
 }

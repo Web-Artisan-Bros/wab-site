@@ -1,13 +1,20 @@
 @use "../partials/variables";
 
 [data-bs-theme="dark"] {
-  --bs-body-color: rgba(255, 255, 255, .8);
+  --bs-body-bg: #{variables.$dark};
+  --bs-body-color: var(--bs-light);
+  --bs-heading-color: var(--bs-light);
+  --accent-color: #{variables.$primary};
 
   .navbar {
     --bs-navbar-bg: var(--bs-dark);
     --bs-navbar-color: var(--bs-light);
     --bs-navbar-active-color: var(--bs-dark);
     --bs-navbar-hover-color: var(--bs-white);
+  }
+
+  .card {
+    --bs-card-border-color: var(--bs-primary);
   }
 
   .dropdown {

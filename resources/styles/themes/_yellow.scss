@@ -1,12 +1,27 @@
 @use "../partials/variables";
 
 [data-bs-theme="yellow"] {
+  --bs-body-bg: #{variables.$primary};
   --bs-body-color: var(--bs-dark);
+  --bs-heading-color: var(--bs-dark);
+  --accent-color: #{variables.$secondary};
 
   .navbar {
     --bs-navbar-bg: var(--bs-primary);
     --bs-navbar-color: var(--bs-dark);
     --bs-navbar-active-color: var(--bs-light);
+  }
+
+  .btn-primary {
+    --bs-btn-color: var(--bs-light);
+    --bs-btn-hover-color: var(--bs-light);
+    --bs-btn-bg: var(--bs-secondary);
+    --bs-btn-hover-bg: #{lighten(variables.$secondary, 1%)};
+    --outline-color: var(--bs-light);
+  }
+
+  .card{
+    --bs-card-border-color: var(--bs-secondary);
   }
 
   .dropdown {

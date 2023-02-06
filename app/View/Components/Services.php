@@ -7,14 +7,16 @@ use Illuminate\View\Component;
 class Services extends Component
 {
     public $cards = [];
+    public $theme = 'light';
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($cards)
+    public function __construct($cards, $theme = 'light')
     {
         $this->cards = $cards;
+        $this->theme = $theme;
     }
 
     /**

@@ -1,6 +1,6 @@
 @props(['img', 'button'=>''])
 
-<section class="bg-light text-dark">
+<section class="themed-section" data-bs-theme="{{$theme}}">
   <div class="container container-p-156">
     <div class="row pb-sm-5">
 

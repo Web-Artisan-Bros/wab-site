@@ -6,7 +6,6 @@
   .navbar-nav {
     .nav-link {
       position: relative;
-
       padding-left: 1rem;
       padding-right: 1rem;
 
@@ -20,6 +19,7 @@
           bottom: 0;
           left: 0;
           transition: opacity #{$ease}, width #{$ease};
+          background-color: var(--accent-color);
         }
 
         &:hover::after {
@@ -41,15 +41,25 @@
   }
 
   .dropdown {
-    .nav-link {
-      .icon {
-        margin-left: 8px;
-        transition: rotate #{$ease};
-      }
+    .icon {
+      width: 14px;
+      height: 14px;
+      margin-left: 8px;
+      transition: rotate #{$ease};
+    }
 
+    .nav-link {
       &:hover, &.show {
         .icon {
           rotate: 45deg;
+        }
+      }
+    }
+
+    .dropdown-item {
+      &:hover {
+        .icon {
+          rotate: -45deg;
         }
       }
     }
@@ -233,3 +243,5 @@
       }
     }*/
 }
+
+

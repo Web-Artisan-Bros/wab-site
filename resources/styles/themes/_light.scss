@@ -1,13 +1,20 @@
 @use "../partials/variables";
 
 [data-bs-theme="light"] {
+  --bs-body-bg: #{variables.$light};
   --bs-body-color: var(--bs-dark);
+  --bs-heading-color: var(--bs-dark);
   --bs-border-color: #cfcfcf;
+  --accent-color: #{variables.$primary};
 
   .navbar {
     --bs-navbar-bg: var(--bs-light);
     --bs-navbar-color: var(--bs-dark);
-    --bs-navbar-active-color: var(--bs-light);
+    --bs-navbar-active-color: var(--bs-dark);
+  }
+
+  .card {
+    --bs-card-border-color: var(--bs-primary);
   }
 
   .dropdown {
@@ -23,7 +30,7 @@
   }
 
   .wab-highlight {
-    --color: #{variables.$light};
-    --wab-bg-highlight-url: url("/public/assets/highlight_secondary.svg");
+    --color: #{variables.$dark};
+    --wab-bg-highlight-url: url("/public/assets/highlight_primary.svg");
   }
 }

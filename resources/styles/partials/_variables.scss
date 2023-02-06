@@ -45,3 +45,13 @@ $h6-font-size: $font-size-base;
 $enable-negative-margins: true;
 
 $ease: 0.3s ease-in-out;
+
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px
+)
