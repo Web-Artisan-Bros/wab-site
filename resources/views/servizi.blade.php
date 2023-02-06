@@ -212,5 +212,4 @@
  });
 </script>
 
-<x-footer background="white-footer" />
 @endsection

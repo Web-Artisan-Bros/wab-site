@@ -4,7 +4,14 @@
   --bs-body-bg: #{variables.$dark};
   --bs-body-color: var(--bs-light);
   --bs-heading-color: var(--bs-light);
+  --bs-border-color: var(--bs-light);
+
+  // accent used for some lines
   --accent-color: #{variables.$primary};
+
+  // logo variables
+  --logo-text: #{variables.$light};
+  --logo-accent: #{variables.$primary};
 
   .navbar {
     --bs-navbar-bg: var(--bs-dark);
@@ -27,6 +34,13 @@
       --bs-dropdown-link-hover-bg: var(--bs-primary);
       --bs-dropdown-link-active-bg: var(--bs-primary);
     }
+  }
+
+  .btn-sqr {
+    --border-square-color: #{variables.$light};
+    --text-color: #{variables.$light};
+    --icon-color: #{variables.$dark};
+    --icon-bg-color: #{variables.$light};
   }
 
   .wab-highlight {

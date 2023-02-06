@@ -17,9 +17,11 @@
 </head>
 
 <body class="antialiased">
-  <x-navbar variant="{{ $navbarVariant ?? null }}"/>
+<x-navbar/>
 
-  @yield('content')
+@yield('content')
+
+{{--<x-footer/>--}}
 
 </body>
 </html>

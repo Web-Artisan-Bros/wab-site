@@ -6,9 +6,6 @@ use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
 class Navbar extends Component {
-  public string $logo;
-  public string $background;
-  public string $variant;
   public array $menuEntries;
   
   /**
@@ -16,28 +13,8 @@ class Navbar extends Component {
    *
    * @return void
    */
-  public function __construct($variant) {
-    $this->variant     = $variant;
+  public function __construct() {
     $this->menuEntries = config('menuEntries');
-    
-    $this->setVariant();
-  }
-  
-  private function setVariant() {
-    switch ($this->variant) {
-      case 'white':
-        $this->logo       = 'NavLogoYB';
-        $this->background = 'white-nav';
-        break;
-      case 'yellow':
-        $this->logo       = 'NavLogoR';
-        $this->background = 'yellow-nav';
-        break;
-      default:
-        $this->logo       = 'NavLogoYW';
-        $this->background = 'dark-nav';
-        break;
-    }
   }
   
   /**

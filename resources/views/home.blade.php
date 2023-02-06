@@ -84,7 +84,7 @@
     </div>
   </x-services>
 
-  <x-contact class="mt-4" background="bg-primary">
+  <x-contact class="mt-4" theme="yellow">
     <x-slot:reverse>
       btn-hover
     </x-slot:reverse>
@@ -93,6 +93,5 @@
     </x-slot:imgCenter>
   </x-contact>
   <x-accordion class="light-accordion" :entries="$accordionWhyUs"/>
-  <x-footer background="dark-footer"/>
 
 @endsection

@@ -5,7 +5,11 @@
   --bs-body-color: var(--bs-dark);
   --bs-heading-color: var(--bs-dark);
   --bs-border-color: #cfcfcf;
-  --accent-color: #{variables.$primary};
+  --accent-color: #{variables.$secondary};
+
+  // logo variables
+  --logo-text: #{variables.$dark};
+  --logo-accent: #{variables.$primary};
 
   .navbar {
     --bs-navbar-bg: var(--bs-light);
@@ -27,6 +31,14 @@
       --bs-dropdown-link-hover-bg: var(--bs-primary);
       --bs-dropdown-link-active-bg: var(--bs-primary);
     }
+  }
+
+  .btn-sqr {
+    --bg-square-color: #{variables.$secondary};
+    --border-square-color: #{variables.$dark};
+    --text-color: #{variables.$dark};
+    --icon-color: #{variables.$dark};
+    --icon-bg-color: #{variables.$primary};
   }
 
   .wab-highlight {

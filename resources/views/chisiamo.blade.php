@@ -99,5 +99,4 @@
   </div>
 </section>
 
-<x-footer background="yellow-footer" />
 @endsection

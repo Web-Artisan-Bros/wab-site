@@ -1,17 +1,10 @@
-{{-- @props([
-  "active" => false,
-]) --}}
-
-{{-- <a class="nav-link {{ $active ? 'active' : ''  }}" href="{{ $href }}">
-{{ $slot }}
-</a> --}}
 
 <div>
 
-  <nav class="navbar navbar-expand-lg py-3 wab-nav  {{ $background }}">
+  <nav class="navbar navbar-expand-lg py-3 wab-nav">
     <div class="container">
       <a class="navbar-brand" href="{{ url('/') }}">
-        <x-svg-icon icon="{{$logo}}"/>
+        <x-svg-icon icon="logo_text"/>
       </a>
 
       <button class="navbar-toggler" type="button"
