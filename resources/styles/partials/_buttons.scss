@@ -15,7 +15,7 @@
 
     &:after {
         content: "";
-        // border: 1px solid $dark;
+        border: 3px solid $dark;
         display: block;
         position: absolute;
         top: 0;
@@ -31,6 +31,7 @@
         &:after {
             // color: var(--bs-btn-hover-color);
             background-color: var(--bs-btn-hover-bg);
+            border: 0px solid $dark;
             // border-color: var(--bs-btn-hover-border-color);
         }
     }
@@ -44,9 +45,11 @@
         width: 100%;
         height: 100%;
         border: 3px solid var(--outline-color);
-        transition: top #{$ease}, right #{$ease};
+        transition: top #{$ease},
+            right #{$ease};
         z-index: -1;
     }
+
     img,
     .icon {
         transition: rotate #{$ease};
@@ -55,10 +58,12 @@
     }
 
     &:hover {
+
         img,
         .icon {
             rotate: 45deg;
         }
+
         &:before {
             top: 0;
             right: 0;
@@ -79,3 +84,11 @@
     --bs-btn-color: #{variables.$dark};
     --outline-color: #{variables.$primary};
 }
+
+// .btn::after {
+//     border-width: 3px;
+
+//     // &:hover {
+//     //     border: 3px solid #{$primary};
+//     // }
+// }

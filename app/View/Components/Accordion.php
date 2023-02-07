@@ -6,6 +6,7 @@ use Illuminate\View\Component;
 
 class Accordion extends Component
 {
+  public $theme;
   public $entries = [];
 
   /**
@@ -13,9 +14,10 @@ class Accordion extends Component
    *
    * @return void
    */
-  public function __construct($entries)
+  public function __construct($entries, $theme = 'light')
   {
     $this->entries = $entries;
+    $this->theme = $theme;
   }
 
   /**

@@ -1,22 +1,22 @@
 .wab-accordion {
-    &.light-accordion {
+    
         background-color: #{$light};
         color: #{$dark};
 
         .accordion {
-            border-top: 3px solid #{$primary};
-            border-bottom: 3px solid #{$primary};
-            --bs-accordion-color: #{$dark};
-            --bs-accordion-border-color: #{$primary};
+            // border-top: 3px solid #{$primary};
+            // border-bottom: 3px solid #{$primary};
+            // --bs-accordion-color: #{$dark};
+            // --bs-accordion-border-color: #{$primary};
             --bs-accordion-border-width: #{3px};
             --bs-accordion-btn-active-icon: src= "";
-            --bs-accordion-btn-color: #{$dark};
-            --bs-accordion-bg: #{$light};
-            --bs-accordion-active-bg: transparent;
-            --bs-accordion-active-color: transparent;
+            // --bs-accordion-btn-color: #{$dark};
+            // --bs-accordion-bg: #{$light};
+            // --bs-accordion-active-bg: transparent;
+            // --bs-accordion-active-color: transparent;
             --bs-accordion-btn-padding-y: 2rem;
         }
-    }
+    
 
     &.dark-accordion {
         .row {

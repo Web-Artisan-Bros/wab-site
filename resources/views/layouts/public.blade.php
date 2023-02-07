@@ -17,11 +17,12 @@
 </head>
 
 <body class="antialiased">
-<x-navbar/>
+  <x-navbar theme="{{ $theme }}" />
 
-@yield('content')
+  @yield('content')
 
-{{--<x-footer/>--}}
+  {{--<x-footer/>--}}
 
 </body>
+
 </html>

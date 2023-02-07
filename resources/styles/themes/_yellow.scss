@@ -14,17 +14,25 @@
     --bs-navbar-bg: var(--bs-primary);
     --bs-navbar-color: var(--bs-dark);
     --bs-navbar-active-color: var(--bs-light);
+
   }
+
 
   .btn-primary {
-    --bs-btn-color: var(--bs-light);
+    --bs-btn-color: var(--bs-dark);
     --bs-btn-hover-color: var(--bs-light);
-    --bs-btn-bg: var(--bs-secondary);
+    --bs-btn-bg: var(--bs-primary);
     --bs-btn-hover-bg: #{lighten(variables.$secondary, 1%)};
-    --outline-color: var(--bs-light);
+                                --outline-color: var(--bs-secondary);
   }
 
-  .card{
+                .btn:after {
+                  border: 3px solid $dark;
+                  transition: all 0.3ms ease-in-out;
+        
+                }
+        
+                .card {
     --bs-card-border-color: var(--bs-secondary);
   }
 
@@ -33,9 +41,9 @@
     .dropdown-menu {
       --bs-dropdown-bg: var(--bs-primary);
       --bs-dropdown-border-color: var(--bs-border-color);
-      --bs-dropdown-link-hover-color: var(--bs-dark);
+      --bs-dropdown-link-hover-color: var(--bs-light);
       --bs-dropdown-link-active-color: var(--bs-dark);
-      --bs-dropdown-link-hover-bg: var(--bs-light);
+      --bs-dropdown-link-hover-bg: var(--bs-secondary);
       --bs-dropdown-link-active-bg: var(--bs-light);
     }
   }

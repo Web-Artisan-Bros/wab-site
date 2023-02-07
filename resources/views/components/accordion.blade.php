@@ -1,7 +1,7 @@
 @props(['class' =>''])
 
-<section class="wab-accordion {{ $class }} ">
-  <div class="container container-p-156">
+<section class="themed-section" data-bs-theme="{{$theme}}">
+  <div class="container container-p-156 wab-accordion">
     <div class="row align-items-end pb-3">
       <div class="col-5">
         <h2 class="position-relative z-index1">
