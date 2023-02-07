@@ -25,17 +25,30 @@
     --bs-btn-hover-color: var(--bs-light);
     --bs-btn-bg: var(--bs-primary);
     --bs-btn-hover-bg: #{lighten(variables.$secondary, 1%)};
-                                --outline-color: var(--bs-secondary);
+    --outline-color: var(--bs-secondary);
   }
 
-                .btn:after {
-                  border: 3px solid $dark;
-                  transition: all 0.3ms ease-in-out;
-        
-                }
-        
-                .card {
+  .btn:after {
+    border: 3px solid $dark;
+    transition: all 0.3ms ease-in-out;
+
+  }
+
+  .card {
     --bs-card-border-color: var(--bs-secondary);
+  }
+
+  .wab-accordion {
+
+    .accordion {
+      --bs-accordion-color: var(--bs-dark);
+      --bs-accordion-border-color: var(--accent-color);
+      --bs-accordion-btn-color: var(--bs-dark);
+
+      .accordion-button {
+        color: #{$dark};
+      }
+    }
   }
 
   .dropdown {
