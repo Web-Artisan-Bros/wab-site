@@ -7,14 +7,17 @@ use Illuminate\View\Component;
 
 class Navbar extends Component {
   public array $menuEntries;
+  public $theme;
   
   /**
    * Create a new component instance.
    *
    * @return void
    */
-  public function __construct() {
+  public function __construct($theme = 'light')
+  {
     $this->menuEntries = config('menuEntries');
+    $this->theme = $theme;
   }
   
   /**

@@ -1,17 +1,14 @@
 @extends('./layouts/public')
 
 @php
-  $theme = "yellow";
-  $navbarVariant = "yellow";
-  $pageTitle = "Chi siamo";
+$theme = "yellow";
+$navbarVariant = "yellow";
+$pageTitle = "Chi siamo";
 @endphp
 
 @section ('content')
 
-<x-jumbo dnone="true" class="bg-primary" reverseJumbo="flex-row-reverse">
-  <x-slot:textBorderColor>
-    bordeTextBlack
-  </x-slot:textBorderColor>
+<x-jumbo dnone="true" reverseJumbo="flex-row-reverse" theme="yellow">
   <x-slot:reverse>
     btn-reverse-white
   </x-slot:reverse>

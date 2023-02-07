@@ -7,7 +7,6 @@ use Illuminate\View\Component;
 class SquareBtn extends Component
 {
     // public $arrowImg;
-    public $textBorderColor;
     public $reverse;
     public $theme;
 
@@ -17,13 +16,11 @@ class SquareBtn extends Component
      * @param mixed $class
      * @param mixed $arrowBg
      * @param mixed $arrowImg
-     * @param mixed $textBorderColor
      * @param mixed $reverse
      */
-    public function __construct($textBorderColor, $reverse, $theme='light')
+    public function __construct($reverse, $theme = 'light')
     {
         // $this->arrowImg = $arrowImg;
-        $this->textBorderColor = $textBorderColor;
         $this->reverse = $reverse;
         $this->theme = $theme;
     }
