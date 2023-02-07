@@ -5,6 +5,8 @@
   --bs-body-color: var(--bs-light);
   --bs-heading-color: var(--bs-light);
   --bs-border-color: var(--bs-light);
+  --bs-link-color-rgb: #{to-rgb(variables.$light)};
+  --bs-link-hover-color-rgb: #{to-rgb(variables.$primary)};
 
   // accent used for some lines
   --accent-color: #{variables.$primary};

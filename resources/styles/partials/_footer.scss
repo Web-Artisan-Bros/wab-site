@@ -1,138 +1,78 @@
 @use "./variables";
 
-.wab-footer {
-    .btn {
-        --outline-color: #{$primary};
-        --bs-btn-bg: #{$dark};
-        --bs-btn-border-color: #{$light};
-        --bs-btn-color: #{$light};
+footer {
+
+  .footer-header {
+    height: 150px;
+    border-bottom: 3px solid var(--accent-color);
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    font-family: variables.$font-family-titles;
+    gap: 1rem;
+
+    @include media-breakpoint-down(lg) {
+      justify-content: center;
+      gap: 1rem;
+
+      * {
+        //flex-basis: 0;
+      }
     }
+  }
 
-    .div-with-title {
-        min-height: 130px;
+  // Class used by the fotter ? symbol and logo
+  .footer-logo {
+    width: 150px;
+    height: 150px;
+    font-size: 100px;
+    display: flex;
+    align-items: center;
+
+    @include media-breakpoint-down(lg) {
+      width: 100px;
+      height: 100px;
+      font-size: 50px;
     }
+  }
 
-    .social .icon {
-        transition: color #{$ease};
-        color: var(--bs-primary);
+  .social-icons-container {
+    display: flex;
+    gap: 1rem;
 
-        &.wab-highlight {
-            --x-offset: -0.35em;
-            --y-offset: -0.35em;
+    .icon {
+      transition: color #{$ease};
+      color: var(--bs-primary);
 
-            &:after {
-                opacity: 0;
-                transition: opacity #{$ease};
-            }
+      &.wab-highlight {
+        --x-offset: -0.35em;
+        --y-offset: -0.35em;
 
-            &:hover {
-                &:after {
-                    opacity: 1;
-                }
-            }
-        }
-
-        svg {
-            transition: transform #{$ease};
+        &:after {
+          opacity: 0;
+          transition: opacity #{$ease};
         }
 
         &:hover {
-            color: var(--bs-dark);
-
-            svg {
-                transform: rotate(15deg);
-            }
+          &:after {
+            opacity: 1;
+          }
         }
+      }
+
+      svg {
+        transition: transform #{$ease};
+      }
+
+      &:hover {
+        color: var(--bs-dark);
+
+        svg {
+          transform: rotate(15deg);
+        }
+      }
     }
+  }
 
-    &.dark-footer {
-        background-color: transparent;
-        h3,
-        a {
-            --bs-link-color-rgb: #{$light};
-        }
-
-        .accent-color {
-            color: #{$primary} !important;
-        }
-
-        .separator {
-            border-color: #{$primary} !important;
-        }
-    }
-
-    &.yellow-footer {
-        background-color: #{$primary};
-        color: #{$dark};
-        h3,
-        h2,
-        a {
-            color: #{$dark};
-        }
-
-        .wab-highlight:after {
-            background-image: url(http://127.0.0.1:5173/public/assets/highlight_secondary.svg);
-        }
-
-        .separator {
-            border-color: #{$secondary} !important;
-        }
-
-        .accent-color {
-            color: #{$secondary} !important;
-        }
-
-        .btn {
-            --outline-color: #{$secondary};
-            --bs-btn-bg: #{$primary};
-            --bs-btn-border-color: #{$dark};
-            --bs-btn-color: #{$dark};
-            --bs-btn-hover-bg: #{$primary};
-            --bs-btn-hover-border-color: #{$dark};
-        }
-
-        .social .icon {
-            color: var(--bs-secondary);
-
-            &:hover {
-                color: var(--bs-dark);
-            }
-        }
-    }
-
-    &.white-footer {
-        background-color: #{$light};
-
-        .separator {
-            border-color: #{$primary} !important;
-        }
-
-        color: #{$dark};
-        h3,
-        h2,
-        a {
-            color: #{$dark};
-        }
-
-        .accent-color {
-            color: #{$primary} !important;
-        }
-
-        .btn {
-            --outline-color: #{$primary};
-            --bs-btn-bg: #{$light};
-            --bs-btn-border-color: #{$dark};
-            --bs-btn-color: #{$dark};
-            --bs-btn-hover-bg: #{$primary};
-            --bs-btn-hover-border-color: #{$dark};
-        }
-
-        .social .icon {
-            color: var(--bs-dark);
-
-            &:hover {
-                color: var(--bs-dark);
-            }
-        }
-    }
 }
+

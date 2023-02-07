@@ -21,7 +21,7 @@
 
 @yield('content')
 
-{{--<x-footer/>--}}
+<x-footer theme="{{ $theme }}"/>
 
 </body>
 </html>
