@@ -4,12 +4,12 @@
   color: var(--bs-body-color);
 
   .accordion {
-     border-top: 3px solid var(--accent-color);
-     border-bottom: 3px solid var(--accent-color);
-    // --bs-accordion-color: #{$dark};
-    // --bs-accordion-border-color: #{$primary};
+    border-top: 3px solid var(--accent-color);
+    border-bottom: 3px solid var(--accent-color);
+    --bs-accordion-color: var(--bs-body-color);
+    --bs-accordion-border-color: var(--accent-color);
     --bs-accordion-border-width: #{3px};
-    --bs-accordion-btn-active-icon: src= "";
+    --bs-accordion-btn-active-icon: src="";
     // --bs-accordion-btn-color: #{$dark};
     // --bs-accordion-bg: #{$light};
     // --bs-accordion-active-bg: transparent;
@@ -18,37 +18,37 @@
   }
 
 
-  &.dark-accordion {
-    .row {
-      flex-direction: row-reverse;
-    }
+  // &.dark-accordion {
+  //   .row {
+  //     flex-direction: row-reverse;
+  //   }
 
-    .accordion {
-      border-top: 3px solid #{$primary};
-      border-bottom: 3px solid #{$primary};
-      --bs-accordion-border-color: #{$primary};
-      --bs-accordion-border-width: #{3px};
-      --bs-accordion-btn-active-icon: src= "";
-      --bs-accordion-btn-padding-y: 2rem;
+  //   .accordion {
+  //     border-top: 3px solid #{$primary};
+  //     border-bottom: 3px solid #{$primary};
+  //     --bs-accordion-border-color: #{$primary};
+  //     --bs-accordion-border-width: #{3px};
+  //     --bs-accordion-btn-active-icon: src= "";
+  //     --bs-accordion-btn-padding-y: 2rem;
 
-      .accordion-button {
-        color: #{$light};
+  //     .accordion-button {
+  //       color: #{$light};
 
-        &:hover,
-        &:not(.collapsed) {
-          color: #{$dark};
-        }
-      }
+  //       &:hover,
+  //       &:not(.collapsed) {
+  //         color: #{$dark};
+  //       }
+  //     }
 
-      .accordion-item {
-        color: #{$dark};
-      }
-    }
-  }
+  //     .accordion-item {
+  //       color: #{$dark};
+  //     }
+  //   }
+  // }
 
   .accordion-item:has(.show) {
     background-color: var(--accent-color);
-    --bs-accordion-active-color: #{$dark};
+    --bs-accordion-active-color: var(--bs-body-color);
   }
 
   .accordion-item {
@@ -57,7 +57,8 @@
 
     .cup {
       opacity: 0;
-      transition: opacity #{$ease}, scale #{$ease};
+      transition: opacity #{$ease},
+      scale #{$ease};
       margin-top: 0;
       scale: 0.9;
     }
@@ -73,7 +74,8 @@
       top: 50%;
       left: 0;
       transform: translate(0, -50%);
-      transition: transform #{$ease}, left #{$ease};
+      transition: transform #{$ease},
+      left #{$ease};
       transform-origin: center;
     }
 
@@ -86,7 +88,7 @@
     }
 
     .accordion-button {
-      color: #{$dark-text};
+      color: var(--bs-accordion-color);
       background-color: transparent;
       box-shadow: none;
       display: flex;

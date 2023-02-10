@@ -3,6 +3,8 @@
 @php
 $theme = "light";
 $navbarVariant = "white";
+$footerVariant = "white";
+
 $pageTitle = "Servizi";
 @endphp
 

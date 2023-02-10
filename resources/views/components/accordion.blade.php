@@ -20,7 +20,7 @@
       </div>
     </div>
 
-    <div class="accordion accordion-flush mt-5 " id="accordionWhyUs">
+    <div class="accordion accordion-flush mt-5 themed-section" id="accordionWhyUs" data-bs-theme="{{$theme}}">
 
       @foreach($entries as $entry)
       <div class="accordion-item d-flex flex-column">

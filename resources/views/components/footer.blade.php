@@ -15,10 +15,7 @@
 
           <div class="row row-cols-md-2 row-cols-xl-3 row-cols-1 justify-content-center justify-content-lg-start">
             <div class="col mb-5">
-              <button class="btn btn-primary w-100"
-                      data-bs-toggle="offcanvas"
-                      href="#offcanvasExample"
-                      role="button" aria-controls="offcanvasExample">
+              <button class="btn ms-1 btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
                 SCRIVICI
                 <x-svg-icon icon="VectorArrow"></x-svg-icon>
               </button>
@@ -35,8 +32,7 @@
         {{-- Right Column --}}
         <div class="col">
           <div class="footer-header flex-column flex-lg-row">
-            <x-svg-icon class="accent-color footer-logo" icon="Logo"
-                        alt="logo web artisan bros"></x-svg-icon>
+            <x-svg-icon class="accent-color footer-logo" icon="Logo" alt="logo web artisan bros"></x-svg-icon>
 
             <div class="position-relative fs-3 lh-1 flex-lg-grow-1">
               <span><span class="accent-color">W</span>eb</span>
@@ -50,16 +46,16 @@
 
             <div class="social-icons-container">
               <a class="text-decoration-none" href="mailto:Info@webartisan.com">
-                <x-svg-icon icon="VectorMail" alt="Mail Icon" class="wab-highlight"/>
+                <x-svg-icon icon="VectorMail" alt="Mail Icon" class="wab-highlight" />
               </a>
               <a class="text-decoration-none" href="https://www.instagram.com/webartisanbros/">
-                <x-svg-icon icon="VectorInsta" alt="Instagram Icon" class="wab-highlight"/>
+                <x-svg-icon icon="VectorInsta" alt="Instagram Icon" class="wab-highlight" />
               </a>
               <a class="text-decoration-none" href="#">
-                <x-svg-icon icon="VectorGit" alt="Git Hub Icon" class="wab-highlight"/>
+                <x-svg-icon icon="VectorGit" alt="Git Hub Icon" class="wab-highlight" />
               </a>
               <a class="text-decoration-none" href="#">
-                <x-svg-icon icon="VectorInsta" alt="Instagram Icon" class="wab-highlight"/>
+                <x-svg-icon icon="VectorInsta" alt="Instagram Icon" class="wab-highlight" />
               </a>
             </div>
           </div>
@@ -76,9 +72,9 @@
         </div>
       </div>
 
-        <div class="text-center d-lg-none">
-          @include('components.footer.copyright')
-        </div>
+      <div class="text-center d-lg-none">
+        @include('components.footer.copyright')
+      </div>
     </div>
   </div>
 </footer>

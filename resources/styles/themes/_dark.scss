@@ -28,8 +28,13 @@
     --outline-color: var(--bs-primary);
   }
 
+  .btn{
+    --bs-btn-bg: var(--bs-body-bg);
+    --bs-btn-color: var(--bs-body-color);
+    --outline-color: var(--accent-color);
+  }
   .btn:after {
-    border: 3px solid $light;
+    border: 3px solid var(--bs-body-color);
   }
 
   .card {
@@ -37,22 +42,26 @@
   }
 
   .wab-accordion {
-    //background-color: #{$dark};
-    //color: #{$light};
 
-    .accordion {
-      //border-top: 3px solid #f6e077;
-      //border-bottom: 3px solid #f6e077;
-      --bs-accordion-color: #{$dark};
-      --bs-accordion-border-color: #f6e077;
-      --bs-accordion-btn-color: #{$light};
-      --bs-accordion-active-bg: transparent;
-      --bs-accordion-active-color: transparent;
 
-      .accordion-button {
-        color: #{$light};
-      }
-    }
+    // .accordion {
+    //   --bs-accordion-color: var(--bs-body-color);
+    //   --bs-accordion-border-color: var(--accent-color);
+    //   --bs-accordion-btn-color: var(--bs-body-color);
+    //   --bs-accordion-active-bg: transparent;
+    //   --bs-accordion-active-color: transparent;
+
+    //   .accordion-item {
+    //     color: var(--bs-body-bg);
+    //   }
+
+      // .accordion-button:hover,
+      // {
+      //   color: var(--bs-body-bg);
+      // }
+
+    
+    // }
   }
 
   .dropdown {

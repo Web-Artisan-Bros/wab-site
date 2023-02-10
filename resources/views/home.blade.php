@@ -75,6 +75,7 @@ $pageTitle = "Home";
   </x-slot:reverse>
 </x-contact>
 
-<x-accordion :entries="$accordionWhyUs" theme="light"></x-accordion>
+<x-accordion :entries="$accordionWhyUs" theme="light">
+</x-accordion>
 
 @endsection
