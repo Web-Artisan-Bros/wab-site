@@ -113,7 +113,6 @@ class Servizi extends Controller
             ]
         ];
 
-        // $class = 'black-nav';
         return view('servizi', compact('accordionWhyUs', 'cardsServices', 'accordionOurProcess'));
     }
 }

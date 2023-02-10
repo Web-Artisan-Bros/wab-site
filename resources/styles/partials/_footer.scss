@@ -42,7 +42,7 @@ footer {
 
     .icon {
       transition: color #{$ease};
-      color: var(--bs-primary);
+      color: var(--accent-color);
 
       &.wab-highlight {
         --x-offset: -0.35em;

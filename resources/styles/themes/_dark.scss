@@ -28,11 +28,12 @@
     --outline-color: var(--bs-primary);
   }
 
-  .btn{
+  .btn {
     --bs-btn-bg: var(--bs-body-bg);
     --bs-btn-color: var(--bs-body-color);
     --outline-color: var(--accent-color);
   }
+
   .btn:after {
     border: 3px solid var(--bs-body-color);
   }
@@ -41,28 +42,6 @@
     --bs-card-border-color: var(--bs-primary);
   }
 
-  .wab-accordion {
-
-
-    // .accordion {
-    //   --bs-accordion-color: var(--bs-body-color);
-    //   --bs-accordion-border-color: var(--accent-color);
-    //   --bs-accordion-btn-color: var(--bs-body-color);
-    //   --bs-accordion-active-bg: transparent;
-    //   --bs-accordion-active-color: transparent;
-
-    //   .accordion-item {
-    //     color: var(--bs-body-bg);
-    //   }
-
-      // .accordion-button:hover,
-      // {
-      //   color: var(--bs-body-bg);
-      // }
-
-    
-    // }
-  }
 
   .dropdown {
     .dropdown-menu {

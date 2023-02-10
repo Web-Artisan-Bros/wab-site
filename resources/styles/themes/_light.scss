@@ -34,27 +34,19 @@
           border: 3px solid var(--bs-body-color);
         }
 
-    .wab-accordion {
-      
-
-      // .accordion {
-       
-      //   --bs-accordion-color: var(--bs-body-color);
-      //   --bs-accordion-border-color: var(--accent-color);
-      //   --bs-accordion-btn-color: var(--bs-body-color);
-      //   --bs-accordion-active-bg: transparent;
-      //   --bs-accordion-active-color: transparent;
-
-      //   .accordion-item {
-      //       color: var(--bs-body-color);
-      //     }
-        
-      //   //   .accordion-button:hover,
-      //   //   .accordion-button:focus {
-      //   //     color: var(--bs-body-color);
-      //   //   }
-      // }
-    }
+        // .wab-accordion {
+        //   .accordion-button {
+        //     &:hover {
+        //       color: var(--bs-body-bg);
+        //     }
+    
+        //     &:not(.collapsed) {
+        //       .text {
+        //         color: var(--bs-body-bg);
+        //       }
+        //     }
+        //   }
+        // }
 
   .card {
     --bs-card-border-color: var(--bs-primary);

@@ -1,8 +1,7 @@
 <div class="d-flex {{ $reverse }}">
   <div class="btn-sqr red-square"></div>
 
-  <div class="btn-sqr white-square d-flex align-items-center justify-content-center" type="button"
-       data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+  <div class="btn-sqr white-square d-flex align-items-center justify-content-center" type="button" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
 
     <div class="lead contact-text contact-text-top">CONTATTACI</div>
     <div class="lead contact-text contact-text-right">CONTATTACI</div>
@@ -10,13 +9,9 @@
     <div class="lead contact-text contact-text-left">CONTATTACI</div>
 
     <div class="align-items-center d-flex  align-self-center">
-{{--      <div class="rotate-270 lead pt-4 align-self-start">CONTATTACI</div>--}}
       <x-svg-icon class="inside-arrow" icon="contact_arrow"></x-svg-icon>
-
-{{--      <div class="rotate-90 lead pt-4  align-self-end">CONTATTACI</div>--}}
     </div>
 
-{{--    <div class=" pb-2 ps-4 lead">CONTATTACI</div>--}}
   </div>
 
 

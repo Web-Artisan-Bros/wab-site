@@ -1,6 +1,6 @@
 <section class="themed-section" data-bs-theme="{{$theme}}">
   <div class="container container-p-156 dark-text">
-    <div class="row">
+    <div class="row {{ $theme === 'light'? 'flex-row-reverse' : '' }}">
       <div class="col">
         <div class="ps-3">
           <x-square-btn textBorderColor="bordeTextBlack" reverse="{{$reverse}}" theme="{{$theme}}">

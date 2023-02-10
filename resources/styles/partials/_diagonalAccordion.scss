@@ -4,6 +4,10 @@
     rotate: 15deg;
     margin-top: -8rem;
 
+    .arrow{
+        max-width: 40px;
+    }
+
     .nav {
         --bs-nav-link-color: #{$light};
         --bs-nav-link-hover-color: #{$primary};

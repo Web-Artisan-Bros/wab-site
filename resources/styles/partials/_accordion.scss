@@ -48,10 +48,11 @@
 
   .accordion-item:has(.show) {
     background-color: var(--accent-color);
-    --bs-accordion-active-color: var(--bs-body-color);
+    --bs-accordion-active-color: #{$dark};
   }
 
   .accordion-item {
+    color: var(--bs-accordion-active-color);
     transition: background-color #{$ease};
     position: relative;
 
@@ -98,8 +99,15 @@
         background-image: none;
       }
 
+      &:hover{
+        .text {
+            color: #{$dark};
+          }
+      }
+
       &:not(.collapsed) {
         .text {
+          color: #{$dark};
           padding-left: 20px;
         }
 

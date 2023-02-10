@@ -4,19 +4,18 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class DiagonalAccordion extends Component
+class AboutUs extends Component
 {
     public $theme;
-    public $entries = [];
+
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($entries, $theme = 'dark')
+    public function __construct($theme = 'light')
     {
         $this->theme = $theme;
-        $this->entries = $entries;
     }
 
     /**
@@ -26,6 +25,6 @@ class DiagonalAccordion extends Component
      */
     public function render()
     {
-        return view('components.diagonal-accordion');
+        return view('components.about-us');
     }
 }
