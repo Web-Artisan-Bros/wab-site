@@ -6,6 +6,7 @@
   --bs-heading-color: var(--bs-dark);
   --bs-border-color: #cfcfcf;
   --accent-color: #{variables.$primary};
+  --accent-color-contrast: #{variables.$dark};
   --bs-link-color-rgb: #{to-rgb(variables.$dark)};
   --bs-link-hover-color-rgb: #{to-rgb(variables.$primary)};
 
@@ -19,34 +20,34 @@
     --bs-navbar-active-color: var(--bs-dark);
   }
 
-    .btn-light {
-      --bs-btn-hover-bg: #{$primary};
-      --outline-color: var(--bs-primary);
-    }
+  .btn-light {
+    --bs-btn-hover-bg: #{$primary};
+    --outline-color: var(--bs-primary);
+  }
 
-        .btn {
-          --bs-btn-bg: var(--bs-body-bg);
-          --bs-btn-color: var(--bs-body-color);
-          --outline-color: var(--accent-color);
-        }
-    
-        .btn:after {
-          border: 3px solid var(--bs-body-color);
-        }
+  .btn {
+    --bs-btn-bg: var(--bs-body-bg);
+    --bs-btn-color: var(--bs-body-color);
+    --outline-color: var(--accent-color);
+  }
 
-        // .wab-accordion {
-        //   .accordion-button {
-        //     &:hover {
-        //       color: var(--bs-body-bg);
-        //     }
-    
-        //     &:not(.collapsed) {
-        //       .text {
-        //         color: var(--bs-body-bg);
-        //       }
-        //     }
-        //   }
-        // }
+  .btn:after {
+    border: 3px solid var(--bs-body-color);
+  }
+
+  // .wab-accordion {
+  //   .accordion-button {
+  //     &:hover {
+  //       color: var(--bs-body-bg);
+  //     }
+
+  //     &:not(.collapsed) {
+  //       .text {
+  //         color: var(--bs-body-bg);
+  //       }
+  //     }
+  //   }
+  // }
 
   .card {
     --bs-card-border-color: var(--bs-primary);

@@ -12,6 +12,7 @@
         position: relative;
         z-index: 0;
         background-color: #{$light};
+        // border: 3px solid var(--outline-color);
 
         &:after {
             content: "";
@@ -43,6 +44,7 @@
     .btn-close {
         --bs-btn-close-opacity: 1;
     }
+
     .btn {
         --outline-color: #{$primary};
         --bs-btn-bg: #{$light};

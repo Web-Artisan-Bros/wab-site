@@ -3,7 +3,7 @@
 
 @if ($dnone === "true")
 
-<div class="wab-jumbo" {{ $dnone }}>
+<div class="wab-jumbo themed-section" {{ $dnone }} data-bs-theme="{{$theme}}">
   <div class="container container-p-156">
     <div class="row {{$reverseJumbo}} pb-sm-5">
       <div class="col">
@@ -25,7 +25,7 @@
 
 @else
 
-<div class="{{ $class }} wab-jumbo">
+<div class="{{ $class }} wab-jumbo themed-section" data-bs-theme="{{$theme}}">
   <div class="container container-p-156">
     <div class="row {{$reverseJumbo}} pb-sm-5">
       <div class="col">

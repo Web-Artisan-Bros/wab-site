@@ -10,6 +10,7 @@
 
   // accent used for some lines
   --accent-color: #{variables.$primary};
+  --accent-color-contrast: #{variables.$dark};
 
   // logo variables
   --logo-text: #{variables.$light};
@@ -58,7 +59,7 @@
     --border-square-color: #{variables.$light};
     --text-color: #{variables.$light};
     --icon-color: #{variables.$dark};
-    --icon-bg-color: #{variables.$light};
+    --icon-bg-color: #{variables.$primary};
   }
 
   .wab-highlight {

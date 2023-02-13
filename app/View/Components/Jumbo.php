@@ -7,14 +7,17 @@ use Illuminate\View\Component;
 
 class Jumbo extends Component
 {
+  public $theme;
+
   /**
    * Create a new component instance.
    *
    * @return void
    */
-  public function __construct()
+  public function __construct($theme = 'light')
   {
-    //
+    $this->theme = $theme;
+
   }
 
   /**

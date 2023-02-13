@@ -5,6 +5,7 @@
   --bs-body-color: var(--bs-dark);
   --bs-heading-color: var(--bs-dark);
   --accent-color: #{variables.$secondary};
+  --accent-color-contrast: #{variables.$light};
   --bs-link-color-rgb: #{to-rgb(variables.$dark)};
   --bs-link-hover-color-rgb: #{to-rgb(variables.$secondary)};
 

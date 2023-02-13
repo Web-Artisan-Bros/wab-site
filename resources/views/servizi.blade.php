@@ -10,7 +10,7 @@ $pageTitle = "Servizi";
 
 @section ('content')
 
-<x-jumbo dnone="false" reverseJumbo="">
+<x-jumbo dnone="false" reverseJumbo="" theme="light">
   <x-slot:reverse>
     btn-hover
   </x-slot:reverse>

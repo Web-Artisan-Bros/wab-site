@@ -21,7 +21,7 @@
               idee e le tue necessità in un prodotto concreto!</p>
 
           </div>
-          <!-- <p class="lead"></p> -->
+          
         </div>
       </div>
 
