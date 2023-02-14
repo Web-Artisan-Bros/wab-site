@@ -2,9 +2,17 @@
     display: flex;
     justify-content: flex-end;
 
+    @include media-breakpoint-down(lg) {
+        justify-content: center;
+    }
+
     img {
         // max-width: 40vw;
         max-height: 600px;
+
+        @include media-breakpoint-down(lg) {
+            max-height: 400px;
+        }
     }
 
     .img-border {

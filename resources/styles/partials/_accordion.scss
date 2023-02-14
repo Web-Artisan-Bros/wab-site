@@ -101,10 +101,10 @@
         background-image: none;
       }
 
-      &:hover{
+      &:hover {
         .text {
-            color: #{$dark};
-          }
+          color: #{$dark};
+        }
       }
 
       &:not(.collapsed) {
@@ -116,6 +116,11 @@
         .arrow {
           left: 100%;
           transform: translate(100%, -50%) rotate(135deg);
+
+          @include media-breakpoint-down(lg) {
+            left: 100%;
+            transform: translate(20%, -50%) rotate(135deg);
+          }
         }
       }
     }

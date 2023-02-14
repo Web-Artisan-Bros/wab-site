@@ -6,11 +6,26 @@
     position: absolute;
     bottom: 36px;
     left: 36px;
+
+    @include media-breakpoint-down(lg) {
+        display: none;
+    }
+}
+
+.img-square {
+    @include media-breakpoint-down(lg) {
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
 }
 
 .img-bw {
     filter: grayscale(100%);
     transition: filter 1s cubic-bezier(0.87, -0.41, 0.19, 1.44);
+
+    @include media-breakpoint-down(lg) {
+        filter: grayscale(0%);
+    }
 
     &:hover {
         filter: grayscale(0%);

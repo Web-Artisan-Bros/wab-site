@@ -3,7 +3,7 @@
 footer {
 
 
-  
+
 
   .footer-header {
     height: 150px;
@@ -18,7 +18,7 @@ footer {
       justify-content: center;
       gap: 1rem;
 
-      
+
     }
   }
 
@@ -36,6 +36,20 @@ footer {
       font-size: 50px;
     }
   }
+
+  .col:has( > button) {
+    @include media-breakpoint-down(lg) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+    .d-flex:has(> .social-icons-container) {
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 1rem !important;
+        
+      }
+    }
 
   .social-icons-container {
     display: flex;
@@ -76,4 +90,3 @@ footer {
   }
 
 }
-

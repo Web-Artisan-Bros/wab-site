@@ -20,6 +20,9 @@
 
   }
 
+  hr {
+    border-color:#{variables.$secondary};
+  }
 
   .btn-primary {
     --bs-btn-color: var(--bs-dark);

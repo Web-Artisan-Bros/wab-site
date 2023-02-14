@@ -39,6 +39,7 @@
 
     .nav-item {
       @include media-breakpoint-down(lg) {
+        margin-bottom: 1rem;
         flex-direction: column;
         align-items: flex-start !important;
       }

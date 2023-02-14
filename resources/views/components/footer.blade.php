@@ -14,7 +14,7 @@
           </div>
 
           <div class="row row-cols-md-2 row-cols-xl-3 row-cols-1 justify-content-center justify-content-lg-start">
-            <div class="col mb-5">
+            <div class="col mb-2 mb-lg-5">
               <button class="btn ms-1 btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
                 SCRIVICI
                 <x-svg-icon icon="VectorArrow"></x-svg-icon>
@@ -31,7 +31,7 @@
 
         {{-- Right Column --}}
         <div class="col">
-          <div class="footer-header flex-column flex-lg-row">
+          <div class="footer-header flex-column flex-lg-row  mb-3 mb-lg-5">
             <x-svg-icon class="accent-color footer-logo" icon="Logo" alt="logo web artisan bros"></x-svg-icon>
 
             <div class="position-relative fs-3 lh-1 flex-lg-grow-1">

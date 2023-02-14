@@ -1,0 +1,6 @@
+.img-small {
+ @include media-breakpoint-down(lg) {
+  object-fit: cover;
+  aspect-ratio: 2/1;
+ }
+}

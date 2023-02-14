@@ -12,15 +12,15 @@
             btn-reverse-white
         </x-slot:reverse>
         <x-slot:text>
-            <div class="mb-5">
-                <h1 class="text-dark">SIAMO <span class="text-dark wab-highlight wab-highlight--secondary">
-                        WEB </span><span class="text-dark wab-highlight wab-highlight--secondary">
-                        ARTISAN</span> <span class="text-dark wab-highlight wab-highlight--secondary">BROS</span></h1>
+            <div class="mb-3 mb-lg-5">
+                <h1>SIAMO <span class="wab-highlight">
+                        WEB</span>&nbsp;<span class="wab-highlight">
+                        ARTISAN</span>&nbsp;<span class="wab-highlight">BROS</span></h1>
             </div>
             <div>
-                <div class="d-flex">
+                <div class="d-flex flex-lg-row flex-column align-items-center">
                     <p class="lead text-dark">Aiutiamo il tuo business a farsi <span
-                            class="wab-highlight wab-highlight--secondary text-dark">notare</span> in un mondo digitale</p>
+                            class="wab-highlight">notare</span> in un mondo digitale</p>
                     <hr class="w-25 opacity-100">
                 </div>
             </div>

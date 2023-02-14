@@ -16,12 +16,12 @@ $pageTitle = "Servizi";
   </x-slot:reverse>
 
   <x-slot:text>
-    <div class="mb-5">
-      <h1 class="text-dark">DIAMO <span class="wab-highlight">VITA</span> AI TUOI <span class="wab-highlight">DESIDERI</span></h1>
+    <div class="mb-3 mb-lg-5">
+      <h1>DIAMO <span class="wab-highlight">VITA</span> AI TUOI <span class="wab-highlight">DESIDERI</span></h1>
     </div>
     <div>
-      <div class="d-flex">
-        <p class="lead text-dark">Aiutiamo il tuo business a farsi <span class="wab-highlight text-dark">notare</span>
+      <div class="d-flex  flex-lg-row flex-column align-items-center">
+        <p class="lead">Aiutiamo il tuo business a farsi <span class="wab-highlight">notare</span>
           in un mondo digitale</p>
         <hr class="w-25 opacity-100">
       </div>
@@ -32,7 +32,7 @@ $pageTitle = "Servizi";
       <img class="img-border" src="/assets/JumboServiziBorder.png" alt="a yellow border of the img">
       <figure class="">
 
-        <img class="img-bw" src="/assets/JumboServiziColor.png" alt="Welcome neon sign">
+        <img class="img-bw img-square" src="/assets/JumboServiziColor.png" alt="Welcome neon sign">
 
       </figure>
     </div>
@@ -44,7 +44,7 @@ $pageTitle = "Servizi";
 
 <x-services img="/assets/JumboService01.png" :cards="$cardsServices">
   <x-slot:cards>
-    <div class="services pt-3">
+    <div class="services pt-3 d-none d-lg-block">
       <div class="d-flex align-content-center">
         <div class="wrapper">
           <div class="arrowM">
@@ -63,7 +63,7 @@ $pageTitle = "Servizi";
           @endforeach
         </div>
       </div>
-      <div class="row">
+      <div class="row justify-center">
         <div class="nav nav-pills " id="v-pills-tab" role="tablist" aria-orientation="orizontal">
           @foreach($cardsServices as $entry)
           <button class="nav-link col" id="v-pills-{{ $entry['id'] }}-tab" data-bs-toggle="pill" data-bs-target="#v-pills-{{ $entry['id'] }}" type="button" role="tab" aria-controls="v-pills-{{ $entry['id'] }}" aria-selected="true">
@@ -81,16 +81,46 @@ $pageTitle = "Servizi";
       </div>
     </div>
 
+    <div class="accordion accordion-flush mt-5 themed-section d-block d-lg-none" id="accordionWhyUs"
+            data-bs-theme="{{ $theme }}">
+
+            @foreach ($cardsServices as $entry)
+                <div class="accordion-item d-flex flex-column">
+                    <h2 class="accordion-header" id="{{ 'acc_head_' . $entry['id'].'0' }}">
+                        <button class="accordion-button collapsed ps-0" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#{{ 'acc_body_' . $entry['id'].'0' }}" aria-expanded="false"
+                            aria-controls="{{ 'acc_body_' . $entry['id'].'0' }}">
+
+                            <div class="text">
+                                <x-svg-icon class="arrow" icon="BorderedArrow"></x-svg-icon>
+                                <div class="fs-6">{{ $entry['num'] }}.</div>
+                                <div class="fs-6">{{ strtoupper($entry['title']) }}</div>
+                            </div>
+                        </button>
+                    </h2>
+
+                    <div id="{{ 'acc_body_' . $entry['id'].'0' }}" class="accordion-collapse collapse"
+                        aria-labelledby="{{ 'acc_head_' . $entry['id'].'0' }}" data-bs-parent="#accordionWhyUs">
+                        <div class="accordion-body d-flex text-break">
+                            {{ $entry['content'] }}
+                            <img class="cup d-none d-lg-block" src="/assets/CoffeeMug.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+
+        </div>
+
 
   </x-slot:cards>
 
-  <div class="mb-5">
-    <h2 class="text-dark position-relative z-index1 mb-4"><span class="wab-highlight">FAQ</span></h2>
-    <h2 class="text-dark position-relative z-index1">DOM<span class="wab-highlight z-index-none">A</span>NDE</h2>
-    <h2 class="text-dark position-relative z-index1"><span class="wab-highlight z-index-none">F</span>RE<span class="wab-highlight z-index-none">Q</span>UENTI</h2>
+  <div class="mb-5 text-center text-lg-start">
+    <h2 class="position-relative z-index1 mb-4"><span class="wab-highlight">FAQ</span></h2>
+    <h2 class="position-relative z-index1">DOM<span class="wab-highlight z-index-none">A</span>NDE</h2>
+    <h2 class="position-relative z-index1"><span class="wab-highlight z-index-none">F</span>RE<span class="wab-highlight z-index-none">Q</span>UENTI</h2>
   </div>
   <div>
-    <div class="d-flex">
+    <div class="d-flex flex-column flex-lg-row align-items-center">
       <hr class="w-25 opacity-100">
       <p class="lead ms-2">Ecco alcune domande frequenti</p>
     </div>
