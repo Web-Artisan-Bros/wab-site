@@ -22,3 +22,15 @@
 .flex-basis-0 {
   flex-basis: 0;
 }
+
+.loader{
+  // display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: #faf8e5;
+  z-index: 9999;
+  margin: 0 auto;
+  padding-top: 19%;
+  padding-left: 48%;
+}

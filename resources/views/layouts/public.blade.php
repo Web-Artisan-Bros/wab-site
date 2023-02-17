@@ -10,18 +10,30 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
   <link rel="manifest" href="/assets/site.webmanifest">
 
-  <title>{{ isset($pageTitle) ? $pageTitle . " | " :  '' }} Web Artisan Bros</title>
+  <title>{{ isset($pageTitle) ? $pageTitle . " | " : '' }} Web Artisan Bros</title>
 
   <!-- Scripts -->
   @vite(["resources/js/app.js", "resources/styles/app.scss"])
 </head>
 
 <body class="antialiased">
+  <div class="loader">
+    <img src="/assets/loader.svg" alt="loader">
+  </div>
+
   <x-navbar theme="{{ $theme }}" />
 
-@yield('content')
+  @yield('content')
 
-<x-footer theme="{{ $theme }}"/>
+  <x-footer theme="{{ $theme }}" />
 
+  <script>
+    $(function(){
+      setTimeout(() => {
+        $(".loader");
+      }, 500)
+    })
+  </script>
 </body>
+
 </html>

@@ -7,7 +7,8 @@
 @endphp
 
 @section('content')
-    <x-jumbo dnone="true" reverseJumbo="flex-row-reverse" theme="yellow">
+
+    <x-jumbo dnone="true" reverseJumbo="flex-lg-row-reverse" theme="yellow">
         <x-slot:reverse>
             btn-reverse-white
         </x-slot:reverse>
@@ -21,7 +22,7 @@
                 <div class="d-flex flex-lg-row flex-column align-items-center">
                     <p class="lead text-dark">Aiutiamo il tuo business a farsi <span
                             class="wab-highlight">notare</span> in un mondo digitale</p>
-                    <hr class="w-25 opacity-100">
+                    <hr class="w-25 opacity-100 d-none d-lg-block">
                 </div>
             </div>
         </x-slot:text>

@@ -24,7 +24,7 @@ $pageTitle = "Home";
       <div class="d-flex flex-lg-row flex-column align-items-center">
         <p class="lead">Aiutiamo il tuo business a farsi <span class="wab-highlight ">notare</span> in un mondo
           digitale</p>
-        <hr class="w-25 opacity-100">
+        <hr class="w-25 opacity-100 d-none d-lg-block">
       </div>
     </div>
   </x-slot:text>
