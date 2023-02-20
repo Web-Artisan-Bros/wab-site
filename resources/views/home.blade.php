@@ -8,7 +8,7 @@ $pageTitle = "Home";
 
 @section ('content')
 
-<x-jumbo dnone="true" theme="dark">
+<x-jumbo dnone="true" reverseJumbo="flex-lg-row" theme="dark">
   <x-slot:reverse>
     btn-hover
   </x-slot:reverse>

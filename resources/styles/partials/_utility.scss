@@ -23,14 +23,27 @@
   flex-basis: 0;
 }
 
-.loader{
-  // display: none;
+
+.loader {
   position: fixed;
-  height: 100%;
-  width: 100%;
-  background-color: #faf8e5;
-  z-index: 9999;
-  margin: 0 auto;
-  padding-top: 19%;
-  padding-left: 48%;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  background-color: #faf8e6;
+  transition: opacity 1s, visibility 1s;
+}
+
+.loader-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+.loader svg {
+  max-width: 500px;
 }
