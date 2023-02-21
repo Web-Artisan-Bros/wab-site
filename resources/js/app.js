@@ -9,6 +9,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import "./follow";
 import "./pageChanger";
 import "./pageLoader";
+import "./navbarScroller";
 
 window.Alpine = Alpine;
 

@@ -28,14 +28,14 @@ body {
         align-items: center;
         z-index: 999;
         background-color: var(--bs-body-bg);
-        transition: opacity .25s;
+        transition: opacity .20s, background-color .25s;
         opacity: 0;
         pointer-events: none;
 
         .logo {
             position: relative;
 
-            &:before{
+            &:before {
                 content: "";
                 position: absolute;
                 top: 50%;

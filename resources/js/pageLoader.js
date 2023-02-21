@@ -18,9 +18,11 @@ class PageLoader extends EventTarget {
     //   duration: 750
     // });
     //
+    
     if (theme) {
       this.loader.dataset.bsTheme = theme
     }
+  
     document.body.classList.add('loading')
   }
   
@@ -30,7 +32,6 @@ class PageLoader extends EventTarget {
   
   addEventListeners () {
     this.loader.addEventListener('transitionend', () => {
-      // document.body.removeChild(document.body.firstChild)
       this.dispatchEvent(new CustomEvent('transitionEnd'))
     })
   }
@@ -42,10 +43,5 @@ window.addEventListener('DOMContentLoaded', () => {
   setTimeout(function () {
     pageLoader.hide()
   }, 1500)
-  
-  /*window.addEventListener("beforeunload", function (e) {
-    e.preventDefault();
-    loader.classList.remove('loader-hidden')
-  })*/
 })
 

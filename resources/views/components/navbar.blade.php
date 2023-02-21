@@ -1,4 +1,4 @@
-<div data-bs-theme="{{ $theme }}">
+<div data-bs-theme="{{ $theme }}" class="navbar-container" >
 
   <nav class="navbar navbar-expand-lg py-3 wab-nav">
     <div class="container">
@@ -59,4 +59,6 @@
     </div>
   </nav>
   <x-offcanvas></x-offcanvas>
+
+  <div class="scroll-spy"></div>
 </div>
