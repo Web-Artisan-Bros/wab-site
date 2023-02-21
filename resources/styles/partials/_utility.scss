@@ -24,26 +24,3 @@
 }
 
 
-.loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-  background-color: #faf8e6;
-  transition: opacity 1s, visibility 1s;
-}
-
-.loader-hidden {
-  opacity: 0;
-  visibility: hidden;
-}
-
-
-.loader svg {
-  max-width: 500px;
-}

@@ -1,3 +1,4 @@
+/*
 document.addEventListener("mousemove", (e) => {
     const mouseX = e.clientX;
     const mouseY = e.clientY;
@@ -24,3 +25,4 @@ function angle(cx, cy, ex, ey) {
     const deg = (rad * 180) / Math.PI;
     return deg;
 }
+*/

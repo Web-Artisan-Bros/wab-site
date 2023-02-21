@@ -2,7 +2,7 @@
 
   <nav class="navbar navbar-expand-lg py-3 wab-nav">
     <div class="container">
-      <a class="navbar-brand" href="{{ url('/') }}">
+      <a class="navbar-brand route-link" href="{{ url('/') }}">
         <x-svg-icon icon="logo_text" class="d-none d-lg-block" />
         <x-svg-icon icon="logo_nav" class="d-lg-none" />
       </a>
@@ -37,7 +37,7 @@
               <ul class="dropdown-menu">
                 @foreach ($entry['children'] as $child)
                 <li @class(['border-bottom'=> !$loop->last])>
-                  <a class="dropdown-item" href="{{ route($child['routeName']) }}">
+                  <a class="dropdown-item route-link" href="{{ route($child['routeName']) }}">
                     <x-svg-icon icon="VectorArrowS" class="me-2 ms-0" />
                     {{ $child['label'] }}
                   </a>

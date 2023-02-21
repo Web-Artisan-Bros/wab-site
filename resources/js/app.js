@@ -7,6 +7,8 @@ import "./shadow";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
 import "./follow";
+import "./pageChanger";
+import "./pageLoader";
 
 window.Alpine = Alpine;
 
