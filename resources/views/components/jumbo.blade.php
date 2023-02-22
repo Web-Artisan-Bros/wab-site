@@ -8,20 +8,15 @@
     <div class="row {{$reverseJumbo}} pb-sm-3 justify-content-center flex-column">
       <div class="col d-none d-lg-block">
         <div class="ps-3">
-          <x-square-btn reverse="{{$reverse}}">
-          </x-square-btn>
+          <x-contact-btn reverse="{{$reverse}}"></x-contact-btn>
         </div>
       </div>
+
       <div class="col text-center text-lg-start">
         {{$text}}
       </div>
-      <button
-        class="align-self-center w-50 btn  mt-4 {{ $theme === 'yellow' ? 'btn-primary' : 'btn-' . $theme }} d-block d-lg-none"
-        type="button" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
-        aria-controls="offcanvasExample">
-        SCRIVICI
-        <x-svg-icon icon="VectorArrow"></x-svg-icon>
-      </button>
+
+      <x-contact-btn version="small" class="align-self-center w-50 mt-4 d-lg-none"></x-contact-btn>
     </div>
     <div class="pt-5 position-relative">
       {{$jumboImg}}
@@ -37,20 +32,14 @@
       <div class="col  text-center text-lg-start">
         {{$text}}
         <div class="ps-3 mt-5 pt-5   d-none d-lg-block">
-          <x-square-btn reverse="{{$reverse}}">
-          </x-square-btn>
+          <x-contact-btn reverse="{{$reverse}}"></x-contact-btn>
         </div>
       </div>
-      <button
-        class="align-self-center w-50 btn  mt-4 {{ $theme === 'yellow' ? 'btn-primary' : 'btn-' . $theme }} d-block d-lg-none"
-        type="button" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-        SCRIVICI
-        <x-svg-icon icon="VectorArrow"></x-svg-icon>
-      </button>
+
+      <x-contact-btn version="small" class="align-self-center w-50 mt-4 d-lg-none"></x-contact-btn>
+
       <div class="col">
-
         {{$jumboImg}}
-
       </div>
     </div>
 

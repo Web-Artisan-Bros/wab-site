@@ -43,34 +43,25 @@
 
             .icon {
                 // margin-bottom: 0.3rem;
-                transition: color #{$ease}, rotate #{$ease};
+                transition: color #{$ease}, rotate #{$ease}, transform #{$ease};
             }
 
             .number {
                 color: #{$light};
                 transform: translateX(0%);
-                transition: color 0.3s #{$ease}, transform #{$ease},
-                    text-shadow #{$ease};
+                transition: color #{$ease}, transform #{$ease}, text-shadow #{$ease};
             }
 
             &:hover,
             &.active {
-                color: #{$dark} !important;
-                text-shadow: -1px 0 #{$primary}, 0 1px #{$primary},
-                    1px 0 #{$primary}, 0 -1px #{$primary};
-                // -webkit-text-stroke: 1px #{$primary};
-
                 .number {
-                    color: #{$dark} !important;
                     transform: translateX(80%);
-                    text-shadow: -1px 0 #{$primary}, 0 1px #{$primary},
-                        1px 0 #{$primary}, 0 -1px #{$primary};
                 }
 
                 .icon {
-                    color: #{$primary} !important;
-                    margin-top: 1rem;
+                    transform: translateX(1rem);
                 }
+
                 &:first-of-type {
                     .icon {
                         rotate: 75deg;
@@ -86,10 +77,25 @@
                         rotate: 115deg;
                     }
                 }
+
                 &:nth-of-type(4) {
                     .icon {
                         rotate: 135deg;
                     }
+                }
+            }
+
+            &.active {
+                color: #{$dark} !important;
+                text-shadow: -1px 0 #{$primary}, 0 1px #{$primary}, 1px 0 #{$primary}, 0 -1px #{$primary};
+
+                .number {
+                    color: #{$dark} !important;
+                    text-shadow: -1px 0 #{$primary}, 0 1px #{$primary}, 1px 0 #{$primary}, 0 -1px #{$primary};
+                }
+
+                .icon {
+                    color: #{$primary} !important;
                 }
             }
 
@@ -101,6 +107,7 @@
 
             &:first-of-type {
                 margin-left: -5.5rem;
+
                 .positioning {
                     left: 0;
                 }

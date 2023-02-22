@@ -32,9 +32,9 @@
                             aria-controls="{{ 'acc_body_' . $entry['id'] }}">
 
                             <div class="text">
-                                <x-svg-icon class="arrow" icon="BorderedArrow"></x-svg-icon>
                                 <div>{{ $entry['num'] }}.</div>
                                 <div class="fs-4">{{ strtoupper($entry['title']) }}</div>
+                                <x-svg-icon class="arrow" icon="BorderedArrow"></x-svg-icon>
                             </div>
                         </button>
                     </h2>

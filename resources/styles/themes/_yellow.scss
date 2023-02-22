@@ -24,20 +24,6 @@
     border-color:#{variables.$secondary};
   }
 
-  .btn-primary {
-    --bs-btn-color: var(--bs-dark);
-    --bs-btn-hover-color: var(--bs-light);
-    --bs-btn-bg: var(--bs-primary);
-    --bs-btn-hover-bg: #{lighten(variables.$secondary, 1%)};
-    --outline-color: var(--bs-secondary);
-  }
-
-  .btn:after {
-    border: 3px solid $dark;
-    transition: all 0.3ms ease-in-out;
-
-  }
-
   .card {
     --bs-card-border-color: var(--bs-secondary);
   }

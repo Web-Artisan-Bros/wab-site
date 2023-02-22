@@ -15,10 +15,7 @@
 
           <div class="row row-cols-md-2 row-cols-xl-3 row-cols-1 justify-content-center justify-content-lg-start">
             <div class="col mb-2 mb-lg-5">
-              <button class="btn ms-1 btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-                SCRIVICI
-                <x-svg-icon icon="VectorArrow"></x-svg-icon>
-              </button>
+              <x-contact-btn version="small"></x-contact-btn>
             </div>
 
             <div class="col w-100">

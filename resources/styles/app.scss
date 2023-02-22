@@ -2,6 +2,8 @@
 
 @import "./partials/_variables";
 @import "bootstrap/scss/bootstrap";
+@import 'animate.css';
+
 
 @import "./css_variables";
 
@@ -13,6 +15,7 @@
 $enable-responsive-font-sizes: true;
 
 @import "./partials/reset";
+@import "./partials/animations";
 @import "./partials/inputs";
 @import "./partials/buttons";
 @import "./partials/cards";

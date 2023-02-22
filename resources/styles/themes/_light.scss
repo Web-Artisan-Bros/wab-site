@@ -20,35 +20,6 @@
     --bs-navbar-active-color: var(--bs-dark);
   }
 
-  .btn-light {
-    --bs-btn-hover-bg: #{$primary};
-    --outline-color: var(--bs-primary);
-  }
-
-  .btn {
-    --bs-btn-bg: var(--bs-body-bg);
-    --bs-btn-color: var(--bs-body-color);
-    --outline-color: var(--accent-color);
-  }
-
-  .btn:after {
-    border: 3px solid var(--bs-body-color);
-  }
-
-  // .wab-accordion {
-  //   .accordion-button {
-  //     &:hover {
-  //       color: var(--bs-body-bg);
-  //     }
-
-  //     &:not(.collapsed) {
-  //       .text {
-  //         color: var(--bs-body-bg);
-  //       }
-  //     }
-  //   }
-  // }
-
   .card {
     --bs-card-border-color: var(--bs-primary);
   }

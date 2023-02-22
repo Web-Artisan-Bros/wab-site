@@ -23,26 +23,9 @@
     --bs-navbar-hover-color: var(--bs-white);
   }
 
-  .btn-dark {
-    --bs-btn-hover-bg: #{$primary};
-    --bs-btn-hover-color: #{$dark};
-    --outline-color: var(--bs-primary);
-  }
-
-  .btn {
-    --bs-btn-bg: var(--bs-body-bg);
-    --bs-btn-color: var(--bs-body-color);
-    --outline-color: var(--accent-color);
-  }
-
-  .btn:after {
-    border: 3px solid var(--bs-body-color);
-  }
-
   .card {
     --bs-card-border-color: var(--bs-primary);
   }
-
 
   .dropdown {
     .dropdown-menu {

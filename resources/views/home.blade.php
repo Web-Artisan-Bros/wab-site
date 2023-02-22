@@ -47,7 +47,7 @@ $pageTitle = "Home";
       @foreach($cardsHome as $card)
       <div class="col d-flex d-lg-block justify-content-center mb-3 mb-lg-0 pt-1 pt-lg-0 pt-md-4">
         <x-service-card number="{{ $card['num'] }}" title='{!! $card["title"] !!}'>
-          <a href="{{url('servizi')}}" class="btn btn-light mt-3 mt-lg-0">Scopri di <span>+</span>
+          <a href="{{url('servizi')}}" class="btn btn-themed mt-3 mt-lg-0">Scopri di <span>+</span>
             <x-svg-icon icon="VectorArrow"></x-svg-icon>
           </a>
         </x-service-card>
@@ -55,9 +55,10 @@ $pageTitle = "Home";
       @endforeach
     </div>
   </x-slot:cards>
+
   <div class="mb-4 mb-lg-5">
     <h2 class=" position-relative z-index1 d-flex d-lg-block flex-column align-items-center text-center text-lg-start">AI NOSTRI <br>
-      <span class="wab-highlight">CLIENTI</span> 
+      <span class="wab-highlight">CLIENTI</span>
       <span class=" ">OFFRIAMO SEMPRE</span>
       <span class="wab-highlight">IL MEGLIO</span>
     </h2>

@@ -50,6 +50,9 @@
 @yield('content')
 
 <x-footer theme="{{ $theme }}"/>
+
+<x-offcanvas></x-offcanvas>
+{{--<x-bottom-navbar theme="{{ $theme }}"/>--}}
 </body>
 
 </html>

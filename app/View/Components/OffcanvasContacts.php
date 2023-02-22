@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class Offcanvas extends Component
+class OffcanvasContacts extends Component
 {
     public $theme;
     /**
@@ -24,6 +24,6 @@ class Offcanvas extends Component
      */
     public function render()
     {
-        return view('components.offcanvas');
+        return view('components.offcanvas-contacts');
     }
 }

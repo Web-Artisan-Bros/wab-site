@@ -78,9 +78,22 @@
 
         </div>
 
-
-
-
-
     </div>
+
+    <script>
+        const links = document.querySelectorAll('.wabDa .nav-link')
+        const tabs = document.getElementById('v-pills-tabContent')
+
+        {{-- For each link, when clicked, ensure the tabs are in the viewport, otherwise scroll to it --}}
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                if (link.classList.contains('active') && !isInViewport(tabs)) {
+                    tabs.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    })
+                }
+            })
+        })
+    </script>
 </section>
