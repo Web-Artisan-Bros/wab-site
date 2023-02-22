@@ -260,14 +260,13 @@
         }
       }
     }
-
   }
-
 
 }
 
 #mobileMenuRight {
   --transition: .25s ease-in-out;
+  --bs-offcanvas-border-width: 0;
 
   top: var(--navbar-height);
 

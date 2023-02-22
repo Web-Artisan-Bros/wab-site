@@ -100,7 +100,8 @@
       @endforeach
     </div>
 
-    <x-contact-btn version="small" class="w-100 mb-3"></x-contact-btn>
-
+    <div class="px-4">
+      <x-contact-btn version="small" class="w-100"></x-contact-btn>
+    </div>
   </div>
 </div>

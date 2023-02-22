@@ -98,6 +98,13 @@
             transform: translate(25%, -25%);
         }
 
+        &.point-down {
+            img,
+            .icon {
+                transform: translate(10%, -10%);
+            }
+        }
+
         &:before {
             top: 0;
             right: 0;
