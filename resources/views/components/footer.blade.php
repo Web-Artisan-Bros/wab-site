@@ -15,7 +15,7 @@
 
           <div class="row row-cols-md-2 row-cols-xl-3 row-cols-1 justify-content-center justify-content-lg-start">
             <div class="col mb-2 mb-lg-5">
-              <x-contact-btn version="small" class="w-100"></x-contact-btn>
+              <x-contact-btn version="small" class="w-100 point-down"></x-contact-btn>
             </div>
 
             <div class="col w-100">

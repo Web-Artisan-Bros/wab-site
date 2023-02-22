@@ -53,7 +53,7 @@
             @endforeach
           </ul>
 
-          <x-contact-btn version="small" class="ms-1"></x-contact-btn>
+          <x-contact-btn version="small" class="ms-1 point-down"></x-contact-btn>
         </div>
       </div>
     </div>

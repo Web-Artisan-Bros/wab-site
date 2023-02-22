@@ -18,7 +18,7 @@
     </div>
   </div>
 @else
-  <button {{ $attributes->merge(['class' => 'btn btn-themed']) }}
+  <button {{ $attributes->merge(['class' => 'btn btn-themed point-down']) }}
           type="button" role="button"
           data-bs-toggle="offcanvas" href="#offcanvasContacts"
           aria-controls="offcanvasContacts">

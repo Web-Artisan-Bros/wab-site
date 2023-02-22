@@ -62,8 +62,24 @@
         height: 18px;
     }
 
+    // point right-down
+    &.point-down {
+        img,
+        .icon {
+            rotate: 90deg;
+        }
+    }
+
     // on hover, rotate the icon and move the outline to merge with the button
     &:hover {
+        // point down
+        &.point-down {
+            img,
+            .icon {
+                rotate: 135deg;
+            }
+        }
+
         img,
         .icon {
             rotate: 45deg;
