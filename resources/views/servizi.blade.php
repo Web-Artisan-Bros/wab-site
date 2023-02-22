@@ -29,12 +29,7 @@ $pageTitle = "Servizi";
   </x-slot:text>
   <x-slot:jumboImg class="wab-img">
     <div class="pt-5 position-relative d-flex wab-img">
-      <img class="img-border" src="/assets/JumboServiziBorder.png" alt="a yellow border of the img">
-      <figure class="">
-
-        <img class="img-bw img-square" src="/assets/JumboServiziColor.png" alt="Welcome neon sign">
-
-      </figure>
+      <x-bordered-image src="/assets/JumboServiziColor.png" alt="Welcome neon sign"></x-bordered-image>
     </div>
 
   </x-slot:jumboImg>

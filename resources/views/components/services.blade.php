@@ -6,18 +6,13 @@
       <div class="col">
         {{$slot}}
       </div>
+
       <div class="col">
-        <div class="pt-5 position-relative">
-          <img class="w-100 img-border" src="/assets/JumboServiceBorder.png" alt="a yellow border of the img">
-          <figure class="h-100">
-            <div class="img-area w-100">
-              <img class="w-100 img-bw img-small" src="{{ $img }}" alt="Welcome neon sign">
-            </div>
-          </figure>
-        </div>
+        <x-bordered-image img-class="img-small" src="{{ $img }}" alt="Welcome neon sign"></x-bordered-image>
       </div>
     </div>
-    <div>
+
+    <div class="mt-5 mt-lg-0">
       {{$cards}}
     </div>
   </div>

@@ -5,7 +5,7 @@
 
 <div class="wab-jumbo themed-section" {{ $dnone }} data-bs-theme="{{$theme}}">
   <div class="container container-p-156">
-    <div class="row {{$reverseJumbo}} pb-sm-3 justify-content-center flex-column">
+    <div class="row {{$reverseJumbo}} pb-sm-3 justify-content-center flex-column flex-nowrap">
       <div class="col d-none d-lg-block">
         <div class="ps-3">
           <x-contact-btn reverse="{{$reverse}}"></x-contact-btn>

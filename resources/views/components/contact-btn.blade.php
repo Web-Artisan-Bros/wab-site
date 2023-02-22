@@ -1,5 +1,5 @@
 @if($version === "large")
-  <div class="d-flex {{ $reverse }}">
+  <div class="d-flex justify-content-center {{ $reverse }}">
     <div class="btn-sqr red-square"></div>
 
     <div class="btn-sqr white-square d-flex align-items-center justify-content-center"

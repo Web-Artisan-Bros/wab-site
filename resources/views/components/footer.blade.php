@@ -15,7 +15,7 @@
 
           <div class="row row-cols-md-2 row-cols-xl-3 row-cols-1 justify-content-center justify-content-lg-start">
             <div class="col mb-2 mb-lg-5">
-              <x-contact-btn version="small"></x-contact-btn>
+              <x-contact-btn version="small" class="w-100"></x-contact-btn>
             </div>
 
             <div class="col w-100">
@@ -27,7 +27,7 @@
         </div>
 
         {{-- Right Column --}}
-        <div class="col">
+        <div class="col mt-5 mt-lg-0">
           <div class="footer-header flex-column flex-lg-row  mb-3 mb-lg-5">
             <x-svg-icon class="accent-color footer-logo" icon="Logo" alt="logo web artisan bros"></x-svg-icon>
 

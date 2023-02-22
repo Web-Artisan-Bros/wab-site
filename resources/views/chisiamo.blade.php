@@ -27,12 +27,7 @@
             </div>
         </x-slot:text>
         <x-slot:jumboImg>
-            <img class="w-100 img-border" src="/assets/JumboChiSiamoBorder.png" alt="a yellow border of the img">
-            <figure class="h-100">
-                <div class="img-area w-100">
-                    <img class="w-100 img-bw" src="/assets/JumboChiSiamoColor.png" alt="Welcome neon sign">
-                </div>
-            </figure>
+            <x-bordered-image src="/assets/JumboChiSiamoColor.png" alt="Welcome neon sign"></x-bordered-image>
 
         </x-slot:jumboImg>
     </x-jumbo>

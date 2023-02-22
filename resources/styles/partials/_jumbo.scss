@@ -3,12 +3,14 @@
 }
 
 .img-border {
+    --border-offset: 1rem;
+
     position: absolute;
-    bottom: 36px;
-    left: 36px;
+    bottom: var(--border-offset);
+    left: var(--border-offset);
 
     @include media-breakpoint-down(lg) {
-        display: none;
+        //display: none;
     }
 }
 
@@ -21,15 +23,56 @@
 }
 
 .img-bw {
-    filter: grayscale(100%);
-    transition: filter 1s cubic-bezier(0.87, -0.41, 0.19, 1.44);
+    //--transition: .4s cubic-bezier(0.87, -0.41, 0.19, 1.44);
+    --transition: .4s ease-out;
 
-    @include media-breakpoint-down(lg) {
-        filter: grayscale(0%);
-    }
+    filter: saturate(0%);
+    transition: filter var(--transition);
 
     &:hover {
-        filter: grayscale(0%);
-        cursor: pointer;
+        filter: saturate(150%);
+        //cursor: pointer;
+    }
+}
+
+.bordered-image {
+    position: relative;
+
+    .img-outline{
+        --border-offset: 1rem;
+
+        position: absolute;
+        bottom: var(--border-offset);
+        left: var(--border-offset);
+        background-color: var(--accent-color);
+        width: 100%;
+        height: 100%;
+        mask-image: var(--mask-image);
+        mask-size: cover;
+
+        .img-outline-inner{
+            --border-width: 3px;
+
+            position: absolute;
+            top: var(--border-width);
+            left: var(--border-width);
+            background-color: var(--bs-body-bg);
+            width: calc(100% - (var(--border-width) * 2));
+            height: calc(100% - (var(--border-width) * 2));
+            mask-image: var(--mask-image);
+            mask-size: cover;
+        }
+    }
+
+    img {
+        --transition: .4s ease-out;
+
+        filter: saturate(0%);
+        transition: filter var(--transition);
+        width: 100%;
+
+        &:hover {
+            filter: saturate(150%);
+        }
     }
 }
