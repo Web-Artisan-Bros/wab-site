@@ -6,7 +6,7 @@ use Illuminate\View\Component;
 
 class OffcanvasContacts extends Component
 {
-    public $theme;
+    public string $theme;
     /**
      * Create a new component instance.
      *

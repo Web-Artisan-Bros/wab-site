@@ -21,7 +21,7 @@
                             le tue idee e le tue necessità in un prodotto concreto!
                         </p>
 
-                        <div class="row justify-content-lg-start justify-content-center">
+                        <div class="row justify-content-lg-start justify-content-center d-lg-none">
                             <div class="col-md-8 col-12">
                                 <x-contact-btn version="small" class="w-100"></x-contact-btn>
                             </div>

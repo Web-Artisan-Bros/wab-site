@@ -28,7 +28,6 @@
         </x-slot:text>
         <x-slot:jumboImg>
             <x-bordered-image src="/assets/JumboChiSiamoColor.png" alt="Welcome neon sign"></x-bordered-image>
-
         </x-slot:jumboImg>
     </x-jumbo>
 

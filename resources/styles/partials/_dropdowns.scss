@@ -5,10 +5,12 @@
   display: block;
   transform: translateY(-150%);
   opacity: 0;
-  transition: transform var(--transition), opacity var(--transition-slow);
+  transition: transform var(--transition), filter var(--transition), opacity var(--transition);
+  filter: blur(5px);
 
   &.show {
     transform: translateY(0);
     opacity: 1;
+    filter: blur(0);
   }
 }

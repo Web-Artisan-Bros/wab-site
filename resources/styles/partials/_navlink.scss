@@ -69,8 +69,11 @@
   --bs-navbar-brand-padding-y: 0;
   background-color: var(--bs-navbar-bg);
   transition: background-color .3s;
+  height: var(--navbar-height);
+  display: flex;
+  align-items: center;
 
-  .navbar-brand {
+  .navbar-brand{
 
   }
 
@@ -98,6 +101,7 @@
       transform-origin: left;
       transform: rotate(0deg) translateX(0);
       transition: background-color var(--transition), transform var(--transition), opacity var(--transition);
+      color: currentColor;
 
       &:nth-child(1) {
         top: 0px;
@@ -113,7 +117,11 @@
       }
     }
 
-    &:not(.collapsed) {
+    &.show {
+      --bs-btn-bg: var(--accent-color);
+      --bs-btn-color: var(--accent-color-contrast);
+      --bs-btn-border-color: var(--accent-color);
+
       &:before {
         top: 0;
         right: 0;
@@ -233,8 +241,6 @@
       height: 14px;
       margin-left: 8px;
       transition: rotate #{$ease};
-
-
     }
 
     .nav-link {
@@ -260,6 +266,55 @@
 
 }
 
-#mobileMenuRight{
-  top: 72px;
+#mobileMenuRight {
+  --transition: .25s ease-in-out;
+
+  top: var(--navbar-height);
+
+  .list-group {
+    --bs-list-group-action-hover-color: var(--accent-color-contrast);
+    --bs-list-group-action-hover-bg: var(--accent-color);
+    --bs-list-group-action-active-color: var(--accent-color-contrast);
+    --bs-list-group-action-active-bg: var(--accent-color);
+    --bs-list-group-active-color: var(--accent-color-contrast);
+    --bs-list-group-active-bg: var(--accent-color);
+    --bs-list-group-active-border-color: var(--bs-border-color);
+    font-size: 1.3rem;
+  }
+
+  .list-group-item {
+    transition: background-color var(--transition), color var(--transition);
+
+    &:focus:not(:hover):not([aria-expanded="true"]) {
+      background-color: var(--bs-list-group-bg);
+      color: var(--bs-list-group-color);
+    }
+
+    .icon {
+      width: 14px;
+      height: 14px;
+      margin-left: 8px;
+      transition: rotate #{$ease};
+    }
+
+    &[data-bs-toggle="collapse"] {
+      &:not(.collapsed),
+      &:hover {
+        .icon {
+          rotate: 45deg;
+        }
+      }
+    }
+
+    &:hover {
+      .icon {
+        rotate: -45deg;
+      }
+    }
+
+    &[aria-expanded="true"] {
+      background-color: var(--accent-color);
+      color: var(--accent-color-contrast);
+    }
+  }
 }

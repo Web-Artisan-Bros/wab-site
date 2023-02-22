@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg wab-nav">
     <div class="container-lg">
       <a class="navbar-brand route-link" href="{{ url('/') }}">
-        <x-svg-icon icon="logo_text" class="d-none d-sm-block"/>
+        <x-svg-icon icon="logo_text" class="d-none d-sm-flex"/>
         <x-svg-icon icon="logo_nav" class="d-sm-none"/>
       </a>
 
@@ -62,50 +62,45 @@
   <div class="scroll-spy"></div>
 </div>
 
-<div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="mobileMenuRight"
+{{-- Mobile menu --}}
+<div class="offcanvas offcanvas-end" data-bs-scroll="false" tabindex="-1" id="mobileMenuRight"
      data-bs-theme="{{ $theme }}"
      aria-labelledby="offcanvasRightLabel">
-  {{--<div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasRightLabel">
-      <x-svg-icon icon="logo_text"/>
-    </h5>
-    <button type="button" class="btn-close-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>--}}
-  <div class="offcanvas-body">
 
-    <ul class="list-group list-group-flush">
+  <div class="offcanvas-body d-flex flex-column">
+
+    <div class="list-group list-group-flush mb-5 flex-fill">
       @foreach ($menuEntries as $entry)
         @if (!key_exists('children', $entry))
-          <li class="list-group-item list-group-item-action text-uppercase">
-            <x-navigation-link href="{{ route($entry['routeName']) }}"
-                               active="{{ request()->routeIs($entry['routeName']) }}">
-              {{ $entry['label'] }}
-            </x-navigation-link>
-          </li>
+          <a href="{{ route($entry['routeName']) }}"
+             class="list-group-item list-group-item-action route-link text-uppercase">
+            {{ $entry['label'] }}
+          </a>
         @else
-          <li class="list-group-item list-group-item-action dropdown text-uppercase">
-            <a @class([ 'active wab-highlight'=>
-                strpos(Route::currentRouteName(), $entry['routeName']) === 0,
-                'nav-link position-relative',
-                ]) href="#" role="button"
-               data-bs-toggle="dropdown" aria-expanded="false">
-              {{ $entry['label'] }}
-              {{--              <x-svg-icon class="imgWhite" icon="VectorArrowBlack"></x-svg-icon>--}}
-            </a>
-            <ul class="dropdown-menu">
+          <a class="list-group-item list-group-item-action text-uppercase collapsed"
+             data-bs-toggle="collapse" href="#mobile-services-menu" role="button"
+             aria-expanded="false" aria-controls="mobile-services-menu">
+            {{ $entry['label'] }}
+
+            <x-svg-icon icon="VectorArrowS" class="me-2 ms-0"/>
+          </a>
+
+          <div class="collapse" id="mobile-services-menu">
+            <div class="list-group list-group-flush border-bottom">
               @foreach ($entry['children'] as $child)
-                <li @class(['border-bottom'=> !$loop->last])>
-                  <a class="dropdown-item route-link" href="{{ route($child['routeName']) }}">
-                    <x-svg-icon icon="VectorArrowS" class="me-2 ms-0"/>
-                    {{ $child['label'] }}
-                  </a>
-                </li>
+                <a class="list-group-item list-group-item-action route-link"
+                   href="{{ route($child['routeName']) }}">
+                  <x-svg-icon icon="VectorArrowS" class="me-2 ms-0"/>
+                  {{ $child['label'] }}
+                </a>
               @endforeach
-            </ul>
-          </li>
+            </div>
+          </div>
         @endif
       @endforeach
-    </ul>
+    </div>
+
+    <x-contact-btn version="small" class="w-100 mb-3"></x-contact-btn>
 
   </div>
 </div>

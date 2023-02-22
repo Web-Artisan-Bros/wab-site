@@ -7,6 +7,7 @@ import './pageChanger'
 import './pageLoader'
 import './navbarScroller'
 import './dropdown'
+import './offcanvas'
 
 window.isInViewport = function (el) {
   const rect = el.getBoundingClientRect()

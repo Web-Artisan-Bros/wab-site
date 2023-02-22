@@ -42,7 +42,7 @@
 {{--          opacity="0" fill="#271b1c"/>--}}
 {{--    <path id="eqX1b59OJwh9" d="M54.9,35h199.1" transform="translate(201 0)" fill="none" stroke="#f6e077"--}}
 {{--          stroke-linecap="round"/>--}}
-{{--  </svg>--}}
+  {{--  </svg>--}}
 </div>
 
 <x-navbar theme="{{ $theme }}"/>
@@ -51,8 +51,7 @@
 
 <x-footer theme="{{ $theme }}"/>
 
-<x-offcanvas></x-offcanvas>
-{{--<x-bottom-navbar theme="{{ $theme }}"/>--}}
+<x-offcanvas-contacts theme="{{ $theme }}"></x-offcanvas-contacts>
 </body>
 
 </html>

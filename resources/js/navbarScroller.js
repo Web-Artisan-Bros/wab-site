@@ -1,7 +1,11 @@
-let navbar
+window.navbar = null
+let mobileMenuCanvas;
+let contactsCanvas;
 
 window.addEventListener('load', function () {
-  navbar = document.querySelector('.navbar-container')
+  window.navbar = document.querySelector('.navbar-container')
+  mobileMenuCanvas = document.getElementById('mobileMenuRight')
+  contactsCanvas = document.getElementById('offcanvasContacts')
   const scrollSpy = document.querySelector('.scroll-spy')
   
   addIntersectionObserver()
@@ -16,13 +20,26 @@ window.addEventListener('load', function () {
     
     // if scroll bigger than 100, add class .scrolled and update scrollSpy width
     if (scrollFromTop > 100) {
-      navbar.classList.add('scrolled')
+      if (window.navbar.forceScrolled) {
+        window.navbar.forceScrolled = true
+      }
+  
+      window.navbar.scrolled = true
+      window.navbar.classList.add('scrolled')
       scrollSpy.style.width = Math.round(perc) + '%'
     } else {
-      navbar.classList.remove('scrolled')
+      window.navbar.scrolled = false
+  
+      if (!window.navbar.forceScrolled) {
+        window.navbar.classList.remove('scrolled')
+      }
+  
       scrollSpy.style.width = '0%'
+  
     }
   })
+  
+  window.dispatchEvent(new CustomEvent('scroll'))
 })
 
 function addIntersectionObserver () {
@@ -41,13 +58,14 @@ function addIntersectionObserver () {
   sections.forEach((section, i) => {
     observer.observe(section)
   })
-  
 }
 
 function callback (entries, observer) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       navbar.dataset.bsTheme = entry.target.dataset.bsTheme
+      mobileMenuCanvas.dataset.bsTheme = entry.target.dataset.bsTheme
+      contactsCanvas.dataset.bsTheme = entry.target.dataset.bsTheme
     }
     // console.log(entry)
   })
