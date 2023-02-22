@@ -1,5 +1,7 @@
-window.addEventListener('DOMContentLoaded', function () {
-  const navbar = document.querySelector('.navbar-container')
+let navbar
+
+window.addEventListener('load', function () {
+  navbar = document.querySelector('.navbar-container')
   const scrollSpy = document.querySelector('.scroll-spy')
   
   addIntersectionObserver()
@@ -21,36 +23,34 @@ window.addEventListener('DOMContentLoaded', function () {
       scrollSpy.style.width = '0%'
     }
   })
-  
-  function addIntersectionObserver () {
-    // recupero le singole sezioni
-    const sections = document.querySelectorAll('.themed-section:not(.offcanvas)')
-    
-    // creo un observer
-    const observer = new IntersectionObserver(callback, {
-      // root: document.body,
-      rootMargin: "-90px 0% -90% 0%",
-      // threshold: 0.9
-    })
-  
-    console.log(sections)
-    
-    sections.forEach(section => {
-      observer.observe(section)
-    })
-    
-    function callback (entries, observer) {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          navbar.dataset.bsTheme = entry.target.dataset.bsTheme
-        }
-        console.log(entry)
-        
-        
-      })
-    }
-  }
-  
 })
+
+function addIntersectionObserver () {
+  // recupero le singole sezioni
+  const sections = document.querySelectorAll('.themed-section:not(.offcanvas)')
+  
+  // creo un observer
+  const observer = new IntersectionObserver(callback, {
+    // root: document.body,
+    rootMargin: '-5% 0% -90% 0%'
+    // threshold: 0.9
+  })
+  
+  console.log(sections)
+  
+  sections.forEach((section, i) => {
+    observer.observe(section)
+  })
+  
+}
+
+function callback (entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      navbar.dataset.bsTheme = entry.target.dataset.bsTheme
+    }
+    console.log(entry)
+  })
+}
 
 
