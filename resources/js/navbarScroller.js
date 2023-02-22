@@ -36,7 +36,7 @@ function addIntersectionObserver () {
     // threshold: 0.9
   })
   
-  console.log(sections)
+  // console.log(sections)
   
   sections.forEach((section, i) => {
     observer.observe(section)
@@ -49,7 +49,7 @@ function callback (entries, observer) {
     if (entry.isIntersecting) {
       navbar.dataset.bsTheme = entry.target.dataset.bsTheme
     }
-    console.log(entry)
+    // console.log(entry)
   })
 }
 

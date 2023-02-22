@@ -30,14 +30,14 @@
                 </li>
               @else
                 <li class="nav-item dropdown text-uppercase">
-                  <a @class([ 'active wab-highlight'=>
-                strpos(Route::currentRouteName(), $entry['routeName']) === 0,
-                'nav-link position-relative',
-                ]) href="#" role="button"
+                  <a @class([ 'active wab-highlight'=> strpos(Route::currentRouteName(), $entry['routeName']) === 0, 'nav-link position-relative'])
+                     style="z-index: 1001"
+                     href="#" role="button"
                      data-bs-toggle="dropdown" aria-expanded="false">
                     {{ $entry['label'] }}
                     <x-svg-icon class="imgWhite" icon="VectorArrowBlack"></x-svg-icon>
                   </a>
+
                   <ul class="dropdown-menu">
                     @foreach ($entry['children'] as $child)
                       <li @class(['border-bottom'=> !$loop->last])>
