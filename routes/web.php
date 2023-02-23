@@ -14,20 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-
 Route::get('/chisiamo', [App\Http\Controllers\ChiSiamo::class, 'index'])->name('about');
-
 Route::get('/servizi', [App\Http\Controllers\Servizi::class, 'index'])->name('services');
-Route::get('/test', [App\Http\Controllers\Test::class, 'index'])->name('test');
 
 
-Route::middleware([
-  'auth:sanctum',
-  config('jetstream.auth_session'),
-  'verified'
-])->group(function () {
-  Route::get('/dashboard', function () {
-    return view('dashboard');
-  })->name('dashboard');
-});
+Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])
+  ->prefix('admin')
+  ->name('admin.')
+  ->group(function () {
+    Route::get('/', [\App\Http\Controllers\Admin\HomeController::class, "index"])->name('dashboard');
+  });

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" data-bs-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,7 +8,7 @@
   <title>{{ 'WAB - Admin' }}</title>
 
   <!-- Scripts -->
-  @vite(["resources/js/app.js", "resources/styles/app.scss"])
+  @vite(["resources/js/admin.js", "resources/styles/admin.scss"])
 
   <!-- Styles -->
   @livewireStyles
@@ -16,9 +16,7 @@
 
 <body class="antialiased">
 
-<x-jet-banner/>
-
-@livewire('navigation-menu')
+<livewire:nav-menu></livewire:nav-menu>
 
 <div class="container-fluid">
 
