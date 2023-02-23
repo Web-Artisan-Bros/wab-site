@@ -1,5 +1,6 @@
-import 'bootstrap'
+import * as bs from 'bootstrap'
 
+window.bootstrap = bs
 
 window.isInViewport = function (el) {
   const rect = el.getBoundingClientRect()
@@ -11,3 +12,10 @@ window.isInViewport = function (el) {
   )
 }
 
+window.livewire.on('closeModal', (modalId) => {
+  const modal = document.getElementById(modalId)
+  
+  if (modal) {
+    bootstrap.Modal.getInstance(modal).hide()
+  }
+})

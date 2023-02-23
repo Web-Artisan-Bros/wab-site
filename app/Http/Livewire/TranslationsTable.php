@@ -14,6 +14,8 @@ class TranslationsTable extends Component {
   
   protected string $paginationTheme = 'bootstrap';
   
+  protected $listeners = ['refresh' => "render"];
+  
   public function getAreActiveFiltersProperty() {
     return $this->filterKey || $this->filterGroup;
   }
