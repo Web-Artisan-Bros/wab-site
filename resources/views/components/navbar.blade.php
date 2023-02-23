@@ -25,7 +25,7 @@
                 <li class="nav-item text-uppercase">
                   <x-navigation-link href="{{ route($entry['routeName']) }}"
                                      active="{{ request()->routeIs($entry['routeName']) }}">
-                    {{ $entry['label'] }}
+                    {{ __('menu.' . $entry['label']) }}
                   </x-navigation-link>
                 </li>
               @else

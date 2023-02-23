@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aaa2c9aa5233f43955554de2529e3e55",
+    "content-hash": "e0504b7a60e703ad653a9f60e7a01da1",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -2416,11 +2416,17 @@
         },
         {
             "name": "leicaflorian/pimp_my_crud",
-            "version": "dev-main",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/leicaflorian/pimp_my_crud.git",
+                "reference": "1123655fdef8830c7e0fae8ce12f0a6f2b1c41b1"
+            },
             "dist": {
-                "type": "path",
-                "url": "./../../Projects/pimp-my-crud",
-                "reference": "ec9a28092db06e6ad448fdb1f41e144743829cb3"
+                "type": "zip",
+                "url": "https://api.github.com/repos/leicaflorian/pimp_my_crud/zipball/1123655fdef8830c7e0fae8ce12f0a6f2b1c41b1",
+                "reference": "1123655fdef8830c7e0fae8ce12f0a6f2b1c41b1",
+                "shasum": ""
             },
             "require": {
                 "doctrine/dbal": "^3.6",
@@ -2454,9 +2460,7 @@
                     "LeicaFlorian\\PimpMyCrud\\Commands\\": "src/Commands"
                 }
             },
-            "autoload-dev": {
-                "psr-4": []
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2473,10 +2477,11 @@
                 "laravel",
                 "resource"
             ],
-            "transport-options": {
-                "symlink": false,
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/leicaflorian/pimp_my_crud/issues",
+                "source": "https://github.com/leicaflorian/pimp_my_crud/tree/1.0.4"
+            },
+            "time": "2023-02-23T12:14:09+00:00"
         },
         {
             "name": "livewire/livewire",
@@ -9178,9 +9183,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "leicaflorian/pimp_my_crud": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

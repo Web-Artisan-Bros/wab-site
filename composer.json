@@ -11,7 +11,7 @@
         "laravel/jetstream": "^2.14",
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
-        "leicaflorian/pimp_my_crud": "dev-main",
+        "leicaflorian/pimp_my_crud": "^1.0",
         "livewire/livewire": "^2.12",
         "spatie/laravel-translation-loader": "^2.7",
         "vemcogroup/laravel-translation": "^3.0"
@@ -66,14 +66,5 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true,
-    "repositories": [
-        {
-            "type": "path",
-            "url": "./../../Projects/pimp-my-crud",
-            "options": {
-                "symlink": false
-            }
-        }
-    ]
+    "prefer-stable": true
 }

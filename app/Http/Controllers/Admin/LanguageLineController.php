@@ -1,11 +1,11 @@
 <?php
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\LanguageLine;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
-
+use App\Http\Controllers\Controller;
+use App\Models\LanguageLine;
 
 class LanguageLineController extends Controller {
   /**
@@ -14,9 +14,9 @@ class LanguageLineController extends Controller {
    * @return View
    */
   public function index(): View {
-    $language-lines = LanguageLine::all();
+    $languageLines = LanguageLine::all();
     
-    return view('language-lines.index', compact("language-lines"));
+    return view('admin.language-lines.index', compact("languageLines"));
   }
   
   /**
@@ -26,7 +26,7 @@ class LanguageLineController extends Controller {
    */
   public function create(): View {
     
-    return view('language-lines.create', []);
+    return view('admin.language-lines.create', []);
   }
   
   /**
@@ -38,9 +38,9 @@ class LanguageLineController extends Controller {
    */
   public function store(Request $request): RedirectResponse {
     $data = $request->all();
-    $language-line = LanguageLine::create($data);
+    $languageLine = LanguageLine::create($data);
     
-    return redirect()->route('language-lines.show', $language-line->id);
+    return redirect()->route('admin.language-lines.show', $languageLine->id);
   }
   
   /**
@@ -50,8 +50,8 @@ class LanguageLineController extends Controller {
    *
    * @return View
    */
-  public function show(LanguageLine $language-line): View {
-    return view('language-lines.show', compact("language-line"));
+  public function show(LanguageLine $languageLine): View {
+    return view('admin.language-lines.show', compact("languageLine"));
   }
   
   /**
@@ -61,10 +61,10 @@ class LanguageLineController extends Controller {
    *
    * @return View
    */
-  public function edit(LanguageLine $language-line): View {
+  public function edit(LanguageLine $languageLine): View {
     
-    return view('language-lines.edit', [
-      "language-line" => $language-line,
+    return view('admin.language-lines.edit', [
+      "languageLine" => $languageLine,
       
     ]);
   }
@@ -77,12 +77,12 @@ class LanguageLineController extends Controller {
    *
    * @return RedirectResponse
    */
-  public function update(Request $request, LanguageLine $language-line): RedirectResponse {
+  public function update(Request $request, LanguageLine $languageLine): RedirectResponse {
     $data = $request->all();
     
-    $language-line->update($data);
+    $languageLine->update($data);
     
-    return redirect()->route('language-lines.show', $language-line->id);
+    return redirect()->route('admin.language-lines.show', $languageLine->id);
   }
   
   /**
@@ -92,9 +92,9 @@ class LanguageLineController extends Controller {
    *
    * @return RedirectResponse
    */
-  public function destroy(LanguageLine $language-line): RedirectResponse {
-    $language-line->destroy();
+  public function destroy(LanguageLine $languageLine): RedirectResponse {
+    $languageLine->destroy();
     
-    return redirect()->route('language-lines.index');
+    return redirect()->route('admin.language-lines.index');
   }
 }
