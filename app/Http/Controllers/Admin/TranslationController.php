@@ -7,16 +7,16 @@ use Illuminate\View\View;
 use App\Http\Controllers\Controller;
 use App\Models\LanguageLine;
 
-class LanguageLineController extends Controller {
+class TranslationController extends Controller {
   /**
    * Display a listing of the resource.
    *
    * @return View
    */
   public function index(): View {
-    $languageLines = LanguageLine::all();
     
-    return view('admin.language-lines.index', compact("languageLines"));
+    
+    return view('admin.translations.index');
   }
   
   /**
@@ -26,7 +26,7 @@ class LanguageLineController extends Controller {
    */
   public function create(): View {
     
-    return view('admin.language-lines.create', []);
+    return view('admin.translations.create', []);
   }
   
   /**
@@ -38,33 +38,33 @@ class LanguageLineController extends Controller {
    */
   public function store(Request $request): RedirectResponse {
     $data = $request->all();
-    $languageLine = LanguageLine::create($data);
+    $translation = LanguageLine::create($data);
     
-    return redirect()->route('admin.language-lines.show', $languageLine->id);
+    return redirect()->route('admin.translations.show', $translation->id);
   }
   
   /**
    * Display the specified resource.
    *
-   * @param LanguageLine $language-line
+   * @param LanguageLine $translation
    *
    * @return View
    */
-  public function show(LanguageLine $languageLine): View {
-    return view('admin.language-lines.show', compact("languageLine"));
+  public function show(LanguageLine $translation): View {
+    return view('admin.translations.show', compact("translation"));
   }
   
   /**
    * Show the form for editing the specified resource.
    *
-   * @param  LanguageLine  $language-line
+   * @param  LanguageLine  $translation
    *
    * @return View
    */
-  public function edit(LanguageLine $languageLine): View {
+  public function edit(LanguageLine $translation): View {
     
-    return view('admin.language-lines.edit', [
-      "languageLine" => $languageLine,
+    return view('admin.translations.edit', [
+      "translation" => $translation,
       
     ]);
   }
@@ -73,28 +73,28 @@ class LanguageLineController extends Controller {
    * Update the specified resource in storage.
    *
    * @param  Request $request
-   * @param  LanguageLine $language-line
+   * @param  LanguageLine $translation
    *
    * @return RedirectResponse
    */
-  public function update(Request $request, LanguageLine $languageLine): RedirectResponse {
+  public function update(Request $request, LanguageLine $translation): RedirectResponse {
     $data = $request->all();
     
-    $languageLine->update($data);
+    $translation->update($data);
     
-    return redirect()->route('admin.language-lines.show', $languageLine->id);
+    return redirect()->route('admin.translations.show', $translation->id);
   }
   
   /**
    * Remove the specified resource from storage.
    *
-   * @param  LanguageLine  $language-line
+   * @param  LanguageLine  $translation
    *
    * @return RedirectResponse
    */
-  public function destroy(LanguageLine $languageLine): RedirectResponse {
-    $languageLine->destroy();
+  public function destroy(LanguageLine $translation): RedirectResponse {
+    $translation->destroy();
     
-    return redirect()->route('admin.language-lines.index');
+    return redirect()->route('admin.translations.index');
   }
 }

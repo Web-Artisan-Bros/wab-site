@@ -24,5 +24,5 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
   ->group(function () {
     Route::get('/', [\App\Http\Controllers\Admin\HomeController::class, "index"])->name('dashboard');
     
-    Route::resource("/translations", \App\Http\Controllers\Admin\LanguageLineController::class);
+    Route::resource("/translations", \App\Http\Controllers\Admin\TranslationController::class);
   });
