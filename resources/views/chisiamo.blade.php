@@ -7,7 +7,6 @@
 @endphp
 
 @section('content')
-
     <x-jumbo dnone="true" reverseJumbo="flex-lg-row-reverse" theme="yellow">
         <x-slot:reverse>
             btn-reverse-white

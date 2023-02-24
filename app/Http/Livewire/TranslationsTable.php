@@ -37,7 +37,7 @@ class TranslationsTable extends Component {
     $groups = LanguageLine::select("group")->distinct()->get();
     $query  = LanguageLine::orderBy("group")->orderBy("key");
     
-    if ($this->filterGroup) {
+    if (isset($this->filterGroup) && $this->filterGroup !== '') {
       $query->where("group", $this->filterGroup);
     }
     if ($this->filterKey) {

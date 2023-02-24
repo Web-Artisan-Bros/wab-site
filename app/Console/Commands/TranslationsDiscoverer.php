@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
 use Spatie\TranslationLoader\LanguageLine;
+use Vemcogroup\Translation\Translation;
 
 class TranslationsDiscoverer extends Command {
   /**
@@ -28,11 +29,21 @@ class TranslationsDiscoverer extends Command {
    */
   public function handle() {
     // Run artisan command translation:scan
-    $this->call('translation:scan');
+    try {
+      $this->info('Preparing to scan code base');
+      $this->info('Finding all translation variables');
+      $this->info('Overwriting keys');
     
+      $variables = app(Translation::class)->scan(false);
+    
+      $this->info('Finished scanning code base, found: ' . $variables . ' variables');
+    } catch (\Exception $e) {
+      $this->error($e->getMessage());
+    }
+  
     // Read the json file
     $translations = json_decode(file_get_contents(app_path('../lang/en.json')), true);
-    
+  
     // For each key, store the translation in the database
     foreach ($translations as $key => $translation) {
       // create only if not exists

@@ -4,7 +4,7 @@
   <div class="container-fluid">
     <!-- Logo -->
     <a class="navbar-brand" href="{{ route('home') }}">
-      <x-svg-icon icon="logo_nav" style="height: 50px"></x-svg-icon>
+      <x-svg-icon icon="logo_nav" style="--icons-size: 50px"></x-svg-icon>
     </a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -15,33 +15,36 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link" href="{{ route('admin.dashboard') }}" @class(['active' => request()->routeIs('admin.dashboard')])>
-            {{ __('Dashboard') }}
+          <a class="nav-link"
+             href="{{ route('admin.dashboard') }}" @class(['active' => request()->routeIs('admin.dashboard')])>
+            Dashboard
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link"
+             href="{{ route('admin.translations.index') }}" @class(['active' => request()->routeIs('admin.translations')])>
+            Traduzioni
           </a>
         </li>
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
-            @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
-              <img class="h-8 w-8 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}"
-                   alt="{{ Auth::user()->name }}"/>
-            @else
-              <span class="inline-flex rounded-md">
+            <span class="inline-flex rounded-md">
               {{ Auth::user()->name }}
             </span>
-            @endif
           </a>
 
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu dropdown-menu-end">
             <!-- Account Management -->
-            <li><a class="dropdown-item" href="#">{{ __('Manage Account') }}</a></li>
-            <li><a class="dropdown-item" href="{{ route('profile.show') }}">{{ __('Profile') }}</a></li>
+            {{--            <li><a class="dropdown-item" href="#">{{ __('Manage Account') }}</a></li>--}}
+            {{--            <li><a class="dropdown-item" href="{{ route('profile.show') }}">{{ __('Profile') }}</a></li>--}}
 
-            @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
+            {{--@if (Laravel\Jetstream\Jetstream::hasApiFeatures())
               <li><a class="dropdown-item" href="{{ route('api-tokens.index') }}">{{ __('API Tokens') }}</a></li>
-            @endif
+            @endif--}}
 
-            <div class="border-t border-gray-100"></div>
+            {{--            <div class="border-t border-gray-100"></div>--}}
 
             <li>
               <form class="dropdown-item" method="POST" action="{{ route('logout') }}" x-data

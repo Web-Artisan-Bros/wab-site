@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'List of translations')
+@section('title', 'Lista traduzioni')
 
 @section('content')
   @livewire("translations")
