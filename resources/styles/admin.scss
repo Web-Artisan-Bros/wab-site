@@ -8,7 +8,7 @@ $enable-responsive-font-sizes: true;
 
 :root {
   --icons-size: 1rem;
-
+  --logo-accent: #{$primary}
 }
 
 [data-bs-theme="dark"] {
@@ -40,6 +40,7 @@ $enable-responsive-font-sizes: true;
 .btn {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .icon {
@@ -49,5 +50,9 @@ $enable-responsive-font-sizes: true;
   svg {
     width: var(--icons-size);
     height: var(--icons-size);
+  }
+
+  &.icon-fluid {
+    --icon-size: 100%;
   }
 }

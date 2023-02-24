@@ -9,7 +9,7 @@
   <title>{{ config('app.name', 'Laravel') }}</title>
 
   <!-- Scripts -->
-  @vite(["resources/js/app.js", "resources/styles/app.scss"])
+  @vite(["resources/js/admin.js", "resources/styles/admin.scss"])
 
   <!-- Styles -->
   @livewireStyles
