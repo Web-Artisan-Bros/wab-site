@@ -14,9 +14,9 @@ class HomeController extends Controller
       [
         "id"      => 1,
         "num"     => "01",
-        "title"   => "ESPERIENZA CONSOLIDATA",
+        "title"   => __("accordion.01_title"),
         "icon"    => "",
-        "content" => "il nostro team vanta anni di esperienza nel settore e un team altamente qualificato, garantendo risultati di alta qualità."
+        "content" => __("accordion.01_text")
       ],
       [
         "id"      => 2,

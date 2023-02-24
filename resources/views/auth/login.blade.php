@@ -32,24 +32,17 @@
                            :attrs="['autocomplete' => 'current-password', 'required'=> true]"
       />
 
-      {{--<div class="block mt-4">
-        <label for="remember_me" class="flex items-center">
-          <x-jet-checkbox id="remember_me" name="remember"/>
-          <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-        </label>
-      </div>--}}
-
-      <div class="text-center mb-4">
-        <button class="btn btn-outline-primary w-100">
+      <div class="text-center">
+        <button class="btn btn-outline-secondary w-100">
           {{ __('Log in') }}
         </button>
       </div>
 
-      @if (Route::has('password.request'))
+      {{--@if (Route::has('password.request'))
         <a class="small d-block" href="{{ route('password.request') }}">
           {{ __('Forgot your password?') }}
         </a>
-      @endif
+      @endif--}}
     </form>
   </x-jet-authentication-card>
 </x-guest-layout>
