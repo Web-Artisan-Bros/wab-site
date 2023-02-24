@@ -58,15 +58,17 @@
     transition: background-color #{$ease};
     position: relative;
 
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(sm) {
       --icon-size: 30px;
       --icon-container-size: 50px;
     }
 
-    .cup {
+    .accordion-icon {
       opacity: 0;
       transition: opacity #{$ease},
       scale #{$ease};
+      max-width: 200px;
+      filter: saturate(0.5);
       margin-top: 0;
       scale: 0.9;
     }
@@ -74,7 +76,8 @@
     .text {
       position: relative;
       padding-left: var(--icon-container-size);
-      transition: padding #{$ease}, color #{$ease};
+      transition: padding #{$ease},
+      color #{$ease};
     }
 
     .arrow {
@@ -84,7 +87,8 @@
       top: 50%;
       left: 0;
       transform: translate(0, -50%);
-      transition: transform #{$ease}, left #{$ease};
+      transition: transform #{$ease},
+      left #{$ease};
       transform-origin: center;
     }
 
@@ -135,7 +139,7 @@
   }
 
   .show {
-    .cup {
+    .accordion-icon {
       opacity: 100%;
       scale: 1;
       // NON possiamo usare il margin negativo perchè il padre ha la classe collapse e quindi ha un overflow quando

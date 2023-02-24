@@ -15,14 +15,13 @@ $pageTitle = "Home";
 
   <x-slot:text>
     <div class="mb-3 mb-lg-5">
-      <h1>WEB DESIGN</h1>
-      <h2 class="fs-3 f-spacing">PERSONALIZZATO</h2>
-      <h2 class="">E <span class="wab-highlight">
-          ARTIGIANALE</span></h2>
+      <h1 class="text-uppercase">esperienze digitali <span class="wab-highlight">artigianali</span></h1>
+
+
     </div>
     <div>
       <div class="d-flex flex-lg-row flex-column align-items-center">
-        <p class="lead">Aiutiamo il tuo business a farsi <span class="wab-highlight ">notare</span> in un mondo
+        <p class="lead">Aiutiamo il tuo business a farsi <span class="wab-highlight">notare</span> in un mondo
           digitale</p>
         <hr class="w-25 opacity-100 d-none d-lg-block">
       </div>
@@ -42,7 +41,7 @@ $pageTitle = "Home";
       @foreach($cardsHome as $card)
       <div class="col">
         <x-service-card number="{{ $card['num'] }}" title='{!! $card["title"] !!}' class="w-100">
-          <a href="{{url('servizi')}}" class="btn btn-themed mt-3 mt-lg-0">Scopri di <span>+</span>
+          <a href="{{url('servizi')}}" class="btn btn-themed mt-3 mt-lg-0">Scopri di più
             <x-svg-icon icon="VectorArrow"></x-svg-icon>
           </a>
         </x-service-card>
@@ -52,10 +51,9 @@ $pageTitle = "Home";
   </x-slot:cards>
 
   <div class="mb-4 mb-lg-5">
-    <h2 class=" position-relative z-index1 d-flex d-lg-block flex-column align-items-center text-center text-lg-start">AI NOSTRI <br>
-      <span class="wab-highlight">CLIENTI</span>
-      <span class=" ">OFFRIAMO SEMPRE</span>
-      <span class="wab-highlight">IL MEGLIO</span>
+    <h2
+      class=" position-relative z-index1 d-flex d-lg-block flex-column align-items-center text-center text-lg-start text-uppercase">
+      I nostri <span class="wab-highlight">servizi:</span> il tuo <span class="wab-highlight">successo</span> online.
     </h2>
   </div>
   <div>
@@ -73,6 +71,10 @@ $pageTitle = "Home";
 </x-contact>
 
 <x-accordion :entries="$accordionWhyUs" theme="light">
+  <x-slot:reverseOrNot>flex-lg-row</x-slot:reverseOrNot>
+  SCEGLI <span class="wab-highlight text-break">NOI,</span> SENZA ESITARE
+  <x-slot:small_text>ECCO PERCHE’ SCEGLIERE NOI, E’ UNA <br><span class="wab-highlight">
+      DECISIONE FACILE</span>:</x-slot:small_text>
 </x-accordion>
 
 @endsection

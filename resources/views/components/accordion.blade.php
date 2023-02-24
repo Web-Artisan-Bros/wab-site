@@ -2,12 +2,9 @@
 
 <section class="themed-section" data-bs-theme="{{ $theme }}">
     <div class="container container-p-156 wab-accordion">
-        <div class="row align-items-lg-end pb-3 flex-column flex-lg-row align-items-center">
+        <div class="row align-items-lg-end pb-3 flex-column {{$reverseOrNot}} align-items-center">
             <div class="col-lg-5 col text-center text-lg-start">
-                <h2 class="position-relative z-index1">
-                    <span class="wab-highlight text-break">
-                        COSTRUIAMO</span> <span>SITI WEB</span>
-                </h2>
+                <h2 class="position-relative z-index1">{{$slot}}</h2>
             </div>
 
             <div class="col-lg-2 col-6">
@@ -15,9 +12,7 @@
             </div>
 
             <div class="col-lg-5 col text-center text-lg-start">
-                <p class="lead position-relative z-index1">ECCO PERCHE’ SCEGLIERE NOI, E’ UNA <br><span
-                        class="wab-highlight">
-                        DECISIONE FACILE</span>:</p>
+                <p class="lead position-relative z-index1">{{$small_text}}</p>
             </div>
         </div>
 
@@ -41,10 +36,9 @@
 
                     <div id="{{ 'acc_body_' . $entry['id'] }}" class="accordion-collapse collapse"
                         aria-labelledby="{{ 'acc_head_' . $entry['id'] }}" data-bs-parent="#accordionWhyUs">
-                        <div class="accordion-body d-flex text-break">
-                            il nostro team vanta anni di esperienza nel settore e un team
-                            altamente qualificato, garantendo risultati di alta qualità.
-                            <img class="cup d-none d-lg-block" src="/assets/CoffeeMug.svg" alt="">
+                        <div class="accordion-body d-flex text-break justify-content-between">
+                            {{ $entry['content'] }}
+                            <img class="accordion-icon d-none d-lg-block" src="/assets/{{ $entry['icon'] }}" alt="">
                         </div>
                     </div>
                 </div>

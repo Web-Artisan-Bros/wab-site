@@ -3,10 +3,9 @@
         <div class="row">
             <div class="col-lg"></div>
             <div class="col-lg-5 col text-center text-lg-start">
-                <h2 class="">ECCO IL NOSTRO PROCESSO <span class="wab-highlight">ARTIGIANALE</span></h2>
+                <h2 class="text-uppercase">{{$slot}}</h2>
                 <div class="d-flex flex-lg-row-reverse flex-column align-items-center">
-                    <p class="lead ps-3">soluzioni personalizzate e artigianali per ogni cliente. esperienza e tecnologie
-                        all'avanguardia.</p>
+                    <p class="lead ps-3">{{$small_text}}</p>
                     <hr class="w-25 opacity-100 primary-hr">
                 </div>
             </div>
