@@ -14,37 +14,37 @@ class HomeController extends Controller
       [
         "id"      => 1,
         "num"     => "01",
-        "title"   => __("accordion.01_title"),
-        "icon"    => "",
-        "content" => __("accordion.01_text")
+        "title"   => "QUALITA’",
+        "icon"    => "quality.png",
+        "content" => "Ci impegniamo per garantire la massima qualità nei nostri prodotti e servizi."
       ],
       [
         "id"      => 2,
         "num"     => "02",
         "title"   => "METODO ARTIGIANALE",
-        "icon"    => "",
-        "content" => "il nostro team vanta anni di esperienza nel settore e un team altamente qualificato, garantendo risultati di alta qualità."
+        "icon"    => "artisanal.png",
+        "content" => "Ogni progetto è unico, e noi ci adattiamo alle esigenze e alle richieste specifiche di ogni cliente."
       ],
       [
         "id"      => 3,
         "num"     => "03",
-        "title"   => "AUMENTO DEI PROFITTI",
-        "icon"    => "",
-        "content" => "il nostro team vanta anni di esperienza nel settore e un team altamente qualificato, garantendo risultati di alta qualità."
+        "title"   => "COMPETENZA",
+        "icon"    => "competenze.png",
+        "content" => "Il nostro team è composto da professionisti altamente qualificati e costantemente aggiornati sulle ultime tendenze e tecnologie del settore."
       ],
       [
         "id"      => 4,
         "num"     => "04",
         "title"   => "ASSISTENZA POST-LANCIO",
-        "icon"    => "",
-        "content" => "il nostro team vanta anni di esperienza nel settore e un team altamente qualificato, garantendo risultati di alta qualità."
+        "icon"    => "assistance.png",
+        "content" => "Offriamo supporto tecnico e assistenza post-vendita per garantire la soddisfazione del cliente anche dopo la consegna del prodotto."
       ],
       [
         "id"      => 5,
         "num"     => "05",
         "title"   => "GIUSTO PREZZO",
-        "icon"    => "",
-        "content" => "il nostro team vanta anni di esperienza nel settore e un team altamente qualificato, garantendo risultati di alta qualità."
+        "icon"    => "money.png",
+        "content" => "Offriamo prezzi competitivi e trasparenti, senza costi nascosti."
       ]
     ];
 
@@ -52,35 +52,35 @@ class HomeController extends Controller
       [
         "id"      => 1,
         "num"     => "01",
-        "title"   => "COSTRUIAMO SITI WEB UNICI",
+        "title"   => "SVILUPPO WEB",
         "icon"    => "",
         "content" => ""
       ],
       [
         "id"      => 2,
         "num"     => "02",
-        "title"   => "MARKETING MIRATO SUI SOCIAL MEDIA",
+        "title"   => "DIGITAL DESIGN",
         "icon"    => "",
         "content" => ""
       ],
       [
         "id"      => 3,
         "num"     => "03",
-        "title"   => "OTTIMIZAZIONE PER IL MOTORI DI RICERCA (SEO)",
+        "title"   => "SVILUPPO SOFTWARE",
         "icon"    => "",
         "content" => ""
       ],
       [
         "id"      => 4,
         "num"     => "04",
-        "title"   => "CREAZIONE DESIGN UNICI",
+        "title"   => "SVILUPPO APP MOBILE",
         "icon"    => "",
         "content" => ""
       ],
       [
         "id"      => 5,
         "num"     => "05",
-        "title"   => "PACHETTI BUSINESS ",
+        "title"   => "TRASFORMAZIONE DIGITALE",
         "icon"    => "",
         "content" => ""
       ]

@@ -12,35 +12,35 @@ class Servizi extends Controller
                 "num"     => "01",
                 "title"   => "SITI AZIENDALI",
                 "icon"    => "",
-                "content" => "il nostro team vanta anni di esperienza nel settore e un team altamente qualificato, garantendo risultati di alta qualità."
+                "content" => "Questi sono siti web progettati per le aziende che vogliono avere una presenza online per promuovere i loro prodotti o servizi."
             ],
             [
                 "id"      => 2,
                 "num"     => "02",
-                "title"   => "SITI PER START UP",
+                "title"   => "SITI PERSONALI",
                 "icon"    => "",
-                "content" => "il nostro team vanta anni di esperienza nel settore e un team altamente qualificato, garantendo risultati di alta qualità."
+                "content" => "Questi sono siti web che le persone possono utilizzare per creare un curriculum online, condividere informazioni personali o promuovere i loro hobby."
             ],
             [
                 "id"      => 3,
                 "num"     => "03",
                 "title"   => "SITI PROMOZIONALI",
                 "icon"    => "",
-                "content" => "il nostro team vanta anni di esperienza nel settore e un team altamente qualificato, garantendo risultati di alta qualità."
+                "content" => "Questi sono siti web per pubblicizzare un prodotto od un evento."
             ],
             [
                 "id"      => 4,
                 "num"     => "04",
                 "title"   => "E-COMMERCE",
                 "icon"    => "",
-                "content" => "il nostro team vanta anni di esperienza nel settore e un team altamente qualificato, garantendo risultati di alta qualità."
+                "content" => "Questi sono siti web che consentono alle aziende di vendere i loro prodotti o servizi online."
             ],
             [
                 "id"      => 5,
                 "num"     => "05",
-                "title"   => "SVILUPPO APP MOBILE",
+                "title"   => "BLOGS",
                 "icon"    => "",
-                "content" => "il nostro team vanta anni di esperienza nel settore e un team altamente qualificato, garantendo risultati di alta qualità."
+                "content" => "Questi sono siti web che presentano articoli e contenuti informativi su argomenti specifici."
             ]
         ];
 
@@ -48,37 +48,38 @@ class Servizi extends Controller
             [
                 "id"      => 1,
                 "num"     => "01",
-                "title"   => "QUALI SERVIZI OFFRITE?",
+                "title"   => "SITO WEB PROFESSIONALE, VANTAGGI?",
                 "icon"    => "",
-                "content" => "Offriamo servizi di progettazione e sviluppo web, ottimizzazione SEO, marketing digitale e consulenza per la trasformazione digitale delle aziende. Ci concentriamo su soluzioni personalizzate per ogni cliente, combinando la nostra esperienza artigianale con tecnologie all'avanguardia per ottenere risultati di successo."
+                "content" => "Un sito web professionale può fornire una forte presenza online per la tua attività, consentire ai clienti di trovare facilmente informazioni sui tuoi prodotti o servizi e migliorare la tua credibilità nel mercato."
             ],
             [
                 "id"      => 2,
                 "num"     => "02",
                 "title"   => "HO GIA' UN SITO, PERCHE' AVREI BISOGNO DI VOI?",
                 "icon"    => "",
-                "content" => "Offriamo servizi di progettazione e sviluppo web, ottimizzazione SEO, marketing digitale e consulenza per la trasformazione digitale delle aziende. Ci concentriamo su soluzioni personalizzate per ogni cliente, combinando la nostra esperienza artigianale con tecnologie all'avanguardia per ottenere risultati di successo."
+                "content" => "Anche se hai già un sito web, la nostra agenzia può aiutarti a migliorarlo e renderlo più efficace. Possiamo fornire un'ampia gamma di servizi, come la progettazione e sviluppo di nuove funzionalità, l'ottimizzazione SEO, il supporto tecnico, e molto altro ancora."
             ],
             [
                 "id"      => 3,
                 "num"     => "03",
-                "title"   => "COS'E' UNA TRASFORMAZIONE DIGITALE?",
+                "title"   => "COSA DEVO FORNIRE PER LA CREAZIONE DEL MIO SITO?",
                 "icon"    => "",
-                "content" => "Offriamo servizi di progettazione e sviluppo web, ottimizzazione SEO, marketing digitale e consulenza per la trasformazione digitale delle aziende. Ci concentriamo su soluzioni personalizzate per ogni cliente, combinando la nostra esperienza artigianale con tecnologie all'avanguardia per ottenere risultati di successo."
+                "content" => "In genere, dovrai fornire testo e immagini di alta qualità relativi ai tuoi prodotti o servizi, il tuo logo e i colori della tua azienda. Potremmo anche richiedere accesso ai tuoi account social media e di hosting."
             ],
             [
                 "id"      => 4,
                 "num"     => "04",
-                "title"   => "AVETE ESPERIENZA NEL MIO SETTORE?",
+                "title"   => "QUANTO TEMPO CI VUOLE PER SVILUPPARE UN SITO?",
                 "icon"    => "",
-                "content" => "Offriamo servizi di progettazione e sviluppo web, ottimizzazione SEO, marketing digitale e consulenza per la trasformazione digitale delle aziende. Ci concentriamo su soluzioni personalizzate per ogni cliente, combinando la nostra esperienza artigianale con tecnologie all'avanguardia per ottenere risultati di successo."
+                "content" => "Il tempo necessario per lo sviluppo di un sito web dipende dalle esigenze specifiche del cliente, dalla complessità del progetto e dalle funzionalità richieste. Tuttavia, cerchiamo sempre di rispettare le scadenze concordate con il cliente."
             ],
             [
                 "id"      => 5,
                 "num"     => "05",
                 "title"   => "OFFRITE ASSISTENZA POST-VENDITA?",
                 "icon"    => "",
-                "content" => "Offriamo servizi di progettazione e sviluppo web, ottimizzazione SEO, marketing digitale e consulenza per la trasformazione digitale delle aziende. Ci concentriamo su soluzioni personalizzate per ogni cliente, combinando la nostra esperienza artigianale con tecnologie all'avanguardia per ottenere risultati di successo."
+                "content" => "Dopo il lancio del sito web, offriamo supporto tecnico e assistenza per eventuali problemi tecnici o domande che possano sorgere. Inoltre, possiamo offrire servizi di gestione e manutenzione del sito web per garantirne la massima efficienza e funzionalità nel tempo.
+                "
             ]
         ];
 
@@ -86,30 +87,30 @@ class Servizi extends Controller
             [
                 "id"      => 1,
                 "num"     => "01",
-                "title"   => "IDEA",
+                "title"   => "ANALISI",
                 "icon"    => "",
-                "content" => "il nostro team vanta anni di esperienza nel settore e un team altamente qualificato, garantendo risultati di alta qualità."
+                "content" => "Analisi e pianificazione: in questa fase, analizziamo le esigenze del cliente e pianifichiamo il progetto in modo dettagliato, per garantire che il risultato finale sia in linea con le sue aspettative."
             ],
             [
                 "id"      => 2,
                 "num"     => "02",
-                "title"   => "BILANCIO",
+                "title"   => "SVILUPPO",
                 "icon"    => "",
-                "content" => "il nostro team vanta anni di esperienza nel settore e un team altamente qualificato, garantendo risultati di alta qualità."
+                "content" => "Progettazione e sviluppo: in questa fase, progettiamo e sviluppiamo il software utilizzando tecniche artigianali avanzate, per garantire la massima qualità del risultato finale."
             ],
             [
                 "id"      => 3,
                 "num"     => "03",
-                "title"   => "SVILUPPO",
+                "title"   => "TEST",
                 "icon"    => "",
-                "content" => "il nostro team vanta anni di esperienza nel settore e un team altamente qualificato, garantendo risultati di alta qualità."
+                "content" => "Test e verifica: una volta completata la fase di sviluppo, effettuiamo test rigorosi per verificare che il software funzioni senza problemi e sia privo di errori o bug."
             ],
             [
                 "id"      => 4,
                 "num"     => "04",
-                "title"   => "RISULTATI",
+                "title"   => "LANCIO",
                 "icon"    => "",
-                "content" => "il nostro team vanta anni di esperienza nel settore e un team altamente qualificato, garantendo risultati di alta qualità."
+                "content" => "Lancio e supporto: dopo il completamento del progetto, forniamo un supporto continuo per garantire che il software funzioni senza problemi e sia sempre aggiornato, per soddisfare le esigenze del cliente nel lungo periodo."
             ]
         ];
 
