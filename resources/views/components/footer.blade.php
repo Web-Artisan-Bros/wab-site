@@ -29,7 +29,7 @@
         {{-- Right Column --}}
         <div class="col mt-5 mt-lg-0">
           <div class="footer-header flex-column flex-lg-row  mb-3 mb-lg-5">
-            <x-svg-icon class="accent-color footer-logo" icon="Logo" alt="logo web artisan bros"></x-svg-icon>
+            <x-svg-icon class="accent-color footer-logo" icon="logo" alt="logo web artisan bros"></x-svg-icon>
 
             <div class="position-relative fs-3 lh-1 flex-lg-grow-1">
               <span><span class="accent-color">W</span>eb</span>
