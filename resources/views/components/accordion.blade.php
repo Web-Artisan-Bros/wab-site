@@ -4,7 +4,7 @@
     <div class="container container-p-156 wab-accordion">
         <div class="row align-items-lg-end pb-3 flex-column {{$reverseOrNot}} align-items-center">
             <div class="col-lg-5 col text-center text-lg-start">
-                <h2 class="position-relative z-index1">{{$slot}}</h2>
+                <h2 class="position-relative z-index1 text-break">{{$slot}}</h2>
             </div>
 
             <div class="col-lg-2 col-6">
@@ -28,7 +28,7 @@
 
                             <div class="text">
                                 <div>{{ $entry['num'] }}.</div>
-                                <div class="fs-4">{{ strtoupper($entry['title']) }}</div>
+                                <div class="fs-4">{{ __('accordion.' . strtoupper($entry['title']))}}</div>
                                 <x-svg-icon class="arrow" icon="BorderedArrow"></x-svg-icon>
                             </div>
                         </button>
@@ -37,7 +37,7 @@
                     <div id="{{ 'acc_body_' . $entry['id'] }}" class="accordion-collapse collapse"
                         aria-labelledby="{{ 'acc_head_' . $entry['id'] }}" data-bs-parent="#accordionWhyUs">
                         <div class="accordion-body d-flex text-break justify-content-between">
-                            {{ $entry['content'] }}
+                            {{ __('accordion.' . $entry['content']) }}
                             <img class="accordion-icon d-none d-lg-block" src="/assets/{{ $entry['icon'] }}" alt="">
                         </div>
                     </div>

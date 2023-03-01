@@ -8,19 +8,19 @@
             </div>
             <div class="col">
                 <div class="mb-5 d-flex d-lg-block flex-column align-items-center ">
-                    <h2 class="fs-3 f-spacing position-relative z-index1 ">Siamo qui per rendere <span
+                    <h2 class="fs-3 f-spacing position-relative z-index1 ">{!! __('Siamo qui per rendere <span
                             class="wab-highlight">le</span> <span class="wab-highlight">tue</span> <span
                             class="wab-highlight">idee</span> una realtà: contattaci <span
-                            class="wab-highlight">adesso!</span></h2>
+                            class="wab-highlight">adesso!</span>')!!}</h2>
                     <hr class=" opacity-100 w-75" style="border-color:var(--accent-color)">
                 </div>
                 <div>
                     <div class="d-flex flex-column">
                         <p class="lead mb-5">
-                            Qualsiasi cosa per <span class="wab-highlight">aiutarti</span> a definire la tua presenza
+                            {!! __('Qualsiasi cosa per <span class="wab-highlight">aiutarti</span> a definire la tua presenza
                             online, <span class="wab-highlight">trasformiamo</span>
                             le tue idee e <span class="wab-highlight">le</span> <span class="wab-highlight">tue</span>
-                            <span class="wab-highlight">necessità</span> in un prodotto concreto!
+                            <span class="wab-highlight">necessità</span> in un prodotto concreto!')!!}
                         </p>
 
                         <div class="row justify-content-lg-start justify-content-center d-lg-none">

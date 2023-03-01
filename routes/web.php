@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/chisiamo', [App\Http\Controllers\ChiSiamo::class, 'index'])->name('about');
-Route::get('/servizi', [App\Http\Controllers\Servizi::class, 'index'])->name('services');
+Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/chisiamo', [\App\Http\Controllers\ChiSiamo::class, 'index'])->name('about');
+Route::get('/servizi', [\App\Http\Controllers\Servizi::class, 'index'])->name('services');
+Route::get('/web', [\App\Http\Controllers\Web::class, 'index'])->name('web');
+Route::get('/design', [\App\Http\Controllers\Design::class, 'index'])->name('design');
+Route::get('/software', [\App\Http\Controllers\Software::class, 'index'])->name('software');
+Route::get('/app', [\App\Http\Controllers\App::class, 'index'])->name('app');
+Route::get('/digital', [\App\Http\Controllers\Digital::class, 'index'])->name('digital');
+
+
+
 
 
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])
@@ -23,6 +32,15 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
   ->name('admin.')
   ->group(function () {
     Route::get('/', [\App\Http\Controllers\Admin\HomeController::class, "index"])->name('dashboard');
-    
+
     Route::resource("/translations", \App\Http\Controllers\Admin\TranslationController::class);
   });
+Route::get('/lang/{locale}', function (string $locale) {
+  if (!in_array($locale, ['en', 'it', 'ro'])) {
+    abort(400);
+  }
+
+  App::setLocale($locale);
+
+  return redirect('/');
+});

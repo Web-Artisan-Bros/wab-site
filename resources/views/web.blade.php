@@ -17,8 +17,7 @@ $pageTitle = "Servizi";
 
   <x-slot:text>
     <div class="mb-3 mb-lg-5">
-      <h1 class="text-uppercase">{!! __('I nostri servizi: il <span class="wab-highlight">tuo</span> <span
-          class="wab-highlight">successo</span> online')!!}</h1>
+      <h1 class="text-uppercase">{!! __('IL TUO SITO WEB, LA <span class="wab-highlight">TUA</span> <span class="wab-highlight">IMMAGINE</span>')!!}</h1>
     </div>
     <div>
       <div class="d-flex  flex-lg-row flex-column align-items-center">
@@ -38,8 +37,8 @@ $pageTitle = "Servizi";
 
 <x-accordion :entries="$accordionWhyUs" theme="dark">
   <x-slot:reverseOrNot>flex-lg-row-reverse</x-slot:reverseOrNot>
-  {!! __('IL <span class="wab-highlight text-break">TUO</span> <span class="wab-highlight text-break">SITO</span>, LA <span class="wab-highlight text-break">TUA</span> <span class="wab-highlight text-break">IMMAGINE</span>')!!}
-  <x-slot:small_text>{!! __('Creiamo siti web <span class="wab-highlight">personalizzati,</span> <span class="wab-highlight">innovativi</span> e <span class="wab-highlight">all\'avanguardia</span> per far crescere il tuo business')!!}</x-slot:small_text>
+  {!! __('IL TUO SITO WEB <span class="wab-highlight">SU</span> <span class="wab-highlight">MISURA:</span> LA NOSTRA SPECIALITÀ!')!!}
+  <x-slot:small_text class="d-none">{!! __('Il mondo online è come un grande magazzino, e il tuo sito web è la <span class="wab-highlight">vetrina</span> che attira l\'attenzione dei <span class="wab-highlight">clienti</span>!')!!}</x-slot:small_text>
 </x-accordion>
 
 <x-services img="/assets/JumboService01.png" :cards="$cardsServices">
@@ -118,7 +117,7 @@ $pageTitle = "Servizi";
   </x-slot:cards>
 
   <div class="mb-5 text-center text-lg-start">
-    <h2 class="position-relative z-index1 mb-4 text-uppercase">{!! __('Hai <span class="wab-highlight">domande?</span> Abbiamo le <span class="wab-highlight">risposte.')!!}</span>
+    <h2 class="position-relative z-index1 mb-4 text-uppercase">{!! __('HAI <span class="wab-highlight">DOMANDE?</span> ABBIAMO LE <span class="wab-highlight">RISPOSTE!</span>')!!}</span>
   </div>
   <div>
     <div class="d-flex flex-column flex-lg-row align-items-center">
@@ -141,9 +140,9 @@ $pageTitle = "Servizi";
 
 
 <x-diagonalAccordion :entries="$accordionOurProcess" theme="dark">
-  {!! __('Un lavoro <span class="wab-highlight">artigianale</span> su misura')!!}
+  {!! __('SVILUPPO: <span class="wab-highlight">EFFICIENTE</span> E <span class="wab-highlight">PRECISO</span>')!!}
     <x-slot:small_text>
-      {!! __('Creiamo <span class="wab-highlight">siti</span> <span class="wab-highlight">personalizzati</span> per ogni cliente, seguendo un processo artigianale che garantisce <span class="wab-highlight">l\'originalità</span> e la qualità del risultato finale.')!!}
+      {!! __('Dall\'<span class="wab-highlight">idea</span> alla <span class="wab-highlight">realtà</span> in pochi step:')!!}
     </x-slot:small_text>
 </x-diagonalAccordion>
 

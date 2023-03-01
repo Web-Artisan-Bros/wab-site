@@ -53,7 +53,7 @@ class TranslationsDiscoverer extends Command {
       ], [
         'group' => '*',
         'key'   => $key,
-        'text'  => ['en' => $translation],
+        'text'  => ['en' => $translation, 'it' => $translation, 'ro' => $translation,],
       ]);
     }
     

@@ -17,8 +17,7 @@ $pageTitle = "Servizi";
 
   <x-slot:text>
     <div class="mb-3 mb-lg-5">
-      <h1 class="text-uppercase">{!! __('I nostri servizi: il <span class="wab-highlight">tuo</span> <span
-          class="wab-highlight">successo</span> online')!!}</h1>
+      <h1 class="text-uppercase">{!! __('IL <span class="wab-highlight">FUTURO</span> È DIGITALE, NOI TI AIUTIAMO A <span class="wab-highlight">RAGGIUNGERLO</span>')!!}</h1>
     </div>
     <div>
       <div class="d-flex  flex-lg-row flex-column align-items-center">
@@ -36,11 +35,32 @@ $pageTitle = "Servizi";
   </x-slot:jumboImg>
 </x-jumbo>
 
-<x-accordion :entries="$accordionWhyUs" theme="dark">
+{{-- <x-accordion :entries="$accordionWhyUs" theme="dark">
   <x-slot:reverseOrNot>flex-lg-row-reverse</x-slot:reverseOrNot>
-  {!! __('IL <span class="wab-highlight text-break">TUO</span> <span class="wab-highlight text-break">SITO</span>, LA <span class="wab-highlight text-break">TUA</span> <span class="wab-highlight text-break">IMMAGINE</span>')!!}
-  <x-slot:small_text>{!! __('Creiamo siti web <span class="wab-highlight">personalizzati,</span> <span class="wab-highlight">innovativi</span> e <span class="wab-highlight">all\'avanguardia</span> per far crescere il tuo business')!!}</x-slot:small_text>
-</x-accordion>
+  {!! __('<span class="wab-highlight">CREAZIONE</span> DI <span class="wab-highlight">APPLICAZIONI</span> MOBILI')!!}
+  <x-slot:small_text class="d-none">{!! __('Chi ha bisogno di una bacchetta magica quando puoi avere un\'<span class="wab-highlight">app</span> <span class="wab-highlight">personalizzata?</span>')!!}</x-slot:small_text>
+</x-accordion> --}}
+<section>
+  <div class="container container-p-156">
+    <div class="row gap-5">
+      <div class="col">
+        <p class="lead">{!! __('Immagina di essere un\'impresa tradizionale che vuole abbracciare la trasformazione digitale ma non sa da dove cominciare. Noi possiamo aiutarti a passare dal tempo dei dinosauri all\'era digitale, senza dover fare un salto nel futuro come Marty McFly in "Ritorno al futuro"!
+          La trasformazione digitale riguarda l\'adozione di tecnologie digitali in tutti gli aspetti dell\'azienda, dalla comunicazione con i clienti all\'organizzazione interna del lavoro. Il nostro servizio di trasformazione digitale ti aiuterà a capire come implementare queste tecnologie nel modo giusto e a creare un piano d\'azione su misura per la tua attività.
+          Ciò può significare l\'integrazione di software personalizzato per la gestione dei processi aziendali, la creazione di una presenza online efficace tramite un sito web o l\'adozione di strumenti di marketing digitale come l\'e-mail marketing o i social media. In ogni caso, lavoriamo insieme per creare un ambiente digitale che ti permetta di risparmiare tempo e di avere maggiori opportunità di crescita.
+          E non preoccuparti se non sei un esperto tecnologico. Noi ci occuperemo di tutto, dall\'analisi delle tue esigenze e delle tue risorse, alla creazione di un piano su misura, alla realizzazione di tutti gli strumenti necessari, alla formazione del personale, fino alla consulenza a lungo termine. Siamo come una guida turistica digitale, pronti a mostrarti tutte le meraviglie che il mondo digitale ha da offrire e a portarti verso il successo!')!!}</p>
+      </div>
+      <div class="col d-flex flex-column justify-content-between text-end">
+        <h2>{!! __('LA TUA <span class="wab-highlight">AZIENDA</span> VERSO IL <span class="wab-highlight">FUTURO</span> DIGITALE')!!}</h2>
+        <x-svg-icon class="d-none d-lg-inline-block arrowLeft mt-auto mb-5" id="arrow" icon="BigArrow"></x-svg-icon>
+        <div>
+          <p class="lead">{!! __('Non c\'è <span class="wab-highlight">trasformazione</span> <span class="wab-highlight">digitale</span> troppo grande o troppo piccola per noi!')!!}</p>
+          <hr class="opacity-100 d-none d-lg-block">
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 
 <x-services img="/assets/JumboService01.png" :cards="$cardsServices">
   <x-slot:cards>
@@ -118,7 +138,7 @@ $pageTitle = "Servizi";
   </x-slot:cards>
 
   <div class="mb-5 text-center text-lg-start">
-    <h2 class="position-relative z-index1 mb-4 text-uppercase">{!! __('Hai <span class="wab-highlight">domande?</span> Abbiamo le <span class="wab-highlight">risposte.')!!}</span>
+    <h2 class="position-relative z-index1 mb-4 text-uppercase">{!! __('ABBIAMO RACCOLTO LE <span class="wab-highlight">DOMANDE</span> PIÙ <span class="wab-highlight">FREQUENTI,</span> PER AIUTARTI MEGLIO')!!}</span>
   </div>
   <div>
     <div class="d-flex flex-column flex-lg-row align-items-center">
@@ -141,9 +161,9 @@ $pageTitle = "Servizi";
 
 
 <x-diagonalAccordion :entries="$accordionOurProcess" theme="dark">
-  {!! __('Un lavoro <span class="wab-highlight">artigianale</span> su misura')!!}
+  {!! __('PORTIAMO LA TUA AZIENDA NEL <span class="wab-highlight">FUTURO</span>')!!}
     <x-slot:small_text>
-      {!! __('Creiamo <span class="wab-highlight">siti</span> <span class="wab-highlight">personalizzati</span> per ogni cliente, seguendo un processo artigianale che garantisce <span class="wab-highlight">l\'originalità</span> e la qualità del risultato finale.')!!}
+      {!! __('Scopri come si svolge la <span class="wab-highlight">trasformazione</span> <span class="wab-highlight">digitale</span> in 4 fasi:')!!}
     </x-slot:small_text>
 </x-diagonalAccordion>
 

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-class Servizi extends Controller
+class Web extends Controller
 {
     public function index()
     {
@@ -48,35 +48,35 @@ class Servizi extends Controller
             [
                 "id"      => 1,
                 "num"     => "01",
-                "title"   => "SITO WEB PROFESSIONALE, VANTAGGI?",
+                "title"   => "QUALI SONO I VANTAGGI DI AVERE UN SITO WEB PROFESSIONALE?",
                 "icon"    => "",
                 "content" => "Un sito web professionale può fornire una forte presenza online per la tua attività, consentire ai clienti di trovare facilmente informazioni sui tuoi prodotti o servizi e migliorare la tua credibilità nel mercato."
             ],
             [
                 "id"      => 2,
                 "num"     => "02",
-                "title"   => "HO GIA' UN SITO, PERCHE' AVREI BISOGNO DI VOI?",
+                "title"   => "HO GIÀ UN SITO, PERCHÉ AVREI BISOGNO DI VOI?",
                 "icon"    => "",
                 "content" => "Anche se hai già un sito web, la nostra agenzia può aiutarti a migliorarlo e renderlo più efficace. Possiamo fornire un'ampia gamma di servizi, come la progettazione e sviluppo di nuove funzionalità, l'ottimizzazione SEO, il supporto tecnico, e molto altro ancora."
             ],
             [
                 "id"      => 3,
                 "num"     => "03",
-                "title"   => "COSA DEVO FORNIRE PER LA CREAZIONE DEL MIO SITO?",
+                "title"   => "COSA DEVO FORNIRE PER LA CREAZIONE DEL MIO SITO WEB?",
                 "icon"    => "",
                 "content" => "In genere, dovrai fornire testo e immagini di alta qualità relativi ai tuoi prodotti o servizi, il tuo logo e i colori della tua azienda. Potremmo anche richiedere accesso ai tuoi account social media e di hosting."
             ],
             [
                 "id"      => 4,
                 "num"     => "04",
-                "title"   => "QUANTO TEMPO CI VUOLE PER SVILUPPARE UN SITO?",
+                "title"   => "QUANTO TEMPO CI VUOLE PER SVILUPPARE UN SITO WEB?",
                 "icon"    => "",
                 "content" => "Il tempo necessario per lo sviluppo di un sito web dipende dalle esigenze specifiche del cliente, dalla complessità del progetto e dalle funzionalità richieste. Tuttavia, cerchiamo sempre di rispettare le scadenze concordate con il cliente."
             ],
             [
                 "id"      => 5,
                 "num"     => "05",
-                "title"   => "OFFRITE ASSISTENZA POST-VENDITA?",
+                "title"   => "OFFRITE SUPPORTO POST VENDITA?",
                 "icon"    => "",
                 "content" => "Dopo il lancio del sito web, offriamo supporto tecnico e assistenza per eventuali problemi tecnici o domande che possano sorgere. Inoltre, possiamo offrire servizi di gestione e manutenzione del sito web per garantirne la massima efficienza e funzionalità nel tempo."
             ]
@@ -88,31 +88,31 @@ class Servizi extends Controller
                 "num"     => "01",
                 "title"   => "ANALISI",
                 "icon"    => "",
-                "content" => "Analisi e pianificazione: in questa fase, analizziamo le esigenze del cliente e pianifichiamo il progetto in modo dettagliato, per garantire che il risultato finale sia in linea con le sue aspettative."
+                "content" => "In questa fase, analizziamo le esigenze del cliente e pianifichiamo il progetto in modo dettagliato, per garantire che il risultato finale sia in linea con le sue aspettative."
             ],
             [
                 "id"      => 2,
                 "num"     => "02",
                 "title"   => "SVILUPPO",
                 "icon"    => "",
-                "content" => "Progettazione e sviluppo: in questa fase, progettiamo e sviluppiamo il software utilizzando tecniche artigianali avanzate, per garantire la massima qualità del risultato finale."
+                "content" => "In questa fase, progettiamo e sviluppiamo il software utilizzando tecniche artigianali avanzate, per garantire la massima qualità del risultato finale."
             ],
             [
                 "id"      => 3,
                 "num"     => "03",
                 "title"   => "TEST",
                 "icon"    => "",
-                "content" => "Test e verifica: una volta completata la fase di sviluppo, effettuiamo test rigorosi per verificare che il software funzioni senza problemi e sia privo di errori o bug."
+                "content" => "Una volta completata la fase di sviluppo, effettuiamo test rigorosi per verificare che il software funzioni senza problemi e sia privo di errori o bug."
             ],
             [
                 "id"      => 4,
                 "num"     => "04",
                 "title"   => "LANCIO",
                 "icon"    => "",
-                "content" => "Lancio e supporto: dopo il completamento del progetto, forniamo un supporto continuo per garantire che il software funzioni senza problemi e sia sempre aggiornato, per soddisfare le esigenze del cliente nel lungo periodo."
+                "content" => "Dopo il completamento del progetto, forniamo un supporto continuo per garantire che il software funzioni senza problemi e sia sempre aggiornato, per soddisfare le esigenze del cliente nel lungo periodo."
             ]
         ];
 
-        return view('servizi', compact('accordionWhyUs', 'cardsServices', 'accordionOurProcess'));
+        return view('web', compact('accordionWhyUs', 'cardsServices', 'accordionOurProcess'));
     }
 }

@@ -17,8 +17,7 @@ $pageTitle = "Servizi";
 
   <x-slot:text>
     <div class="mb-3 mb-lg-5">
-      <h1 class="text-uppercase">{!! __('I nostri servizi: il <span class="wab-highlight">tuo</span> <span
-          class="wab-highlight">successo</span> online')!!}</h1>
+      <h1 class="text-uppercase">{!! __('REALIZZIAMO <span class="wab-highlight">SOFTWARE</span> SU <span class="wab-highlight">MISURA</span> PER TE')!!}</h1>
     </div>
     <div>
       <div class="d-flex  flex-lg-row flex-column align-items-center">
@@ -36,11 +35,35 @@ $pageTitle = "Servizi";
   </x-slot:jumboImg>
 </x-jumbo>
 
-<x-accordion :entries="$accordionWhyUs" theme="dark">
-  <x-slot:reverseOrNot>flex-lg-row-reverse</x-slot:reverseOrNot>
-  {!! __('IL <span class="wab-highlight text-break">TUO</span> <span class="wab-highlight text-break">SITO</span>, LA <span class="wab-highlight text-break">TUA</span> <span class="wab-highlight text-break">IMMAGINE</span>')!!}
-  <x-slot:small_text>{!! __('Creiamo siti web <span class="wab-highlight">personalizzati,</span> <span class="wab-highlight">innovativi</span> e <span class="wab-highlight">all\'avanguardia</span> per far crescere il tuo business')!!}</x-slot:small_text>
-</x-accordion>
+<section>
+  <div class="container container-p-156">
+    <div class="row gap-5">
+      <div class="col">
+        <p class="lead">{!! __('Il <span class="wab-highlight">servizio</span> di sviluppo software personalizzato è come la confezione di un vestito su misura,
+          fatta apposta per te. Invece di scegliere un software preconfezionato che potrebbe non soddisfare tutte le tue
+          esigenze, noi creiamo un software appositamente per te, tenendo conto di ogni dettaglio e delle tue specifiche
+          richieste. È come avere un abito cucito su misura per la tua azienda, che si adatta perfettamente a tutte le
+          tue esigenze e ti fa risplendere in ogni occasione.<br>
+          Immagina che hai un\'idea per un\'applicazione fantastica ma non sai da dove iniziare. Ecco dove entra in gioco
+          il nostro servizio di sviluppo software personalizzato! Il nostro team di sviluppatori esperti lavora
+          alacremente per creare un software su misura per le tue esigenze specifiche.
+          In pratica, ti ascoltiamo attentamente per capire ciò che desideri e poi lavoriamo con te per creare un
+          software che soddisfi tutte le tue esigenze. Ti teniamo aggiornato durante tutto il processo, perché vogliamo
+          che tu sia coinvolto e felice del prodotto finale. E non preoccuparti se non sei un esperto in informatica,
+          noi ci occupiamo di tutto per te!')!!}</p>
+      </div>
+      <div class="col d-flex flex-column justify-content-between text-end">
+        <h2>{!! __('IL <span class="wab-highlight">SOFTWARE</span> SU MISURA PER IL TUO BUSINESS')!!}</h2>
+        <x-svg-icon class="d-none d-lg-inline-block arrowLeft mt-auto mb-5" id="arrow" icon="BigArrow"></x-svg-icon>
+        <div>
+          <p class="lead">{!! __('Non è <span class="wab-highlight">magia,</span> è solo il nostro software!')!!}</p>
+          <hr class="opacity-100 d-none d-lg-block">
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 
 <x-services img="/assets/JumboService01.png" :cards="$cardsServices">
   <x-slot:cards>
@@ -58,7 +81,8 @@ $pageTitle = "Servizi";
           @foreach($cardsServices as $entry)
           <div class="tab-pane fade" id="v-pills-{{ $entry['id'] }}" role="tabpanel"
             aria-labelledby="v-pills-{{ $entry['id'] }}-tab" tabindex="0">
-            <div class="fs-4 text-primary mb-3">{{ $entry["num"] }}. {{ __('cards.' . strtoupper($entry["title"]))}}</div>
+            <div class="fs-4 text-primary mb-3">{{ $entry["num"] }}. {{ __('cards.' . strtoupper($entry["title"]))}}
+            </div>
             {{ __('cards.' . $entry['content']) }}
           </div>
           @endforeach
@@ -75,7 +99,7 @@ $pageTitle = "Servizi";
                 <h4 class="text-dark text-end">{{ $entry["num"] }}.</h4>
               </div>
               <div class="card-body">
-                <h5 class="card-title text-start h-100">{{  __('cards.' . strtoupper($entry["title"])) }}</h5>
+                <h5 class="card-title text-start h-100">{{ __('cards.' . strtoupper($entry["title"])) }}</h5>
               </div>
             </div>
           </button>
@@ -118,7 +142,7 @@ $pageTitle = "Servizi";
   </x-slot:cards>
 
   <div class="mb-5 text-center text-lg-start">
-    <h2 class="position-relative z-index1 mb-4 text-uppercase">{!! __('Hai <span class="wab-highlight">domande?</span> Abbiamo le <span class="wab-highlight">risposte.')!!}</span>
+    <h2 class="position-relative z-index1 mb-4 text-uppercase">{!! __('TUTTO CIÒ CHE DEVI <span class="wab-highlight">SAPERE,</span> <span class="wab-highlight">A</span> <span class="wab-highlight">PORTATA</span> DI CLICK')!!}</span>
   </div>
   <div>
     <div class="d-flex flex-column flex-lg-row align-items-center">
@@ -141,10 +165,11 @@ $pageTitle = "Servizi";
 
 
 <x-diagonalAccordion :entries="$accordionOurProcess" theme="dark">
-  {!! __('Un lavoro <span class="wab-highlight">artigianale</span> su misura')!!}
-    <x-slot:small_text>
-      {!! __('Creiamo <span class="wab-highlight">siti</span> <span class="wab-highlight">personalizzati</span> per ogni cliente, seguendo un processo artigianale che garantisce <span class="wab-highlight">l\'originalità</span> e la qualità del risultato finale.')!!}
-    </x-slot:small_text>
+  {!! __('SVILUPPO: <span class="wab-highlight">EFFICIENTE</span> E <span class="wab-highlight">PRECISO</span>')!!}
+  <x-slot:small_text>
+    {!! __('Dall\'<span class="wab-highlight">idea</span> alla <span class="wab-highlight">realtà</span> in pochi
+    step:')!!}
+  </x-slot:small_text>
 </x-diagonalAccordion>
 
 <script>

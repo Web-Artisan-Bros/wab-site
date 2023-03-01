@@ -16,31 +16,31 @@ return [
       [
         'title'     => 'Sviluppo Web',
         'label'     => 'Sviluppo Web',
-        'routeName' => 'services',
+        'routeName' => 'web',
         'order'     => 1,
       ],
       [
         'title'     => 'Digital Design',
         'label'     => 'Digital Design',
-        'routeName' => 'services',
+        'routeName' => 'design',
         'order'     => 2,
       ],
       [
         'title'     => 'Sviluppo Software',
         'label'     => 'Sviluppo Software',
-        'routeName' => 'services',
+        'routeName' => 'software',
         'order'     => 3,
       ],
       [
         'title'     => 'Sviluppo App Mobile',
         'label'     => 'Sviluppo App Mobile',
-        'routeName' => 'services',
+        'routeName' => 'app',
         'order'     => 4,
       ],
       [
         'title'     => 'Trasformazioni Digitale',
         'label'     => 'Trasformazioni Digitale',
-        'routeName' => 'services',
+        'routeName' => 'digital',
         'order'     => 5,
       ],
     ]

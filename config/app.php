@@ -70,7 +70,7 @@ return [
   */
   
   'timezone' => 'UTC',
-  
+
   /*
   |--------------------------------------------------------------------------
   | Application Locale Configuration
@@ -81,11 +81,11 @@ return [
   | to any of the locales which will be supported by the application.
   |
   */
-  
-  'locale' => 'en',
+
+  'locale' => 'ro',
   
   'validLocales' => [["code" => 'en', "label" => "English"], ["code" => 'it', "label" => "Italiano"], ["code" => 'ro', "label" => "Română"]],
-  
+
   /*
   |--------------------------------------------------------------------------
   | Application Fallback Locale
@@ -96,8 +96,8 @@ return [
   | the language folders that are provided through your application.
   |
   */
-  
-  'fallback_locale' => 'en',
+
+  'fallback_locale' => 'it',
   
   /*
   |--------------------------------------------------------------------------

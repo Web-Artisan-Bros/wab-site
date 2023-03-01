@@ -14,15 +14,17 @@ $pageTitle = 'Chi siamo';
     </x-slot:reverse>
     <x-slot:text>
         <div class="mb-3 mb-lg-5">
-            <h1>SIAMO <span class="wab-highlight">
+            <h1>{!! __('SIAMO <span class="wab-highlight">
                     WEB</span>&nbsp;<span class="wab-highlight">
-                    ARTISAN</span>&nbsp;<span class="wab-highlight">BROS</span></h1>
+                    ARTISAN</span>&nbsp;<span class="wab-highlight">BROS</span>')!!}</h1>
         </div>
         <div>
             <div class="d-flex flex-lg-row flex-column align-items-center">
-                <p class="lead text-dark">La nostra missione? <span class="wab-highlight">Realizzare</span> <span
-                            class="wab-highlight">le</span> <span class="wab-highlight">tue</span> <span class="wab-highlight">idee.</span>
-                                    Scopri chi siamo!</p>
+                <p class="lead text-dark">{!! __('La nostra missione? <span class="wab-highlight">Realizzare</span>
+                    <span class="wab-highlight">le</span> <span class="wab-highlight">tue</span> <span
+                        class="wab-highlight">idee.</span>
+                    Scopri chi siamo!')!!}
+                </p>
                 <hr class="w-25 opacity-100 d-none d-lg-block">
             </div>
         </div>
@@ -45,9 +47,11 @@ $pageTitle = 'Chi siamo';
 
 
 <x-diagonalAccordion :entries="$accordionOurProcess" theme="dark">
-    IL NOSTRO LAVORO E' UN <span class="wab-highlight">ARTE</span>
+    {!! __('IL NOSTRO LAVORO E&#39 UN <span class="wab-highlight">ARTE</span>')!!}
     <x-slot:small_text>
-        Ogni progetto che realizziamo è un'<span class="wab-highlight">opera</span> <span class="wab-highlight">unica</span>, creata con <span class="wab-highlight">passione</span> e maestria <span class="wab-highlight">artigianale</span>.
+        {!! __('Ogni progetto che realizziamo è un\'<span class="wab-highlight">opera</span> <span
+            class="wab-highlight">unica</span>, creata con <span class="wab-highlight">passione</span> e maestria <span
+            class="wab-highlight">artigianale</span>.') !!}
     </x-slot:small_text>
 </x-diagonalAccordion>
 @endsection

@@ -22,7 +22,7 @@
                                 <div class="positioning">
                                     <div class="text">
                                         <div class="number">{{ $entry['num'] }}.</div>
-                                        <div class="fs-4">{{ strtoupper($entry['title']) }}</div>
+                                        <div class="fs-4">{{ __('d_accordion.' . strtoupper($entry['title'])) }}</div>
                                     </div>
                                     <x-svg-icon class="arrow ms-3" icon="VectorArrowWhiteD"></x-svg-icon>
                                 </div>
@@ -37,9 +37,9 @@
                         aria-labelledby="v-pillss-{{ $entry['id'] }}-tab" tabindex="0">
                         <div class="d-flex flex-column mb-3">
                             <div class="number fs-4 text-primary">{{ $entry['num'] }}.</div>
-                            <div class="fs-4 text-primary">{{ strtoupper($entry['title']) }}</div>
+                            <div class="fs-4 text-primary">{{ __('d_accordion.' . strtoupper($entry['title'])) }}</div>
                         </div>
-                        {{ $entry['content'] }}
+                        {{  __('d_accordion.' . $entry['content']) }}
                     </div>
                 @endforeach
             </div>

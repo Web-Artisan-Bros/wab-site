@@ -34,7 +34,7 @@
                      style="z-index: 1001"
                      href="#" role="button"
                      data-bs-toggle="dropdown" aria-expanded="false">
-                    {{ $entry['label'] }}
+                    {{  __('menu.' . $entry['label']) }}
                     <x-svg-icon class="imgWhite" icon="VectorArrowBlack"></x-svg-icon>
                   </a>
 
@@ -43,7 +43,7 @@
                       <li @class(['border-bottom'=> !$loop->last])>
                         <a class="dropdown-item route-link" href="{{ route($child['routeName']) }}">
                           <x-svg-icon icon="VectorArrowS" class="me-2 ms-0"/>
-                          {{ $child['label'] }}
+                          {{ __('menu_dropdown.' . $child['label']) }}
                         </a>
                       </li>
                     @endforeach
