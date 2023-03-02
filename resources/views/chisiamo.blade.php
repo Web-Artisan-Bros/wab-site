@@ -16,7 +16,7 @@ $pageTitle = 'Chi siamo';
         <div class="mb-3 mb-lg-5">
             <h1>{!! __('SIAMO <span class="wab-highlight">
                     WEB</span>&nbsp;<span class="wab-highlight">
-                    ARTISAN</span>&nbsp;<span class="wab-highlight">BROS</span>')!!}</h1>
+                    ARTISAN</span>&nbsp;<span class="wab-highlight">BROS')!!}</span></h1>
         </div>
         <div>
             <div class="d-flex flex-lg-row flex-column align-items-center">
@@ -47,11 +47,11 @@ $pageTitle = 'Chi siamo';
 
 
 <x-diagonalAccordion :entries="$accordionOurProcess" theme="dark">
-    {!! __('IL NOSTRO LAVORO E&#39 UN <span class="wab-highlight">ARTE</span>')!!}
+    {!! __('IL NOSTRO LAVORO E&#39 UN <span class="wab-highlight">ARTE')!!}</span>
     <x-slot:small_text>
         {!! __('Ogni progetto che realizziamo è un\'<span class="wab-highlight">opera</span> <span
             class="wab-highlight">unica</span>, creata con <span class="wab-highlight">passione</span> e maestria <span
-            class="wab-highlight">artigianale</span>.') !!}
+            class="wab-highlight">artigianale.') !!}</span>
     </x-slot:small_text>
 </x-diagonalAccordion>
 @endsection

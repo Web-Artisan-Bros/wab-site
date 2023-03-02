@@ -10,14 +10,15 @@ $pageTitle = "Servizi";
 
 @section ('content')
 
-<x-jumbo dnone="false" reverseJumbo="" theme="light">
+<x-jumbo dnone="true" reverseJumbo="flex-lg-row-reverse" theme="light">
   <x-slot:reverse>
-    btn-hover
+    btn-reverse-white
   </x-slot:reverse>
 
   <x-slot:text>
     <div class="mb-3 mb-lg-5">
-      <h1 class="text-uppercase">{!! __('REALIZZIAMO <span class="wab-highlight">SOFTWARE</span> SU <span class="wab-highlight">MISURA</span> PER TE')!!}</h1>
+      <h1 class="text-uppercase text-break">{!! __('REALIZZIAMO <span class="wab-highlight">SOFTWARE</span> SU <span
+          class="wab-highlight">MISURA</span> PER TE')!!}</h1>
     </div>
     <div>
       <div class="d-flex  flex-lg-row flex-column align-items-center">
@@ -29,34 +30,37 @@ $pageTitle = "Servizi";
   </x-slot:text>
   <x-slot:jumboImg class="wab-img">
     <div class="pt-5 position-relative d-flex wab-img">
-      <x-bordered-image src="/assets/JumboServiziColor.png" alt="Welcome neon sign"></x-bordered-image>
+      <x-bordered-image src="/assets/jumbo_soft.png" alt="Welcome neon sign"></x-bordered-image>
     </div>
 
   </x-slot:jumboImg>
 </x-jumbo>
 
-<section>
+<section class="themed-section info-section" data-bs-theme="dark">
   <div class="container container-p-156">
     <div class="row gap-5">
       <div class="col">
-        <p class="lead">{!! __('Il <span class="wab-highlight">servizio</span> di sviluppo software personalizzato è come la confezione di un vestito su misura,
-          fatta apposta per te. Invece di scegliere un software preconfezionato che potrebbe non soddisfare tutte le tue
-          esigenze, noi creiamo un software appositamente per te, tenendo conto di ogni dettaglio e delle tue specifiche
-          richieste. È come avere un abito cucito su misura per la tua azienda, che si adatta perfettamente a tutte le
-          tue esigenze e ti fa risplendere in ogni occasione.<br>
-          Immagina che hai un\'idea per un\'applicazione fantastica ma non sai da dove iniziare. Ecco dove entra in gioco
-          il nostro servizio di sviluppo software personalizzato! Il nostro team di sviluppatori esperti lavora
-          alacremente per creare un software su misura per le tue esigenze specifiche.
-          In pratica, ti ascoltiamo attentamente per capire ciò che desideri e poi lavoriamo con te per creare un
-          software che soddisfi tutte le tue esigenze. Ti teniamo aggiornato durante tutto il processo, perché vogliamo
-          che tu sia coinvolto e felice del prodotto finale. E non preoccuparti se non sei un esperto in informatica,
-          noi ci occupiamo di tutto per te!')!!}</p>
+        <p class="">{!! __('Il servizio di <span class="wab-highlight">sviluppo</span> <span class="wab-highlight">software</span> <span class="wab-highlight">personalizzato</span> è
+          come la confezione di un vestito su misura, fatta apposta per te. Invece di scegliere un software preconfezionato che potrebbe non soddisfare tutte le tue esigenze, noi creiamo un software appositamente per te, tenendo conto di ogni <span class="wab-highlight">dettaglio</span> e delle tue specifiche
+          richieste. È come avere un abito cucito <span class="wab-highlight">su</span> <span class="wab-highlight">misura</span> per la tua azienda, che si adatta perfettamente a tutte le
+          tue esigenze e ti fa risplendere in ogni occasione.')!!}</p>
+        <p class="">{!! __('Immagina che hai un\'idea per un\'applicazione fantastica ma non sai da dove iniziare. Ecco
+          dove entra in
+          gioco il nostro servizio di sviluppo software personalizzato! Il nostro team di sviluppatori esperti lavora
+          alacremente per creare un software su misura per le tue <span class="wab-highlight">esigenze</span> <span class="wab-highlight">specifiche</span>.
+          In pratica, ti <span class="wab-highlight">ascoltiamo</span> <span class="wab-highlight">attentamente</span> per capire ciò che desideri e poi lavoriamo con te per creare un
+          software che soddisfi tutte le tue esigenze. Ti teniamo <span class="wab-highlight">aggiornato</span> durante tutto il processo, perché vogliamo
+          che tu sia <span class="wab-highlight">coinvolto</span> e felice del <span class="wab-highlight">prodotto</span> <span class="wab-highlight">finale</span>.')!!}</p>
+        <p class="">{!! __('E non preoccuparti se non sei un esperto in informatica, noi <span class="wab-highlight">ci</span> <span class="wab-highlight">occupiamo</span> <span class="wab-highlight">di</span> <span class="wab-highlight">tutto</span> per
+          te!')!!}</p>
       </div>
       <div class="col d-flex flex-column justify-content-between text-end">
-        <h2>{!! __('IL <span class="wab-highlight">SOFTWARE</span> SU MISURA PER IL TUO BUSINESS')!!}</h2>
+        <h2 class="text-center text-lg-end">{!! __('IL <span class="wab-highlight">SOFTWARE</span> SU MISURA PER IL TUO
+          BUSINESS')!!}</h2>
         <x-svg-icon class="d-none d-lg-inline-block arrowLeft mt-auto mb-5" id="arrow" icon="BigArrow"></x-svg-icon>
         <div>
-          <p class="lead">{!! __('Non è <span class="wab-highlight">magia,</span> è solo il nostro software!')!!}</p>
+          <p class="lead text-center text-lg-end">{!! __('Non è <span class="wab-highlight">magia,</span> è solo il
+            nostro software!')!!}</p>
           <hr class="opacity-100 d-none d-lg-block">
         </div>
 
@@ -81,7 +85,7 @@ $pageTitle = "Servizi";
           @foreach($cardsServices as $entry)
           <div class="tab-pane fade" id="v-pills-{{ $entry['id'] }}" role="tabpanel"
             aria-labelledby="v-pills-{{ $entry['id'] }}-tab" tabindex="0">
-            <div class="fs-4 text-primary mb-3">{{ $entry["num"] }}. {{ __('cards.' . strtoupper($entry["title"]))}}
+            <div class="fs-4 text-primary mb-3">{{ $entry["num"] }}. {{ trans('cards.' . strtoupper($entry["title"]))}}
             </div>
             {{ __('cards.' . $entry['content']) }}
           </div>
@@ -99,7 +103,7 @@ $pageTitle = "Servizi";
                 <h4 class="text-dark text-end">{{ $entry["num"] }}.</h4>
               </div>
               <div class="card-body">
-                <h5 class="card-title text-start h-100">{{ __('cards.' . strtoupper($entry["title"])) }}</h5>
+                <h5 class="card-title text-start h-100">{{ trans('cards.' . strtoupper($entry["title"])) }}</h5>
               </div>
             </div>
           </button>
@@ -121,7 +125,7 @@ $pageTitle = "Servizi";
             <div class="text">
               <x-svg-icon class="arrow" icon="BorderedArrow"></x-svg-icon>
               <div class="fs-6">{{ $entry['num'] }}.</div>
-              <div class="fs-6">{{ __('cards.' . strtoupper($entry['title']))}}</div>
+              <div class="fs-6">{{ trans('cards.' . strtoupper($entry["title"]))}}</div>
             </div>
           </button>
         </h2>
@@ -142,7 +146,9 @@ $pageTitle = "Servizi";
   </x-slot:cards>
 
   <div class="mb-5 text-center text-lg-start">
-    <h2 class="position-relative z-index1 mb-4 text-uppercase">{!! __('TUTTO CIÒ CHE DEVI <span class="wab-highlight">SAPERE,</span> <span class="wab-highlight">A</span> <span class="wab-highlight">PORTATA</span> DI CLICK')!!}</span>
+    <h2 class="position-relative z-index1 mb-4 text-uppercase">{!! __('TUTTO CIÒ CHE DEVI <span
+        class="wab-highlight">SAPERE,</span> <span class="wab-highlight">A</span> <span
+        class="wab-highlight">PORTATA</span> DI CLICK')!!}</span>
   </div>
   <div>
     <div class="d-flex flex-column flex-lg-row align-items-center">
@@ -165,7 +171,7 @@ $pageTitle = "Servizi";
 
 
 <x-diagonalAccordion :entries="$accordionOurProcess" theme="dark">
-  {!! __('SVILUPPO: <span class="wab-highlight">EFFICIENTE</span> E <span class="wab-highlight">PRECISO</span>')!!}
+  {!! __('SVILUPPO: <span class="wab-highlight">EFFICIENTE</span> E <span class="wab-highlight">PRECISO')!!}</span>
   <x-slot:small_text>
     {!! __('Dall\'<span class="wab-highlight">idea</span> alla <span class="wab-highlight">realtà</span> in pochi
     step:')!!}

@@ -12,7 +12,7 @@
             <div class="col d-lg-block d-flex flex-column align-items-center text-center text-lg-start">
                 <h2>{{ __("CHI SIAMO")}}</h2>
                 <hr class="w-50">
-                <p class="lead">{!! __('<span class="wab-highlight">Web</span> <span
+                <p class="lead"><span class="wab-highlight">{!! __('Web</span> <span
                         class="wab-highlight">Artisan</span> <span class="wab-highlight">Bros</span> è una piccola
                     realtà <span class="wab-highlight">artigianale</span> che si <span
                         class="wab-highlight">distingue</span> per la <span class="wab-highlight">passione</span> e

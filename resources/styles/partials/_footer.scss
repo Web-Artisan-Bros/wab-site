@@ -17,8 +17,12 @@ footer {
     @include media-breakpoint-down(lg) {
       justify-content: center;
       gap: 1rem;
-
-
+    }
+    
+    div{
+      @include media-breakpoint-down(lg) {
+        text-align: center;
+      }
     }
   }
 

@@ -10,14 +10,15 @@ $pageTitle = "Servizi";
 
 @section ('content')
 
-<x-jumbo dnone="false" reverseJumbo="" theme="light">
+<x-jumbo dnone="true" reverseJumbo="flex-lg-row-reverse" theme="light">
   <x-slot:reverse>
-    btn-hover
+    btn-reverse-white
   </x-slot:reverse>
 
   <x-slot:text>
     <div class="mb-3 mb-lg-5">
-      <h1 class="text-uppercase">{!! __('IL <span class="wab-highlight">FUTURO</span> È DIGITALE, NOI TI AIUTIAMO A <span class="wab-highlight">RAGGIUNGERLO</span>')!!}</h1>
+      <h1 class="text-break text-wrap">{!! __('IL <span class="wab-highlight">FUTURO</span> È DIGITALE, NOI TI AIUTIAMO AD
+        <span class="wab-highlight text-break text-wrap">ARRIVARCI')!!}</span></h1>
     </div>
     <div>
       <div class="d-flex  flex-lg-row flex-column align-items-center">
@@ -29,31 +30,42 @@ $pageTitle = "Servizi";
   </x-slot:text>
   <x-slot:jumboImg class="wab-img">
     <div class="pt-5 position-relative d-flex wab-img">
-      <x-bordered-image src="/assets/JumboServiziColor.png" alt="Welcome neon sign"></x-bordered-image>
+      <x-bordered-image src="/assets/jumbo_digital.png" alt="Welcome neon sign"></x-bordered-image>
     </div>
 
   </x-slot:jumboImg>
 </x-jumbo>
 
-{{-- <x-accordion :entries="$accordionWhyUs" theme="dark">
-  <x-slot:reverseOrNot>flex-lg-row-reverse</x-slot:reverseOrNot>
-  {!! __('<span class="wab-highlight">CREAZIONE</span> DI <span class="wab-highlight">APPLICAZIONI</span> MOBILI')!!}
-  <x-slot:small_text class="d-none">{!! __('Chi ha bisogno di una bacchetta magica quando puoi avere un\'<span class="wab-highlight">app</span> <span class="wab-highlight">personalizzata?</span>')!!}</x-slot:small_text>
-</x-accordion> --}}
-<section>
+
+<section class="themed-section info-section" data-bs-theme="dark">
   <div class="container container-p-156">
     <div class="row gap-5">
       <div class="col">
-        <p class="lead">{!! __('Immagina di essere un\'impresa tradizionale che vuole abbracciare la trasformazione digitale ma non sa da dove cominciare. Noi possiamo aiutarti a passare dal tempo dei dinosauri all\'era digitale, senza dover fare un salto nel futuro come Marty McFly in "Ritorno al futuro"!
-          La trasformazione digitale riguarda l\'adozione di tecnologie digitali in tutti gli aspetti dell\'azienda, dalla comunicazione con i clienti all\'organizzazione interna del lavoro. Il nostro servizio di trasformazione digitale ti aiuterà a capire come implementare queste tecnologie nel modo giusto e a creare un piano d\'azione su misura per la tua attività.
-          Ciò può significare l\'integrazione di software personalizzato per la gestione dei processi aziendali, la creazione di una presenza online efficace tramite un sito web o l\'adozione di strumenti di marketing digitale come l\'e-mail marketing o i social media. In ogni caso, lavoriamo insieme per creare un ambiente digitale che ti permetta di risparmiare tempo e di avere maggiori opportunità di crescita.
-          E non preoccuparti se non sei un esperto tecnologico. Noi ci occuperemo di tutto, dall\'analisi delle tue esigenze e delle tue risorse, alla creazione di un piano su misura, alla realizzazione di tutti gli strumenti necessari, alla formazione del personale, fino alla consulenza a lungo termine. Siamo come una guida turistica digitale, pronti a mostrarti tutte le meraviglie che il mondo digitale ha da offrire e a portarti verso il successo!')!!}</p>
+        <p class="">{!! __('Immagina di essere <span class="wab-highlight">un\'impresa</span> <span class="wab-highlight">tradizionale</span> che vuole abbracciare la <span class="wab-highlight">trasformazione</span>
+          <span class="wab-highlight">digitale</span> ma non sa da dove cominciare. Noi possiamo aiutarti a passare dal tempo dei dinosauri all\'era
+          digitale, senza dover fare un salto nel futuro come Marty McFly in "Ritorno al futuro"!')!!}</p>
+          <p class="">{!! __('La trasformazione digitale riguarda l\'adozione di <span class="wab-highlight">tecnologie</span> <span class="wab-highlight">digitali</span> in tutti gli aspetti dell\'azienda,
+            dalla <span class="wab-highlight">comunicazione</span> <span class="wab-highlight">con</span> <span class="wab-highlight">i</span> <span class="wab-highlight">clienti</span> <span class="wab-highlight">all\'organizzazione</span> interna del lavoro. Il nostro servizio di trasformazione
+            digitale ti aiuterà a capire come implementare queste tecnologie nel modo giusto e a creare un piano d\'azione
+            su misura per la tua attività.
+            Ciò può significare l\'integrazione di <span class="wab-highlight">software</span> <span class="wab-highlight">personalizzato</span> per la gestione dei processi aziendali, la
+            creazione di una <span class="wab-highlight">presenza</span> <span class="wab-highlight">online</span> efficace tramite un sito web o l\'adozione di strumenti di <span class="wab-highlight">marketing</span> <span class="wab-highlight">digitale</span>
+            come l\'e-mail marketing o i social media.')!!}</p>
+            <p class="">{!! __(' In ogni caso, lavoriamo insieme per creare un <span class="wab-highlight">ambiente</span> <span class="wab-highlight">digitale</span> che
+              ti permetta di risparmiare tempo e di avere maggiori opportunità di crescita.
+              E non preoccuparti se non sei un esperto tecnologico. Noi ci occuperemo di tutto, dall\'analisi delle tue
+              esigenze e delle tue risorse, alla creazione di un piano su misura, alla realizzazione di tutti gli strumenti
+              necessari, alla formazione del personale, fino alla consulenza a lungo termine. Siamo come una <span class="wab-highlight">guida</span> <span class="wab-highlight">turistica</span>
+              digitale, pronti a mostrarti tutte le meraviglie che il mondo digitale ha da offrire e a portarti verso il
+              successo!')!!}</p>
       </div>
       <div class="col d-flex flex-column justify-content-between text-end">
-        <h2>{!! __('LA TUA <span class="wab-highlight">AZIENDA</span> VERSO IL <span class="wab-highlight">FUTURO</span> DIGITALE')!!}</h2>
+        <h2 class="text-center text-lg-end">{!! __('LA TUA <span class="wab-highlight">AZIENDA</span> VERSO IL <span class="wab-highlight">FUTURO</span>
+          DIGITALE')!!}</h2>
         <x-svg-icon class="d-none d-lg-inline-block arrowLeft mt-auto mb-5" id="arrow" icon="BigArrow"></x-svg-icon>
         <div>
-          <p class="lead">{!! __('Non c\'è <span class="wab-highlight">trasformazione</span> <span class="wab-highlight">digitale</span> troppo grande o troppo piccola per noi!')!!}</p>
+          <p class="lead text-center text-lg-end">{!! __('Non c\'è <span class="wab-highlight">trasformazione</span> <span
+              class="wab-highlight">digitale</span> troppo grande o troppo piccola per noi!')!!}</p>
           <hr class="opacity-100 d-none d-lg-block">
         </div>
 
@@ -78,8 +90,9 @@ $pageTitle = "Servizi";
           @foreach($cardsServices as $entry)
           <div class="tab-pane fade" id="v-pills-{{ $entry['id'] }}" role="tabpanel"
             aria-labelledby="v-pills-{{ $entry['id'] }}-tab" tabindex="0">
-            <div class="fs-4 text-primary mb-3">{{ $entry["num"] }}. {{ __('cards.' . strtoupper($entry["title"]))}}</div>
-            {{ __('cards.' . $entry['content']) }}
+            <div class="fs-4 text-primary mb-3">{{ $entry["num"] }}. {{ trans('cards.' . strtoupper($entry["title"]))}}
+            </div>
+            {{ trans('cards.' . $entry['content']) }}
           </div>
           @endforeach
         </div>
@@ -95,7 +108,7 @@ $pageTitle = "Servizi";
                 <h4 class="text-dark text-end">{{ $entry["num"] }}.</h4>
               </div>
               <div class="card-body">
-                <h5 class="card-title text-start h-100">{{  __('cards.' . strtoupper($entry["title"])) }}</h5>
+                <h5 class="card-title text-start h-100">{{ trans('cards.' . strtoupper($entry["title"])) }}</h5>
               </div>
             </div>
           </button>
@@ -117,7 +130,7 @@ $pageTitle = "Servizi";
             <div class="text">
               <x-svg-icon class="arrow" icon="BorderedArrow"></x-svg-icon>
               <div class="fs-6">{{ $entry['num'] }}.</div>
-              <div class="fs-6">{{ __('cards.' . strtoupper($entry['title']))}}</div>
+              <div class="fs-6">{{ trans('cards.' . strtoupper($entry["title"]))}}</div>
             </div>
           </button>
         </h2>
@@ -125,7 +138,7 @@ $pageTitle = "Servizi";
         <div id="{{ 'acc_body_' . $entry['id'].'0' }}" class="accordion-collapse collapse"
           aria-labelledby="{{ 'acc_head_' . $entry['id'].'0' }}" data-bs-parent="#accordionWhyUs">
           <div class="accordion-body d-flex text-break">
-            {{ __('cards.' . $entry['content'])}}
+            {{ trans('cards.' . $entry['content'])}}
             <img class="cup d-none d-lg-block" src="/assets/CoffeeMug.svg" alt="">
           </div>
         </div>
@@ -138,7 +151,9 @@ $pageTitle = "Servizi";
   </x-slot:cards>
 
   <div class="mb-5 text-center text-lg-start">
-    <h2 class="position-relative z-index1 mb-4 text-uppercase">{!! __('ABBIAMO RACCOLTO LE <span class="wab-highlight">DOMANDE</span> PIÙ <span class="wab-highlight">FREQUENTI,</span> PER AIUTARTI MEGLIO')!!}</span>
+    <h2 class="position-relative z-index1 mb-4 text-uppercase">{!! __('ABBIAMO RACCOLTO LE <span
+        class="wab-highlight">DOMANDE</span> PIÙ <span class="wab-highlight">FREQUENTI,</span> PER AIUTARTI
+      MEGLIO')!!}</span>
   </div>
   <div>
     <div class="d-flex flex-column flex-lg-row align-items-center">
@@ -161,10 +176,12 @@ $pageTitle = "Servizi";
 
 
 <x-diagonalAccordion :entries="$accordionOurProcess" theme="dark">
-  {!! __('PORTIAMO LA TUA AZIENDA NEL <span class="wab-highlight">FUTURO</span>')!!}
-    <x-slot:small_text>
-      {!! __('Scopri come si svolge la <span class="wab-highlight">trasformazione</span> <span class="wab-highlight">digitale</span> in 4 fasi:')!!}
-    </x-slot:small_text>
+
+  {!! __('PORTIAMO LA TUA AZIENDA NEL <span class="wab-highlight">FUTURO')!!}</span>
+  <x-slot:small_text>
+    {!! __('Scopri come si svolge la <span class="wab-highlight">trasformazione</span> <span
+      class="wab-highlight">digitale</span> in 4 fasi:')!!}
+  </x-slot:small_text>
 </x-diagonalAccordion>
 
 <script>

@@ -46,6 +46,7 @@ class TranslationsDiscoverer extends Command {
   
     // For each key, store the translation in the database
     foreach ($translations as $key => $translation) {
+      dump($key);
       // create only if not exists
       LanguageLine::firstOrCreate([
         'group' => '*',

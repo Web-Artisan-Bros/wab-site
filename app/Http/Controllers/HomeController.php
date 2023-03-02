@@ -53,6 +53,7 @@ class HomeController extends Controller
         "id"      => 1,
         "num"     => "01",
         "title"   => "SVILUPPO WEB",
+        "url"     => "/web",
         "icon"    => "",
         "content" => ""
       ],
@@ -60,6 +61,7 @@ class HomeController extends Controller
         "id"      => 2,
         "num"     => "02",
         "title"   => "DIGITAL DESIGN",
+        "url"     => "/design",
         "icon"    => "",
         "content" => ""
       ],
@@ -67,6 +69,7 @@ class HomeController extends Controller
         "id"      => 3,
         "num"     => "03",
         "title"   => "SVILUPPO SOFTWARE",
+        "url"     => "/software",
         "icon"    => "",
         "content" => ""
       ],
@@ -74,6 +77,7 @@ class HomeController extends Controller
         "id"      => 4,
         "num"     => "04",
         "title"   => "SVILUPPO APP MOBILE",
+        "url"     => "/app",
         "icon"    => "",
         "content" => ""
       ],
@@ -81,6 +85,7 @@ class HomeController extends Controller
         "id"      => 5,
         "num"     => "05",
         "title"   => "TRASFORMAZIONE DIGITALE",
+        "url"     => "/digital",
         "icon"    => "",
         "content" => ""
       ]

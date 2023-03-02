@@ -11,7 +11,7 @@
                     <h2 class="fs-3 f-spacing position-relative z-index1 ">{!! __('Siamo qui per rendere <span
                             class="wab-highlight">le</span> <span class="wab-highlight">tue</span> <span
                             class="wab-highlight">idee</span> una realtà: contattaci <span
-                            class="wab-highlight">adesso!</span>')!!}</h2>
+                            class="wab-highlight">adesso!')!!}</span></h2>
                     <hr class=" opacity-100 w-75" style="border-color:var(--accent-color)">
                 </div>
                 <div>

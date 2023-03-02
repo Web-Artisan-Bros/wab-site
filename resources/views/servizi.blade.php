@@ -38,8 +38,11 @@ $pageTitle = "Servizi";
 
 <x-accordion :entries="$accordionWhyUs" theme="dark">
   <x-slot:reverseOrNot>flex-lg-row-reverse</x-slot:reverseOrNot>
-  {!! __('IL <span class="wab-highlight text-break">TUO</span> <span class="wab-highlight text-break">SITO</span>, LA <span class="wab-highlight text-break">TUA</span> <span class="wab-highlight text-break">IMMAGINE</span>')!!}
-  <x-slot:small_text>{!! __('Creiamo siti web <span class="wab-highlight">personalizzati,</span> <span class="wab-highlight">innovativi</span> e <span class="wab-highlight">all\'avanguardia</span> per far crescere il tuo business')!!}</x-slot:small_text>
+  {!! __('IL <span class="wab-highlight text-break">TUO</span> <span class="wab-highlight text-break">SITO</span>, LA
+  <span class="wab-highlight text-break">TUA</span> <span class="wab-highlight text-break">IMMAGINE')!!}</span>
+  <x-slot:small_text>{!! __('Creiamo siti web <span class="wab-highlight">personalizzati,</span> <span
+      class="wab-highlight">innovativi</span> e <span class="wab-highlight">all\'avanguardia</span> per far crescere il
+    tuo business')!!}</x-slot:small_text>
 </x-accordion>
 
 <x-services img="/assets/JumboService01.png" :cards="$cardsServices">
@@ -58,7 +61,8 @@ $pageTitle = "Servizi";
           @foreach($cardsServices as $entry)
           <div class="tab-pane fade" id="v-pills-{{ $entry['id'] }}" role="tabpanel"
             aria-labelledby="v-pills-{{ $entry['id'] }}-tab" tabindex="0">
-            <div class="fs-4 text-primary mb-3">{{ $entry["num"] }}. {{ __('cards.' . strtoupper($entry["title"]))}}</div>
+            <div class="fs-4 text-primary mb-3">{{ $entry["num"] }}. {{ trans('cards.' . strtoupper($entry["title"]))}}
+            </div>
             {{ __('cards.' . $entry['content']) }}
           </div>
           @endforeach
@@ -75,7 +79,7 @@ $pageTitle = "Servizi";
                 <h4 class="text-dark text-end">{{ $entry["num"] }}.</h4>
               </div>
               <div class="card-body">
-                <h5 class="card-title text-start h-100">{{  __('cards.' . strtoupper($entry["title"])) }}</h5>
+                <h5 class="card-title text-start h-100">{{ trans('cards.' . strtoupper($entry["title"])) }}</h5>
               </div>
             </div>
           </button>
@@ -97,7 +101,7 @@ $pageTitle = "Servizi";
             <div class="text">
               <x-svg-icon class="arrow" icon="BorderedArrow"></x-svg-icon>
               <div class="fs-6">{{ $entry['num'] }}.</div>
-              <div class="fs-6">{{ __('cards.' . strtoupper($entry['title']))}}</div>
+              <div class="fs-6">{{ trans('cards.' . strtoupper($entry["title"]))}}</div>
             </div>
           </button>
         </h2>
@@ -118,7 +122,8 @@ $pageTitle = "Servizi";
   </x-slot:cards>
 
   <div class="mb-5 text-center text-lg-start">
-    <h2 class="position-relative z-index1 mb-4 text-uppercase">{!! __('Hai <span class="wab-highlight">domande?</span> Abbiamo le <span class="wab-highlight">risposte.')!!}</span>
+    <h2 class="position-relative z-index1 mb-4 text-uppercase">{!! __('Hai <span class="wab-highlight">domande?</span>
+      Abbiamo le <span class="wab-highlight">risposte.')!!}</span>
   </div>
   <div>
     <div class="d-flex flex-column flex-lg-row align-items-center">
@@ -142,9 +147,11 @@ $pageTitle = "Servizi";
 
 <x-diagonalAccordion :entries="$accordionOurProcess" theme="dark">
   {!! __('Un lavoro <span class="wab-highlight">artigianale</span> su misura')!!}
-    <x-slot:small_text>
-      {!! __('Creiamo <span class="wab-highlight">siti</span> <span class="wab-highlight">personalizzati</span> per ogni cliente, seguendo un processo artigianale che garantisce <span class="wab-highlight">l\'originalità</span> e la qualità del risultato finale.')!!}
-    </x-slot:small_text>
+  <x-slot:small_text>
+    {!! __('Creiamo <span class="wab-highlight">siti</span> <span class="wab-highlight">personalizzati</span> per ogni
+    cliente, seguendo un processo artigianale che garantisce <span class="wab-highlight">l\'originalità</span> e la
+    qualità del risultato finale.')!!}
+  </x-slot:small_text>
 </x-diagonalAccordion>
 
 <script>

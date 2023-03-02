@@ -8,9 +8,9 @@
         <div class="col">
           <div class="footer-header">
             <div class="position-relative fs-3 lh-1 flex-basis-0 flex-lg-grow-1 text-lg-start text-end text-uppercase">
-              {!! __("footer.text_left_" . rand(1, 3)) !!}
+              {!! trans("footer.text_left_" . rand(1, 3)) !!}
             </div>
-            <div class="footer-logo justify-content-end w-auto">?</div>
+            <div class="footer-logo justify-content-end w-auto">!</div>
           </div>
 
           <div class="row row-cols-md-2 row-cols-xl-3 row-cols-1 justify-content-center justify-content-lg-start">

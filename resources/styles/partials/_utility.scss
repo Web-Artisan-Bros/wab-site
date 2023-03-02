@@ -23,8 +23,16 @@
   flex-basis: 0;
 }
 
-.arrowLeft{
+.arrowLeft {
   rotate: 180deg;
   max-width: 120px;
 }
 
+.info-section {
+  .row {
+    @include media-breakpoint-down(lg) {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+  }
+}

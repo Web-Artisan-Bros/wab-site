@@ -74,13 +74,13 @@
         @if (!key_exists('children', $entry))
           <a href="{{ route($entry['routeName']) }}"
              class="list-group-item list-group-item-action route-link text-uppercase">
-            {{ $entry['label'] }}
+             {{ __('menu.' . $entry['label']) }}
           </a>
         @else
           <a class="list-group-item list-group-item-action text-uppercase collapsed"
              data-bs-toggle="collapse" href="#mobile-services-menu" role="button"
              aria-expanded="false" aria-controls="mobile-services-menu">
-            {{ $entry['label'] }}
+             {{  __('menu.' . $entry['label']) }}
 
             <x-svg-icon icon="VectorArrowS" class="me-2 ms-0"/>
           </a>
@@ -91,7 +91,7 @@
                 <a class="list-group-item list-group-item-action route-link"
                    href="{{ route($child['routeName']) }}">
                   <x-svg-icon icon="VectorArrowS" class="me-2 ms-0"/>
-                  {{ $child['label'] }}
+                  {{ __('menu_dropdown.' . $child['label']) }}
                 </a>
               @endforeach
             </div>

@@ -28,7 +28,7 @@
 
                             <div class="text">
                                 <div>{{ $entry['num'] }}.</div>
-                                <div class="fs-4">{{ __('accordion.' . strtoupper($entry['title']))}}</div>
+                                <div class="fs-4">{{ trans('accordion.' . strtoupper($entry['title']))}}</div>
                                 <x-svg-icon class="arrow" icon="BorderedArrow"></x-svg-icon>
                             </div>
                         </button>
