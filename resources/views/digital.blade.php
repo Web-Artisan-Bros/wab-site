@@ -117,7 +117,7 @@ $pageTitle = "Servizi";
       </div>
     </div>
 
-    <div class="accordion accordion-flush mt-5 themed-section d-block d-lg-none" id="accordionWhyUs"
+    <div class="accordion accordion-flush mt-5 themed-section d-block d-lg-none" id="cardsServices"
       data-bs-theme="{{ $theme }}">
 
       @foreach ($cardsServices as $entry)
@@ -136,7 +136,7 @@ $pageTitle = "Servizi";
         </h2>
 
         <div id="{{ 'acc_body_' . $entry['id'].'0' }}" class="accordion-collapse collapse"
-          aria-labelledby="{{ 'acc_head_' . $entry['id'].'0' }}" data-bs-parent="#accordionWhyUs">
+          aria-labelledby="{{ 'acc_head_' . $entry['id'].'0' }}" data-bs-parent="#cardsServices">
           <div class="accordion-body d-flex text-break">
             {{ trans('cards.' . $entry['content'])}}
             <img class="cup d-none d-lg-block" src="/assets/CoffeeMug.svg" alt="">

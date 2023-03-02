@@ -45,16 +45,16 @@
             </div>
         </div>
 
-
-        <div class="accordion accordion-flush mt-5 themed-section d-block d-lg-none" id="accordionWhyUs"
+        {{-- accordion per mobile --}}
+        <div class="accordion accordion-flush mt-5 themed-section d-block d-lg-none" id="accordionOurProcess"
             data-bs-theme="{{ $theme }}">
 
             @foreach ($entries as $entry)
             <div class="accordion-item d-flex flex-column">
-                <h2 class="accordion-header" id="{{ 'acc_head_' . $entry['id'] }}">
+                <h2 class="accordion-header" id="{{ 'acc_head_' . $entry['id'].'00' }}">
                     <button class="accordion-button collapsed ps-0" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#{{ 'acc_body_' . $entry['id'] }}" aria-expanded="false"
-                        aria-controls="{{ 'acc_body_' . $entry['id'] }}">
+                        data-bs-target="#{{ 'acc_body_' . $entry['id'].'00' }}" aria-expanded="false"
+                        aria-controls="{{ 'acc_body_' . $entry['id'].'00' }}">
 
                         <div class="text">
                             <x-svg-icon class="arrow" icon="BorderedArrow"></x-svg-icon>
@@ -64,8 +64,8 @@
                     </button>
                 </h2>
 
-                <div id="{{ 'acc_body_' . $entry['id'] }}" class="accordion-collapse collapse"
-                    aria-labelledby="{{ 'acc_head_' . $entry['id'] }}" data-bs-parent="#accordionWhyUs">
+                <div id="{{ 'acc_body_' . $entry['id'].'00' }}" class="accordion-collapse collapse"
+                    aria-labelledby="{{ 'acc_head_' . $entry['id'].'00' }}" data-bs-parent="#accordionOurProcess">
                     <div class="accordion-body d-flex text-break">
                         {{ trans('d_accordion.'. $entry['content'])}}
                         <img class="cup d-none d-lg-block" src="/assets/CoffeeMug.svg" alt="">
