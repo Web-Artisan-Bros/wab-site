@@ -25,7 +25,7 @@
                 <li class="nav-item text-uppercase">
                   <x-navigation-link href="{{ route($entry['routeName']) }}"
                                      active="{{ request()->routeIs($entry['routeName']) }}">
-                    {{ __('menu.' . $entry['label']) }}
+                    {{ trans('menu.' . $entry['label']) }}
                   </x-navigation-link>
                 </li>
               @else
@@ -34,7 +34,7 @@
                      style="z-index: 1001"
                      href="#" role="button"
                      data-bs-toggle="dropdown" aria-expanded="false">
-                    {{  __('menu.' . $entry['label']) }}
+                    {{  trans('menu.' . $entry['label']) }}
                     <x-svg-icon class="imgWhite" icon="VectorArrowBlack"></x-svg-icon>
                   </a>
 
@@ -43,7 +43,7 @@
                       <li @class(['border-bottom'=> !$loop->last])>
                         <a class="dropdown-item route-link" href="{{ route($child['routeName']) }}">
                           <x-svg-icon icon="VectorArrowS" class="me-2 ms-0"/>
-                          {{ __('menu_dropdown.' . $child['label']) }}
+                          {{ trans('menu_dropdown.' . $child['label']) }}
                         </a>
                       </li>
                     @endforeach
@@ -74,13 +74,13 @@
         @if (!key_exists('children', $entry))
           <a href="{{ route($entry['routeName']) }}"
              class="list-group-item list-group-item-action route-link text-uppercase">
-             {{ __('menu.' . $entry['label']) }}
+             {{ trans('menu.' . $entry['label']) }}
           </a>
         @else
           <a class="list-group-item list-group-item-action text-uppercase collapsed"
              data-bs-toggle="collapse" href="#mobile-services-menu" role="button"
              aria-expanded="false" aria-controls="mobile-services-menu">
-             {{  __('menu.' . $entry['label']) }}
+             {{  trans('menu.' . $entry['label']) }}
 
             <x-svg-icon icon="VectorArrowS" class="me-2 ms-0"/>
           </a>
@@ -91,7 +91,7 @@
                 <a class="list-group-item list-group-item-action route-link"
                    href="{{ route($child['routeName']) }}">
                   <x-svg-icon icon="VectorArrowS" class="me-2 ms-0"/>
-                  {{ __('menu_dropdown.' . $child['label']) }}
+                  {{ trans('menu_dropdown.' . $child['label']) }}
                 </a>
               @endforeach
             </div>

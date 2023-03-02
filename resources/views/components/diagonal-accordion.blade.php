@@ -39,7 +39,7 @@
                         <div class="number fs-4 text-primary">{{ $entry['num'] }}.</div>
                         <div class="fs-4 text-primary">{{ trans('d_accordion.' . strtoupper($entry['title'])) }}</div>
                     </div>
-                    {{ __('d_accordion.'. $entry['content'])}}
+                    {{ trans('d_accordion.'. $entry['content'])}}
                 </div>
                 @endforeach
             </div>
@@ -67,7 +67,7 @@
                 <div id="{{ 'acc_body_' . $entry['id'] }}" class="accordion-collapse collapse"
                     aria-labelledby="{{ 'acc_head_' . $entry['id'] }}" data-bs-parent="#accordionWhyUs">
                     <div class="accordion-body d-flex text-break">
-                        {{ __('d_accordion.'. $entry['content'])}}
+                        {{ trans('d_accordion.'. $entry['content'])}}
                         <img class="cup d-none d-lg-block" src="/assets/CoffeeMug.svg" alt="">
                     </div>
                 </div>

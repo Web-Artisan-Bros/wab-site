@@ -42,7 +42,7 @@ class TranslationsDiscoverer extends Command {
     }
   
     // Read the json file
-    $translations = json_decode(file_get_contents(app_path('../lang/en.json')), true);
+    $translations = json_decode(file_get_contents(app_path('../lang/' . config("translation.base_language") . '.json')), true);
   
     // For each key, store the translation in the database
     foreach ($translations as $key => $translation) {

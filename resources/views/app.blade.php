@@ -61,7 +61,7 @@ $pageTitle = "Servizi";
             aria-labelledby="v-pills-{{ $entry['id'] }}-tab" tabindex="0">
             <div class="fs-4 text-primary mb-3">{{ $entry["num"] }}. {{ trans('cards.' . strtoupper($entry["title"]))}}
             </div>
-            {{ __('cards.' . $entry["content"]) }}
+            {{ trans('cards.' . $entry["content"]) }}
           </div>
           @endforeach
         </div>
@@ -107,7 +107,7 @@ $pageTitle = "Servizi";
         <div id="{{ 'acc_body_' . $entry['id'].'0' }}" class="accordion-collapse collapse"
           aria-labelledby="{{ 'acc_head_' . $entry['id'].'0' }}" data-bs-parent="#accordionWhyUs">
           <div class="accordion-body d-flex text-break">
-            {{ __('cards.' . $entry['content'])}}
+            {{ trans('cards.' . $entry['content'])}}
             <img class="cup d-none d-lg-block" src="/assets/CoffeeMug.svg" alt="">
           </div>
         </div>
