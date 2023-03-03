@@ -15,15 +15,15 @@
     <form method="POST" action="{{ route('login') }}">
       @csrf
 
-      <livewire:form-input :label="__('Email')"
+      <livewire:form-input :label="trans('Email')"
                            :value="old('email')"
                            :bindValue="false"
                            name="email"
-                           :placeholder="__('mario.rossi@gmail.com')"
+                           :placeholder="trans('mario.rossi@gmail.com')"
                            type="email"
                            :attrs="['autofocus' => true, 'required'=> true]"/>
 
-      <livewire:form-input :label="__('Password')"
+      <livewire:form-input :label="trans('Password')"
                            :value="old('password')"
                            :bindValue="false"
                            name="password"
@@ -34,7 +34,7 @@
 
       <div class="text-center">
         <button class="btn btn-outline-secondary w-100">
-          {{ __('Log in') }}
+          {{ trans('Log in') }}
         </button>
       </div>
 

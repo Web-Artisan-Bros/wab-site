@@ -35,6 +35,16 @@
             @enderror
           </div>
 
+          <div class="mb-3">
+            <label class="form-label" for="input_path">Path</label>
+            <input type="text"
+                   class="form-control"
+                   name="path"
+                   id="input_path"
+                   disabled
+                   value="{{ isset($showingLine->path) ? $showingLine->path : ''  }}">
+          </div>
+
           <div class="nav nav-tabs" role="tablist">
             @foreach($availableLangs as $lang)
               <button @class(['nav-link', 'active' => $loop->index === $modalActiveTab]) aria-current="page"
@@ -49,7 +59,7 @@
             @foreach($availableLangs as $lang)
               <div @class(['tab-pane fade', 'show active' => $loop->index === $modalActiveTab])
                    id="lang_{{$lang['code']}}" role="tabpanel" tabindex="0">
-                <textarea class="form-control" rows="10" wire:model="form.texts.{{ $lang['code'] }}"></textarea>
+                <textarea class="form-control" rows="10" wire:model="form.text.{{ $lang['code'] }}"></textarea>
               </div>
             @endforeach
           </div>

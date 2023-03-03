@@ -9,31 +9,31 @@
     <form method="POST" action="{{ route('register') }}">
       @csrf
 
-      <livewire:form-input :label="__('Name')"
+      <livewire:form-input :label="trans('Name')"
                            :value="old('name')"
                            name="name"
-                           :placeholder="__('Mario Rossi')"
+                           :placeholder="trans('Mario Rossi')"
                            :attrs="['autofocus' => true, 'required'=> true, 'autocomplete'=>'name']"/>
 
-      <livewire:form-input :label="__('Email')"
+      <livewire:form-input :label="trans('Email')"
                            :value="old('email')"
                            name="email"
-                           :placeholder="__('mario.rossi@gmail.com')"
+                           :placeholder="trans('mario.rossi@gmail.com')"
                            type="email"
                            :attrs="['autofocus' => true, 'required'=> true]"/>
 
-      <livewire:form-input :label="__('Password')"
+      <livewire:form-input :label="trans('Password')"
                            :value="old('password')"
                            name="password"
-                           :placeholder="__('******')"
+                           :placeholder="trans('******')"
                            type="password"
                            :attrs="['autocomplete' => 'new-password', 'required'=> true]"
       />
 
-      <livewire:form-input :label="__('Confirm Password')"
+      <livewire:form-input :label="trans('Confirm Password')"
                            :value="old('password_confirmation')"
                            name="password_confirmation"
-                           :placeholder="__('******')"
+                           :placeholder="trans('******')"
                            type="password"
                            :attrs="['autocomplete' => 'new-password']"
       />
@@ -45,9 +45,9 @@
               <x-jet-checkbox name="terms" id="terms" required/>
 
               <div class="ml-2">
-                {!! __('I agree to the :terms_of_service and :privacy_policy', [
-                        'terms_of_service' => '<a target="_blank" href="'.route('terms.show').'" class="underline text-sm text-gray-600 hover:text-gray-900">'.__('Terms of Service').'</a>',
-                        'privacy_policy' => '<a target="_blank" href="'.route('policy.show').'" class="underline text-sm text-gray-600 hover:text-gray-900">'.__('Privacy Policy').'</a>',
+                {!! trans('I agree to the :terms_of_service and :privacy_policy', [
+                        'terms_of_service' => '<a target="_blank" href="'.route('terms.show').'" class="underline text-sm text-gray-600 hover:text-gray-900">'.trans('Terms of Service').'</a>',
+                        'privacy_policy' => '<a target="_blank" href="'.route('policy.show').'" class="underline text-sm text-gray-600 hover:text-gray-900">'.trans('Privacy Policy').'</a>',
                 ]) !!}
               </div>
             </div>
@@ -58,12 +58,12 @@
 
       <div class="text-center mb-4">
         <button class="btn btn-primary w-100">
-          {{ __('Register') }}
+          {{ trans('Register') }}
         </button>
       </div>
 
       <a class="small" href="{{ route('login') }}">
-        {{ __('Already registered?') }}
+        {{ trans('Already registered?') }}
       </a>
     </form>
   </x-jet-authentication-card>

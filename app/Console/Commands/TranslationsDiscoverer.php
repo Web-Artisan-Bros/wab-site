@@ -2,10 +2,11 @@
 
 namespace App\Console\Commands;
 
+use App\Console\Classes\TranslationScanner;
+use App\Models\LanguageLine;
 use Illuminate\Console\Command;
-use Illuminate\Support\Str;
-use Spatie\TranslationLoader\LanguageLine;
-use Vemcogroup\Translation\Translation;
+use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Support\Facades\DB;
 
 class TranslationsDiscoverer extends Command {
   /**
@@ -28,39 +29,70 @@ class TranslationsDiscoverer extends Command {
    * @return int
    */
   public function handle() {
-    // Run artisan command translation:scan
-    try {
-      $this->info('Preparing to scan code base');
-      $this->info('Finding all translation variables');
-      $this->info('Overwriting keys');
+    $translations = $this->scanFiles();
+    $updatedIds   = [];
     
-      $variables = app(Translation::class)->scan(false);
-    
-      $this->info('Finished scanning code base, found: ' . $variables . ' variables');
-    } catch (\Exception $e) {
-      $this->error($e->getMessage());
-    }
-  
-    // Read the json file
-    $translations = json_decode(file_get_contents(app_path('../lang/' . config("translation.base_language") . '.json')), true);
-  
     // For each key, store the translation in the database
-    foreach ($translations as $key => $translation) {
-      dump($key);
-      // create only if not exists
-      LanguageLine::firstOrCreate([
-        'group' => '*',
-        'key'   => $key,
-      ], [
-        'group' => '*',
-        'key'   => $key,
-        'text'  => ['en' => $translation, 'it' => $translation, 'ro' => $translation,],
-      ]);
+    foreach ($translations as $translation) {
+      $line = LanguageLine::where('group', '*')
+        ->where('key', $translation['key'])
+        ->where(function ($query) use ($translation) {
+          $query->where('path', $translation['path'])
+            ->orWhereNull('path')
+            ->orWhere('path', '');
+        })
+        ->first();
+      
+      $data = [
+        'group'     => '*',
+        'path'      => $translation['path'],
+        'key'       => $translation['key'],
+        'text'      => ['en' => $translation["value"], 'it' => $translation["value"], 'ro' => $translation["value"]],
+        'is_custom' => false
+      ];
+      
+      if ($line) {
+        $line->update([
+          'group' => '*',
+          'path'  => $translation['path'],
+          'key'   => $translation['key'],
+          // avoid editing the text field, because it will be overwritten by the user translation
+          // 'text'  => ['en' => $translation["value"], 'it' => $translation["value"], 'ro' => $translation["value"]],
+        ]);
+        
+        $line->save();
+      } else {
+        $line = LanguageLine::create($data);
+      }
+      
+      $updatedIds[] = $line->id;
     }
+    
+    // after saving all data, must remove from db all ids that are not present in the code with group "*"
+    $deletedKeys = LanguageLine::where('group', '*')
+      ->where('is_custom', false)
+      ->whereNotIn('id', $updatedIds)
+      ->delete();
     
     // clean cache for spatie.translation-loader
     $this->call('cache:forget', ['key' => 'spatie.translation-loader.*.en']);
     
     return Command::SUCCESS;
+  }
+  
+  private function scanFiles() {
+    // Run artisan command translation:scan
+    try {
+      /**
+       * @var Collection $variables
+       */
+      $variables = app(TranslationScanner::class)->scan();
+      
+      $this->info('Finished scanning code base, found: ' . $variables->count() . ' variables');
+      
+      return $variables;
+    } catch (\Exception $e) {
+      $this->error($e->getMessage());
+    }
   }
 }

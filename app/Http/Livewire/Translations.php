@@ -13,10 +13,11 @@ class Translations extends Component {
   public array $form = [
     'group' => null,
     'key'   => null,
-    'texts' => null,
+    'text' => null,
   ];
   public array $availableLangs;
   public int|null $toDelete;
+  public LanguageLine|null $showingLine;
   
   protected $listeners = ['editClick' => "onEditClick", "deleteClick" => "onDeleteClick"];
   
@@ -26,7 +27,7 @@ class Translations extends Component {
     $this->availableLangs = config('app.validLocales');
     
     foreach ($this->availableLangs as $lang) {
-      $this->form['texts'][$lang['code']] = "";
+      $this->form['text'][$lang['code']] = "";
     }
   }
   
@@ -38,17 +39,15 @@ class Translations extends Component {
     $validatedDate = $this->validate([
       'form.group' => 'required',
       'form.key'   => 'required',
-      "form.texts" => "array"
+      "form.text"  => "array",
+      "form.path"  => "string"
     ]);
-    
-    LanguageLine::updateOrCreate([
-      'group' => $validatedDate['form']['group'],
-      'key'   => $validatedDate['form']['key'],
-    ], [
-      'group' => $validatedDate['form']['group'],
-      'key'   => $validatedDate['form']['key'],
-      'text'  => $validatedDate['form']["texts"],
-    ]);
+  
+    if (isset($this->showingLine)) {
+      $this->showingLine->update($validatedDate['form']);
+    } else {
+      LanguageLine::create($validatedDate['form']);
+    }
   
     $this->emit("closeModal", "admin.translations.modal.upsert");
     
@@ -58,17 +57,20 @@ class Translations extends Component {
   public function onAddClick() {
     $this->modalTitle      = 'Aggiungi nuova traduzione';
     $this->modalSaveButton = "Aggiungi";
+    $this->resetForm();
   }
   
   public function onEditClick(LanguageLine $languageLine) {
     $this->modalTitle      = 'Modifica traduzione';
     $this->modalSaveButton = "Salva";
-    
+  
     $this->form = [
       'group' => $languageLine->group,
       'key'   => $languageLine->key,
-      'texts' => $languageLine->text,
+      'text' => $languageLine->text,
     ];
+  
+    $this->showingLine = $languageLine;
   }
   
   public function onDeleteClick($id) {
@@ -85,7 +87,7 @@ class Translations extends Component {
     $this->emit("closeModal", "admin.translations.modal.delete");
     
     // must refresh table data
-    $this->emitTo('translations-table', "refresh");
+    $this->emitTo('tables.translations', "refresh");
     
     session()->flash('message', 'Traduzione eliminata correttamente.');
   }
@@ -93,19 +95,12 @@ class Translations extends Component {
   public function onTranslationAdded() {
     // must close modal
     $this->emit("closeModal", "admin.translations.modal.upsert");
-    
+  
     // must refresh table data
     $this->emitTo('translations-table', "refresh");
-    
-    // must reset form
-    $this->form = [
-      'group' => null,
-      'key'   => null,
-      'text'  => null,
-    ];
-    
-    $this->modalActiveTab = 0;
-    
+  
+    $this->resetForm();
+  
     session()->flash('message', 'Traduzione salvata correttamente.');
   }
   
@@ -113,6 +108,21 @@ class Translations extends Component {
     Artisan::call("localize:store");
     
     session()->flash('message', 'Scansione completata.');
+  
+    // must refresh table data
+    $this->emitTo('tables.translations', "refresh");
   }
  
+  public function resetForm() {
+    // must reset form
+    $this->form = [
+      'group' => null,
+      'key'   => null,
+      'text'  => null,
+    ];
+  
+    $this->showingLine = null;
+  
+    $this->modalActiveTab = 0;
+  }
 }

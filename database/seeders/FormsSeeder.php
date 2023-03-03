@@ -28,8 +28,9 @@ class FormsSeeder extends Seeder {
       'email'              => ["en" => "At what email can we answer?", "it" => "A quale email ti possiamo rispondere?", "ro" => "La ce adresă de email iți putem răspunde?"],
       'phone'              => ["en" => "Woul'd you provide your phone number?", "it" => "Ci vuoi dare il tuo numero di telefono?", "ro" => "Vrei să ne dai numărul de telefon?"],
       'message'            => ["en" => "What would you like to tell us?", "it" => "Cosa ci vuoi dire?", "ro" => "Ce vrei să ne spui?"],
+      'date'               => ["en" => "Date", "it" => "Data", "ro" => "Dată"],
       'required_field_msg' => ["en" => "This fields are the bare minimum ", "it" => "Questi campi sono indispensabili", "ro" => "Aceste informații sunt obligatorii"],
-      'send_btn'           => ["en" => "Send ", "it" => "Invia", "ro" => "Trimite"],
+      'send_btn'           => ["en" => "Send", "it" => "Invia", "ro" => "Trimite"],
     ];
     
     foreach ($validations as $key => $value) {

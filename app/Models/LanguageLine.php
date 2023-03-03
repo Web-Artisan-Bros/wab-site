@@ -14,6 +14,7 @@ use function PHPUnit\Framework\isEmpty;
  * @property string $group
  * @property string $key
  * @property string $text
+ * @property string $path
  *
  * @mixin Builder
  */
@@ -27,12 +28,21 @@ class LanguageLine extends \Spatie\TranslationLoader\LanguageLine {
   /** @var array */
   protected $casts = ['text' => 'array'];
   
+  protected $fillable = ['group', 'key', 'text', 'path', 'is_custom'];
+  
   public static function boot() {
     parent::boot();
     
     $flushGroupCache = function (self $languageLine) {
       $languageLine->flushGroupCache();
     };
+    
+    self::creating(function ($model) {
+      // if is_custom is not set, set it to true
+      if ( !isset($model['is_custom'])) {
+        $model->is_custom = true;
+      }
+    });
     
     static::saved($flushGroupCache);
     static::deleted($flushGroupCache);

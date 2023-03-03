@@ -27,6 +27,11 @@
           <input type="text" class="form-control" id="keyInput" placeholder="Chiave" wire:model.lazy="filterKey">
           <label for="keyInput">Chiave</label>
         </div>
+
+        <div class="form-floating col">
+          <input type="text" class="form-control" id="pathInput" placeholder="Chiave" wire:model.lazy="filterPath">
+          <label for="pathInput">Path</label>
+        </div>
       </div>
     </form>
   @endif
@@ -46,6 +51,7 @@
         <th class="text-center">Id</th>
         <th class="text-center">Gruppo</th>
         <th>Chiave</th>
+        <th>Path</th>
         <th class="text-center">Lingue</th>
         @if(!$onlyLast)
           <th></th>
@@ -58,6 +64,7 @@
           <td class="text-center">{{ $translation->id }}</td>
           <td class="text-center">{{ $translation->group }}</td>
           <td>{{ Str::limit($translation->key), 50, " ..." }}</td>
+          <td>{{ $translation->path }}</td>
           <td class="text-center">{{ implode(", ", array_keys($translation->text)) }}</td>
 
           @if(!$onlyLast)

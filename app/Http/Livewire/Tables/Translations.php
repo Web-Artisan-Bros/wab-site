@@ -11,6 +11,7 @@ class Translations extends Component {
   
   public $filterKey = '';
   public $filterGroup = '';
+  public $filterPath = '';
   public $withFilters = true;
   public $onlyLast = false;
   
@@ -19,7 +20,7 @@ class Translations extends Component {
   protected $listeners = ['refresh' => "render"];
   
   public function getAreActiveFiltersProperty() {
-    return $this->filterKey || $this->filterGroup;
+    return $this->filterKey || $this->filterGroup || $this->filterPath;
   }
   
   public function updatingFilterKey() {
@@ -30,9 +31,14 @@ class Translations extends Component {
     $this->resetPage();
   }
   
+  public function updatingFilterPath() {
+    $this->resetPage();
+  }
+  
   public function filtersReset() {
     $this->filterKey   = '';
     $this->filterGroup = '';
+    $this->filterPath  = '';
   }
   
   public function render() {
@@ -42,8 +48,13 @@ class Translations extends Component {
     if (isset($this->filterGroup) && $this->filterGroup !== '') {
       $query->where("group", $this->filterGroup);
     }
+    
     if ($this->filterKey) {
       $query->where("key", "like", "%{$this->filterKey}%");
+    }
+    
+    if ($this->filterPath) {
+      $query->where("path", "like", "%{$this->filterPath}%");
     }
     
     if ($this->onlyLast) {

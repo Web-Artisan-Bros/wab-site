@@ -23,16 +23,19 @@ class TranslationScanner {
     $this->baseFilename = app()->langPath() . DIRECTORY_SEPARATOR . $this->baseLanguage . '.json';
   }
   
-  public function scan($mergeKeys = false): int {
+  /**
+   * @return Collection - Each element contains the following keys: path, key, value
+   */
+  public function scan(): Collection {
     $allMatches = [];
     $finder     = new Finder();
-    
+  
     $finder->in(base_path())
       ->exclude(config('translation.excluded_directories'))
       ->name(config('translation.extensions'))
       ->followLinks()
       ->files();
-    
+  
     /*
      * This pattern is derived from Barryvdh\TranslationManager by Barry vd. Heuvel <barryvdh@gmail.com>
      *
@@ -54,28 +57,20 @@ class TranslationScanner {
       "\s*" . // Allow whitespace chars before the closing parenthese
       "[\),]"  // Close parentheses or new parameter
     ;
-    
+  
     foreach ($finder as $file) {
       if (preg_match_all("/$pattern/siU", $file->getContents(), $matches)) {
-        $allMatches[$file->getRelativePathname()] = $matches[2];
+        foreach ($matches[2] as $key) {
+          $allMatches[] = [
+            "path"  => $file->getRelativePathname(),
+            "key"   => trim($key),
+            "value" => trim($key),
+          ];
+        }
       }
     }
-    
-    $collapsedKeys = collect($allMatches)->collapse();
-    $keys          = $collapsedKeys->combine($collapsedKeys);
-    
-    if ($mergeKeys) {
-      $content = $this->getFileContent();
-      $keys    = $content->union(
-        $keys->filter(function ($key) use ($content) {
-          return !$content->has($key);
-        })
-      );
-    }
-    
-    file_put_contents($this->baseFilename, json_encode($keys->sortKeys(), JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
-    
-    return $keys->count();
+
+    return collect($allMatches);
   }
   
   public function createJs(): int {

@@ -2,9 +2,15 @@
 
 namespace App\Http\Livewire\Forms;
 
+use App\Http\Controllers\App;
 use App\Http\Requests\StoreContacts;
+use App\Mail\ContactAdminNotify;
+use App\Mail\ContactClientReview;
 use App\Models\Contact;
+use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Support\Facades\Mail;
 use Livewire\Component;
 
 class Contacts extends Component {
@@ -28,17 +34,17 @@ class Contacts extends Component {
       "name"    => "Nome",
     ];*/
   
-  public function __construct($id = null) {
-    parent::__construct($id);
+  public function transconstruct($id = null) {
+    parent::transconstruct($id);
     
     $this->messages = [
-      'name.required'    => __('validations.name_required'),
-      'name.max'         => __('validations.name_max'),
-      'email.required'   => __('validations.email_required'),
-      'email.email'      => __('validations.email_email'),
-      'email.max'        => __('validations.email_max'),
-      'phone.max'        => __('validations.phone_max'),
-      'message.required' => __('validations.message_required'),
+      'name.required'    => trans('validations.name_required'),
+      'name.max'         => trans('validations.name_max'),
+      'email.required'   => trans('validations.email_required'),
+      'email.email'      => trans('validations.email_email'),
+      'email.max'        => trans('validations.email_max'),
+      'phone.max'        => trans('validations.phone_max'),
+      'message.required' => trans('validations.message_required'),
     ];
   }
   
@@ -47,14 +53,22 @@ class Contacts extends Component {
   }
   
   public function store() {
+    $contact = Contact::all()->last();
+    
     $data = $this->validate();
     
-    Contact::create([
+    $contact = Contact::create([
       'name'    => $data['name'],
       'email'   => $data['email'],
       'phone'   => $data['phone'],
       'message' => $data['message'],
     ]);
+    
+    // User email
+    Mail::to($contact->email)->locale(\Illuminate\Support\Facades\App::currentLocale())->queue(new ContactClientReview($contact));
+    
+    // Admin email
+    Mail::to(User::all())->locale(\Illuminate\Support\Facades\App::currentLocale())->queue(new ContactAdminNotify($contact));
     
     $this->formSent = true;
   }
