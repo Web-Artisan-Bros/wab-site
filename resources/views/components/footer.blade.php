@@ -62,7 +62,7 @@
               <strong class="lead">Web Artisan Bros</strong><br>
               Via San Rocco, 34/D - 36016 Thiene (VI)
             </p>
-            <p>Telefono: <a href="3290241530">3290241530</a></p>
+            <p>{{ __('Telefono')}}: <a href="3290241530">3290241530</a></p>
             <p>E-mail: <a href="mailto:Info@webartisan.com">Info@webartisan.com</a></p>
             <p class="mb-0">P. IVA 04439020241</p>
           </div>
