@@ -13,9 +13,15 @@
             <div class="footer-logo justify-content-end w-auto">!</div>
           </div>
 
-          <div class="row row-cols-md-2 row-cols-xl-3 row-cols-1 justify-content-center justify-content-lg-start">
+          <div class="row row-cols-md-2 row-cols-xl-3 row-cols-1 justify-content-center justify-content-lg-start align-items-start">
             <div class="col mb-2 mb-lg-5">
               <x-contact-btn version="small" class="w-100 point-down"></x-contact-btn>
+            </div>
+
+            <div class="col w-100 mb-3">
+              @foreach(config("app.validLocales") as $lang)
+                <a href="{{ route('change-locale', $lang['code']) }}">{{ $lang['label'] }}</a>
+              @endforeach
             </div>
 
             <div class="col w-100">
@@ -43,16 +49,16 @@
 
             <div class="social-icons-container">
               <a class="text-decoration-none" href="mailto:Info@webartisan.com">
-                <x-svg-icon icon="VectorMail" alt="Mail Icon" class="wab-highlight" />
+                <x-svg-icon icon="VectorMail" alt="Mail Icon" class="wab-highlight"/>
               </a>
               <a class="text-decoration-none" href="https://www.instagram.com/webartisanbros/">
-                <x-svg-icon icon="VectorInsta" alt="Instagram Icon" class="wab-highlight" />
+                <x-svg-icon icon="VectorInsta" alt="Instagram Icon" class="wab-highlight"/>
               </a>
               <a class="text-decoration-none" href="#">
-                <x-svg-icon icon="VectorGit" alt="Git Hub Icon" class="wab-highlight" />
+                <x-svg-icon icon="VectorGit" alt="Git Hub Icon" class="wab-highlight"/>
               </a>
               <a class="text-decoration-none" href="#">
-                <x-svg-icon icon="VectorInsta" alt="Instagram Icon" class="wab-highlight" />
+                <x-svg-icon icon="VectorInsta" alt="Instagram Icon" class="wab-highlight"/>
               </a>
             </div>
           </div>

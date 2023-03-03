@@ -35,11 +35,8 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
   });
 
 Route::get('/lang/{locale}', function (string $locale) {
-  if (!in_array($locale, ['en', 'it', 'ro'])) {
-    abort(400);
-  }
-
-  App::setLocale($locale);
-
-  return redirect('/');
-});
+  app()->setLocale($locale);
+  session()->put('locale', $locale);
+  
+  return redirect()->back();
+})->name("change-locale");

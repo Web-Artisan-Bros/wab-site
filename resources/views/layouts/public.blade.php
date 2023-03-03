@@ -31,7 +31,6 @@
 
   <x-offcanvas-contacts theme="{{ $theme }}"></x-offcanvas-contacts>
 
-
   @livewireScripts
 </body>
 
