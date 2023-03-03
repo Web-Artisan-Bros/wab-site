@@ -24,17 +24,16 @@ Route::get('/app', [\App\Http\Controllers\App::class, 'index'])->name('app');
 Route::get('/digital', [\App\Http\Controllers\Digital::class, 'index'])->name('digital');
 
 
-
-
-
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])
   ->prefix('admin')
   ->name('admin.')
   ->group(function () {
     Route::get('/', [\App\Http\Controllers\Admin\HomeController::class, "index"])->name('dashboard');
+    Route::get("/contacts", [\App\Http\Controllers\Admin\ContactController::class, "index"])->name("contacts.index");
 
     Route::resource("/translations", \App\Http\Controllers\Admin\TranslationController::class);
   });
+
 Route::get('/lang/{locale}', function (string $locale) {
   if (!in_array($locale, ['en', 'it', 'ro'])) {
     abort(400);

@@ -14,11 +14,16 @@ class DatabaseSeeder extends Seeder {
    */
   public function run() {
     // \App\Models\User::factory(10)->create();
-    
-    User::factory()->create([
-      'name'     => 'Wab Admin',
-      'email'    => 'info@webartisanbros.com',
-      'password' => bcrypt('password'),
+    $this->call([
+      FormsSeeder::class
     ]);
+  
+    if ( !User::count()) {
+      User::factory()->create([
+        'name'     => 'Wab Admin',
+        'email'    => 'info@webartisanbros.com',
+        'password' => bcrypt('password'),
+      ]);
+    }
   }
 }

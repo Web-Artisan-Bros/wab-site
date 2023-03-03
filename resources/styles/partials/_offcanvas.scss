@@ -19,7 +19,8 @@
 
             &:focus {
                 border-color: var(--accent-color);
-                color: var(--accent-color);
+                // Let color be inherited from body because on light theme the accent color is to light and becomes unreadable
+                //color: var(--accent-color);
             }
         }
 

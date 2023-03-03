@@ -18,7 +18,6 @@ class Translations extends Component {
   public array $availableLangs;
   public int|null $toDelete;
   
-  
   protected $listeners = ['editClick' => "onEditClick", "deleteClick" => "onDeleteClick"];
   
   public function __construct($id = null) {

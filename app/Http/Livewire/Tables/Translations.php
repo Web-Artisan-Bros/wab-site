@@ -1,16 +1,18 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\Tables;
 
 use App\Models\LanguageLine;
 use Livewire\Component;
 use Livewire\WithPagination;
 
-class TranslationsTable extends Component {
+class Translations extends Component {
   use WithPagination;
   
   public $filterKey = '';
   public $filterGroup = '';
+  public $withFilters = true;
+  public $onlyLast = false;
   
   protected string $paginationTheme = 'bootstrap';
   
@@ -29,7 +31,7 @@ class TranslationsTable extends Component {
   }
   
   public function filtersReset() {
-    $this->filterKey = '';
+    $this->filterKey   = '';
     $this->filterGroup = '';
   }
   
@@ -44,9 +46,13 @@ class TranslationsTable extends Component {
       $query->where("key", "like", "%{$this->filterKey}%");
     }
     
-    $data = $query->paginate();
+    if ($this->onlyLast) {
+      $data = LanguageLine::orderBy("created_at", "desc")->limit(10)->get();
+    } else {
+      $data = $query->paginate();
+    }
     
-    return view('livewire.translations-table', [
+    return view('livewire.tables.translations', [
       'translations' => $data,
       "groups"       => $groups
     ]);

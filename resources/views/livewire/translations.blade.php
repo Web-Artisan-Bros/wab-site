@@ -33,7 +33,7 @@
       <div class="card-header">Traduzioni disponibili</div>
 
       <div class="card-body">
-        <livewire:translations-table></livewire:translations-table>
+        <livewire:tables.translations></livewire:tables.translations>
       </div>
     </div>
   </div>

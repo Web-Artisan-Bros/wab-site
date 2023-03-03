@@ -2,11 +2,21 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Cache;
 use function PHPUnit\Framework\isEmpty;
 
 // Model extracted from Spatie\TranslationLoader\LanguageLine
+
+/**
+ * @property int    $id
+ * @property string $group
+ * @property string $key
+ * @property string $text
+ *
+ * @mixin Builder
+ */
 class LanguageLine extends \Spatie\TranslationLoader\LanguageLine {
   /** @var array */
   public $translatable = ['text'];
