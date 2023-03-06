@@ -18,23 +18,28 @@ class LocalizedRoutes {
    */
   public function handle(Request $request, Closure $next) {
     //    $availableLocales = collect(config('app.validLocales'));
-    
+  
     /*
      * We need to check the user language
      * them we check the route name language
      * finally if the route name language is not the same as the user language we redirect to the correct route
      */
-    
-    $userLang    = $request->session()->get("locale");
+  
+    $userLang    = $request->session()->get("locale") ?? $request->getLocale() ?? App::getLocale();
     $routeName   = $request->route()->getName();
     $requestLang = explode(".", $routeName)[0];
-    
+  
+    if ( !$request->session()->has('locale')) {
+      $request->setLocale($userLang);
+      $request->session()->put('locale', $userLang);
+    }
+  
     if ($userLang !== $requestLang) {
       $routeName = str_replace($requestLang . ".", $userLang . ".", $routeName);
-      
+    
       return redirect()->route($routeName);
     }
-    
+  
     return $next($request);
   }
 }

@@ -82,7 +82,7 @@ return [
   |
   */
 
-  'locale' => 'ro',
+  'locale' => 'it',
   
   'validLocales' => [["code" => 'en', "label" => "English"], ["code" => 'it', "label" => "Italiano"], ["code" => 'ro', "label" => "Română"]],
 
