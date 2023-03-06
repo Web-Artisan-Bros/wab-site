@@ -15,13 +15,23 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/chisiamo', [\App\Http\Controllers\ChiSiamo::class, 'index'])->name('about');
-Route::get('/servizi', [\App\Http\Controllers\Servizi::class, 'index'])->name('services');
-Route::get('/web', [\App\Http\Controllers\Web::class, 'index'])->name('web');
-Route::get('/design', [\App\Http\Controllers\Design::class, 'index'])->name('design');
-Route::get('/software', [\App\Http\Controllers\Software::class, 'index'])->name('software');
-Route::get('/app', [\App\Http\Controllers\App::class, 'index'])->name('app');
-Route::get('/digital', [\App\Http\Controllers\Digital::class, 'index'])->name('digital');
+
+foreach (config('app.validLocales') as $locale) {
+  $langCode = $locale["code"];
+  
+  Route::middleware(\App\Http\Middleware\LocalizedRoutes::class)
+    ->name($langCode . ".")
+    ->group(function () use ($langCode) {
+      
+      Route::get('/' . __('routes.chisiamo', [], $langCode), [\App\Http\Controllers\ChiSiamo::class, 'index'])->name('about');
+      Route::get('/' . __('routes.servizi', [], $langCode), [\App\Http\Controllers\Servizi::class, 'index'])->name('services');
+      Route::get('/' . __('routes.web', [], $langCode), [\App\Http\Controllers\Web::class, 'index'])->name('web');
+      Route::get('/' . __('routes.design', [], $langCode), [\App\Http\Controllers\Design::class, 'index'])->name('design');
+      Route::get('/' . __('routes.software', [], $langCode), [\App\Http\Controllers\Software::class, 'index'])->name('software');
+      Route::get('/' . __('routes.app', [], $langCode), [\App\Http\Controllers\App::class, 'index'])->name('app');
+      Route::get('/' . __('routes.digital', [], $langCode), [\App\Http\Controllers\Digital::class, 'index'])->name('digital');
+    });
+}
 
 
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])
@@ -30,13 +40,14 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
   ->group(function () {
     Route::get('/', [\App\Http\Controllers\Admin\HomeController::class, "index"])->name('dashboard');
     Route::get("/contacts", [\App\Http\Controllers\Admin\ContactController::class, "index"])->name("contacts.index");
-
+    
     Route::resource("/translations", \App\Http\Controllers\Admin\TranslationController::class);
   });
 
 Route::get('/lang/{locale}', function (string $locale) {
   app()->setLocale($locale);
   session()->put('locale', $locale);
+  session()->put('localeManualChange', true);
   
   return redirect()->back();
 })->name("change-locale");

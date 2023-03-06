@@ -17,7 +17,8 @@ class DatabaseSeeder extends Seeder {
     $this->call([
       FormsSeeder::class,
       EmailSeeder::class,
-      LanguageLinesSeeder::class
+      LanguageLinesSeeder::class,
+      RoutesLocalizationSeeder::class
     ]);
   
     if ( !User::count()) {

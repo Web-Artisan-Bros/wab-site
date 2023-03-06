@@ -23,7 +23,7 @@
             @foreach ($menuEntries as $entry)
               @if (!key_exists('children', $entry))
                 <li class="nav-item text-uppercase">
-                  <x-navigation-link href="{{ route($entry['routeName']) }}"
+                  <x-navigation-link href="{{ route( $entry['routeName']) }}"
                                      active="{{ request()->routeIs($entry['routeName']) }}">
                     {{ trans('menu.' . $entry['label']) }}
                   </x-navigation-link>
@@ -74,13 +74,13 @@
         @if (!key_exists('children', $entry))
           <a href="{{ route($entry['routeName']) }}"
              class="list-group-item list-group-item-action route-link text-uppercase">
-             {{ trans('menu.' . $entry['label']) }}
+            {{ trans('menu.' . $entry['label']) }}
           </a>
         @else
           <a class="list-group-item list-group-item-action text-uppercase collapsed"
              data-bs-toggle="collapse" href="#mobile-services-menu" role="button"
              aria-expanded="false" aria-controls="mobile-services-menu">
-             {{  trans('menu.' . $entry['label']) }}
+            {{  trans('menu.' . $entry['label']) }}
 
             <x-svg-icon icon="VectorArrowS" class="me-2 ms-0"/>
           </a>

@@ -17,10 +17,10 @@ class Localization {
    * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
    */
   public function handle(Request $request, Closure $next) {
-    if (Session::has('locale')) {
-      App::setLocale(Session::get('locale'));
+    if ($request->session()->has('locale')) {
+      App::setLocale($request->session()->get('locale'));
     }
-    
+  
     return $next($request);
   }
 }

@@ -2,10 +2,14 @@
 
 namespace App\View\Components;
 
+use App\Traits\LocalizedRoutesName;
 use Illuminate\Contracts\View\View;
+use Illuminate\Support\Facades\App;
 use Illuminate\View\Component;
 
 class Navbar extends Component {
+  use LocalizedRoutesName;
+  
   public array $menuEntries;
   public $theme;
   
@@ -14,9 +18,8 @@ class Navbar extends Component {
    *
    * @return void
    */
-  public function __construct($theme = 'light')
-  {
-    $this->menuEntries = config('menuEntries');
+  public function __construct($theme = 'light') {
+    $this->menuEntries = $this->addLocalizationToNames(config('menuEntries'));
     $this->theme = $theme;
   }
   

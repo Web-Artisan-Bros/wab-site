@@ -2,9 +2,13 @@
 
 namespace App\View\Components;
 
+use App\Traits\LocalizedRoutesName;
+use Illuminate\Support\Facades\App;
 use Illuminate\View\Component;
 
 class BottomNavbar extends Component {
+  use LocalizedRoutesName;
+  
   public array $menuEntries;
   public $theme;
   
@@ -14,8 +18,9 @@ class BottomNavbar extends Component {
    * @return void
    */
   public function __construct($theme = 'light') {
-    $this->menuEntries = config('menuEntries');
-    $this->theme       = $theme;
+    $this->menuEntries = $this->addLocalizationToNames(config('menuEntries'));
+    
+    $this->theme = $theme;
   }
   
   /**
