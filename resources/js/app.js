@@ -1,4 +1,4 @@
-import 'bootstrap'
+import * as bs from 'bootstrap'
 
 import './shadow'
 
@@ -8,6 +8,8 @@ import './pageLoader'
 import './navbarScroller'
 import './dropdown'
 import './offcanvas'
+
+window._bs = bs
 
 window.isInViewport = function (el) {
   const rect = el.getBoundingClientRect()

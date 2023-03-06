@@ -44,6 +44,7 @@
             .icon {
                 // margin-bottom: 0.3rem;
                 transition: color #{$ease}, rotate #{$ease}, transform #{$ease};
+                width: 40px;
             }
 
             .number {
@@ -55,7 +56,7 @@
             &:hover,
             &.active {
                 .number {
-                    transform: translateX(80%);
+                    transform: translateX(90%);
                 }
 
                 .icon {
@@ -99,6 +100,11 @@
                 }
             }
 
+            /*
+             * This will be the element that must be positioned one after the other with a different indentation
+             * Because the text of each element is not the same, the indentation must be different, so we use
+             * the transform and left/right properties to position the element
+             */
             .positioning {
                 align-items: center;
                 position: absolute;
@@ -106,35 +112,26 @@
             }
 
             &:first-of-type {
-                margin-left: -5.5rem;
-
-                .positioning {
-                    left: 0;
-                }
+                // nothing must be done
             }
-            &:nth-of-type(2) {
-                margin-left: -4.5rem;
-                min-width: 109%;
 
-                // margin-left: 1rem;
+            &:nth-of-type(2) {
                 .positioning {
-                    right: 65%;
+                    transform: translateX(-50%);
+                    left: 36%;
                 }
             }
 
             &:nth-of-type(3) {
-                margin-left: -2.5rem;
-                min-width: 109%;
                 .positioning {
-                    right: 35%;
+                    transform: translateX(50%);
+                    right: 36%;
                 }
             }
 
             &:nth-of-type(4) {
-                margin-left: -1.5rem;
-                min-width: 111%;
                 .positioning {
-                    right: 4rem;
+                    right: 0;
                 }
             }
         }
@@ -149,9 +146,11 @@
     .tab-content {
         position: relative;
         z-index: -1;
-        height: 172px;
+        // we must use min-height because the height of the element is not fixed due to text translation and length
+        min-height: 172px;
         rotate: -15deg;
         padding-left: 4rem;
+
         .tab-pane {
             max-width: 30%;
         }
