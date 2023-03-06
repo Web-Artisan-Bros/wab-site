@@ -1,3 +1,7 @@
+@php
+    $id = "wab-da-" . uniqid();
+@endphp
+
 <section class="themed-section" data-bs-theme="{{ $theme }}">
     <div class="container container-p-156 overflow-hidden wab-accordion">
         <div class="row">
@@ -11,33 +15,37 @@
             </div>
         </div>
 
-        <div class="wabDa d-none d-lg-block">
-            <div class="d-flex row">
-                <div class="nav flex-column nav-pills " id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    @foreach ($entries as $entry)
-                        <button class="nav-link" id="v-pillss-{{ $entry['id'] }}-tab" data-bs-toggle="tab"
-                                data-bs-target="#v-pillss-{{ $entry['id'] }}" type="button" role="tab"
-                                aria-controls="v-pills-{{ $entry['id'] }}" aria-selected="true">
-                            <div class="position-relative w-100">
-                                <div class="positioning">
-                                    <div class="text">
-                                        <div class="number">{{ $entry['num'] }}.</div>
-                                        <div
-                                            class="fs-4">{{ trans('d_accordion.' . strtoupper($entry['title'])) }}</div>
+        <div class="d-none d-lg-block">
+            <div class="wabDa ">
+                <div class="d-flex ">
+                    <div class="nav flex-column nav-pills " id="{{ $id }}-tabs" role="tablist"
+                         aria-orientation="vertical">
+                        @foreach ($entries as $entry)
+                            <button class="nav-link" id="{{ $id }}-{{ $entry['id'] }}-tab" data-bs-toggle="tab"
+                                    data-bs-target="#{{ $id }}-{{ $entry['id'] }}" type="button" role="tab"
+                                    aria-controls="{{ $id }}-{{ $entry['id'] }}" aria-selected="true">
+                                <div class="position-relative w-100">
+                                    <div class="positioning">
+                                        <div class="text">
+                                            <div class="number">{{ $entry['num'] }}.</div>
+                                            <div
+                                                class="fs-4">{{ trans('d_accordion.' . strtoupper($entry['title'])) }}</div>
+                                        </div>
+                                        <x-svg-icon class="arrow ms-3" icon="VectorArrowWhiteD"></x-svg-icon>
                                     </div>
-                                    <x-svg-icon class="arrow ms-3" icon="VectorArrowWhiteD"></x-svg-icon>
                                 </div>
-                            </div>
-                        </button>
-                    @endforeach
+                            </button>
+                        @endforeach
+                    </div>
                 </div>
             </div>
-            <div class="tab-content row" id="v-pills-tabContent">
-                <div class="tab-pane fade show" id="v-pillss-empty" role="tabpanel"></div>
 
+            {{-- Must move out from "wabDa" to avoid a bug when a tab was selected and the tabs would gain a strange padding.
+             This seems to be caused by the tabContent rotation. --}}
+            <div class="tab-content" id="{{ $id }}-tabContent">
                 @foreach ($entries as $entry)
-                    <div class="tab-pane fade" id="v-pillss-{{ $entry['id'] }}" role="tabpanel"
-                         aria-labelledby="v-pillss-{{ $entry['id'] }}-tab" tabindex="0">
+                    <div class="tab-pane fade" id="{{ $id }}-{{ $entry['id'] }}" role="tabpanel"
+                         aria-labelledby="{{ $id }}-{{ $entry['id'] }}-tab" tabindex="0">
                         <div class="d-flex flex-column mb-3">
                             <div class="number fs-4 text-primary">{{ $entry['num'] }}.</div>
                             <div
@@ -69,13 +77,13 @@
                     </h2>
 
                     <div id="{{ 'acc_body_' . $entry['id'].'00' }}" class="accordion-collapse collapse"
-                    aria-labelledby="{{ 'acc_head_' . $entry['id'].'00' }}" data-bs-parent="#accordionOurProcess">
-                    <div class="accordion-body d-flex text-break">
-                        {{ trans('d_accordion.'. $entry['content'])}}
-                        <img class="cup d-none d-lg-block" src="/assets/CoffeeMug.svg" alt="">
+                         aria-labelledby="{{ 'acc_head_' . $entry['id'].'00' }}" data-bs-parent="#accordionOurProcess">
+                        <div class="accordion-body d-flex text-break">
+                            {{ trans('d_accordion.'. $entry['content'])}}
+                            <img class="cup d-none d-lg-block" src="/assets/CoffeeMug.svg" alt="">
+                        </div>
                     </div>
                 </div>
-            </div>
             @endforeach
 
         </div>
@@ -83,46 +91,50 @@
     </div>
 
     <script>
-        const links = document.querySelectorAll('.wabDa .nav-link')
-        const tabs = document.getElementById('v-pills-tabContent')
+        window.addEventListener('load', function () {
+            console.log('loaded')
+            const links = document.querySelectorAll('#{{ $id }}-tabs .nav-link')
+            const tabs = document.getElementById('{{ $id }}-tabContent')
 
-        {{-- For each link, when clicked, ensure the tabs are in the viewport, otherwise scroll to it --}}
-        links.forEach(link => {
-            // Store the timer so on hidden event, we can clear it to avoid unwanted behaviour
-            let setTabActiveTimer = null
+            {{-- For each link, when clicked, ensure the tabs are in the viewport, otherwise scroll to it --}}
+            links.forEach(link => {
+                // Store the timer so on hidden event, we can clear it to avoid unwanted behaviour
+                let setTabActiveTimer = null
 
-            link.addEventListener('shown.bs.tab', event => {
-                // Set a timeout to allow the click event to be dispatched
-                setTabActiveTimer = setTimeout(() => {
-                    event.target.tabActive = true
-                }, 100)
-            })
+                link.addEventListener('shown.bs.tab', event => {
+                    // Set a timeout to allow the click event to be dispatched
+                    setTabActiveTimer = setTimeout(() => {
+                        event.target.tabActive = true
+                    }, 100)
+                })
 
-            link.addEventListener('hidden.bs.tab', event => {
-                event.target.tabActive = false
+                link.addEventListener('hidden.bs.tab', event => {
+                    event.target.tabActive = false
 
-                clearTimeout(setTabActiveTimer)
-            })
+                    clearTimeout(setTabActiveTimer)
+                })
 
-            link.addEventListener('click', (e) => {
-                const tabInstance = _bs.Tab.getInstance(e.currentTarget)
+                link.addEventListener('click', (e) => {
+                    const tabInstance = _bs.Tab.getInstance(e.currentTarget)
 
-                // If the current tab is active, deactivate it
-                if (tabInstance._element.tabActive) {
-                    tabInstance._deactivate(tabInstance._element)
-                } else {
-                    // if the tab content is not in the viewport, scroll to it
-                    if (!isInViewport(tabs)) {
-                        // set a timeout to allow the tab to be activated and faded
-                        setTimeout(() => {
-                            tabs.scrollIntoView({
-                                behavior: 'smooth',
-                                block: 'nearest'
-                            })
-                        }, 200)
+                    // If the current tab is active, deactivate it
+                    if (tabInstance._element.tabActive) {
+                        tabInstance._deactivate(tabInstance._element)
+                    } else {
+                        // if the tab content is not in the viewport, scroll to it
+                        if (!isInViewport(tabs)) {
+                            // set a timeout to allow the tab to be activated and faded
+                            setTimeout(() => {
+                                tabs.scrollIntoView({
+                                    behavior: 'smooth',
+                                    block: 'nearest'
+                                })
+                            }, 200)
+                        }
                     }
-                }
+                })
             })
         })
+
     </script>
 </section>

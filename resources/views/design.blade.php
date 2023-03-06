@@ -43,17 +43,15 @@ $pageTitle = "Servizi";
   </x-slot:small_text>
 </x-accordion>
 
-<x-services img="/assets/JumboService01.png" :cards="$cardsServices">
+<x-services img="/assets/JumboService01.png" :cards="$cardsServices" class="follow-mouse-container">
   <x-slot:cards>
     <div class="services pt-3 d-none d-lg-block">
       <div class="d-flex align-content-center">
         <div class="wrapper">
           <div class="arrowM">
-            <img src="/assets/BigArrow.svg" alt="">
+            <img src="/assets/BigArrow.svg" alt="" class="follow-mouse">
           </div>
         </div>
-
-
 
         <div class="tab-content row ps-5 ms-1" id="v-pills-tabContent">
           @foreach($cardsServices as $entry)
@@ -151,48 +149,6 @@ $pageTitle = "Servizi";
   </x-slot:small_text>
 </x-diagonalAccordion>
 
-<script>
-  //Selecting the arrow div
-  let arrow_ref = document.querySelectorAll(".arrowM");
 
-  //mousemove for devices with mouse aand touchmove for touchcreen devices
-  let events = ["mousemove", "touchmove"];
-
-  //Check for touch screen
-  function isTouchDevice() {
-    try {
-      document.createEvent("TouchEvent");
-      return true;
-    } catch (e) {
-      return false;
-    }
-  }
-
-  //Same function for both events
-  events.forEach((eventType) => {
-    document.body.addEventListener(eventType, (event) => {
-      arrow_ref.forEach((arrowM) => {
-        /* getBoundingClientRect() method returns the position relative to the viewport */
-        let arrowX = arrowM.getBoundingClientRect().left + arrowM.clientWidth / 2;
-        let arrowY = arrowM.getBoundingClientRect().top + arrowM.clientHeight / 2;
-
-        /* ClientX and ClientY return the position of clients cursor from top left of the screen*/
-        var x = !isTouchDevice() ? event.clientX : event.touches[0].clientX;
-        var y = !isTouchDevice() ? event.clientY : event.touches[0].clientY;
-
-        /*
-        Subtract x position of mouse from x position of arrow and y position of mouse from y position of arrow.
-        Use atan2(returns angle in radians)
-        */
-
-        let radian = Math.atan2(x - arrowX, y - arrowY);
-        //Convert Radians to Degrees
-        let rotationDegrees = radian * (180 / Math.PI) * -1 + 40;
-        //Rotate the arrow
-        arrowM.style.transform = "rotate(" + rotationDegrees + "deg)";
-      });
-    });
-  });
-</script>
 
 @endsection

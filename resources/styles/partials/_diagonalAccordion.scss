@@ -143,15 +143,18 @@
         background-color: transparent;
     }
 
-    .tab-content {
+    & ~ .tab-content {
         position: relative;
-        z-index: -1;
         // we must use min-height because the height of the element is not fixed due to text translation and length
         min-height: 172px;
-        rotate: -15deg;
         padding-left: 4rem;
+        max-width: 50%;
 
-        .tab-pane {
+        @include media-breakpoint-up(xl) {
+            max-width: 40%;
+        }
+
+        @include media-breakpoint-up(xxl) {
             max-width: 30%;
         }
     }

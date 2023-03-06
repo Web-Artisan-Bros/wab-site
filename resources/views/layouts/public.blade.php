@@ -25,7 +25,7 @@
 
   <x-offcanvas-contacts theme="{{ $theme }}"></x-offcanvas-contacts>
 
-  @livewireScripts
+  {{--  @livewireScripts--}}
 
   {{-- Positioning the loader at the end so that can be visible independelty of z-index --}}
   <div class="loader" data-bs-theme="{{$theme}}">

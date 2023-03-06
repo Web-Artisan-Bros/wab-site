@@ -61,17 +61,31 @@
     transition: color #{$ease}, border-color #{$ease};
   }
 
+  // when hover, move the yellow line to the top and change the color of the text
   &:hover {
     .card-header {
       &:after {
         top: 0;
-        height: 100%;
+        //height: 100%;
         opacity: 0;
       }
+
     }
 
     h4 {
       color: var(--bs-card-border-color) !important;
+    }
+  }
+}
+
+// Necessary to avoid the yellow line to go down when the card is active
+.nav-link.active {
+  .service-card {
+    .card-header {
+      &:after {
+        top: 0;
+        opacity: 0;
+      }
     }
   }
 }

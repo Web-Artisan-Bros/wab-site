@@ -111,6 +111,7 @@
       &::after {
         background-image: none;
         width: var(--icon-container-size);
+        transition: width #{$ease};
       }
 
       &:hover {
@@ -120,6 +121,10 @@
       }
 
       &:not(.collapsed) {
+        &::after{
+          width: calc(var(--icon-container-size) + 40px);
+        }
+
         .text {
           color: #{$dark};
           padding-left: 20px;

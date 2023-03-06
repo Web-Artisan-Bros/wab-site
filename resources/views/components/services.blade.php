@@ -1,6 +1,6 @@
 @props(['img', 'button'=>''])
 
-<section class="themed-section" data-bs-theme="{{$theme}}">
+<section @class(["themed-section", $attributes['class']] ) data-bs-theme="{{$theme}}">
   <div class="container container-p-156 wab-accordion">
     <div class="row pb-sm-5 flex-column flex-lg-row">
       <div class="col">

@@ -2,7 +2,7 @@ import * as bs from 'bootstrap'
 
 import './shadow'
 
-import './follow'
+// import './follow'
 import './pageChanger'
 import './pageLoader'
 import './navbarScroller'
