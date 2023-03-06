@@ -33,6 +33,12 @@
   }
 }
 
+p .wab-highlight {
+  --x-offset: -.3em;
+  margin-left: .3em;
+  margin-right: .3em;
+}
+
 .icon {
   display: inline-flex;
   align-items: center;
