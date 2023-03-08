@@ -38,7 +38,7 @@ $pageTitle = "Servizi";
 
 <x-accordion :entries="$accordionWhyUs" theme="dark">
   <x-slot:reverseOrNot>flex-lg-row-reverse</x-slot:reverseOrNot>
-  <span class="wab-highlight">{!! __('CREIAMO</span><span class="wab-highlight">APP</span> MOBILI')!!}
+  <span class="wab-highlight">{!! __('CREIAMO</span> <span class="wab-highlight"> APP</span> MOBILI')!!}
   <x-slot:small_text class="d-none">{!! __('Chi ha bisogno di una bacchetta magica quando puoi avere un\'<span
       class="wab-highlight">app</span> <span class="wab-highlight">personalizzata?')!!}</span></x-slot:small_text>
 </x-accordion>
