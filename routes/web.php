@@ -23,13 +23,13 @@ foreach (config('app.validLocales') as $locale) {
     ->name($langCode . ".")
     ->group(function () use ($langCode) {
       
-      Route::get('/' . __('routes.chisiamo', [], $langCode), [\App\Http\Controllers\ChiSiamo::class, 'index'])->name('about');
-      Route::get('/' . __('routes.servizi', [], $langCode), [\App\Http\Controllers\Servizi::class, 'index'])->name('services');
-      Route::get('/' . __('routes.web', [], $langCode), [\App\Http\Controllers\Web::class, 'index'])->name('web');
-      Route::get('/' . __('routes.design', [], $langCode), [\App\Http\Controllers\Design::class, 'index'])->name('design');
-      Route::get('/' . __('routes.software', [], $langCode), [\App\Http\Controllers\Software::class, 'index'])->name('software');
-      Route::get('/' . __('routes.app', [], $langCode), [\App\Http\Controllers\App::class, 'index'])->name('app');
-      Route::get('/' . __('routes.digital', [], $langCode), [\App\Http\Controllers\Digital::class, 'index'])->name('digital');
+      Route::get('/' . trans('routes.chisiamo', [], $langCode), [\App\Http\Controllers\ChiSiamo::class, 'index'])->name('about');
+      Route::get('/' . trans('routes.servizi', [], $langCode), [\App\Http\Controllers\Servizi::class, 'index'])->name('services');
+      Route::get('/' . trans('routes.web', [], $langCode), [\App\Http\Controllers\Web::class, 'index'])->name('web');
+      Route::get('/' . trans('routes.design', [], $langCode), [\App\Http\Controllers\Design::class, 'index'])->name('design');
+      Route::get('/' . trans('routes.software', [], $langCode), [\App\Http\Controllers\Software::class, 'index'])->name('software');
+      Route::get('/' . trans('routes.app', [], $langCode), [\App\Http\Controllers\App::class, 'index'])->name('app');
+      Route::get('/' . trans('routes.digital', [], $langCode), [\App\Http\Controllers\Digital::class, 'index'])->name('digital');
     });
 }
 
