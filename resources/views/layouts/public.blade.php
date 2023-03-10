@@ -27,7 +27,6 @@
   <meta name="twitter:image" content="https://i.postimg.cc/8C87jrRJ/Group-240.png">
 
   <!-- Meta Tags Generated via https://www.opengraph.xyz -->
-        
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">

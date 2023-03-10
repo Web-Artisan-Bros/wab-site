@@ -1,1 +1,1 @@
-<div class="neon-text">{!! $text !!}</div>
+<div class="neon-text">{!! $text !== '' ? $text : $slot !!}</div>

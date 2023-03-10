@@ -112,7 +112,6 @@ window.addEventListener('popstate', (event) => {
     fromHistory = true
     firstLink.click()
   } else {
-    debugger
     window.location = href
   }
 })

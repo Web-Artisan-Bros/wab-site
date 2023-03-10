@@ -1,6 +1,9 @@
 body {
   // main loader
   .loader {
+    --loader-icon-size: 170px;
+    --loader-border-size: 300px;
+    
     position: fixed;
     top: 0;
     left: 0;
@@ -17,20 +20,32 @@ body {
 
     .logo {
       position: relative;
+      width: var(--loader-icon-size);
+      height: var(--loader-icon-size);
+      
+      .icon {
+        width: var(--loader-icon-size);
+        height: var(--loader-icon-size);
+      }
 
       &:before {
         content: "";
         position: absolute;
         top: 50%;
         left: 50%;
-        width: 300px;
-        height: 300px;
+        width: var(--loader-border-size);
+        height: var(--loader-border-size);
         transform: translate(-50%, -50%);
         transform-origin: center;
         border: 2px solid var(--accent-color);
         z-index: -1;
         animation: spin 2s linear infinite;
       }
+    }
+  
+    @include media-breakpoint-down(sm){
+      --loader-icon-size: 100px;
+      --loader-border-size: 170px;
     }
   }
 
