@@ -1,4 +1,4 @@
-<div data-bs-theme="{{ $theme }}" class="navbar-container">
+<header data-bs-theme="{{ $theme }}" class="navbar-container">
   <nav class="navbar navbar-expand-lg wab-nav">
     <div class="container-lg">
       <a class="navbar-brand route-link" href="{{ url('/') }}">
@@ -60,7 +60,7 @@
   </nav>
 
   <div class="scroll-spy"></div>
-</div>
+</header>
 
 {{-- Mobile menu --}}
 <div class="offcanvas offcanvas-end" data-bs-scroll="false" tabindex="-1" id="mobileMenuRight"

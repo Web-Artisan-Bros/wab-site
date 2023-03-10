@@ -76,12 +76,19 @@
   }
   
   &.neon-on {
-    animation:            flicker 3.5s infinite alternate;
-    //animation-play-state: paused;
-    filter:               blur(1px);
-    
+    animation-name:            border-flicker;
+    animation-timing-function: linear;
+    animation-fill-mode:       both;
+    filter:                    blur(1px);
+  
+    span {
+      animation-name:            singleLetter-flicker;
+      animation-timing-function: linear;
+      animation-fill-mode:       both;
+    }
+  
     &:hover {
-      animation-play-state: paused;
+      //animation-play-state: paused;
     }
   }
   
@@ -94,7 +101,7 @@
       border-color: var(--sign-color-border);
       box-shadow:   var(--sign-on-border-shadow);
     }
-    
+  
     //20%, 24%, 55% {
     20%, 24%, 55% {
       color:        var(--sign-color-off);
@@ -102,5 +109,31 @@
       border-color: var(--sign-color-border-off);
       box-shadow:   var(--sign-off-border-shadow);
     }
+  }
+}
+
+@keyframes singleLetter-flicker {
+  0%, 10%, 10.2%, 20%, 20.6%, 30%, 30.6%, 45%, 55.1%, 57%, 60.1%, 65%, 75.1%, 77%, 85.1%, 86% {
+    color:       var(--sign-color-off);
+    text-shadow: var(--sign-off-shadow);
+    //border-color: var(--sign-color-border-off);
+    //box-shadow:   var(--sign-off-border-shadow);
+  }
+  10.1%, 20.1%, 30.1%, 30.5%, 45.1%, 50%, 55%, 57.1%, 60%, 65.1%, 75%, 77.1%, 85%, 86.1%, 100% {
+    color:       var(--sign-color);
+    text-shadow: var(--sign-on-shadow);
+    //border-color: var(--sign-color-border);
+    //box-shadow:   var(--sign-on-border-shadow);
+  }
+}
+
+@keyframes border-flicker {
+  0%, 10%, 10.2%, 20%, 20.6%, 30%, 30.6%, 45%, 55.1%, 57%, 60.1%, 65%, 75.1%, 77%, 85.1%, 86% {
+    border-color: var(--sign-color-border-off);
+    box-shadow:   var(--sign-off-border-shadow);
+  }
+  10.1%, 20.1%, 30.1%, 30.5%, 45.1%, 50%, 55%, 57.1%, 60%, 65.1%, 75%, 77.1%, 85%, 86.1%, 100% {
+    border-color: var(--sign-color-border);
+    box-shadow:   var(--sign-on-border-shadow);
   }
 }

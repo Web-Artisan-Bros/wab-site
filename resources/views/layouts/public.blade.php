@@ -43,13 +43,13 @@
 <body class="antialiased loading">
   <x-navbar theme="{{ $theme }}"/>
 
-  @yield('content')
+  <main>
+    @yield('content')
+  </main>
 
   <x-footer theme="{{ $theme }}"/>
 
   <x-offcanvas-contacts theme="{{ $theme }}"></x-offcanvas-contacts>
-
-  {{--  @livewireScripts--}}
 
   {{-- Positioning the loader at the end so that can be visible independelty of z-index --}}
   <div class="loader" data-bs-theme="{{$theme}}">
@@ -57,6 +57,9 @@
       <x-svg-icon icon="logo"></x-svg-icon>
     </div>
   </div>
+
+  {{-- Livewire is used for the submit form --}}
+  @livewireScripts
 </body>
 
 </html>

@@ -7,9 +7,15 @@ class PageLoader extends EventTarget {
   constructor (loader) {
     super()
     
+    this.active = false
     this.loader = loader
     
+    this.setActiveValue()
     this.addEventListeners()
+  }
+  
+  setActiveValue () {
+    this.active = document.body.classList.contains('loading')
   }
   
   show (theme = null) {
@@ -32,7 +38,9 @@ class PageLoader extends EventTarget {
   
   addEventListeners () {
     this.loader.addEventListener('transitionend', () => {
-      this.dispatchEvent(new CustomEvent('transitionEnd'))
+      this.setActiveValue()
+  
+      this.dispatchEvent(new CustomEvent('padeLoader' + (this.active ? 'Shown' : 'Hidden')))
     })
   }
 }
@@ -42,6 +50,6 @@ window.addEventListener('DOMContentLoaded', () => {
   
   setTimeout(function () {
     pageLoader.hide()
-  }, 1500)
+  }, 1000)
 })
 

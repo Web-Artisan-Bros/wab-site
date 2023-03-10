@@ -2,13 +2,11 @@ window.navbar = null
 let mobileMenuCanvas;
 let contactsCanvas;
 
-window.addEventListener('load', function () {
+window.addEventListener('DOMContentLoaded', function () {
   window.navbar = document.querySelector('.navbar-container')
   mobileMenuCanvas = document.getElementById('mobileMenuRight')
   contactsCanvas = document.getElementById('offcanvasContacts')
   const scrollSpy = document.querySelector('.scroll-spy')
-  
-  addIntersectionObserver()
   
   window.addEventListener('scroll', function () {
     // get the vertical scroll position
@@ -40,6 +38,10 @@ window.addEventListener('load', function () {
   })
   
   window.dispatchEvent(new CustomEvent('scroll'))
+})
+
+window.addEventListener("pageChanged", function () {
+  addIntersectionObserver()
 })
 
 function addIntersectionObserver () {

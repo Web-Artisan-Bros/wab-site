@@ -31,7 +31,7 @@ $pageTitle = 'Chi siamo';
     </x-slot:text>
     <x-slot:jumboImg>
 {{--        <x-bordered-image src="/assets/JumboChiSiamoColor.png" alt="Welcome neon sign"></x-bordered-image>--}}
-        <x-neon-graphic text="DO WHAT<br>YOU LOVE"></x-neon-graphic>
+        <x-neon-graphic text="DO WHAT YOU LOVE"></x-neon-graphic>
     </x-slot:jumboImg>
 </x-jumbo>
 

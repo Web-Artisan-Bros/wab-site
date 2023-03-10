@@ -18,7 +18,7 @@ window.addEventListener('DOMContentLoaded', function () {
     if (!window.navbar.scrolled) {
       window.navbar.classList.remove('scrolled')
     }
-    
+  
     window.navbar.forceScrolled = false
   })
   
@@ -28,4 +28,14 @@ window.addEventListener('DOMContentLoaded', function () {
     
     this.style.setProperty('--bs-offcanvas-height', `${headHeight + bodyHeight}px`)
   })
+  
+  window.addEventListener('pageChanged', function () {
+    // hide mobile menu if opened
+    const mobileInstance = window._bs.Offcanvas.getInstance(mobileMenuCanvas)
+    
+    if (mobileInstance) {
+      mobileInstance.hide()
+    }
+  })
 })
+
