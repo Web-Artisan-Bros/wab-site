@@ -1,0 +1,106 @@
+@use "../partials/variables";
+@use "sass:list";
+
+.neon-text {
+  $sign-glow-blur:              5, 10, 20, 30, 60, 75, 95;
+  $sign-border-glow-blur:       .5, .5, 2, 2, 4, 4;
+  
+  // text
+  --sign-color:                 var(--bs-light); // text color
+  --sign-color-off:             #{transparentize(variables.$light, .7)}; // text color OFF
+  
+  // text glow
+  --sign-color-glow:            var(--accent-color); // neon glow color
+  --sign-color-glow-off:        var(--sign-color-off); // neon glow color OFF
+  
+  // border
+  --sign-color-border:          var(--sign-color); // border color
+  --sign-color-border-off:      var(--sign-color-off); // border color OFF
+  
+  // border glow
+  --sign-color-border-glow:     var(--sign-color-glow); // border color
+  --sign-color-border-glow-off: var(--sign-color-off); // border color OFF
+  
+  --sign-on-shadow:             0px 0px #{list.nth($sign-glow-blur, 1)}px var(--sign-color),
+                                0px 0px #{list.nth($sign-glow-blur, 2)}px var(--sign-color),
+                                0px 0px #{list.nth($sign-glow-blur, 3)}px var(--sign-color-glow),
+                                0px 0px #{list.nth($sign-glow-blur, 4)}px var(--sign-color-glow),
+                                0px 0px #{list.nth($sign-glow-blur, 5)}px var(--sign-color-glow),
+                                0px 0px #{list.nth($sign-glow-blur, 6)}px var(--sign-color-glow),
+                                0px 0px #{list.nth($sign-glow-blur, 7)}px var(--sign-color-glow);
+  --sign-off-shadow:            none;
+  --sign-on-border-shadow:      0 0 #{list.nth($sign-border-glow-blur, 1)}rem var(--sign-color-border),
+                                inset 0 0 #{list.nth($sign-border-glow-blur, 2)}rem var(--sign-color-border),
+                                0 0 #{list.nth($sign-border-glow-blur, 3)}rem var(--sign-color-border-glow),
+                                inset 0 0 #{list.nth($sign-border-glow-blur, 4)}rem var(--sign-color-border-glow),
+                                0 0 #{list.nth($sign-border-glow-blur, 5)}rem var(--sign-color-border-glow),
+                                inset 0 0 #{list.nth($sign-border-glow-blur, 6)}rem var(--sign-color-border-glow);
+  --sign-off-border-shadow:     none;
+  
+  @include rfs(9.35rem, font-size);
+  @include rfs(5px, border-width);
+  font-family:                  Neon, serif;
+  padding:                      2rem 1rem;
+  user-select:                  none;
+  color:                        var(--sign-color-off);
+  text-shadow:                  var(--sign-off-shadow);
+  text-align:                   center;
+  border-style:                 solid;
+  border-color:                 var(--sign-color-border-off);
+  border-radius:                1rem;
+  filter:                       blur(3px);
+  
+  @include media-breakpoint-down(lg) {
+    $sign-glow-blur:         2, 7, 10, 20, 40, 45, 55;
+    $sign-border-glow-blur:  .2, .2, 1, 1, 2, 2;
+    
+    --sign-on-shadow:        0px 0px #{list.nth($sign-glow-blur, 1)}px var(--sign-color),
+                             0px 0px #{list.nth($sign-glow-blur, 2)}px var(--sign-color),
+                             0px 0px #{list.nth($sign-glow-blur, 3)}px var(--sign-color-glow),
+                             0px 0px #{list.nth($sign-glow-blur, 4)}px var(--sign-color-glow),
+                             0px 0px #{list.nth($sign-glow-blur, 5)}px var(--sign-color-glow),
+                             0px 0px #{list.nth($sign-glow-blur, 6)}px var(--sign-color-glow),
+                             0px 0px #{list.nth($sign-glow-blur, 7)}px var(--sign-color-glow);
+    --sign-on-border-shadow: 0 0 #{list.nth($sign-border-glow-blur, 1)}rem var(--sign-color-border),
+                             inset 0 0 #{list.nth($sign-border-glow-blur, 2)}rem var(--sign-color-border),
+                             0 0 #{list.nth($sign-border-glow-blur, 3)}rem var(--sign-color-border-glow),
+                             inset 0 0 #{list.nth($sign-border-glow-blur, 4)}rem var(--sign-color-border-glow),
+                             0 0 #{list.nth($sign-border-glow-blur, 5)}rem var(--sign-color-border-glow),
+                             inset 0 0 #{list.nth($sign-border-glow-blur, 6)}rem var(--sign-color-border-glow);
+    @include rfs(7.35rem, font-size);
+    @include rfs(2px, border-width);
+  }
+  
+  @include media-breakpoint-down(sm) {
+    @include rfs(5rem, font-size);
+  }
+  
+  &.neon-on {
+    animation:            flicker 3.5s infinite alternate;
+    //animation-play-state: paused;
+    filter:               blur(1px);
+    
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+  
+  /* Flickering animation */
+  @keyframes flicker {
+    //0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      color:        var(--sign-color);
+      text-shadow:  var(--sign-on-shadow);
+      border-color: var(--sign-color-border);
+      box-shadow:   var(--sign-on-border-shadow);
+    }
+    
+    //20%, 24%, 55% {
+    20%, 24%, 55% {
+      color:        var(--sign-color-off);
+      text-shadow:  var(--sign-off-shadow);
+      border-color: var(--sign-color-border-off);
+      box-shadow:   var(--sign-off-border-shadow);
+    }
+  }
+}

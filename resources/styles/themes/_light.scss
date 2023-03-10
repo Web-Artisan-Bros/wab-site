@@ -48,4 +48,8 @@
     --color: #{variables.$dark};
     --wab-bg-highlight-url: url("/public/assets/highlight_primary.svg");
   }
+  
+  .neon-text {
+    --sign-color-off: #{lighten(variables.$primary, 15)};
+  }
 }

@@ -33,6 +33,9 @@ window.addEventListener('DOMContentLoaded', function () {
         window.pageLoader.addEventListener('transitionEnd', () => {
           window.history.pushState({}, '', href)
           document.body.innerHTML = body
+          document.body.style.overflow = ''
+          document.body.style.paddingRight = ''
+          
           window.scrollTo({ top: 0 })
       
           window.dispatchEvent(new CustomEvent('DOMContentLoaded'))

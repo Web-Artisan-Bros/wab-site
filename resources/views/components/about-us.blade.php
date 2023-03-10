@@ -4,8 +4,9 @@
             <!-- <h2 class="filigram text-center text-wrap position-absolute top-50 start-50 translate-middle">ABOUT<br>US</h2> -->
             <div class="col pb-4 pb-lg-0">
                 <div class="position-relative">
-                    <x-bordered-image img-class="img-small" src="/assets/AboutUsColor.png" alt="Art neon sign">
-                    </x-bordered-image>
+                    {{--<x-bordered-image img-class="img-small" src="/assets/AboutUsColor.png" alt="Art neon sign">
+                    </x-bordered-image>--}}
+                    <x-neon-graphic text="ART"></x-neon-graphic>
                 </div>
             </div>
             <div class="col-1"></div>

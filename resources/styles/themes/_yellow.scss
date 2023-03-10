@@ -65,4 +65,8 @@
     --color: #{variables.$light};
     --wab-bg-highlight-url: url("/public/assets/highlight_secondary.svg");
   }
+  
+  .neon-text {
+    --sign-color: #{lighten(variables.$secondary, 60)};
+  }
 }

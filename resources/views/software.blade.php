@@ -28,9 +28,9 @@ $pageTitle = "Servizi";
       </div>
     </div>
   </x-slot:text>
-  <x-slot:jumboImg class="wab-img">
-    <div class="pt-5 position-relative d-flex wab-img">
-      <x-bordered-image src="/assets/jumbo_soft.png" alt="Welcome neon sign"></x-bordered-image>
+  <x-slot:jumboImg class="">
+    <div class="pt-5 position-relative">
+      <x-neon-graphic text="Software"></x-neon-graphic>
     </div>
 
   </x-slot:jumboImg>
