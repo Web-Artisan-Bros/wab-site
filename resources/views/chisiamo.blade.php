@@ -49,7 +49,7 @@ $pageTitle = 'Chi siamo';
 <x-diagonalAccordion :entries="$accordionOurProcess" theme="dark">
     {!! __('IL NOSTRO LAVORO E&#39 UN <span class="wab-highlight">ARTE')!!}</span>
     <x-slot:small_text>
-        {!! __('Ogni progetto che realizziamo è un\'<span class="wab-highlight">opera</span> <span
+        {!! __('Ogni progetto che realizziamo è un&acute;<span class="wab-highlight">opera</span> <span
             class="wab-highlight">unica</span>, creata con <span class="wab-highlight">passione</span> e maestria <span
             class="wab-highlight">artigianale.') !!}</span>
     </x-slot:small_text>

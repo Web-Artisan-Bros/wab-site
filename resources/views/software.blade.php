@@ -44,7 +44,7 @@ $pageTitle = "Servizi";
           come la confezione di un vestito su misura, fatta apposta per te. Invece di scegliere un software preconfezionato che potrebbe non soddisfare tutte le tue esigenze, noi creiamo un software appositamente per te, tenendo conto di ogni <span class="wab-highlight">dettaglio</span> e delle tue specifiche
           richieste. È come avere un abito cucito <span class="wab-highlight">su</span> <span class="wab-highlight">misura</span> per la tua azienda, che si adatta perfettamente a tutte le
           tue esigenze e ti fa risplendere in ogni occasione.')!!}</p>
-        <p class="">{!! __('Immagina che hai un\'idea per un\'applicazione fantastica ma non sai da dove iniziare. Ecco
+        <p class="">{!! __('Immagina che hai un&acute;idea per un&acute;applicazione fantastica ma non sai da dove iniziare. Ecco
           dove entra in
           gioco il nostro servizio di sviluppo software personalizzato! Il nostro team di sviluppatori esperti lavora
           alacremente per creare un software su misura per le tue <span class="wab-highlight">esigenze</span> <span class="wab-highlight">specifiche</span>.
@@ -171,9 +171,9 @@ $pageTitle = "Servizi";
 
 
 <x-diagonalAccordion :entries="$accordionOurProcess" theme="dark">
-  {!! __('SVILUPPO: <span class="wab-highlight">EFFICIENTE</span> E <span class="wab-highlight">PRECISO')!!}</span>
+  {!! __('IL <span class="wab-highlight">FUTURO</span> A PORTATA DI <span class="wab-highlight">SOFTWARE')!!}</span>
   <x-slot:small_text>
-    {!! __('Dall\'<span class="wab-highlight">idea</span> alla <span class="wab-highlight">realtà</span> in pochi
+    {!! __('Dall&acute;<span class="wab-highlight">idea</span> alla <span class="wab-highlight">realtà</span> in pochi
     step:')!!}
   </x-slot:small_text>
 </x-diagonalAccordion>

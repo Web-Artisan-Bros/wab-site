@@ -88,7 +88,7 @@ class App extends Controller
                 "num"     => "01",
                 "title"   => "ANALISI",
                 "icon"    => "",
-                "content" => "In questo primo step, ci incontriamo con il cliente per comprendere le sue esigenze e specifiche richieste per l'app da sviluppare. Come si suol dire, 'è meglio un'ora in più di analisi che una settimana in più di sviluppo'."
+                "content" => "In questo primo step, ci incontriamo con il cliente per comprendere le sue esigenze e specifiche richieste per l&acute;app da sviluppare. Come si suol dire, è meglio un&acute;ora in più di analisi che una settimana in più di sviluppo."
             ],
             [
                 "id"      => 2,
