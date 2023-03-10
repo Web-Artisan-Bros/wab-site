@@ -5,6 +5,7 @@ let toLoadHtml = null
 let toLoadTheme = null
 
 let links
+let fromHistory = false
 
 /**
  * By adding class .route-link to a link, it will be handled by this script
@@ -61,27 +62,33 @@ window.addEventListener('DOMContentLoaded', function () {
     if (!toLoadHref && !toLoadHtml) {
       return
     }
-    
+  
     console.log('transitionEnd')
-    
+  
     fixElementsTheme()
     fixNavbarActive()
-    
-    window.history.pushState({}, '', toLoadHref)
+  
+    if (!fromHistory) {
+      window.history.pushState({}, '', toLoadHref)
+    } else {
+      fromHistory = false
+      window.history.replaceState({}, '', toLoadHref)
+    }
+  
     document.body.querySelector('main').innerHTML = toLoadHtml
     document.body.style.overflow = ''
     document.body.style.paddingRight = ''
-    
+  
     toLoadHref = null
     toLoadHtml = null
     toLoadTheme = null
-    
+  
     window.scrollTo({ top: 0, behavior: 'auto' })
     
     // window.dispatchEvent(new CustomEvent('DOMContentLoaded'))
     // window.dispatchEvent(new CustomEvent('load'))
     window.dispatchEvent(new CustomEvent('pageChanged'))
-    
+  
     setTimeout(() => {
       window.pageLoader.hide()
     }, 300)
@@ -89,6 +96,25 @@ window.addEventListener('DOMContentLoaded', function () {
   
   // immediately dispatch the event for the first time
   window.dispatchEvent(new CustomEvent('pageChanged'))
+})
+
+window.addEventListener('popstate', (event) => {
+  const href = event.target.location.href.replace(/\/$/, "")
+  let firstLink
+  
+  links.forEach(link => {
+    if (link.getAttribute('href') === href) {
+      firstLink = link
+    }
+  })
+  
+  if (firstLink) {
+    fromHistory = true
+    firstLink.click()
+  } else {
+    debugger
+    window.location = href
+  }
 })
 
 function fixElementsTheme () {
