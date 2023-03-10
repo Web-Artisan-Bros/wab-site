@@ -42,7 +42,7 @@
         @foreach($cardsHome as $card)
           <div class="col">
             <x-service-card number="{{ $card['num'] }}" title="{{ trans('cards.' . $card['title'])}}" class="w-100">
-              <a href="{{$card['url']}}" class="btn btn-themed mt-3 mt-lg-0">{{ __('Scopri di più')}}
+              <a href="{{$card['url']}}" class="btn btn-themed mt-3 mt-lg-0 route-link">{{ __('Scopri di più')}}
                 <x-svg-icon icon="VectorArrow"></x-svg-icon>
               </a>
             </x-service-card>
