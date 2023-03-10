@@ -1,14 +1,11 @@
 import * as bs from 'bootstrap'
 
-import './shadow'
-
 // import './follow'
-import './pageChanger'
 import './pageLoader'
+import './pageChanger'
 import './navbarScroller'
-import './dropdown'
 import './offcanvas'
-import './neon-graphic'
+import './neonGraphic'
 
 window._bs = bs
 
