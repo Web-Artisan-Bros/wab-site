@@ -17,7 +17,7 @@ $pageTitle = "Servizi";
 
   <x-slot:text>
     <div class="mb-3 mb-lg-5">
-      <h1 class="text-uppercase">{!! __('LA <span class="wab-highlight">TUA</span> <span
+      <h1 class="text-uppercase text-break">{!! __('LA <span class="wab-highlight">TUA</span> <span
           class="wab-highlight">APP</span> SU MISURA, SVILUPPATA CON <span class="wab-highlight">CURA')!!}</span></h1>
     </div>
     <div>
@@ -146,8 +146,7 @@ $pageTitle = "Servizi";
 <x-diagonalAccordion :entries="$accordionOurProcess" theme="dark">
   {!! __('SVILUPPO: <span class="wab-highlight">EFFICIENTE</span> E <span class="wab-highlight">PRECISO')!!}</span>
   <x-slot:small_text>
-    {!! __('Dall\'<span class="wab-highlight">idea</span> alla <span class="wab-highlight">realtà</span> in pochi
-    step:')!!}
+    {!! __('Le 4 fasi del nostro <span class="wab-highlight">processo:</span>')!!}
   </x-slot:small_text>
 </x-diagonalAccordion>
 

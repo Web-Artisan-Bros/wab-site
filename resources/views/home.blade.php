@@ -75,7 +75,7 @@
     <x-slot:reverseOrNot>flex-lg-row</x-slot:reverseOrNot>
     {!! __('SCEGLI <span class="wab-highlight text-break">NOI,</span> SENZA ESITARE')!!}
     <x-slot:small_text>{!! __('ECCO PERCHE’ SCEGLIERE NOI, E’ UNA <br><span class="wab-highlight">
-      DECISIONE FACILE')!!}</span>:</x-slot:small_text>
+      DECISIONE FACILE')!!}</span></x-slot:small_text>
 </x-accordion>
 
 @endsection

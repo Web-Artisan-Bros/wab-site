@@ -17,8 +17,7 @@ $pageTitle = "Servizi";
 
   <x-slot:text>
     <div class="mb-3 mb-lg-5">
-      <h1 class="text-uppercase text-break">{!! __('REALIZZIAMO <span class="wab-highlight">SOFTWARE</span> SU <span
-          class="wab-highlight">MISURA</span> PER TE')!!}</h1>
+      <h1 class="text-uppercase text-break">{!! __('REALIZZIAMO <span class="wab-highlight">SOFTWARE</span> SU <span class="wab-highlight">MISURA</span> PER TE')!!}</h1>
     </div>
     <div>
       <div class="d-flex  flex-lg-row flex-column align-items-center">

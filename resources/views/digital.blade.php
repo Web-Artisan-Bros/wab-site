@@ -17,8 +17,10 @@ $pageTitle = "Servizi";
 
   <x-slot:text>
     <div class="mb-3 mb-lg-5">
-      <h1 class="text-break text-wrap">{!! __('IL <span class="wab-highlight">FUTURO</span> È DIGITALE, NOI TI AIUTIAMO AD
-        <span class="wab-highlight text-break text-wrap">ARRIVARCI')!!}</span></h1>
+      <h1 class="text-break text-wrap">{!! __('IL <span class="wab-highlight">FUTURO</span> È DIGITALE, NOI TI AIUTIAMO
+        AD
+        <span class="wab-highlight text-break text-wrap">ARRIVARCI')!!}</span>
+      </h1>
     </div>
     <div>
       <div class="d-flex  flex-lg-row flex-column align-items-center">
@@ -41,31 +43,38 @@ $pageTitle = "Servizi";
   <div class="container container-p-156">
     <div class="row gap-5">
       <div class="col">
-        <p class="">{!! __('Immagina di essere <span class="wab-highlight">un\'impresa</span> <span class="wab-highlight">tradizionale</span> che vuole abbracciare la <span class="wab-highlight">trasformazione</span>
-          <span class="wab-highlight">digitale</span> ma non sa da dove cominciare. Noi possiamo aiutarti a passare dal tempo dei dinosauri all\'era
-          digitale, senza dover fare un salto nel futuro come Marty McFly in "Ritorno al futuro"!')!!}</p>
-          <p class="">{!! __('La trasformazione digitale riguarda l\'adozione di <span class="wab-highlight">tecnologie</span> <span class="wab-highlight">digitali</span> in tutti gli aspetti dell\'azienda,
-            dalla <span class="wab-highlight">comunicazione</span> <span class="wab-highlight">con</span> <span class="wab-highlight">i</span> <span class="wab-highlight">clienti</span> <span class="wab-highlight">all\'organizzazione</span> interna del lavoro. Il nostro servizio di trasformazione
-            digitale ti aiuterà a capire come implementare queste tecnologie nel modo giusto e a creare un piano d\'azione
-            su misura per la tua attività.
-            Ciò può significare l\'integrazione di <span class="wab-highlight">software</span> <span class="wab-highlight">personalizzato</span> per la gestione dei processi aziendali, la
-            creazione di una <span class="wab-highlight">presenza</span> <span class="wab-highlight">online</span> efficace tramite un sito web o l\'adozione di strumenti di <span class="wab-highlight">marketing</span> <span class="wab-highlight">digitale</span>
-            come l\'e-mail marketing o i social media.')!!}</p>
-            <p class="">{!! __(' In ogni caso, lavoriamo insieme per creare un <span class="wab-highlight">ambiente</span> <span class="wab-highlight">digitale</span> che
-              ti permetta di risparmiare tempo e di avere maggiori opportunità di crescita.
-              E non preoccuparti se non sei un esperto tecnologico. Noi ci occuperemo di tutto, dall\'analisi delle tue
-              esigenze e delle tue risorse, alla creazione di un piano su misura, alla realizzazione di tutti gli strumenti
-              necessari, alla formazione del personale, fino alla consulenza a lungo termine. Siamo come una <span class="wab-highlight">guida</span> <span class="wab-highlight">turistica</span>
-              digitale, pronti a mostrarti tutte le meraviglie che il mondo digitale ha da offrire e a portarti verso il
-              successo!')!!}</p>
+        <p class="">{!! __('Immagina di essere <span class="wab-highlight">un&acute;impresa</span> <span
+            class="wab-highlight">tradizionale</span> che vuole abbracciare la <span
+            class="wab-highlight">trasformazione</span>
+          <span class="wab-highlight">digitale</span> ma non sa da dove cominciare. Noi possiamo aiutarti a passare dal
+          tempo dei dinosauri all&acute;era
+          digitale, senza dover fare un salto nel futuro come Marty McFly in Ritorno al futuro!')!!}
+        </p>
+        <p class="">{!! __('La trasformazione digitale riguarda l&acute;adozione di <span
+            class="wab-highlight">tecnologie</span> <span class="wab-highlight">digitali</span> in tutti gli aspetti
+          dell&acute;azienda,
+          dalla <span class="wab-highlight">comunicazione</span> <span class="wab-highlight">con</span> <span
+            class="wab-highlight">i</span> <span class="wab-highlight">clienti</span> <span
+            class="wab-highlight">all&acute;organizzazione</span> interna del lavoro. Il nostro servizio di trasformazione
+          digitale ti aiuterà a capire come implementare queste tecnologie nel modo giusto e a creare un piano d&acute;azione
+          su misura per la tua attività.
+          Ciò può significare l&acute;integrazione di <span class="wab-highlight">software</span> <span
+            class="wab-highlight">personalizzato</span> per la gestione dei processi aziendali, la
+          creazione di una <span class="wab-highlight">presenza</span> <span class="wab-highlight">online</span>
+          efficace tramite un sito web o l&acute;adozione di strumenti di <span class="wab-highlight">marketing</span> <span
+            class="wab-highlight">digitale</span>
+          come l&acute;e-mail marketing o i social media.')!!}</p>
+        <p class="">{!! __('In ogni caso, lavoriamo insieme per creare un <span class="wab-highlight">ambiente</span> <span class="wab-highlight">digitale</span> che ti permetta di risparmiare tempo e di avere maggiori opportunità di crescita. E non preoccuparti se non sei un esperto tecnologico. Noi ci occuperemo di tutto, dall&acute;analisi delle tue esigenze e delle tue risorse, alla creazione di un piano su misura, alla realizzazione di tutti gli strumenti necessari, alla formazione del personale, fino alla consulenza a lungo termine. Siamo come una <span class="wab-highlight">guida</span> <span class="wab-highlight">turistica</span> digitale, pronti a mostrarti tutte le meraviglie che il mondo digitale ha da offrire e a portarti verso il successo!')!!}</p>
       </div>
       <div class="col d-flex flex-column justify-content-between text-end">
-        <h2 class="text-center text-lg-end">{!! __('LA TUA <span class="wab-highlight">AZIENDA</span> VERSO IL <span class="wab-highlight">FUTURO</span>
+        <h2 class="text-center text-lg-end">{!! __('LA TUA <span class="wab-highlight">AZIENDA</span> VERSO IL <span
+            class="wab-highlight">FUTURO</span>
           DIGITALE')!!}</h2>
         <x-svg-icon class="d-none d-lg-inline-block arrowLeft mt-auto mb-5" id="arrow" icon="BigArrow"></x-svg-icon>
         <div>
-          <p class="lead text-center text-lg-end">{!! __('Non c\'è <span class="wab-highlight">trasformazione</span> <span
-              class="wab-highlight">digitale</span> troppo grande o troppo piccola per noi!')!!}</p>
+          <p class="lead text-center text-lg-end">{!! __('Non c&acute;è <span
+              class="wab-highlight">trasformazione</span> <span class="wab-highlight">digitale</span> troppo grande o
+            troppo piccola per noi!')!!}</p>
           <hr class="opacity-100 d-none d-lg-block">
         </div>
 

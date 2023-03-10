@@ -7,7 +7,7 @@
         {{-- Left Column --}}
         <div class="col">
           <div class="footer-header">
-            <div class="position-relative fs-3 lh-1 flex-basis-0 flex-lg-grow-1 text-lg-start text-end text-uppercase">
+            <div class="position-relative fs-3 lh-1 flex-basis-lg-0 flex-lg-grow-1 text-lg-start text-center text-uppercase">
               {!! trans("footer.text_left_" . rand(1, 3)) !!}
             </div>
             <div class="footer-logo justify-content-end w-auto">!</div>
@@ -18,9 +18,10 @@
               <x-contact-btn version="small" class="w-100 point-down"></x-contact-btn>
             </div>
 
-            <div class="col w-100 mb-3">
+            <div class="col w-100 mb-lg-3 mb-0 justify-content-center pt-3 pt-lg-0 justify-content-lg-start d-flex align-items-center">
+              <x-svg-icon class="accent-color lang-logo" icon="lang" alt="language selector"></x-svg-icon>
               @foreach(config("app.validLocales") as $lang)
-                <a href="{{ route('change-locale', $lang['code']) }}">{{ $lang['label'] }}</a>
+                <a class="pe-2" href="{{ route('change-locale', $lang['code']) }}">{{ $lang['label'] }}</a>
               @endforeach
             </div>
 
