@@ -8,7 +8,8 @@
       </div>
 
       <div class="col">
-        <x-bordered-image img-class="img-small" src="{{ $img }}" alt="Welcome neon sign"></x-bordered-image>
+{{--        <x-bordered-image img-class="img-small" src="{{ $img }}" alt="Welcome neon sign"></x-bordered-image>--}}
+        <x-neon-graphic text="Best"></x-neon-graphic>
       </div>
     </div>
 

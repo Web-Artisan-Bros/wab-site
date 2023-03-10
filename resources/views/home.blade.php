@@ -28,7 +28,8 @@
       </div>
     </x-slot:text>
     <x-slot:jumboImg>
-      <x-bordered-image src="/assets/JumboHomeColor.png" alt="Welcome neon sign"></x-bordered-image>
+      {{--      <x-bordered-image src="/assets/JumboHomeColor.png" alt="Welcome neon sign"></x-bordered-image>--}}
+      <x-neon-graphic text="Welcome"></x-neon-graphic>
     </x-slot:jumboImg>
   </x-jumbo>
 

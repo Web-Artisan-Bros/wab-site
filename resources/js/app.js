@@ -8,6 +8,7 @@ import './pageLoader'
 import './navbarScroller'
 import './dropdown'
 import './offcanvas'
+import './neon-graphic'
 
 window._bs = bs
 

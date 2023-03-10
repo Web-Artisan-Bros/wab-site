@@ -5,6 +5,7 @@
 @import "bootstrap/scss/bootstrap";
 @import 'animate.css';
 @import "./fonts/zenDot";
+@import "./fonts/neon";
 
 @import "./css_variables";
 
@@ -35,6 +36,7 @@ $enable-responsive-font-sizes: true;
 @import "./partials/contact";
 @import "./partials/diagonalAccordion";
 @import "./partials/sections";
+@import "./partials/neonGraphic";
 @import "./partials/about-us";
 @import "./chisiamo";
 @import "./servizi";
