@@ -39,8 +39,7 @@ $pageTitle = "Servizi";
 <x-accordion :entries="$accordionWhyUs" theme="dark">
   <x-slot:reverseOrNot>flex-lg-row-reverse</x-slot:reverseOrNot>
   {!! __('LA NOSTRA <span class="wab-highlight">SPECIALITÀ!')!!}</span>
-  <x-slot:small_text class="d-none">{!! __('Il mondo online è come un grande magazzino, e il tuo sito web è la <span
-      class="wab-highlight">vetrina</span> che attira l\'attenzione dei <span class="wab-highlight">clienti')!!}</span>!
+  <x-slot:small_text class="d-none">{!! __('Il mondo online è come un grande magazzino, e il tuo sito web è la <span class="wab-highlight">vetrina</span> che attira l&acute;attenzione dei <span class="wab-highlight">clienti</span>') !!}
   </x-slot:small_text>
 </x-accordion>
 
@@ -141,10 +140,9 @@ $pageTitle = "Servizi";
 
 
 <x-diagonalAccordion :entries="$accordionOurProcess" theme="dark">
-  {!! __('SVILUPPO: <span class="wab-highlight">EFFICIENTE</span> E <span class="wab-highlight">PRECISO')!!}</span>
+  {!! __('UN LAVORO <span class="wab-highlight">ARTIGIANALE</span> SU <span class="wab-highlight">MISURA</span>')!!}</span>
   <x-slot:small_text>
-    {!! __('Dall\'<span class="wab-highlight">idea</span> alla <span class="wab-highlight">realtà</span> in pochi
-    step:')!!}
+    {!! __('Progetti <span class="wab-highlight">personalizzati</span> per ogni cliente in quattro steps:')!!}
   </x-slot:small_text>
 </x-diagonalAccordion>
 
