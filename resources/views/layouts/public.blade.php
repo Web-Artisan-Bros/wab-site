@@ -9,22 +9,22 @@
 
   <!-- HTML Meta Tags -->
   <title>Web Artisan Bros: web design & software house.</title>
-  <meta name="description" content="Web Artisan Bros is a small artisanal company that stands out for its passion and love for things done well. We are passionate and love our work, constantly staying up to date with the latest technologies and industry trends.">
+  <meta name="description" content="{{ __('Web Artisan Bros è una piccola realtà artigianale che si distingue per la passione e l&acute;amore per le cose fatte bene. Siamo appassionati e amiamo il nostro lavoro e ci manteniamo costantemente aggiornati sulle ultime tecnologie e tendenze del settore.')}}">
 
   <!-- Facebook Meta Tags -->
   <meta property="og:url" content="https://webartisanbros.com/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Web Artisan Bros: web design & software house.">
-  <meta property="og:description" content="Web Artisan Bros is a small artisanal company that stands out for its passion and love for things done well. We are passionate and love our work, constantly staying up to date with the latest technologies and industry trends.">
-  <meta property="og:image" content="https://i.postimg.cc/8C87jrRJ/Group-240.png">
+  <meta property="og:description" content="{{ __('Web Artisan Bros è una piccola realtà artigianale che si distingue per la passione e l&acute;amore per le cose fatte bene. Siamo appassionati e amiamo il nostro lavoro e ci manteniamo costantemente aggiornati sulle ultime tecnologie e tendenze del settore.')}}">
+  <meta property="og:image" content="/assets/meta_logo.png">
 
   <!-- Twitter Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
   <meta property="twitter:domain" content="webartisanbros.com">
   <meta property="twitter:url" content="https://webartisanbros.com/">
   <meta name="twitter:title" content="Web Artisan Bros: web design & software house.">
-  <meta name="twitter:description" content="Web Artisan Bros is a small artisanal company that stands out for its passion and love for things done well. We are passionate and love our work, constantly staying up to date with the latest technologies and industry trends.">
-  <meta name="twitter:image" content="https://i.postimg.cc/8C87jrRJ/Group-240.png">
+  <meta name="twitter:description" content="{{ __('Web Artisan Bros è una piccola realtà artigianale che si distingue per la passione e l&acute;amore per le cose fatte bene. Siamo appassionati e amiamo il nostro lavoro e ci manteniamo costantemente aggiornati sulle ultime tecnologie e tendenze del settore.')}}">
+  <meta name="twitter:image" content="/assets/meta_logo.png">
 
   <!-- Meta Tags Generated via https://www.opengraph.xyz -->
 
