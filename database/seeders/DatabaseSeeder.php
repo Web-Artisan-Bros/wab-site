@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder {
       User::factory()->create([
         'name'     => 'Wab Admin',
         'email'    => 'info@webartisanbros.com',
-        'password' => bcrypt(App::environment('production') ? config("ADMIN_PASSWORD") : 'password'),
+        'password' => bcrypt(config("ADMIN_PASSWORD")),
       ]);
     }
   }
