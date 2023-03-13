@@ -21,11 +21,15 @@ class DatabaseSeeder extends Seeder {
       RoutesLocalizationSeeder::class
     ]);
   
+    if(!env("ADMIN_PASSWORD")){
+      throw new \Exception("ADMIN_PASSWORD is not set in .env file");
+    }
+    
     if ( !User::count()) {
       User::factory()->create([
         'name'     => 'Wab Admin',
         'email'    => 'info@webartisanbros.com',
-        'password' => bcrypt(config("ADMIN_PASSWORD")),
+        'password' => bcrypt(env("ADMIN_PASSWORD")),
       ]);
     }
   }
