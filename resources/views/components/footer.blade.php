@@ -25,7 +25,7 @@
               <x-svg-icon class="accent-color lang-logo" icon="lang" alt="language selector"></x-svg-icon>
               @foreach(config("app.validLocales") as $lang)
                 <a class="pe-2"
-                   href="{{ $localizeUrl($lang["code"]) }}">{{ $lang['label'] }}</a>
+                   href="{{ \App\Providers\GlobalHelperProvider::localizeUrl($lang["code"]) }}">{{ $lang['label'] }}</a>
               @endforeach
             </div>
 
