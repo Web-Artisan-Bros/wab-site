@@ -3,6 +3,7 @@ import axios from 'axios'
 let toLoadHref = null
 let toLoadHtml = null
 let toLoadTheme = null
+let toLoadFooterHTML = null
 
 let links
 let fromHistory = false
@@ -37,6 +38,7 @@ window.addEventListener('DOMContentLoaded', function () {
         
         // extract the body tag
         const body = newHtml.match('<main[^>]*>((.|[\n\r])*)<\/main>')[0]
+        const footer = newHtml.match('<footer[^>]*>((.|[\n\r])*)<\/footer>')[0]
         // extract title tag
         const title = newHtml.match('<title[^>]*>((.|[\n\r])*)<\/title>')[0]
         // extract data-bs-theme attribute from the loader div
@@ -48,6 +50,7 @@ window.addEventListener('DOMContentLoaded', function () {
         toLoadHref = href
         toLoadHtml = body
         toLoadTheme = loaderTheme
+        toLoadFooterHTML = footer
         
         // before pushing the new body, show the loader page
         window.pageLoader.show(loaderTheme)
@@ -75,7 +78,8 @@ window.addEventListener('DOMContentLoaded', function () {
       window.history.replaceState({}, '', toLoadHref)
     }
   
-    document.body.querySelector('main').innerHTML = toLoadHtml
+    document.body.querySelector('main').outerHTML = toLoadHtml
+    document.body.querySelector('footer').outerHTML = toLoadFooterHTML
     document.body.style.overflow = ''
     document.body.style.paddingRight = ''
   

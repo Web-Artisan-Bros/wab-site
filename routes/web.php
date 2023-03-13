@@ -19,8 +19,7 @@ Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('h
 foreach (config('app.validLocales') as $locale) {
   $langCode = $locale["code"];
   
-  Route::middleware(\App\Http\Middleware\LocalizedRoutes::class)
-    ->name($langCode . ".")
+  Route::name($langCode . ".")
     ->group(function () use ($langCode) {
       
       Route::get('/' . trans('routes.chisiamo', [], $langCode), [\App\Http\Controllers\ChiSiamo::class, 'index'])->name('about');
@@ -44,10 +43,22 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
     Route::resource("/translations", \App\Http\Controllers\Admin\TranslationController::class);
   });
 
-Route::get('/lang/{locale}', function (string $locale) {
-  app()->setLocale($locale);
-  session()->put('locale', $locale);
-  session()->put('localeManualChange', true);
+Route::get('/lang/{locale}', function (string $locale, \Illuminate\Http\Request $request) {
+  // get the destination route from where the user comes
+  $currentPage = url()->previousPath();
+  // from the previous path get the relative route name
+  $prevRouteName = Route::getRoutes()->match(app('request')->create($currentPage))->getName();
+  $newRouteName  = str_replace(app()->getLocale() . ".", $locale . ".", $prevRouteName);
   
-  return redirect()->back();
+  $newPath = route($newRouteName, [], false);
+  $newUrl = [env("APP_DOMAIN"), $newPath];
+  
+  dump($newUrl);
+  dd("");
+
+//  app()->setLocale($locale);
+//  session()->put('locale', $locale);
+//  session()->put('localeManualChange', true);
+
+//  return redirect()->back();
 })->name("change-locale");

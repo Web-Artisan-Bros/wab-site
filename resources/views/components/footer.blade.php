@@ -7,21 +7,25 @@
         {{-- Left Column --}}
         <div class="col">
           <div class="footer-header">
-            <div class="position-relative fs-3 lh-1 flex-basis-lg-0 flex-lg-grow-1 text-lg-start text-center text-uppercase">
+            <div
+                class="position-relative fs-3 lh-1 flex-basis-lg-0 flex-lg-grow-1 text-lg-start text-center text-uppercase">
               {!! trans("footer.text_left_" . rand(1, 3)) !!}
             </div>
             <div class="footer-logo justify-content-end w-auto">!</div>
           </div>
 
-          <div class="row row-cols-md-2 row-cols-xl-3 row-cols-1 justify-content-center justify-content-lg-start align-items-start">
+          <div
+              class="row row-cols-md-2 row-cols-xl-3 row-cols-1 justify-content-center justify-content-lg-start align-items-start">
             <div class="col mb-2 mb-lg-5">
               <x-contact-btn version="small" class="w-100 point-down"></x-contact-btn>
             </div>
 
-            <div class="col w-100 mb-lg-3 mb-0 justify-content-center pt-3 pt-lg-0 justify-content-lg-start d-flex align-items-center">
+            <div
+                class="col w-100 mb-lg-3 mb-0 justify-content-center pt-3 pt-lg-0 justify-content-lg-start d-flex align-items-center">
               <x-svg-icon class="accent-color lang-logo" icon="lang" alt="language selector"></x-svg-icon>
               @foreach(config("app.validLocales") as $lang)
-                <a class="pe-2" href="{{ route('change-locale', $lang['code']) }}">{{ $lang['label'] }}</a>
+                <a class="pe-2"
+                   href="{{ $localizeUrl($lang["code"]) }}">{{ $lang['label'] }}</a>
               @endforeach
             </div>
 
@@ -69,9 +73,9 @@
               <strong class="lead">Web Artisan Bros</strong><br>
               Via San Rocco, 34/D - 36016 Thiene (VI)
             </p>
-            <p>{{ __('Telefono')}}: <a href="3290241530">3290241530</a></p>
-            <p>E-mail: <a href="mailto:Info@webartisanbros.com">Info@webartisanbros.com</a></p>
-            <p class="mb-0">P. IVA 04439020241</p>
+            <p>{{ __('Telefono')}}: <a href="tel:3290241530">+39 329 0241530</a></p>
+            <p>E-mail: <a href="mailto:info@webartisanbros.com">info@webartisanbros.com</a></p>
+            <p class="mb-0">P. IVA: 04439020241</p>
           </div>
         </div>
       </div>
