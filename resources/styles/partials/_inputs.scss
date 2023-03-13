@@ -1,6 +1,19 @@
 .form-control {
-    border-width: 0 0 1px 0;
+  border-width: 0 0 1px 0;
+  
+  // &:focus {
+  // }
+}
 
-    // &:focus {
-    // }
+.form-floating {
+  > textarea.form-control {
+    resize: none;
+    
+    ~ .form-label {
+      height:         auto;
+      padding-bottom: 0;
+      background:     var(--bs-body-bg);
+      padding-right:  0;
+    }
+  }
 }

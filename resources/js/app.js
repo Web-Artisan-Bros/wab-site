@@ -6,6 +6,7 @@ import './pageChanger'
 import './navbarScroller'
 import './offcanvas'
 import './neonGraphic'
+import './dynamicTextarea'
 
 window._bs = bs
 
