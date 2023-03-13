@@ -2,12 +2,12 @@ window.addEventListener('load', function () {
   const textareas = document.querySelectorAll('textarea')
   
   window.Livewire.hook('message.processed', (message) => {
-    const textarea = message.updateQueue.find(el => el.name === 'message')
-    
+    const textarea = message.component.el.elements.messageFormInput
+  
     if (textarea) {
-      if (textarea.el.scrollHeight > textarea.el.initialSize) {
-        textarea.el.style.height = textarea.el.scrollHeight + 2 + 'px'
-        textarea.el.offcanvasBody.scrollTop = textarea.el.offcanvasBodyScroll
+      if (textarea.scrollHeight > textarea.initialSize) {
+        textarea.style.height = textarea.scrollHeight + 2 + 'px'
+        textarea.offcanvasBody.scrollTop = textarea.offcanvasBodyScroll
   
         textarea.alreadyResized = false
       }
