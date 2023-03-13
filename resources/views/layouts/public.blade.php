@@ -16,7 +16,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Web Artisan Bros: web design & software house.">
   <meta property="og:description" content="{{ __('Web Artisan Bros è una piccola realtà artigianale che si distingue per la passione e l&acute;amore per le cose fatte bene. Siamo appassionati e amiamo il nostro lavoro e ci manteniamo costantemente aggiornati sulle ultime tecnologie e tendenze del settore.')}}">
-  <meta property="og:image" content="https://i.postimg.cc/8C87jrRJ/Group-240.png">
+  <meta property="og:image" content="/assets/meta_logo.png">
 
   <!-- Twitter Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
@@ -24,7 +24,7 @@
   <meta property="twitter:url" content="https://webartisanbros.com/">
   <meta name="twitter:title" content="Web Artisan Bros: web design & software house.">
   <meta name="twitter:description" content="{{ __('Web Artisan Bros è una piccola realtà artigianale che si distingue per la passione e l&acute;amore per le cose fatte bene. Siamo appassionati e amiamo il nostro lavoro e ci manteniamo costantemente aggiornati sulle ultime tecnologie e tendenze del settore.')}}">
-  <meta name="twitter:image" content="https://i.postimg.cc/8C87jrRJ/Group-240.png">
+  <meta name="twitter:image" content="/assets/meta_logo.png">
 
   <!-- Meta Tags Generated via https://www.opengraph.xyz -->
 
