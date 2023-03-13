@@ -23,7 +23,6 @@ foreach (config('app.validLocales') as $locale) {
     ->group(function () use ($langCode) {
       
       Route::get('/' . trans('routes.chisiamo', [], $langCode), [\App\Http\Controllers\ChiSiamo::class, 'index'])->name('about');
-      Route::get('/' . trans('routes.servizi', [], $langCode), [\App\Http\Controllers\Servizi::class, 'index'])->name('services');
       Route::get('/' . trans('routes.web', [], $langCode), [\App\Http\Controllers\Web::class, 'index'])->name('web');
       Route::get('/' . trans('routes.design', [], $langCode), [\App\Http\Controllers\Design::class, 'index'])->name('design');
       Route::get('/' . trans('routes.software', [], $langCode), [\App\Http\Controllers\Software::class, 'index'])->name('software');
