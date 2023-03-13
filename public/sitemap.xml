@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    <url>
+        <loc>https://webartisanbros.com</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://en.webartisanbros.com" />
+        <xhtml:link rel="alternate" hreflang="ro" href="https://ro.webartisanbros.com" />
+        <lastmod>2023-03-13T14:59:28+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://webartisanbros.com/chi-siamo</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://en.webartisanbros.com/about" />
+        <xhtml:link rel="alternate" hreflang="ro" href="https://ro.webartisanbros.com/cine-suntem" />
+        <lastmod>2023-03-13T14:59:28+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://webartisanbros.com/sviluppo-web</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://en.webartisanbros.com/web-development" />
+        <xhtml:link rel="alternate" hreflang="ro" href="https://ro.webartisanbros.com/dezvoltare-web" />
+        <lastmod>2023-03-13T14:59:28+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://webartisanbros.com/digital-design-it</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://en.webartisanbros.com/digital-design-en" />
+        <xhtml:link rel="alternate" hreflang="ro" href="https://ro.webartisanbros.com/digital-design-ro" />
+        <lastmod>2023-03-13T14:59:28+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://webartisanbros.com/sviluppo-software</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://en.webartisanbros.com/software-development" />
+        <xhtml:link rel="alternate" hreflang="ro" href="https://ro.webartisanbros.com/dezvoltare-software" />
+        <lastmod>2023-03-13T14:59:28+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://webartisanbros.com/sviluppo-app-mobile</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://en.webartisanbros.com/mobile-app-development" />
+        <xhtml:link rel="alternate" hreflang="ro" href="https://ro.webartisanbros.com/dezvoltare-app-mobil" />
+        <lastmod>2023-03-13T14:59:28+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://webartisanbros.com/sviluppo-digitale</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://en.webartisanbros.com/digital-transformation" />
+        <xhtml:link rel="alternate" hreflang="ro" href="https://ro.webartisanbros.com/transformare-digitala" />
+        <lastmod>2023-03-13T14:59:28+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+</urlset>
