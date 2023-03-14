@@ -42,9 +42,14 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
     Route::resource("/translations", \App\Http\Controllers\Admin\TranslationController::class);
   });
 
-/*Route::get('/mailable', function () {
+Route::get('/OuPeB9lY56GhLfye8B/mailable/ContactAdminNotify', function () {
   $contact = \App\Models\Contact::first();
   
-//  return new \App\Mail\ContactAdminNotify($contact);
+  return new \App\Mail\ContactAdminNotify($contact);
+});
+
+Route::get('/OuPeB9lY56GhLfye8B/mailable/ContactClientReview', function () {
+  $contact = \App\Models\Contact::first();
+  
   return new \App\Mail\ContactClientReview($contact);
-});*/
+});
