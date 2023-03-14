@@ -74,7 +74,9 @@
   align-items: center;
 
   .navbar-brand{
-
+    svg {
+      height: 48px;
+    }
   }
 
   .btn-menu-toggler {
