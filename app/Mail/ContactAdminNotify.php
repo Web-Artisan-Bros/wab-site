@@ -31,7 +31,7 @@ class ContactAdminNotify extends Mailable {
    */
   public function envelope() {
     return new Envelope(
-      subject: __('mail_contact-admin-notify.subject', ["name" => $this->contact->name]),
+      subject: trans('mail_contact-admin-notify.subject', ["name" => $this->contact->name]),
     );
   }
   

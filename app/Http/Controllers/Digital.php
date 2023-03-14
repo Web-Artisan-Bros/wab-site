@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-class digital extends Controller
+class Digital extends Controller
 {
     public function index()
     {

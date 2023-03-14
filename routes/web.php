@@ -42,22 +42,9 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
     Route::resource("/translations", \App\Http\Controllers\Admin\TranslationController::class);
   });
 
-Route::get('/lang/{locale}', function (string $locale, \Illuminate\Http\Request $request) {
-  // get the destination route from where the user comes
-  $currentPage = url()->previousPath();
-  // from the previous path get the relative route name
-  $prevRouteName = Route::getRoutes()->match(app('request')->create($currentPage))->getName();
-  $newRouteName  = str_replace(app()->getLocale() . ".", $locale . ".", $prevRouteName);
+/*Route::get('/mailable', function () {
+  $contact = \App\Models\Contact::first();
   
-  $newPath = route($newRouteName, [], false);
-  $newUrl = [env("APP_DOMAIN"), $newPath];
-  
-  dump($newUrl);
-  dd("");
-
-//  app()->setLocale($locale);
-//  session()->put('locale', $locale);
-//  session()->put('localeManualChange', true);
-
-//  return redirect()->back();
-})->name("change-locale");
+//  return new \App\Mail\ContactAdminNotify($contact);
+  return new \App\Mail\ContactClientReview($contact);
+});*/
