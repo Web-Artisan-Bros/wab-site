@@ -2,8 +2,8 @@
   <nav class="navbar navbar-expand-lg wab-nav">
     <div class="container-lg">
       <a class="navbar-brand route-link" href="{{ url('/') }}">
-        <x-svg-icon icon="logo_text" class="d-none d-sm-flex"/>
-        <x-svg-icon icon="logo_nav" class="d-sm-none"/>
+        <x-svg-icon icon="logo_text" class="logo-large d-none d-sm-flex"/>
+        <x-svg-icon icon="logo_nav" class="logo-small d-sm-none"/>
       </a>
 
       <button class="btn btn-themed btn-menu-toggler collapsed d-lg-none" type="button"
