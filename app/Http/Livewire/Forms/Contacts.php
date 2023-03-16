@@ -34,8 +34,8 @@ class Contacts extends Component {
       "name"    => "Nome",
     ];*/
   
-  public function transconstruct($id = null) {
-    parent::transconstruct($id);
+  public function __construct($id = null) {
+    parent::__construct($id);
     
     $this->messages = [
       'name.required'    => trans('validations.name_required'),
