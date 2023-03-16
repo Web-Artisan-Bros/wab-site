@@ -28,6 +28,11 @@
         content="{{ __('Web Artisan Bros è una piccola realtà artigianale che si distingue per la passione e l&acute;amore per le cose fatte bene. Siamo appassionati e amiamo il nostro lavoro e ci manteniamo costantemente aggiornati sulle ultime tecnologie e tendenze del settore.')}}">
   <meta name="twitter:image" content="/assets/meta_logo.png">
 
+  <!-- Script per il banner dei cookie -->
+
+  {{-- <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="00954f20-3d6f-4155-a821-e3c47a069e06" data-blockingmode="auto" type="text/javascript"></script> --}}
+
+
   <!-- Meta Tags Generated via https://www.opengraph.xyz -->
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
@@ -50,6 +55,7 @@
   <x-navbar theme="{{ $theme }}"/>
 
   <main>
+    
     @yield('content')
   </main>
 

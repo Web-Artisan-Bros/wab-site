@@ -53,7 +53,7 @@
             <div class="lead d-none d-lg-block">Info:</div>
 
             <div class="social-icons-container">
-              <a class="text-decoration-none" href="mailto:Info@webartisan.com">
+              <a class="text-decoration-none" href="mailto:Info@webartisanbros.com">
                 <x-svg-icon icon="VectorMail" alt="Mail Icon" class="wab-highlight"/>
               </a>
               <a class="text-decoration-none" href="https://www.instagram.com/webartisanbros/">
