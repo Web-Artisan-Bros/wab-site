@@ -53,7 +53,7 @@
             <div class="lead d-none d-lg-block">Info:</div>
 
             <div class="social-icons-container">
-              <a class="text-decoration-none" href="mailto:Info@webartisan.com">
+              <a class="text-decoration-none" href="mailto:Info@webartisanbros.com">
                 <x-svg-icon icon="VectorMail" alt="Mail Icon" class="wab-highlight"/>
               </a>
               <a class="text-decoration-none" href="https://www.instagram.com/webartisanbros/">
@@ -74,8 +74,13 @@
               Via San Rocco, 34/D - 36016 Thiene (VI)
             </p>
             <p>{{ __('Telefono')}}: <a href="tel:3290241530">+39 329 0241530</a></p>
-            <p>E-mail: <a href="mailto:info@webartisanbros.com">info@webartisanbros.com</a></p>
+
+            <p class="mb-0">E-mail: <a href="mailto:info@webartisanbros.com">info@webartisanbros.com</a></p>
+            <p>Pec: <a href="mailto:leicamarius@pec.it">leicamarius@pec.it</a></p>
+
             <p class="mb-0">P. IVA: 04439020241</p>
+            <p class="mb-0">CF: LCEMRS84B07Z129L</p>
+            <p class="mb-0">Cod. REA: VI-404246</p>
           </div>
         </div>
       </div>
@@ -85,4 +90,40 @@
       </div>
     </div>
   </div>
+
+
+  <div class="modal fade" tabindex="-1" id="cookieModal">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Cookie Policy</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <script id="CookieDeclaration" src="https://consent.cookiebot.com/00954f20-3d6f-4155-a821-e3c47a069e06/cd.js"
+                  type="text/javascript" async></script>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" tabindex="-1" id="privacyModal">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Cookie Policy</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <iframe src="https://www.iubenda.com/privacy-policy/37486167?ifr=true&amp;height=800" scrolling="no"
+                  frameborder="0" allowtransparency="true"
+                  style="border: none; background-clip: padding-box; width: 100%; height: 800px;"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 </footer>
+
+
