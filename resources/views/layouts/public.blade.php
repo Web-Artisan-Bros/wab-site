@@ -30,7 +30,7 @@
 
   <!-- Script per il banner dei cookie -->
 
-  {{-- <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="00954f20-3d6f-4155-a821-e3c47a069e06" data-blockingmode="auto" type="text/javascript"></script> --}}
+
 
 
   <!-- Meta Tags Generated via https://www.opengraph.xyz -->
@@ -49,6 +49,8 @@
 
   <!-- Scripts -->
   @vite(["resources/js/app.js", "resources/styles/app.scss"])
+<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="00954f20-3d6f-4155-a821-e3c47a069e06"
+  type="text/javascript" async></script>
 </head>
 
 <body class="antialiased loading">
