@@ -41,3 +41,9 @@ $enable-responsive-font-sizes: true;
 @import "./partials/about-us";
 @import "./chisiamo";
 @import "./servizi";
+
+
+.iubenda-embed.iubenda-nostyle {
+  width:  auto !important;
+  height: auto !important;
+}
