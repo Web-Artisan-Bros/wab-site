@@ -56,14 +56,14 @@
               <a class="text-decoration-none" href="mailto:Info@webartisanbros.com">
                 <x-svg-icon icon="VectorMail" alt="Mail Icon" class="wab-highlight"/>
               </a>
-              <a class="text-decoration-none" href="https://www.instagram.com/webartisanbros/">
-                <x-svg-icon icon="VectorInsta" alt="Instagram Icon" class="wab-highlight"/>
+              <a class="text-decoration-none" href="https://www.linkedin.com/company/web-artisan-bros/" target="_blank">
+                <x-svg-icon icon="VectorLinkedin" alt="Linkedin Icon" class="wab-highlight"/>
+              </a>
+              <a class="text-decoration-none" href="https://www.facebook.com/WebArtisanBros" target="_blank">
+                <x-svg-icon icon="VectorFace" alt="Git Hub Icon" class="wab-highlight"/>
               </a>
               <a class="text-decoration-none" href="#">
-                <x-svg-icon icon="VectorGit" alt="Git Hub Icon" class="wab-highlight"/>
-              </a>
-              <a class="text-decoration-none" href="#">
-                <x-svg-icon icon="VectorInsta" alt="Instagram Icon" class="wab-highlight"/>
+                <x-svg-icon icon="face" alt="Instagram Icon" class="wab-highlight"/>
               </a>
             </div>
           </div>
