@@ -54,16 +54,20 @@
 
             <div class="social-icons-container">
               <a class="text-decoration-none" href="mailto:Info@webartisanbros.com">
-                <x-svg-icon icon="VectorMail" alt="Mail Icon" class="wab-highlight"/>
+                <x-svg-icon icon="icons/mail" alt="Mail Icon" class="wab-highlight"/>
               </a>
               <a class="text-decoration-none" href="https://www.linkedin.com/company/web-artisan-bros/" target="_blank">
-                <x-svg-icon icon="VectorLinkedin" alt="Linkedin Icon" class="wab-highlight"/>
+                <x-svg-icon icon="icons/linkedin" alt="Linkedin Icon" class="wab-highlight"/>
+              </a>
+              <a class="text-decoration-none" href="https://github.com/Web-Artisan-Bros" target="_blank">
+                <x-svg-icon icon="icons/github" alt="GitHub Icon" class="wab-highlight" />
               </a>
               <a class="text-decoration-none" href="https://www.facebook.com/WebArtisanBros" target="_blank">
-                <x-svg-icon icon="VectorFace" alt="Git Hub Icon" class="wab-highlight"/>
+                <x-svg-icon icon="icons/facebook" alt="Facebook Icon" class="wab-highlight"/>
               </a>
-              <a class="text-decoration-none" href="#">
-                <x-svg-icon icon="face" alt="Instagram Icon" class="wab-highlight"/>
+              
+              <a class="text-decoration-none" href="https://www.instagram.com/web_artisan_bros/" target="_blank">
+                <x-svg-icon icon="icons/instagram" alt="Instagram Icon" class="wab-highlight" />
               </a>
             </div>
           </div>
