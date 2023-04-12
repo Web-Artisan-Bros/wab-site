@@ -5,7 +5,7 @@ $theme = "light";
 $navbarVariant = "white";
 $footerVariant = "white";
 
-$pageTitle = "Servizi";
+$pageTitle = trans('menu_dropdown.Digital Design');
 @endphp
 
 @section ('content')

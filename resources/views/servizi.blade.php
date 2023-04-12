@@ -5,7 +5,7 @@ $theme = "light";
 $navbarVariant = "white";
 $footerVariant = "white";
 
-$pageTitle = "Servizi";
+$pageTitle = trans('menu.Servizi');
 @endphp
 
 @section ('content')

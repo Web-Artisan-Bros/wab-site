@@ -7,7 +7,10 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
   <!-- HTML Meta Tags -->
-  <title>Web Artisan Bros: web design & software house</title>
+  <title>{{ isset($pageTitle) ? ucwords(strtolower($pageTitle)) . " | " : '' }}
+    Web Artisan Bros: web design & software house
+  </title>
+  {{--  <title>Web Artisan Bros: web design & software house</title>--}}
   <meta name="description"
         content="{{ __('Web Artisan Bros è una piccola realtà artigianale che si distingue per la passione e l&acute;amore per le cose fatte bene. Siamo appassionati e amiamo il nostro lavoro e ci manteniamo costantemente aggiornati sulle ultime tecnologie e tendenze del settore.')}}">
 
@@ -31,8 +34,8 @@
   <!-- Script per il banner dei cookie -->
 
 
-{{--  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="00954f20-3d6f-4155-a821-e3c47a069e06"
-          type="text/javascript" async></script>--}}
+  {{--  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="00954f20-3d6f-4155-a821-e3c47a069e06"
+            type="text/javascript" async></script>--}}
 
   <!-- Meta Tags Generated via https://www.opengraph.xyz -->
 
@@ -46,7 +49,6 @@
           href="{{\App\Providers\GlobalHelperProvider::localizeUrl($lang["code"])}}"/>
   @endforeach
 
-  <title>{{ isset($pageTitle) ? $pageTitle . " | " : '' }} Web Artisan Bros</title>
 
   <!-- Scripts -->
   @vite(["resources/js/app.js", "resources/styles/app.scss"])

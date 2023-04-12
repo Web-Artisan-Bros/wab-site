@@ -3,7 +3,7 @@
 @php
 $theme = 'yellow';
 $navbarVariant = 'yellow';
-$pageTitle = 'Chi siamo';
+$pageTitle = trans('menu.Chi siamo');
 @endphp
 
 @section('content')

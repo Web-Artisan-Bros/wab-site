@@ -3,7 +3,7 @@
 @php
   $theme = "dark";
   $navbarVariant = "dark";
-  $pageTitle = "Home";
+//  $pageTitle = "Home";
 @endphp
 
 @section ('content')
