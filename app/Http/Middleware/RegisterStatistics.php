@@ -15,9 +15,9 @@ class RegisterStatistics {
    * @param  Request                                         $request
    * @param  \Closure(Request): (Response|RedirectResponse)  $next
    *
-   * @return Response|RedirectResponse
+   * @return mixed
    */
-  public function handle(Request $request, Closure $next): Response|RedirectResponse {
+  public function handle(Request $request, Closure $next): mixed {
     if ($request->is('admin*')) {
       return $next($request);
     }
