@@ -31,7 +31,6 @@ foreach (config('app.validLocales') as $locale) {
     });
 }
 
-
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])
   ->prefix('admin')
   ->name('admin.')
@@ -40,6 +39,9 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
     Route::get("/contacts", [\App\Http\Controllers\Admin\ContactController::class, "index"])->name("contacts.index");
     
     Route::resource("/translations", \App\Http\Controllers\Admin\TranslationController::class);
+    
+    Route::post("/qrs/fields", [\App\Http\Controllers\Admin\QrController::class, "fields"])->name("qrs.fields");
+    Route::resource("/qrs", \App\Http\Controllers\Admin\QrController::class);
   });
 
 Route::get('/OuPeB9lY56GhLfye8B/mailable/ContactAdminNotify', function () {

@@ -199,7 +199,8 @@ return [
     App\Providers\RouteServiceProvider::class,
     App\Providers\FortifyServiceProvider::class,
     App\Providers\JetstreamServiceProvider::class,
-    App\Providers\GlobalHelperProvider::class
+    App\Providers\GlobalHelperProvider::class,
+    SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
   ],
   
   /*
@@ -215,6 +216,7 @@ return [
   
   'aliases' => Facade::defaultAliases()->merge([
     // 'ExampleClass' => App\Example\ExampleClass::class,
+    'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class,
   ])->toArray(),
 
 ];

@@ -35,6 +35,13 @@
           </a>
         </li>
 
+        <li class="nav-item">
+          <a href="{{ route('admin.qrs.index') }}"
+              @class(['nav-link', 'active' => request()->routeIs('admin.qrs.index')])>
+            Codici QR
+          </a>
+        </li>
+
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
             <span class="inline-flex rounded-md">

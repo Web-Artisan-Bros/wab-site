@@ -1,7 +1,11 @@
 import * as bs from 'bootstrap'
 import { tinymceConfig } from './tinymce'
+import axios from 'axios'
+import Alpine from 'alpinejs'
 
+window.axios = axios
 window.bootstrap = bs
+window.Alpine = Alpine
 
 window.isInViewport = function (el) {
   const rect = el.getBoundingClientRect()
@@ -39,4 +43,6 @@ window.addEventListener('DOMContentLoaded', () => {
       })
     })
   })
+  
+  Alpine.start()
 })
