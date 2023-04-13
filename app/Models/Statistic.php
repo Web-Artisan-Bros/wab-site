@@ -33,6 +33,7 @@ class Statistic extends Model {
   
   public static function booted() {
     static::creating(function ($statistic) {
+    
       $statistic->fill([
         "ip"           => request()->ip(),
         "route_name"   => request()->route()->getName() ?? request()->getRequestUri(),
@@ -44,14 +45,13 @@ class Statistic extends Model {
         "payload"      => request()->except("ipinfo", "password"),
         "user_agent"   => request()->userAgent(),
         "referer"      => request()->headers->get('referer'),
-        "country"      => request()->ipInfo['country_name'] ?? '',
-        "city"         => request()->ipInfo['city'] ?? '',
-        "latitude"     => request()->ipInfo['latitude'] ?? '',
-        "longitude"    => request()->ipInfo['longitude'] ?? '',
-        "timezone"     => request()->ipInfo['timezone'] ?? '',
+        "country"      => request()->ipinfo['country_name'] ?? '',
+        "city"         => request()->ipinfo['city'] ?? '',
+        "latitude"     => request()->ipinfo['latitude'] ?? '',
+        "longitude"    => request()->ipinfo['longitude'] ?? '',
+        "timezone"     => request()->ipinfo['timezone'] ?? '',
       ]);
     });
-    
   }
   
   public function routeQuery(): Attribute {
