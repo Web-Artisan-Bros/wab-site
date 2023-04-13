@@ -45,7 +45,7 @@ class Statistic extends Model {
         "payload"      => request()->except("ipinfo", "password"),
         "user_agent"   => request()->userAgent(),
         "referer"      => request()->headers->get('referer'),
-        "country"      => request()->ipinfo['country_name'] ?? '',
+        "country"      => request()->ipinfo['country'] ?? '',
         "city"         => request()->ipinfo['city'] ?? '',
         "latitude"     => request()->ipinfo['latitude'] ?? '',
         "longitude"    => request()->ipinfo['longitude'] ?? '',
@@ -53,7 +53,6 @@ class Statistic extends Model {
       ]);
     });
   }
-  
   public function routeQuery(): Attribute {
     return Attribute::make(
       get: fn($value) => json_decode($value, true),
