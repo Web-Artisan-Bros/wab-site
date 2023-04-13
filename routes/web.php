@@ -31,6 +31,8 @@ foreach (config('app.validLocales') as $locale) {
     });
 }
 
+Route::get("qrs/{slug}", [\App\Http\Controllers\QrController::class, "show"])->name("qrs.show");
+
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])
   ->prefix('admin')
   ->name('admin.')

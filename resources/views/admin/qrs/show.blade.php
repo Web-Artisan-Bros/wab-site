@@ -9,7 +9,7 @@
         <a class="nav-link" href="{{ route('admin.qrs.edit', $qr->id) }}">Edit</a>
 
         <x-delete-btn class="nav-link" :action="route('admin.qrs.destroy', $qr->id)" :id="$qr->id"
-                      >Delete
+        >Delete
         </x-delete-btn>
       </div>
     </div>
@@ -43,11 +43,16 @@
 
         <div><strong>Updated at:</strong> {{ $qr->updated_at->format("d/m/Y H:i") }}</div>
 
+        <div><strong>Url scansione:</strong> <a href="{{route("qrs.show", $qr->slug)}}"
+                                                target="_blank">{{ url("/qr/{$qr->slug}") }}</a></div>
+
         <div><strong>Data:</strong>
           <pre><code>{!! json_encode($qr->data, JSON_PRETTY_PRINT) !!}</code></pre>
         </div>
 
-        <x-qr-code-preview :type="$qr->type" :json-data="$qr->data"/>
+        <hr>
+
+        <x-qr-code-preview :type="$qr->type" :json-data="$qr->data" :slug="$qr->slug"/>
       </div>
     </div>
   </div>

@@ -85,6 +85,7 @@
     </div>
   </div>
 
+  <legend class="mt-4 mb-3">Dati QR</legend>
   <div id="qr_type_fields_container">
     @fragment("qr_type_fields")
       @if($qr->type)
@@ -104,6 +105,10 @@
       @endif
     @endfragment
   </div>
+
+  <legend class="mt-4 mb-3">Impostazioni</legend>
+
+  <x-form-fields-generator :fields="\App\Models\Qr::settingFields()" :values="$qr?->qrSettings" prefix="data.settings"/>
 
   <div class="d-flex gap-3 mt-4">
     <a href="{{ route('admin.qrs.index') }}" class="btn btn-secondary">Cancel</a>

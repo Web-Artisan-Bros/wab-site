@@ -3,6 +3,8 @@ import { tinymceConfig } from './tinymce'
 import axios from 'axios'
 import Alpine from 'alpinejs'
 
+import './jscolor.min';
+
 window.axios = axios
 window.bootstrap = bs
 window.Alpine = Alpine
@@ -46,3 +48,8 @@ window.addEventListener('DOMContentLoaded', () => {
   
   Alpine.start()
 })
+
+// @see https://jscolor.com/configure/
+jscolor.presets.default = {
+  format:'rgba'
+};

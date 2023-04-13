@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Models\Qr;
 use App\Models\QrType;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Request;
@@ -23,7 +24,8 @@ class QrUpsertRequest extends FormRequest {
    * @return array<string, mixed>
    */
   public function rules(Request $request) {
-    $qrTypeId = $request->get('qr_type_id');
+    $qrTypeId         = $request->get('qr_type_id');
+    $qrSettingsFields = Qr::settingFields();
     
     $rules = [
       "slug"        => [
@@ -43,6 +45,14 @@ class QrUpsertRequest extends FormRequest {
         foreach ($qrType->fields as $field) {
           $rules["data." . $field->name] = $field->validation;
         }
+      }
+    }
+    
+    foreach ($qrSettingsFields as $field) {
+      $path = ["data", "settings", $field["name"]];
+      
+      if (isset($field["validation"])) {
+        $rules[implode(".", $path)] = $field["validation"];
       }
     }
     

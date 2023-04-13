@@ -5,6 +5,7 @@ use App\Http\Requests\QrUpsertRequest;
 use App\Models\QrType;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Illuminate\View\View;
 use App\Http\Controllers\Controller;
@@ -48,6 +49,12 @@ class QrController extends Controller {
   public function store(QrUpsertRequest $request): RedirectResponse {
     $data = $request->all();
     
+    if (isset($data["data"]["settings"]["merge"])) {
+      $newImage = Storage::put("qrs", $data["data"]["settings"]["merge"]);
+      
+      $data["data"]["settings"]["merge"] = $newImage;
+    }
+    
     $qr = Qr::create($data);
     
     return redirect()->route('admin.qrs.show', $qr->id);
@@ -83,13 +90,25 @@ class QrController extends Controller {
   /**
    * Update the specified resource in storage.
    *
-   * @param  Request  $request
-   * @param  Qr       $qr
+   * @param  QrUpsertRequest  $request
+   * @param  Qr               $qr
    *
    * @return RedirectResponse
    */
   public function update(QrUpsertRequest $request, Qr $qr): RedirectResponse {
     $data = $request->except(["slug"]);
+    
+    if (isset($data["data"]["settings"]["merge"])) {
+      $newImage = Storage::put("qrs", $data["data"]["settings"]["merge"]);
+      
+      if (isset($qr->qrSettings["merge"])) {
+        Storage::delete($qr->qrSettings["merge"]);
+      }
+      
+      $data["data"]["settings"]["merge"] = $newImage;
+    } else {
+      $data["data"]["settings"]["merge"] = $qr->qrSettings["merge"] ?? null;
+    }
     
     $qr->update($data);
     
