@@ -44,7 +44,7 @@
         <div><strong>Updated at:</strong> {{ $qr->updated_at->format("d/m/Y H:i") }}</div>
 
         <div><strong>Url scansione:</strong> <a href="{{route("qrs.show", $qr->slug)}}"
-                                                target="_blank">{{ url("/qr/{$qr->slug}") }}</a></div>
+                                                target="_blank">{{ route("qrs.show", $qr->slug) }}</a></div>
 
         <div><strong>Data:</strong>
           <pre><code>{!! json_encode($qr->data, JSON_PRETTY_PRINT) !!}</code></pre>

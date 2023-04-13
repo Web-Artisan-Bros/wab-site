@@ -39,7 +39,7 @@ class QrCodePreview extends Component {
   public function __construct(public QrType $type, public array $jsonData, public string $slug) {
     $this->settings = array_merge($this->settings, ($jsonData['settings'] ?? []));
     
-    $this->value = url("/qr/{$slug}");
+    $this->value =route("qrs.show", $slug);
     
     $this->generateCode();
   }
