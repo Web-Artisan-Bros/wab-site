@@ -28,10 +28,10 @@ class GlobalHelperProvider extends ServiceProvider {
   public static function localizeUrl($locale) {
     $currentLocale = app()->getLocale();
     $currRoute     = Route::getCurrentRoute();
-    $currParams = $currRoute->parameters();
     $newLocale = $locale !== "it" ? $locale . "." : "";
     
     if ($currRoute) {
+      $currParams = $currRoute->parameters();
       $newName = str_replace(app()->getLocale() . ".", $locale . ".", $currRoute->getName());
       
       if (Route::has($newName)) {
