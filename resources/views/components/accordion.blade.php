@@ -28,22 +28,24 @@
 
                             <div class="text">
                                 <div>{{ $entry['num'] }}.</div>
-                                <div class="fs-4">{{ trans('accordion.' . strtoupper($entry['title']))}}</div>
-                                <x-svg-icon class="arrow" icon="BorderedArrow"></x-svg-icon>
+                              <div class="fs-4">{{ trans('accordion.' . strtoupper($entry['title']))}}</div>
+                              <x-svg-icon class="arrow" icon="BorderedArrow"></x-svg-icon>
                             </div>
                         </button>
                     </h2>
 
-                    <div id="{{ 'acc_body_' . $entry['id'] }}" class="accordion-collapse collapse"
-                        aria-labelledby="{{ 'acc_head_' . $entry['id'] }}" data-bs-parent="#accordionWhyUs">
-                        <div class="accordion-body d-flex text-break justify-content-between">
-                            {{ __('accordion.' . $entry['content']) }}
-                            <img class="accordion-icon d-none d-lg-block" src="/assets/{{ $entry['icon'] }}" alt="">
-                        </div>
-                    </div>
-                </div>
-            @endforeach
+                  <div id="{{ 'acc_body_' . $entry['id'] }}" class="accordion-collapse collapse"
+                       aria-labelledby="{{ 'acc_head_' . $entry['id'] }}" data-bs-parent="#accordionWhyUs">
+                    <div class="accordion-body d-flex text-break justify-content-between">
+                      {{ __('accordion.' . $entry['content']) }}
 
+                      @if(!empty($entry['icon']))
+                        <img class="accordion-icon d-none d-lg-block" src="/assets/{{ $entry['icon'] }}" alt="">
+                      @endif
+                    </div>
+                  </div>
+                </div>
+          @endforeach
         </div>
     </div>
 </section>
