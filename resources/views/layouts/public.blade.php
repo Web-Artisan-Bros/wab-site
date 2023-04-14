@@ -3,52 +3,25 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
-  <!-- HTML Meta Tags -->
-  <title>{{ isset($pageTitle) ? ucwords(strtolower($pageTitle)) . " | " : '' }}
-    Web Artisan Bros: web design & software house
-  </title>
-  {{--  <title>Web Artisan Bros: web design & software house</title>--}}
-  <meta name="description"
-        content="{{ __('Web Artisan Bros è una piccola realtà artigianale che si distingue per la passione e l&acute;amore per le cose fatte bene. Siamo appassionati e amiamo il nostro lavoro e ci manteniamo costantemente aggiornati sulle ultime tecnologie e tendenze del settore.')}}">
+  @php
+    $title = (isset($pageTitle) ? ucwords(strtolower($pageTitle)) . " | " : '') . "Web Artisan Bros: Web Boutique & Software House";
+    $description = __('Web Artisan Bros è una piccola realtà artigianale che si distingue per la passione e l&acute;amore per le cose fatte bene. Siamo appassionati e amiamo il nostro lavoro e ci manteniamo costantemente aggiornati sulle ultime tecnologie e tendenze del settore.');
+  @endphp
 
-  <!-- Facebook Meta Tags -->
-  <meta property="og:url" content="https://webartisanbros.com/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Web Artisan Bros: web design & software house">
-  <meta property="og:description"
-        content="{{ __('Web Artisan Bros è una piccola realtà artigianale che si distingue per la passione e l&acute;amore per le cose fatte bene. Siamo appassionati e amiamo il nostro lavoro e ci manteniamo costantemente aggiornati sulle ultime tecnologie e tendenze del settore.')}}">
-  <meta property="og:image" content="/assets/meta_logo.png">
+  <title>{{$title}}</title>
+  <meta name="description" content="{{ $description }}">
 
-  <!-- Twitter Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta property="twitter:domain" content="webartisanbros.com">
-  <meta property="twitter:url" content="https://webartisanbros.com/">
-  <meta name="twitter:title" content="Web Artisan Bros: web design & software house">
-  <meta name="twitter:description"
-        content="{{ __('Web Artisan Bros è una piccola realtà artigianale che si distingue per la passione e l&acute;amore per le cose fatte bene. Siamo appassionati e amiamo il nostro lavoro e ci manteniamo costantemente aggiornati sulle ultime tecnologie e tendenze del settore.')}}">
-  <meta name="twitter:image" content="/assets/meta_logo.png">
+  @include('components.head.favicon')
 
-  <!-- Script per il banner dei cookie -->
-
-
-  {{--  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="00954f20-3d6f-4155-a821-e3c47a069e06"
-            type="text/javascript" async></script>--}}
-
-  <!-- Meta Tags Generated via https://www.opengraph.xyz -->
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
-  <link rel="manifest" href="/assets/site.webmanifest">
+  @include('components.head.social-tags', ["title"=> $title, "description" => $description])
 
   @foreach(config("app.validLocales") as $lang)
     <link rel="alternate" hreflang="{{$lang["code"] === 'it' ? 'x-default' : $lang["code"]}}"
           href="{{\App\Providers\GlobalHelperProvider::localizeUrl($lang["code"])}}"/>
   @endforeach
-
 
   <!-- Scripts -->
   @vite(["resources/js/app.js", "resources/styles/app.scss"])
