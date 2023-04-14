@@ -101,6 +101,29 @@
     </div>
 
     <div class="px-4">
+
+      <div class="list-group list-group-flush mb-5 flex-fill">
+        <a class="list-group-item list-group-item-action text-uppercase collapsed"
+           data-bs-toggle="collapse" href="#mobile-language-menu" role="button"
+           aria-expanded="false" aria-controls="mobile-services-menu">
+          {{ __("Language")  }}
+
+          <x-svg-icon icon="arrow_top_right" class="me-2 ms-0" data-active-direction="up"/>
+        </a>
+
+        <div class="collapse" id="mobile-language-menu">
+          <div class="list-group list-group-flush border-bottom" >
+            @foreach(config("app.validLocales") as $lang)
+              <a href="{{ \App\Providers\GlobalHelperProvider::localizeUrl($lang["code"]) }}"
+                 class="list-group-item list-group-item-action text-uppercase">
+                {{ $lang['label'] }}
+              </a>
+            @endforeach
+          </div>
+        </div>
+
+      </div>
+
       <x-contact-btn version="small" class="w-100"></x-contact-btn>
     </div>
   </div>

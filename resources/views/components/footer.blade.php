@@ -22,7 +22,7 @@
 
             <div
                 class="col w-100 mb-lg-3 mb-0 justify-content-center pt-3 pt-lg-0 justify-content-lg-start d-flex align-items-center">
-              <x-svg-icon class="accent-color lang-logo" size="32" icon="icons/lang" alt="language selector"></x-svg-icon>
+              <x-svg-icon class="accent-color lang-logo" icon="icons/lang" alt="language selector"></x-svg-icon>
 
               @foreach(config("app.validLocales") as $lang)
                 <a class="pe-2"

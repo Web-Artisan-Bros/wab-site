@@ -12,7 +12,7 @@ class SvgIcon extends Component {
    *
    * @return void
    */
-  public function __construct($icon) {
+  public function __construct($icon, public $size = null) {
     $this->name = $icon;
   }
   
