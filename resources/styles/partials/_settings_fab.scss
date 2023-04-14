@@ -1,0 +1,25 @@
+.settings-fab-container {
+  position: fixed;
+  bottom:   1rem;
+  left:     1rem;
+  z-index:  1000;
+  transition: opacity .2s ease;
+  
+  .dropdown-menu {
+    transform: translateX(-100%) !important;
+    bottom:    100% !important;
+    
+    &.show {
+      transform: translateX(0) !important;
+    }
+  }
+  
+  .btn {
+    --icon-rotation: 0deg;
+    --icon-hover-rotation: 0deg;
+    --icon-active-transform: translate(0, 0);
+    
+    width:  60px;
+    height: 60px;
+  }
+}
