@@ -47,3 +47,11 @@ $enable-responsive-font-sizes: true;
   width:  auto !important;
   height: auto !important;
 }
+
+@include media-breakpoint-up(lg) {
+  #CookiebotWidget {
+    bottom:  100px!important;
+    left:    1.5rem!important;
+    z-index: 999!important;
+  }
+}
