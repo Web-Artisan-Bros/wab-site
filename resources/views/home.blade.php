@@ -9,15 +9,9 @@
 @section ('content')
 
   <x-jumbo dnone="true" reverseJumbo="flex-lg-row" theme="dark">
-    <x-slot:reverse>
-      btn-hover
-    </x-slot:reverse>
-
     <x-slot:text>
       <div class="mb-3 mb-lg-5">
         <h1 class="text-uppercase">{!! __('esperienze digitali <span class="wab-highlight">artigianali') !!}</span></h1>
-
-
       </div>
       <div>
         <div class="d-flex flex-lg-row flex-column align-items-center">
@@ -36,14 +30,14 @@
   <x-services img=/assets/JumboService.png :cards="$cardsHome" theme="light">
 
     <x-slot:cards>
-      <x-svg-icon class="d-none d-lg-inline-block" id="arrow" icon="BigArrow"></x-svg-icon>
+      <x-svg-icon class="d-none d-lg-inline-block" id="arrow" icon="arrow_outline"></x-svg-icon>
 
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-2 gy-4 justify-content-center">
         @foreach($cardsHome as $card)
           <div class="col">
             <x-service-card number="{{ $card['num'] }}" title="{{ trans('cards.' . $card['title'])}}" class="w-100">
               <a href="{{route($card['routeName'])}}" class="btn btn-themed mt-3 mt-lg-0 route-link">{{ __('Scopri di più')}}
-                <x-svg-icon icon="VectorArrow"></x-svg-icon>
+                <x-svg-icon icon="arrow_top_right"></x-svg-icon>
               </a>
             </x-service-card>
           </div>
@@ -67,9 +61,6 @@
   </x-services>
 
   <x-contact class="mt-4" theme="yellow">
-    <x-slot:reverse>
-      btn-hover
-    </x-slot:reverse>
   </x-contact>
 
   <x-accordion :entries="$accordionWhyUs" theme="light">

@@ -16,14 +16,13 @@
                 ]) href="#" role="button"
              data-bs-toggle="dropdown" aria-expanded="false">
             {{ $entry['label'] }}
-{{--            <x-svg-icon class="imgWhite" icon="VectorArrowBlack"></x-svg-icon>--}}
           </a>
           <ul class="dropdown-menu">
             @foreach ($entry['children'] as $child)
               <li @class(['border-bottom'=> !$loop->last])>
                 <a class="dropdown-item route-link"
                    href="{{ route($child['routeName']) }}">
-                  <x-svg-icon icon="VectorArrowS" class="me-2 ms-0"/>
+                  <x-svg-icon icon="arrow_top_right" class="me-2 ms-0"/>
                   {{ $child['label'] }}
                 </a>
               </li>

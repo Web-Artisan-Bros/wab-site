@@ -22,7 +22,8 @@
 
             <div
                 class="col w-100 mb-lg-3 mb-0 justify-content-center pt-3 pt-lg-0 justify-content-lg-start d-flex align-items-center">
-              <x-svg-icon class="accent-color lang-logo" icon="lang" alt="language selector"></x-svg-icon>
+              <x-svg-icon class="accent-color lang-logo" size="32" icon="icons/lang" alt="language selector"></x-svg-icon>
+
               @foreach(config("app.validLocales") as $lang)
                 <a class="pe-2"
                    href="{{ \App\Providers\GlobalHelperProvider::localizeUrl($lang["code"]) }}">{{ $lang['label'] }}</a>
@@ -65,7 +66,7 @@
               <a class="text-decoration-none" href="https://www.facebook.com/WebArtisanBros" target="_blank">
                 <x-svg-icon icon="icons/facebook" alt="Facebook Icon" class="wab-highlight"/>
               </a>
-              
+
               <a class="text-decoration-none" href="https://www.instagram.com/web_artisan_bros/" target="_blank">
                 <x-svg-icon icon="icons/instagram" alt="Instagram Icon" class="wab-highlight" />
               </a>

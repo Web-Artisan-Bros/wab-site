@@ -68,7 +68,7 @@
 
       {{ trans('forms.send_btn') }}
 
-      <x-svg-icon icon="VectorArrow"></x-svg-icon>
+      <x-svg-icon icon="arrow_top_right"></x-svg-icon>
     </button>
   </form>
 @else

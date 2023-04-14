@@ -1,8 +1,5 @@
 @props(['class' =>'', 'dnone' => '', 'reverseJumbo' =>''])
 
-
-
-
 <div class="wab-jumbo themed-section" {{ $dnone }} data-bs-theme="{{$theme}}">
   <div class="container container-p-156">
     <div class="row {{$reverseJumbo}} pb-sm-3 justify-content-center flex-column flex-nowrap">

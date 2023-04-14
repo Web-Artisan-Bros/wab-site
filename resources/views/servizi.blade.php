@@ -11,9 +11,6 @@ $pageTitle = trans('menu.Servizi');
 @section ('content')
 
 <x-jumbo dnone="false" reverseJumbo="" theme="light">
-  <x-slot:reverse>
-    btn-hover
-  </x-slot:reverse>
 
   <x-slot:text>
     <div class="mb-3 mb-lg-5">
@@ -51,7 +48,7 @@ $pageTitle = trans('menu.Servizi');
       <div class="d-flex align-content-center">
         <div class="wrapper">
           <div class="arrowM">
-            <img src="/assets/BigArrow.svg" alt="">
+            <x-svg-icon icon="arrow_outline"></x-svg-icon>
           </div>
         </div>
 
@@ -97,7 +94,7 @@ $pageTitle = trans('menu.Servizi');
             aria-controls="{{ 'acc_body_' . $entry['id'].'0' }}">
 
             <div class="text">
-              <x-svg-icon class="arrow" icon="BorderedArrow"></x-svg-icon>
+              <x-svg-icon class="arrow" icon="arrow_square"></x-svg-icon>
               <div class="fs-6">{{ $entry['num'] }}.</div>
               <div class="fs-6">{{ trans('cards.' . strtoupper($entry["title"]))}}</div>
             </div>
@@ -134,12 +131,6 @@ $pageTitle = trans('menu.Servizi');
 </x-services>
 
 <x-contact class="mt-4" theme="yellow">
-  <x-slot:reverse>
-    btn-hover
-  </x-slot:reverse>
-  <x-slot:imgCenter>
-    /assets/WhiteArrow.svg
-  </x-slot:imgCenter>
 </x-contact>
 
 

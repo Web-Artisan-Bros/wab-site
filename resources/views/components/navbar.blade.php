@@ -35,14 +35,14 @@
                      href="#" role="button"
                      data-bs-toggle="dropdown" aria-expanded="false">
                     {{  trans('menu.' . $entry['label']) }}
-                    <x-svg-icon class="imgWhite" icon="VectorArrowBlack"></x-svg-icon>
+                    <x-svg-icon class="imgWhite" icon="arrow_bottom_right"></x-svg-icon>
                   </a>
 
                   <ul class="dropdown-menu">
                     @foreach ($entry['children'] as $child)
                       <li @class(['border-bottom'=> !$loop->last])>
                         <a class="dropdown-item route-link" href="{{ route($child['routeName']) }}">
-                          <x-svg-icon icon="VectorArrowS" class="me-2 ms-0"/>
+                          <x-svg-icon icon="arrow_bottom_right" class="me-2 ms-0"/>
                           {{ trans('menu_dropdown.' . $child['label']) }}
                         </a>
                       </li>
@@ -82,7 +82,7 @@
              aria-expanded="false" aria-controls="mobile-services-menu">
             {{  trans('menu.' . $entry['label']) }}
 
-            <x-svg-icon icon="VectorArrowS" class="me-2 ms-0"/>
+            <x-svg-icon icon="arrow_bottom_right" class="me-2 ms-0"/>
           </a>
 
           <div class="collapse" id="mobile-services-menu">
@@ -90,7 +90,7 @@
               @foreach ($entry['children'] as $child)
                 <a class="list-group-item list-group-item-action route-link"
                    href="{{ route($child['routeName']) }}">
-                  <x-svg-icon icon="VectorArrowS" class="me-2 ms-0"/>
+                  <x-svg-icon icon="arrow_bottom_right" class="me-2 ms-0"/>
                   {{ trans('menu_dropdown.' . $child['label']) }}
                 </a>
               @endforeach

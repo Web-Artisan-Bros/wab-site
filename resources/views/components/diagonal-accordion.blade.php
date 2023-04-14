@@ -31,7 +31,7 @@ $id = "wab-da-" . uniqid();
                                         <div class="fs-4">{{ trans('d_accordion.' . strtoupper($entry['title'])) }}
                                         </div>
                                     </div>
-                                    <x-svg-icon class="arrow ms-3" icon="VectorArrowWhiteD"></x-svg-icon>
+                                    <x-svg-icon class="arrow ms-3" icon="arrow_right"></x-svg-icon>
                                 </div>
                             </div>
                         </button>
@@ -69,7 +69,7 @@ $id = "wab-da-" . uniqid();
                         aria-controls="{{ 'acc_body_' . $entry['id'].'00' }}">
 
                         <div class="text">
-                            <x-svg-icon class="arrow" icon="BorderedArrow"></x-svg-icon>
+                            <x-svg-icon class="arrow" icon="arrow_square"></x-svg-icon>
                             <div>{{ $entry['num'] }}.</div>
                             <div class="fs-4">{{ trans('d_accordion.' . strtoupper($entry['title'])) }}</div>
                         </div>

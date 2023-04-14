@@ -29,7 +29,7 @@
                             <div class="text">
                                 <div>{{ $entry['num'] }}.</div>
                               <div class="fs-4">{{ trans('accordion.' . strtoupper($entry['title']))}}</div>
-                              <x-svg-icon class="arrow" icon="BorderedArrow"></x-svg-icon>
+                              <x-svg-icon class="arrow" icon="arrow_square"></x-svg-icon>
                             </div>
                         </button>
                     </h2>
