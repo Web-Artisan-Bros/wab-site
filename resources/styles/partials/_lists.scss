@@ -8,8 +8,63 @@
 
 .list-light {
     .list-group-item {
-        color: variables.$dark-text;
+        color:            variables.$dark-text;
         background-color: transparent;
-        border-color: variables.$secondary;
+        border-color:     variables.$secondary;
+    }
+}
+
+.list-animate-items {
+    --icon-rotation:         0deg;
+    --icon-hover-rotation:   45deg;
+    --icon-active-transform: translate(25%, -25%);
+    --transition:            .25s ease-in-out;
+    --transition-fast:       .15s ease-in-out;
+    
+    .list-group-item-action {
+        img,
+        .icon {
+            transition: rotate var(--transition), transform var(--transition-fast);
+            rotate:     var(--icon-rotation);
+        }
+        
+        // point right-down
+        &.point-down {
+            --icon-rotation:         90deg;
+            --icon-hover-rotation:   135deg;
+            --icon-active-transform: translate(10%, -10%);
+        }
+        
+        &.point-up {
+            --icon-rotation:         0deg;
+            --icon-hover-rotation:   -45deg;
+            --icon-active-transform: translate(25%, -10%);
+        }
+        
+        // on hover, rotate the icon and move the outline to merge with the button
+        &:hover {
+            img,
+            .icon {
+                rotate: var(--icon-hover-rotation);
+            }
+            
+            &:before {
+                top:   0;
+                right: 0;
+            }
+        }
+        
+        // on active, maintain outline merged with the button and move the icon by 25% to right
+        &:active {
+            img,
+            .icon {
+                transform: var(--icon-active-transform);
+            }
+            
+            &:before {
+                top:   0;
+                right: 0;
+            }
+        }
     }
 }

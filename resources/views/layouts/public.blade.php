@@ -45,11 +45,12 @@
   <x-navbar theme="{{ $theme }}"/>
 
   <main>
-
     @yield('content')
   </main>
 
   <x-footer theme="{{ $theme }}"/>
+
+  <x-settings-fab theme="{{ $theme }}"></x-settings-fab>
 
   <x-offcanvas-contacts theme="{{ $theme }}"></x-offcanvas-contacts>
 
