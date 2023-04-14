@@ -3,6 +3,7 @@
   bottom:   1rem;
   left:     1rem;
   z-index:  1000;
+  transition: opacity .2s ease;
   
   .dropdown-menu {
     transform: translateX(-100%) !important;

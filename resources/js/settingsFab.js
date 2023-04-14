@@ -27,7 +27,8 @@ function addIntersectionObserver () {
 function callback (entries, observer) {
   entries.forEach((entry) => {
     if (entry.isIntersecting && settingsContainer) {
-      settingsContainer.dataset.bsTheme = entry.target.dataset.bsTheme
+      settingsContainer.dataset.bsTheme = entry.target.tagName !== 'FOOTER' ? entry.target.dataset.bsTheme : settingsContainer.dataset.bsTheme
+      settingsContainer.style.opacity = entry.target.tagName === 'FOOTER' ? 0 : 1
     }
   })
 }
