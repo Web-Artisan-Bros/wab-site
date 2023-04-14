@@ -100,8 +100,7 @@
       @endforeach
     </div>
 
-    <div class="px-4">
-
+    <div class="">
       <div class="list-group list-group-flush mb-5 flex-fill">
         <a class="list-group-item list-group-item-action text-uppercase collapsed"
            data-bs-toggle="collapse" href="#mobile-language-menu" role="button"
@@ -124,7 +123,9 @@
 
       </div>
 
-      <x-contact-btn version="small" class="w-100"></x-contact-btn>
+      <div class="px-2">
+        <x-contact-btn version="small" class="w-100"></x-contact-btn>
+      </div>
     </div>
   </div>
 </div>
