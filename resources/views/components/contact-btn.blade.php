@@ -1,8 +1,9 @@
 @if($version === "large")
-  <div class="d-flex justify-content-center {{ $reverse }}">
-    <div class="btn-sqr red-square"></div>
 
-    <div class="btn-sqr white-square d-flex align-items-center justify-content-center"
+  <div @class(["contact-btn-container", "contact-reverse"=> $reverse])>
+    <div class="contact-square contact-bg-square "></div>
+
+    <div class="contact-square contact-main-square"
          type="button" role="button"
          data-bs-toggle="offcanvas" href="#offcanvasContacts"
          aria-controls="offcanvasContacts">
@@ -23,6 +24,6 @@
           data-bs-toggle="offcanvas" href="#offcanvasContacts"
           aria-controls="offcanvasContacts">
     {{ __('SCRIVICI')}}
-    <x-svg-icon icon="VectorArrow"></x-svg-icon>
+    <x-svg-icon icon="arrow_top_right"></x-svg-icon>
   </button>
 @endif

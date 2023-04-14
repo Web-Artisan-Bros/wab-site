@@ -6,16 +6,13 @@ use Illuminate\View\Component;
 
 class Contact extends Component
 {
-  public $theme;
 
   /**
    * Create a new component instance.
    *
    * @return void
    */
-  public function __construct($theme = 'light')
-  {
-    $this->theme = $theme;
+  public function __construct(public $theme = 'light', public $reverse = false) {
   }
 
   /**
