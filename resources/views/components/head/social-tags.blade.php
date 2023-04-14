@@ -5,6 +5,8 @@
 <meta property="og:description" content="{{ $description }}">
 <meta property="og:site_name" content="Web Artisan Bros" />
 <meta property="og:image" content="{{asset("assets/og/og_image.jpg")}}">
+<meta property="og:image:width" content="1198">
+<meta property="og:image:height" content="627">
 
 <meta property="og:determiner" content="the" />
 <meta property="og:locale:alternate" content="it_IT" />
