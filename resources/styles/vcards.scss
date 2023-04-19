@@ -1,0 +1,41 @@
+.v-card {
+ .btn {
+  width: unset;
+  height: unset;
+ }
+
+ .to-right {
+  bottom: 1rem;
+  right: 1rem;
+  left: unset;
+ }
+}
+
+.wab_link {
+ a{
+  transition: color #{$ease};
+    h4,
+    h5 {
+     transition: color #{$ease};
+    }
+    .arrow_icon{
+     margin-left: 3rem;
+     max-width: 50px;
+     transition: rotate #{$ease};
+    }
+ }
+ &:hover {
+  a {
+   color: #{$secondary};
+   
+
+   h4,
+   h5 {
+    color: #{$secondary};
+   }
+      .arrow_icon {
+       rotate: -45deg;
+      }
+  }
+ }
+}
