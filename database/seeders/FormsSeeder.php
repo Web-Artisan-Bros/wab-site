@@ -21,6 +21,8 @@ class FormsSeeder extends Seeder {
       'email_max'        => ["en" => "Wow, what a long email, a bit too long", "it" => "Wow, che email lunga, forse un po' troppo", "ro" => "Wow, ce email lungă, poate un pic prea lungă"],
       'phone_max'        => ["en" => "Oh c'mon, is this really your phone?", "it" => "Ma dai, è davvero questo il tuo telefono?", "ro" => "Las-o baltă, nu cred că ăsta-i numărul tău de telefon!"],
       'message_required' => ["en" => "We're glad you reach out, but tell us something", "it" => "Siamo contenti che ci stai contattando, ma cosa ci vuoi dire?", "ro" => "Ne pare bine că ne contactezi, dar spune-ne ceva"],
+      'privacy_required' => ["en" => "Please accept our privacy policy to proceed.", "it" => "Per favore, accetta la nostra privacy policy per procedere.", "ro" => "Vă rugăm să acceptați privacy policy pentru a continua."],
+    
     ];
     
     $forms = [
