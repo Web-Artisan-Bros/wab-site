@@ -62,7 +62,7 @@
     <div class="form-check mb-5 ms-3">
       <input class="form-check-input" type="checkbox" value="" id="checkModal" wire:model="privacy">
       @error('privacy')
-      <div class="invalid-feedback">{{ $privacy }}</div> @enderror
+      <div class="invalid-feedback">{{ $message }}</div> @enderror
       <label class="form-check-label" for="checkModal">
         {{ trans('forms.privacy') }} 
         <a href="https://www.iubenda.com/privacy-policy/37486167" class="iubenda-noiframe iubenda-embed iubenda-nostyle me-3" title="Privacy Policy "
