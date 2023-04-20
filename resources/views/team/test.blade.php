@@ -85,7 +85,61 @@
 
     </div>
   </section>
+  <div class="settings-fab-container to-right" data-bs-theme="light" style="opacity: 1;">
+    <div class="btn-group dropup">
+      <a href="{{ route('download.vcard') }}" class="btn btn-themed"><img src="/assets/icons/contact.svg" alt="">
+        <span class="d-none d-sm-block">Salva Contatto</span></a>
+    </div>
+  </div>
+  
+  
+  <div class="modal fade" id="qrModal" tabindex="-1" aria-labelledby="qrModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <img class="h-25 w-25" src="/assets/marius_square.png" alt="">
+          <div>
+            <h1 class="modal-title fs-6" id="qrModalLabel">LEICA MARIUS</h1>
+            <h2 class="modal-title fs-6" id="qrModalLabel">Ceo & Co-Founder</h2>
+            <h3 class="modal-title fs-6" id="qrModalLabel">Web Artisan Bros</h3>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+  
+          <img class="w-50 h-50" src="/assets/qr_marius.svg" alt="">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          {{-- <button type="button" class="btn btn-primary">Save changes</button> --}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="settings-fab-container" data-bs-theme="light" style="opacity: 1;">
+    <div class="btn-group dropup">
+      <button class="btn btn-themed" data-bs-toggle="modal" data-bs-target="#qrModal"><img src="/assets/icons/qr.svg"
+          alt="">
+      </button>
+    </div>
+    <div class="btn-group dropup">
+      <button onclick="share()" class="btn btn-themed"><img src="/assets/icons/share.svg" alt="">
+      </button>
+    </div>
+  </div>
 
   <x-contact class="mt-4" theme="yellow">
   </x-contact>
+
+  <script>
+    function share() {
+      navigator.share({
+        title: 'My Contact Info',
+        text: 'Check out my contact info',
+        url: 'https://www.webartisanbros.com/team/5a13e4fd16'
+      })
+        .then(() => console.log('Successful share'))
+        .catch((error) => console.log('Error sharing:', error));
+    }
+  </script>
 @endsection
