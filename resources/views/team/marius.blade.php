@@ -88,7 +88,7 @@
             </div>
 
           </div>
-        </footer>
+        </div>
 
       </div>
     </section>
@@ -158,14 +158,14 @@
 
       </div>
     </footer>
-    
+
       <div class="settings-fab-container to-right" data-bs-theme="light" style="opacity: 1;">
         <div class="btn-group dropup">
           <a href="{{ route('download.vcard') }}" class="btn btn-themed"><img src="/assets/icons/contact.svg" alt="">
             <span class="d-none d-sm-block">Salva Contatto</span></a>
         </div>
       </div>
-   
+
 
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -180,7 +180,7 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              
+
               <img class="w-50 h-50" src="/assets/qr_marius.svg" alt="">
             </div>
             <div class="modal-footer">

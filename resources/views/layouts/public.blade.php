@@ -42,13 +42,17 @@
 </head>
 
 <body class="antialiased loading">
-  <x-navbar theme="{{ $theme }}"/>
+  @if(!isset($noHeader) || !$noHeader)
+    <x-navbar theme="{{ $theme }}"/>
+  @endif
 
   <main>
     @yield('content')
   </main>
 
-  <x-footer theme="{{ $theme }}"/>
+  @if(!isset($noFooter) || !$noFooter)
+    <x-footer theme="{{ $theme }}"/>
+  @endif
 
   <x-settings-fab theme="{{ $theme }}"></x-settings-fab>
 

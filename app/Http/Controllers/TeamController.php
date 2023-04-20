@@ -12,6 +12,8 @@ class TeamController extends Controller
             return view('team.marius');
         } elseif ($slug === 'e5b097b696') {
             return view('team.florian');
+        } elseif ($slug === 'test') {
+            return view('team.test');
         } else {
             dump($slug);
         }
