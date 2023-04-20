@@ -7,7 +7,7 @@ import './navbarScroller'
 import './offcanvas'
 import './neonGraphic'
 import './dynamicTextarea'
-import './settingsFab'
+import './fabButtons'
 
 window._bs = bs
 
