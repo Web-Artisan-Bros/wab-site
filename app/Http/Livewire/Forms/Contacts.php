@@ -51,6 +51,8 @@ class Contacts extends Component {
       'phone.accepted'        => trans('validations.phone_accepted'),
       'message.required' => trans('validations.message_required'),
       'privacy.required' => trans('validations.privacy_required'),
+      'privacy.accepted' => trans('validations.privacy_accepted'),
+
 
     ];
   }

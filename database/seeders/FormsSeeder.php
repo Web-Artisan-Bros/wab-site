@@ -22,6 +22,7 @@ class FormsSeeder extends Seeder {
       'phone_max'        => ["en" => "Oh c'mon, is this really your phone?", "it" => "Ma dai, è davvero questo il tuo telefono?", "ro" => "Las-o baltă, nu cred că ăsta-i numărul tău de telefon!"],
       'message_required' => ["en" => "We're glad you reach out, but tell us something", "it" => "Siamo contenti che ci stai contattando, ma cosa ci vuoi dire?", "ro" => "Ne pare bine că ne contactezi, dar spune-ne ceva"],
       'privacy_required' => ["en" => "Please accept our privacy policy to proceed.", "it" => "Per favore, accetta la nostra privacy policy per procedere.", "ro" => "Vă rugăm să acceptați privacy policy pentru a continua."],
+      'privacy_accepted' => ["en" => "Please accept our privacy policy to proceed.", "it" => "Per favore, accetta la nostra privacy policy per procedere.", "ro" => "Vă rugăm să acceptați privacy policy pentru a continua."],
     
     ];
     
@@ -33,6 +34,8 @@ class FormsSeeder extends Seeder {
       'date'               => ["en" => "Date", "it" => "Data", "ro" => "Dată"],
       'required_field_msg' => ["en" => "This fields are the bare minimum ", "it" => "Questi campi sono indispensabili", "ro" => "Aceste informații sunt obligatorii"],
       'send_btn'           => ["en" => "Send", "it" => "Invia", "ro" => "Trimite"],
+      'privacy_required' => ["en" => "I consent to the processing of my data and declare that I have read the", "it" => "Acconsento al trattamento dei miei dati e dichiaro di aver preso visione della", "ro" => "Sunt de acord cu prelucrarea datelor mele și declar că am citit"],
+
     ];
     
     foreach ($validations as $key => $value) {
