@@ -1,4 +1,4 @@
-<div class="settings-fab-container d-none d-lg-block" data-bs-theme="{{$theme}}">
+<div class="fab-container d-none d-lg-flex" data-bs-theme="{{$theme}}" data-hide-on-footer="true">
     <div class="btn-group dropup">
         <button type="button" class="btn btn-themed " data-bs-toggle="dropdown" aria-expanded="false"
                 data-bs-auto-close="outside" title="Language">
