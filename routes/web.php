@@ -36,11 +36,18 @@ Route::get('/team/{slug}', [\App\Http\Controllers\TeamController::class, "show"]
 Route::get("qrs/{slug}", [\App\Http\Controllers\QrController::class, "show"])->name("qrs.show");
 
 Route::get('/download/vcard', function () {
-  $vcard = "BEGIN:VCARD\r\nVERSION:3.0\r\nFN:Leica Florian Robert\r\nORG:Web Artisan Bros\r\nTITLE:Web Developer\r\nTEL:+393202942127\r\nEMAIL:florian.leica@webartisanbros.com\r\nURL:http://www.webartisanbros.com/\r\nPHOTO;MEDIATYPE=image/jpeg:https://bestprofilepictures.com/cool-profile-picture-for-instagram/cool-profile-picture-for-instagram/\r\nEND:VCARD\r\n";
+  $vcard = "BEGIN:VCARD\r\nVERSION:3.0\r\nFN:Leica Florian Robert\r\nORG:Web Artisan Bros\r\nTITLE:Web Developer\r\nTEL:+393202942127\r\nEMAIL:florian.leica@webartisanbros.com\r\nURL:http://www.webartisanbros.com/\r\nPHOTO;MEDIATYPE=image/jpeg:/assets/florian_square/\r\nEND:VCARD\r\n";
   return response()->streamDownload(function () use ($vcard) {
     echo $vcard;
-  }, 'yourname.vcf');
+  }, 'Leica Florian Robert.vcf');
 })->name('download.vcard');
+
+Route::get('/download/mariusvcard', function () {
+  $vcard = "BEGIN:VCARD\r\nVERSION:3.0\r\nFN:Leica Marius\r\nORG:Web Artisan Bros\r\nTITLE:CEO\r\nTEL:+393290241530\r\nEMAIL:marius.leica@webartisanbros.com\r\nURL:http://www.webartisanbros.com/\r\nPHOTO;MEDIATYPE=image/jpeg:/assets/marius_square.png/\r\nEND:VCARD\r\n";
+  return response()->streamDownload(function () use ($vcard) {
+    echo $vcard;
+  }, 'Leica Marius.vcf');
+})->name('download.mariusvcard');
 
 
 

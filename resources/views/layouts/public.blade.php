@@ -54,7 +54,9 @@
     <x-footer theme="{{ $theme }}"/>
   @endif
 
+  @if(!isset($noFab) || !$noFab)
   <x-settings-fab theme="{{ $theme }}"></x-settings-fab>
+  @endif
 
   <x-offcanvas-contacts theme="{{ $theme }}"></x-offcanvas-contacts>
 

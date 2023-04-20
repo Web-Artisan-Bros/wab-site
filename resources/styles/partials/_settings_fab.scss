@@ -24,6 +24,16 @@
     
     width:                   60px;
     height:                  60px;
+
+    
+
+    &:hover{
+    width: fit-content;
+    @include media-breakpoint-down(md) {
+            width: 60px;
+      }
+            
+    }
   }
   
   // add this to align items on the right

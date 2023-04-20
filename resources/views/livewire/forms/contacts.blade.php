@@ -60,7 +60,7 @@
 
     <p class="accent-color mb-2 ms-3 mt-2">* {{ trans('forms.required_field_msg') }}</p>
     <div class="form-check mb-5 ms-3">
-      <input class="form-check-input" type="checkbox" value="" id="checkModal" wire:model="privacy" @error('privacy') is-invalid @enderror">
+      <input class="form-check-input @error('privacy') is-invalid @enderror" type="checkbox" value="" id="checkModal" wire:model="privacy" >
       @error('privacy')
       <div class="invalid-feedback">{{ $message }}</div> @enderror
       <label class="form-check-label" for="checkModal">
