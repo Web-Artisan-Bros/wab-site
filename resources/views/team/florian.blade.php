@@ -30,7 +30,7 @@ $pageTitle = "Leica Florian Robert";
           </a>
           <a class="text-decoration-none px-2" href="tel:+393202942127" target="_blank">
             <x-svg-icon icon="icons/call" alt="Linkedin Icon" class="wab-highlight" />
-            <span class="icon-title">Telefono</span>
+            <span class="icon-title">{{ __('Telefono')}}</span>
           </a>
           <a class="text-decoration-none px-2" href="sms:+393202942127" target="_blank">
             <x-svg-icon icon="icons/sms" alt="Linkedin Icon" class="wab-highlight" />
@@ -58,8 +58,8 @@ $pageTitle = "Leica Florian Robert";
     <div class="row row-cols-1 row-cols-md-2 gx-5">
       <div class="col">
         <blockquote class="blockquote text-end">
-          <p class="fs-4">"Non esiste <span class="wab-highlight">limite</span> se non la propria <span
-              class="wab-highlight">fantasia</span> !"</p>
+          <p class="fs-4">"{!! __('Non esiste <span class="wab-highlight">limite</span> se non la propria <span
+              class="wab-highlight">fantasia')!!}</span> !"</p>
           <footer class="blockquote-footer"><cite title="Leica Florian Robert">Leica Florian Robert</cite></footer>
         </blockquote>
       </div>
@@ -67,7 +67,7 @@ $pageTitle = "Leica Florian Robert";
         <div>
           <div class="">
             <strong class="fs-5 pe-3">Telefono:</strong>
-            <a href="tel:+393202942127">+39 3290241530</a>
+            <a href="tel:+393202942127">+39 3202942127</a>
           </div>
           <div class="">
             <strong class="fs-5 pe-3">Email:</strong>
@@ -98,7 +98,7 @@ $pageTitle = "Leica Florian Robert";
   <div class="btn-group dropup ">
     <a href="{{ route('download.vcard') }}" class="btn btn-themed">
       <x-svg-icon icon="icons/contact" alt="save contact icon" />
-      <span class="icon-title d-none d-md-block">Salva Contatto</span>
+      <span class="icon-title d-none d-md-block">{{ __('Salva Contatto')}}</span>
     </a>
   </div>
 </div>

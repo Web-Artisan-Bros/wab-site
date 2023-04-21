@@ -30,7 +30,7 @@ $pageTitle = "Leica Marius";
           </a>
           <a class="text-decoration-none px-2" href="tel:+3932902421530" target="_blank">
             <x-svg-icon icon="icons/call" alt="Linkedin Icon" class="wab-highlight" />
-            <span class="icon-title">Telefono</span>
+            <span class="icon-title">{{ __('Telefono')}}</span>
           </a>
           <a class="text-decoration-none px-2" href="sms:+3932902421530" target="_blank">
             <x-svg-icon icon="icons/sms" alt="Linkedin Icon" class="wab-highlight" />
@@ -58,14 +58,14 @@ $pageTitle = "Leica Marius";
     <div class="row row-cols-1 row-cols-md-2 gx-5">
       <div class="col">
         <blockquote class="blockquote text-end">
-          <p class="fs-4">"Per ogni cosa ho forza grazie a colui che mi dà potenza."</p>
-          <footer class="blockquote-footer"><cite title="Filippesi 4:13">Filippesi 4:13</cite></footer>
+          <p class="fs-4">{{ __('"Per ogni cosa ho forza grazie a colui che mi dà potenza."')}}</p>
+          <footer class="blockquote-footer"><cite title="Filippesi 4:13">{{( __('Filippesi 4:13'))}}</cite></footer>
         </blockquote>
       </div>
       <div class="col">
         <div>
           <div class="">
-            <strong class="fs-5 pe-3">Telefono:</strong>
+            <strong class="fs-5 pe-3">{{ __('Telefono')}}:</strong>
             <a href="tel:+3932902421530">+39 32902421530</a>
           </div>
           <div class="">
@@ -97,7 +97,7 @@ $pageTitle = "Leica Marius";
   <div class="btn-group dropup ">
     <a href="{{ route('download.mariusvcard') }}" class="btn btn-themed">
       <x-svg-icon icon="icons/contact" alt="save contact icon" />
-      <span class="icon-title d-none d-md-block">Salva Contatto</span>
+      <span class="icon-title d-none d-md-block">{{ __('Salva Contatto')}}</span>
     </a>
   </div>
 </div>
