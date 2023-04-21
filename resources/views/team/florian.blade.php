@@ -60,7 +60,7 @@ $pageTitle = "Leica Florian Robert";
         <blockquote class="blockquote text-end">
           <p class="fs-4">"{!! __('Non esiste <span class="wab-highlight">limite</span> se non la propria <span
               class="wab-highlight">fantasia')!!}</span> !"</p>
-          <footer class="blockquote-footer"><cite title="Leica Florian Robert">Leica Florian Robert</cite></footer>
+          <p class="blockquote-footer"><cite title="Leica Florian Robert">Leica Florian Robert</cite></p>
         </blockquote>
       </div>
       <div class="col">
