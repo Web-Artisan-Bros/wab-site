@@ -5,16 +5,12 @@ $theme = "light";
 $navbarVariant = "white";
 $footerVariant = "white";
 
-$pageTitle = "Servizi";
+$pageTitle = trans('menu_dropdown.Sviluppo App Mobile');
 @endphp
 
 @section ('content')
 
-<x-jumbo dnone="true" reverseJumbo="flex-lg-row-reverse" theme="light">
-  <x-slot:reverse>
-        btn-reverse-white
-  </x-slot:reverse>
-
+<x-jumbo dnone="true" reverseJumbo="flex-lg-row-reverse" theme="light" reverse>
   <x-slot:text>
     <div class="mb-3 mb-lg-5">
       <h1 class="text-uppercase text-break">{!! __('LA <span class="wab-highlight">TUA</span> <span
@@ -49,7 +45,7 @@ $pageTitle = "Servizi";
       <div class="d-flex align-content-center">
         <div class="wrapper">
           <div class="arrowM">
-            <img src="/assets/BigArrow.svg" alt="">
+            <x-svg-icon icon="arrow_outline"></x-svg-icon>
           </div>
         </div>
 
@@ -97,7 +93,7 @@ $pageTitle = "Servizi";
             aria-controls="{{ 'acc_body_' . $entry['id'].'0' }}">
 
             <div class="text">
-              <x-svg-icon class="arrow" icon="BorderedArrow"></x-svg-icon>
+              <x-svg-icon class="arrow" icon="arrow_square"></x-svg-icon>
               <div class="fs-6">{{ $entry['num'] }}.</div>
               <div class="fs-6">{{ trans('cards.' . strtoupper($entry["title"]))}}</div>
             </div>
@@ -134,12 +130,6 @@ $pageTitle = "Servizi";
 </x-services>
 
 <x-contact class="mt-4" theme="yellow">
-  <x-slot:reverse>
-    btn-hover
-  </x-slot:reverse>
-  <x-slot:imgCenter>
-    /assets/WhiteArrow.svg
-  </x-slot:imgCenter>
 </x-contact>
 
 

@@ -28,7 +28,6 @@ $enable-responsive-font-sizes: true;
 @import "./partials/spacing";
 @import "./partials/typography";
 @import "./partials/footer";
-@import "./partials/squarebtn";
 @import "./partials/jumbo";
 @import "./partials/utility";
 @import "./partials/accordion";
@@ -38,6 +37,7 @@ $enable-responsive-font-sizes: true;
 @import "./partials/diagonalAccordion";
 @import "./partials/sections";
 @import "./partials/neonGraphic";
+@import "./partials/settings_fab";
 @import "./partials/about-us";
 @import "./chisiamo";
 @import "./servizi";
@@ -46,4 +46,12 @@ $enable-responsive-font-sizes: true;
 .iubenda-embed.iubenda-nostyle {
   width:  auto !important;
   height: auto !important;
+}
+
+@include media-breakpoint-up(lg) {
+  #CookiebotWidget {
+    bottom:  100px!important;
+    left:    1.5rem!important;
+    z-index: 999!important;
+  }
 }

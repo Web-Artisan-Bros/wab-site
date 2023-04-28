@@ -6,7 +6,7 @@
         @if($this->areActiveFilters)
           <div class=" flex-grow-0 d-flex align-items-center gap-2">
             <button class="btn btn-secondary" type="reset" wire:click="filtersReset">
-              <x-svg-icon icon="xmark-solid"></x-svg-icon>
+              <x-svg-icon icon="icons/xmark"></x-svg-icon>
             </button>
           </div>
         @endif

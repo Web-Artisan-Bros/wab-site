@@ -1,7 +1,13 @@
 import * as bs from 'bootstrap'
 import { tinymceConfig } from './tinymce'
+import axios from 'axios'
+import Alpine from 'alpinejs'
 
+import './jscolor.min';
+
+window.axios = axios
 window.bootstrap = bs
+window.Alpine = Alpine
 
 window.isInViewport = function (el) {
   const rect = el.getBoundingClientRect()
@@ -39,4 +45,11 @@ window.addEventListener('DOMContentLoaded', () => {
       })
     })
   })
+  
+  Alpine.start()
 })
+
+// @see https://jscolor.com/configure/
+jscolor.presets.default = {
+  format:'rgba'
+};

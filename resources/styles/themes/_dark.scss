@@ -15,6 +15,10 @@
   // logo variables
   --logo-text: #{variables.$light};
   --logo-accent: #{variables.$primary};
+  
+  // square contact icon
+  --icon-color:          #{variables.$dark};
+  --icon-bg-color:       #{variables.$primary};
 
   .navbar {
     --bs-navbar-bg: var(--bs-dark);

@@ -7,12 +7,14 @@
     "require": {
         "php": "^8.1",
         "guzzlehttp/guzzle": "^7.2",
+        "ipinfo/ipinfolaravel": "^2.5",
         "laravel/framework": "^9.19",
         "laravel/jetstream": "^2.14",
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
         "leicaflorian/pimp_my_crud": "^1.0",
         "livewire/livewire": "^2.12",
+        "simplesoftwareio/simple-qrcode": "^4.2",
         "spatie/laravel-sitemap": "^6.2",
         "spatie/laravel-translation-loader": "^2.7",
         "vemcogroup/laravel-translation": "^3.0"

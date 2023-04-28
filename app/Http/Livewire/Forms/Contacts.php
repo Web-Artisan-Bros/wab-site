@@ -18,6 +18,8 @@ class Contacts extends Component {
   public string $email;
   public string $phone;
   public string $message;
+  public string $privacy;
+
   
   public bool $formSent = false;
   
@@ -26,6 +28,8 @@ class Contacts extends Component {
     'email'   => 'required|email|max:255',
     'phone'   => 'nullable|string|max:255',
     'message' => 'required|string',
+    'privacy' => 'required|accepted',
+
   ];
   
   protected array $messages = [];
@@ -44,7 +48,12 @@ class Contacts extends Component {
       'email.email'      => trans('validations.email_email'),
       'email.max'        => trans('validations.email_max'),
       'phone.max'        => trans('validations.phone_max'),
+      'phone.accepted'        => trans('validations.phone_accepted'),
       'message.required' => trans('validations.message_required'),
+      'privacy.required' => trans('validations.privacy_required'),
+      'privacy.accepted' => trans('validations.privacy_accepted'),
+
+
     ];
   }
   
@@ -62,6 +71,8 @@ class Contacts extends Component {
       'email'   => $data['email'],
       'phone'   => $data['phone'],
       'message' => $data['message'],
+      'privacy' => $data['privacy'],
+
     ]);
     
     // User email

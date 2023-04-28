@@ -58,7 +58,17 @@
       </div>
     </fieldset>
 
-    <p class="accent-color mb-5 ms-3 mt-2">* {{ trans('forms.required_field_msg') }}</p>
+    <p class="accent-color mb-2 ms-3 mt-2">* {{ trans('forms.required_field_msg') }}</p>
+    <div class="form-check mb-5 ms-3">
+      <input class="form-check-input @error('privacy') is-invalid @enderror" type="checkbox" value="" id="checkModal" wire:model="privacy" >
+      @error('privacy')
+      <div class="invalid-feedback">{{ $message }}</div> @enderror
+      <label class="form-check-label" for="checkModal">
+        {{ trans('forms.privacy') }} 
+        <a href="https://www.iubenda.com/privacy-policy/37486167" class="iubenda-noiframe iubenda-embed iubenda-nostyle me-3" title="Privacy Policy "
+     data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</a>
+      </label>
+    </div>
 
     <button type="submit" class="btn btn-themed w-100 mb-4" wire:loading.attr="disabled" wire:target="submit">
       <div class="spinner-border spinner-border-sm" role="status" wire:loading.delay.class="d-inline-block"
@@ -68,7 +78,7 @@
 
       {{ trans('forms.send_btn') }}
 
-      <x-svg-icon icon="VectorArrow"></x-svg-icon>
+      <x-svg-icon icon="arrow_top_right"></x-svg-icon>
     </button>
   </form>
 @else

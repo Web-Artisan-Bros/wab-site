@@ -305,8 +305,12 @@
     &[data-bs-toggle="collapse"] {
       &:not(.collapsed),
       &:hover {
-        .icon {
+        .icon:not([data-active-direction="up"]) {
           rotate: 45deg;
+        }
+        
+        .icon[data-active-direction="up"] {
+          rotate: -45deg;
         }
       }
     }

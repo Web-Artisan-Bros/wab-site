@@ -35,14 +35,14 @@
                      href="#" role="button"
                      data-bs-toggle="dropdown" aria-expanded="false">
                     {{  trans('menu.' . $entry['label']) }}
-                    <x-svg-icon class="imgWhite" icon="VectorArrowBlack"></x-svg-icon>
+                    <x-svg-icon class="imgWhite" icon="arrow_bottom_right"></x-svg-icon>
                   </a>
 
                   <ul class="dropdown-menu">
                     @foreach ($entry['children'] as $child)
                       <li @class(['border-bottom'=> !$loop->last])>
                         <a class="dropdown-item route-link" href="{{ route($child['routeName']) }}">
-                          <x-svg-icon icon="VectorArrowS" class="me-2 ms-0"/>
+                          <x-svg-icon icon="arrow_bottom_right" class="me-2 ms-0"/>
                           {{ trans('menu_dropdown.' . $child['label']) }}
                         </a>
                       </li>
@@ -82,7 +82,7 @@
              aria-expanded="false" aria-controls="mobile-services-menu">
             {{  trans('menu.' . $entry['label']) }}
 
-            <x-svg-icon icon="VectorArrowS" class="me-2 ms-0"/>
+            <x-svg-icon icon="arrow_bottom_right" class="me-2 ms-0"/>
           </a>
 
           <div class="collapse" id="mobile-services-menu">
@@ -90,7 +90,7 @@
               @foreach ($entry['children'] as $child)
                 <a class="list-group-item list-group-item-action route-link"
                    href="{{ route($child['routeName']) }}">
-                  <x-svg-icon icon="VectorArrowS" class="me-2 ms-0"/>
+                  <x-svg-icon icon="arrow_bottom_right" class="me-2 ms-0"/>
                   {{ trans('menu_dropdown.' . $child['label']) }}
                 </a>
               @endforeach
@@ -100,8 +100,32 @@
       @endforeach
     </div>
 
-    <div class="px-4">
-      <x-contact-btn version="small" class="w-100"></x-contact-btn>
+    <div class="">
+      <div class="list-group list-group-flush mb-5 flex-fill">
+        <a class="list-group-item list-group-item-action text-uppercase collapsed"
+           data-bs-toggle="collapse" href="#mobile-language-menu" role="button"
+           aria-expanded="false" aria-controls="mobile-services-menu">
+          {{ __("Language")  }}
+
+          <x-svg-icon icon="arrow_top_right" class="me-2 ms-0" data-active-direction="up"/>
+        </a>
+
+        <div class="collapse" id="mobile-language-menu">
+          <div class="list-group list-group-flush border-bottom" >
+            @foreach(config("app.validLocales") as $lang)
+              <a href="{{ \App\Providers\GlobalHelperProvider::localizeUrl($lang["code"]) }}"
+                 class="list-group-item list-group-item-action text-uppercase">
+                {{ $lang['label'] }}
+              </a>
+            @endforeach
+          </div>
+        </div>
+
+      </div>
+
+      <div class="px-2">
+        <x-contact-btn version="small" class="w-100"></x-contact-btn>
+      </div>
     </div>
   </div>
 </div>

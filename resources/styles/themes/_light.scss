@@ -13,6 +13,10 @@
   // logo variables
   --logo-text: #{variables.$dark};
   --logo-accent: #{variables.$primary};
+  
+  // square contact icon
+  --icon-color:          #{variables.$dark};
+  --icon-bg-color:       #{variables.$primary};
 
   .navbar {
     --bs-navbar-bg: var(--bs-light);
@@ -52,4 +56,7 @@
   .neon-text {
     --sign-color-off: #{lighten(variables.$primary, 15)};
   }
+
+  
+  
 }

@@ -1,32 +1,35 @@
 @use "./variables";
 
 .btn {
-    --outline-offset-x: var(--outline-offset);
-    --outline-offset-y: var(--outline-offset);
-    --outline-color: #{variables.$secondary};
-    --bs-btn-border-width: 0;
-    --bs-btn-box-shadow: none;
-    --transition: .25s ease-in-out;
-    --transition-fast: .15s ease-in-out;
-
-    position: relative;
-    z-index: 0;
-    display: flex;
-    gap: .5rem;
-    align-items: center;
-    justify-content: center;
-    transition: color var(--transition);
-
+    --outline-offset-x:      var(--outline-offset);
+    --outline-offset-y:      var(--outline-offset);
+    --outline-color:         #{variables.$secondary};
+    --bs-btn-border-width:   0;
+    --bs-btn-box-shadow:     none;
+    --transition:            .25s ease-in-out;
+    --transition-fast:       .15s ease-in-out;
+    --icon-rotation:         0deg;
+    --icon-hover-rotation:   45deg;
+    --icon-active-transform: translate(25%, -25%);
+    
+    position:                relative;
+    z-index:                 0;
+    display:                 flex;
+    gap:                     .5rem;
+    align-items:             center;
+    justify-content:         center;
+    transition:              color var(--transition);
+    
     // sfondo colorato
     &:after {
-        content: "";
-        border: 3px solid var(--bs-btn-border-color);
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
+        content:    "";
+        border:     3px solid var(--bs-btn-border-color);
+        display:    block;
+        position:   absolute;
+        top:        0;
+        right:      0;
+        width:      100%;
+        height:     100%;
         background: var(--bs-btn-bg);
         transition: background var(--transition), border-color var(--transition);
         z-index: -1;
@@ -58,31 +61,23 @@
     img,
     .icon {
         transition: rotate var(--transition), transform var(--transition-fast);
-        width: 18px;
-        height: 18px;
+        width:      18px;
+        height:     18px;
+        rotate:     var(--icon-rotation);
     }
 
     // point right-down
     &.point-down {
-        img,
-        .icon {
-            rotate: 90deg;
-        }
+        --icon-rotation:         90deg;
+        --icon-hover-rotation:   135deg;
+        --icon-active-transform: translate(10%, -10%);
     }
 
     // on hover, rotate the icon and move the outline to merge with the button
     &:hover {
-        // point down
-        &.point-down {
-            img,
-            .icon {
-                rotate: 135deg;
-            }
-        }
-
         img,
         .icon {
-            rotate: 45deg;
+            rotate: var(--icon-hover-rotation);
         }
 
         &:before {
@@ -95,14 +90,7 @@
     &:active {
         img,
         .icon {
-            transform: translate(25%, -25%);
-        }
-
-        &.point-down {
-            img,
-            .icon {
-                transform: translate(10%, -10%);
-            }
+            transform: var(--icon-active-transform);
         }
 
         &:before {
@@ -112,13 +100,22 @@
     }
 }
 
+.btn-icon-animate{
+
+}
+
 .btn-themed {
-    --bs-btn-bg: var(--bs-body-bg);
-    --bs-btn-color: var(--bs-body-color);
-    --outline-color: var(--accent-color);
-    --bs-btn-border-color: var(--bs-body-color);
+    --bs-btn-bg:                 var(--bs-body-bg);
+    --bs-btn-color:              var(--bs-body-color);
+    --outline-color:             var(--accent-color);
+    --bs-btn-border-color:       var(--bs-body-color);
     --bs-btn-hover-border-color: var(--accent-color);
-    --bs-btn-hover-bg: var(--accent-color);
-    --bs-btn-hover-color: var(--accent-color-contrast);
-    --bs-btn-active-color: var(--accent-color-contrast);
+    --bs-btn-hover-bg:           var(--accent-color);
+    --bs-btn-hover-color:        var(--accent-color-contrast);
+    --bs-btn-active-color:       var(--accent-color-contrast);
+    
+    &.show {
+        --bs-btn-active-color: var(--accent-color-contrast);
+        --bs-btn-bg:  var(--accent-color);
+    }
 }

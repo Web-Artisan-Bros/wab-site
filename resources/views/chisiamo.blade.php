@@ -3,15 +3,12 @@
 @php
 $theme = 'yellow';
 $navbarVariant = 'yellow';
-$pageTitle = 'Chi siamo';
+$pageTitle = trans('menu.Chi siamo');
 @endphp
 
 @section('content')
 
-<x-jumbo dnone="true" reverseJumbo="flex-lg-row-reverse" theme="yellow">
-    <x-slot:reverse>
-        btn-reverse-white
-    </x-slot:reverse>
+<x-jumbo dnone="true" reverseJumbo="flex-lg-row-reverse" theme="yellow" reverse>
     <x-slot:text>
         <div class="mb-3 mb-lg-5">
             <h1>{!! __('SIAMO <span class="wab-highlight">
@@ -37,10 +34,7 @@ $pageTitle = 'Chi siamo';
 
 <x-about-us theme="dark"></x-about-us>
 
-<x-contact background="reverse-contact" theme="light">
-    <x-slot:reverse>
-        btn-reverse-white
-    </x-slot:reverse>
+<x-contact background="reverse-contact" theme="light" reverse>
     <x-slot:message class="lead">
 
     </x-slot:message>

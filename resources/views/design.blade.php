@@ -5,15 +5,12 @@ $theme = "light";
 $navbarVariant = "white";
 $footerVariant = "white";
 
-$pageTitle = "Servizi";
+$pageTitle = trans('menu_dropdown.Digital Design');
 @endphp
 
 @section ('content')
 
 <x-jumbo dnone="true" reverseJumbo="flex-lg-row-reverse" theme="light">
-  <x-slot:reverse>
-    btn-reverse-white
-  </x-slot:reverse>
 
   <x-slot:text>
     <div class="mb-3 mb-lg-5">
@@ -48,7 +45,7 @@ $pageTitle = "Servizi";
       <div class="d-flex align-content-center">
         <div class="wrapper">
           <div class="arrowM">
-            <img src="/assets/BigArrow.svg" alt="" class="follow-mouse">
+            <x-svg-icon icon="arrow_outline"></x-svg-icon>
           </div>
         </div>
 
@@ -94,7 +91,7 @@ $pageTitle = "Servizi";
             aria-controls="{{ 'acc_body_' . $entry['id'].'0' }}">
 
             <div class="text">
-              <x-svg-icon class="arrow" icon="BorderedArrow"></x-svg-icon>
+              <x-svg-icon class="arrow" icon="arrow_square"></x-svg-icon>
               <div class="fs-6">{{ $entry['num'] }}.</div>
               <div class="fs-6">{{ trans('cards.' . strtoupper($entry["title"]))}}</div>
             </div>
@@ -126,19 +123,9 @@ $pageTitle = "Servizi";
       <p class="lead ms-2">{{ __('Ecco alcune domande frequenti')}}</p>
     </div>
   </div>
-
-
 </x-services>
 
-<x-contact class="mt-4" theme="yellow">
-  <x-slot:reverse>
-    btn-hover
-  </x-slot:reverse>
-  <x-slot:imgCenter>
-    /assets/WhiteArrow.svg
-  </x-slot:imgCenter>
-</x-contact>
-
+<x-contact class="mt-4" theme="yellow" reverse></x-contact>
 
 <x-diagonalAccordion :entries="$accordionOurProcess" theme="dark">
   {!! __('CREIAMO <span class="wab-highlight">DESIGN</span> DIGITALI DI <span class="wab-highlight">SUCCESSO')!!}</span>

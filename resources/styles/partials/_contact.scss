@@ -1,29 +1,93 @@
 @use "./variables";
 
-// .light-contact {
-//     background: #{$light};
-
-//     .row {
-//         flex-direction: row-reverse;
-//     }
-
-//     .wab-highlight--secondary {
-//         color: #{$dark} !important;
-
-//         &::after {
-//             background-image: url(http://127.0.0.1:5173/public/assets/highlight_primary.svg);
-//         }
-//     }
-// }
-
-.reverse-contact {
-    background-color: #{$light};
-
-    .row {
-        flex-direction: row-reverse;
+.contact-btn-container {
+  display:         flex;
+  justify-content: center;
+  
+  .contact-square {
+    --bg-square-color:     #{variables.$secondary};
+    --border-square-color: var(--bs-body-color);
+    
+    width:                 234.49px;
+    aspect-ratio:          1/1;
+    transform-origin:      center;
+    //transform:             rotate(15deg);
+    transition:            transform ease 1s;
+    position:              relative;
+    
+    .contact-text {
+      position: absolute;
+      
+      &.contact-text-top {
+        top: 0;
+      }
+      
+      &.contact-text-right {
+        right:     0;
+        transform: translateX(35%) rotateZ(-90deg)
+      }
+      
+      &.contact-text-bottom {
+        bottom: 0;
+      }
+      
+      &.contact-text-left {
+        left:      0;
+        transform: translateX(-35%) rotateZ(-90deg)
+      }
     }
-
-    .btn-hover {
-        justify-content: flex-end;
+  }
+  
+  .contact-bg-square {
+    background-color: var(--bg-square-color);
+    transform:        translateX(25%) rotate(15deg);
+  }
+  
+  .contact-main-square {
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+    border:          2px solid var(--border-square-color);
+    transform:       translateX(-25%) rotate(15deg);
+    
+    .inside-arrow {
+      width:     94px;
+      height:    94px;
+      transform: rotate(-15deg);
     }
+  }
+  
+  &:hover {
+    .contact-bg-square {
+      transform: translateX(50%) rotate(22deg);
+    }
+    
+    .contact-main-square {
+      transform: translateX(-50%) rotate(7deg);
+    }
+  }
+  
+  &.contact-reverse {
+    flex-direction: row-reverse;
+    
+    .contact-bg-square {
+      transform: translateX(-25%) rotate(15deg);
+    }
+    
+    .contact-main-square {
+      transform: translateX(25%) rotate(15deg);
+    }
+    
+    &:hover {
+      .contact-bg-square {
+        transform: translateX(-50%) rotate(7deg);
+      }
+      
+      .contact-main-square {
+        transform: translateX(50%) rotate(22deg);
+      }
+    }
+  }
+  
+  
 }
