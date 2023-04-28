@@ -42,7 +42,7 @@ Route::get('/download/vcard', function () {
   ];
   return response()->streamDownload(function () use ($vcard) {
     echo $vcard;
-  }, 'Leica Florian Robert.vcf');
+  }, 'Leica Florian Robert.vcf', $headers);
 })->name('download.vcard');
 
 Route::get('/download/mariusvcard', function () {
