@@ -59,7 +59,7 @@ $pageTitle = "Leica Marius";
       <div class="col">
         <blockquote class="blockquote text-end">
           <p class="fs-4">{{ __('"Per ogni cosa ho forza grazie a colui che mi dà potenza."')}}</p>
-          <footer class="blockquote-footer"><cite title="Filippesi 4:13">{{( __('Filippesi 4:13'))}}</cite></footer>
+          <p class="blockquote-footer"><cite title="Filippesi 4:13">{{( __('Filippesi 4:13'))}}</cite></p>
         </blockquote>
       </div>
       <div class="col">
