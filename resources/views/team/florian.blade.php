@@ -96,7 +96,7 @@ $pageTitle = "Leica Florian Robert";
 <div class="fab-container fab-container-right social-icons-container icons-with-title" data-bs-theme="light"
   style="opacity: 1;">
   <div class="btn-group dropup ">
-    <a href="{{ route('download.vcard') }}" class="btn btn-themed">
+    <a href="{{ route('team.vcard', "florian") }}" class="btn btn-themed">
       <x-svg-icon icon="icons/contact" alt="save contact icon" />
       <span class="icon-title d-none d-md-block">{{ __('Salva Contatto')}}</span>
     </a>
