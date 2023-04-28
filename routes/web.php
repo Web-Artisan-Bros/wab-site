@@ -38,12 +38,14 @@ Route::get("qrs/{slug}", [\App\Http\Controllers\QrController::class, "show"])->n
 Route::get('/download/vcard', function () {
   $vcard = "BEGIN:VCARD\r\nVERSION:3.0\r\nFN:Leica Florian Robert\r\nORG:Web Artisan Bros\r\nTITLE:Web Developer\r\nTEL:+393202942127\r\nEMAIL:florian.leica@webartisanbros.com\r\nURL:http://www.webartisanbros.com/\r\nPHOTO;MEDIATYPE=image/jpeg:/assets/florian_square/\r\nEND:VCARD\r\n";
   $headers = [
+    'Content-Type' => 'text/x-vcard',
     'Content-Disposition' => 'attachment; filename="Leica Florian Robert.vcf"',
   ];
   return response()->streamDownload(function () use ($vcard) {
     echo $vcard;
   }, 'Leica Florian Robert.vcf', $headers);
 })->name('download.vcard');
+
 
 Route::get('/download/mariusvcard', function () {
   $vcard = "BEGIN:VCARD\r\nVERSION:3.0\r\nFN:Leica Marius\r\nORG:Web Artisan Bros\r\nTITLE:CEO\r\nTEL:+393290241530\r\nEMAIL:marius.leica@webartisanbros.com\r\nURL:http://www.webartisanbros.com/\r\nPHOTO;MEDIATYPE=image/jpeg:/assets/marius_square.png/\r\nEND:VCARD\r\n";
