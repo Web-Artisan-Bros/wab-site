@@ -49,7 +49,7 @@ $pageTitle = "Leica Marius";
 
 <section class="themed-section" data-bs-theme="light">
   <div class="container container-p-156">
-    <x-neon-graphic text="Contatti"></x-neon-graphic>
+    <x-neon-graphic text="{!! __('Contatti')!!}"></x-neon-graphic>
   </div>
 </section>
 
