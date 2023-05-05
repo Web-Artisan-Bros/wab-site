@@ -58,8 +58,8 @@ $pageTitle = "Leica Florian Robert";
     <div class="row row-cols-1 row-cols-md-2 gx-5">
       <div class="col">
         <blockquote class="blockquote text-end">
-          <p class="fs-4">"{!! __('Non esiste <span class="wab-highlight">limite</span> se non la propria <span
-              class="wab-highlight">fantasia')!!}</span> !"</p>
+          <p class="fs-4">"{!! __('L\'unico <span class="wab-highlight">limite</span> siamo <span
+              class="wab-highlight">noi stessi')!!}</span> !"</p>
           <p class="blockquote-footer"><cite title="Leica Florian Robert">Leica Florian Robert</cite></p>
         </blockquote>
       </div>
@@ -96,7 +96,7 @@ $pageTitle = "Leica Florian Robert";
 <div class="fab-container fab-container-right social-icons-container icons-with-title" data-bs-theme="light"
   style="opacity: 1;">
   <div class="btn-group dropup ">
-    <a href="{{ route('download.vcard') }}" class="btn btn-themed">
+    <a href="{{ route('team.vcard', "florian") }}" class="btn btn-themed">
       <x-svg-icon icon="icons/contact" alt="save contact icon" />
       <span class="icon-title d-none d-md-block">{{ __('Salva Contatto')}}</span>
     </a>

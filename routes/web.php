@@ -31,29 +31,10 @@ foreach (config('app.validLocales') as $locale) {
     });
 }
 
-Route::get('/team/{slug}', [\App\Http\Controllers\TeamController::class, "show"])->name("team.show");
+Route::get('/team/{name}', [\App\Http\Controllers\TeamController::class, "show"])->name("team.show");
+Route::get('/team/{name}/vcard', [\App\Http\Controllers\TeamController::class, "vcard"])->name("team.vcard");
 
 Route::get("qrs/{slug}", [\App\Http\Controllers\QrController::class, "show"])->name("qrs.show");
-
-Route::get('/download/vcard', function () {
-  $vcard = "BEGIN:VCARD\r\nVERSION:3.0\r\nFN:Leica Florian Robert\r\nORG:Web Artisan Bros\r\nTITLE:Web Developer\r\nTEL:+393202942127\r\nEMAIL:florian.leica@webartisanbros.com\r\nURL:http://www.webartisanbros.com/\r\nPHOTO;MEDIATYPE=image/jpeg:/assets/florian_square/\r\nEND:VCARD\r\n";
-  $headers = [
-    'Content-Type' => 'text/x-vcard',
-    'Content-Disposition' => 'attachment; filename="Leica Florian Robert.vcf"',
-  ];
-  return response()->streamDownload(function () use ($vcard) {
-    echo $vcard;
-  }, 'Leica Florian Robert.vcf', $headers);
-})->name('download.vcard');
-
-
-Route::get('/download/mariusvcard', function () {
-  $vcard = "BEGIN:VCARD\r\nVERSION:3.0\r\nFN:Leica Marius\r\nORG:Web Artisan Bros\r\nTITLE:CEO\r\nTEL:+393290241530\r\nEMAIL:marius.leica@webartisanbros.com\r\nURL:http://www.webartisanbros.com/\r\nPHOTO;MEDIATYPE=image/jpeg:/assets/marius_square.png/\r\nEND:VCARD\r\n";
-  return response()->streamDownload(function () use ($vcard) {
-    echo $vcard;
-  }, 'Leica Marius.vcf');
-})->name('download.mariusvcard');
-
 
 
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])

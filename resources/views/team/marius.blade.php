@@ -59,7 +59,7 @@ $pageTitle = "Leica Marius";
       <div class="col">
         <blockquote class="blockquote text-end">
           <p class="fs-4">{{ __('"Per ogni cosa ho forza grazie a colui che mi dà potenza."')}}</p>
-          <footer class="blockquote-footer"><cite title="Filippesi 4:13">{{( __('Filippesi 4:13'))}}</cite></footer>
+          <p class="blockquote-footer"><cite title="Filippesi 4:13">{{( __('Filippesi 4:13'))}}</cite></p>
         </blockquote>
       </div>
       <div class="col">
@@ -95,7 +95,7 @@ $pageTitle = "Leica Marius";
 <div class="fab-container fab-container-right social-icons-container icons-with-title" data-bs-theme="light"
   style="opacity: 1;">
   <div class="btn-group dropup ">
-    <a href="{{ route('download.mariusvcard') }}" class="btn btn-themed">
+    <a href="{{ route('team.vcard', "marius") }}" class="btn btn-themed">
       <x-svg-icon icon="icons/contact" alt="save contact icon" />
       <span class="icon-title d-none d-md-block">{{ __('Salva Contatto')}}</span>
     </a>
