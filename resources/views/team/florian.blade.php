@@ -58,7 +58,7 @@ $pageTitle = "Leica Florian Robert";
     <div class="row row-cols-1 row-cols-md-2 gx-5">
       <div class="col">
         <blockquote class="blockquote text-end">
-          <p class="fs-4">"{!! __('L\'unico <span class="wab-highlight">limite</span> siamo <span
+          <p class="fs-4">"{!! __('Lun&acute;unico <span class="wab-highlight">limite</span> siamo <span
               class="wab-highlight">noi stessi')!!}</span> !"</p>
           <p class="blockquote-footer"><cite title="Leica Florian Robert">Leica Florian Robert</cite></p>
         </blockquote>
@@ -66,7 +66,7 @@ $pageTitle = "Leica Florian Robert";
       <div class="col">
         <div>
           <div class="">
-            <strong class="fs-5 pe-3">Telefono:</strong>
+            <strong class="fs-5 pe-3">{!! __('Telefono')!!}:</strong>
             <a href="tel:+393202942127">+39 3202942127</a>
           </div>
           <div class="">
