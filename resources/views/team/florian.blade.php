@@ -24,7 +24,7 @@ $pageTitle = "Leica Florian Robert";
             Bros</a></h4>
 
         <div class="social-icons-container icons-with-title" data-bs-theme="dark">
-          <a class="text-decoration-none px-2" href="mailto:florian.leica@webartisanbros" target="_blank">
+          <a class="text-decoration-none px-2" href="mailto:florian.leica@webartisanbros.com" target="_blank">
             <x-svg-icon icon="icons/mail" alt="email icon" class="wab-highlight" />
             <span class="icon-title">Email</span>
           </a>
