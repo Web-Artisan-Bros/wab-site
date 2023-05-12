@@ -28,15 +28,15 @@ $pageTitle = "Leica Marius";
             <x-svg-icon icon="icons/mail" alt="email icon" class="wab-highlight" />
             <span class="icon-title">Email</span>
           </a>
-          <a class="text-decoration-none px-2" href="tel:+3932902421530" target="_blank">
+          <a class="text-decoration-none px-2" href="tel:+393290241530" target="_blank">
             <x-svg-icon icon="icons/call" alt="Linkedin Icon" class="wab-highlight" />
             <span class="icon-title">{{ __('Telefono')}}</span>
           </a>
-          <a class="text-decoration-none px-2" href="sms:+3932902421530" target="_blank">
+          <a class="text-decoration-none px-2" href="sms:+393290241530" target="_blank">
             <x-svg-icon icon="icons/sms" alt="Linkedin Icon" class="wab-highlight" />
             <span class="icon-title">SMS</span>
           </a>
-          <a class="text-decoration-none px-2" href="https://wa.me/+3932902421530" target="_blank">
+          <a class="text-decoration-none px-2" href="https://wa.me/+393290241530" target="_blank">
             <x-svg-icon icon="icons/whatsapp" alt="Linkedin Icon" class="wab-highlight" />
             <span class="icon-title">WhatsApp</span>
           </a>
@@ -66,7 +66,7 @@ $pageTitle = "Leica Marius";
         <div>
           <div class="">
             <strong class="fs-5 pe-3">{{ __('Telefono')}}:</strong>
-            <a href="tel:+3932902421530">+39 32902421530</a>
+            <a href="tel:+393290241530">+39 3290241530</a>
           </div>
           <div class="">
             <strong class="fs-5 pe-3">Email:</strong>
