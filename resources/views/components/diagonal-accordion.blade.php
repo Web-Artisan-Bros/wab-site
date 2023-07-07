@@ -80,7 +80,6 @@ $id = "wab-da-" . uniqid();
                     aria-labelledby="{{ 'acc_head_' . $entry['id'].'00' }}" data-bs-parent="#accordionOurProcess">
                     <div class="accordion-body d-flex text-break">
                         {{ trans('d_accordion.'. $entry['content'])}}
-                        <img class="cup d-none d-lg-block" src="/assets/CoffeeMug.svg" alt="">
                     </div>
                 </div>
             </div>
