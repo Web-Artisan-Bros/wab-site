@@ -130,7 +130,6 @@ $pageTitle = trans('menu_dropdown.Sviluppo Software');
           aria-labelledby="{{ 'acc_head_' . $entry['id'].'0' }}" data-bs-parent="#accordionWhyUs">
           <div class="accordion-body d-flex text-break">
             {{ trans('cards.' . $entry['content'])}}
-            <img class="cup d-none d-lg-block" src="/assets/CoffeeMug.svg" alt="">
           </div>
         </div>
       </div>
