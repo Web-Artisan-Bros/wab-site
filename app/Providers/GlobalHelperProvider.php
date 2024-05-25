@@ -47,7 +47,7 @@ class GlobalHelperProvider extends ServiceProvider {
       $newPath   = "/";
     }
   
-    $newUrl = [Request::isSecure() ? "https://" : "http://", $newLocale, env('APP_DOMAIN'), $newPath];
+    $newUrl = [Request::isSecure() ? "https://" : "http://", $newLocale, config('app.domain'), $newPath];
     
     return implode("", $newUrl);
   }
