@@ -8,12 +8,12 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-  
+
     gtag('config', 'G-N11RYP8BXG');
   </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
-  <meta name="csrf-token" content="{{ csrf_token() }}">
+{{--  <meta name="csrf-token" content="{{ csrf_token() }}">--}}
 
   @php
     $title = (isset($pageTitle) ? ucwords(strtolower($pageTitle)) . " | " : '') . "web agency thiene, web design thiene";
