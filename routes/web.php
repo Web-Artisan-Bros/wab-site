@@ -16,6 +16,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get("/___localize", function () {
+	$test = \App\Providers\GlobalHelperProvider::localizeUrl("ro");
+	
+	dump(config('app.domain'), $test);
+})->name("localize");
+
 foreach (config('app.validLocales') as $locale) {
   $langCode = $locale["code"];
   
