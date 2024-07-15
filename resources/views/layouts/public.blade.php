@@ -14,6 +14,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
 {{--  <meta name="csrf-token" content="{{ csrf_token() }}">--}}
+<meta name="msvalidate.01" content="3B95437DC390652760FB0279545216B0" />
 
   @php
     $title = (isset($pageTitle) ? ucwords(strtolower($pageTitle)) . " | " : '') . "web agency thiene, web design thiene";
