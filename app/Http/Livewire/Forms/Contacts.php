@@ -62,6 +62,9 @@ class Contacts extends Component {
   }
   
   public function store() {
+    // The site is archived: contact requests are no longer accepted
+    return;
+
     $contact = Contact::all()->last();
     
     $data = $this->validate();

@@ -1,0 +1,40 @@
+# Coolify deployment (build pack "Docker Compose", file /docker-compose.prod.yml).
+# The site is archived: the contact form is off, so there is no queue worker.
+# The database is the shared MySQL service in Coolify, reached through DB_HOST.
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    environment:
+      SERVICE_FQDN_APP_8080: ""
+      APP_NAME: ${APP_NAME:-Web Artisan Bros}
+      APP_ENV: production
+      APP_DEBUG: "false"
+      APP_KEY: ${APP_KEY}
+      # SERVICE_URL_* carries the scheme, SERVICE_FQDN_* only the host
+      APP_URL: ${SERVICE_URL_APP}
+      # Locale subdomains are built on top of it (en.<domain>, ro.<domain>)
+      APP_DOMAIN: ${APP_DOMAIN:-wab.leicaflorianrobert.dev}
+      LOG_CHANNEL: stderr
+      LOG_LEVEL: ${LOG_LEVEL:-warning}
+      DB_CONNECTION: mysql
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT:-3306}
+      DB_DATABASE: ${DB_DATABASE:-wab_site}
+      DB_USERNAME: ${DB_USERNAME:-wab_site}
+      DB_PASSWORD: ${DB_PASSWORD}
+      QUEUE_CONNECTION: sync
+      CACHE_DRIVER: file
+      SESSION_DRIVER: file
+      # No outgoing mail while the site is archived
+      MAIL_MAILER: log
+      # Migrations and config/route/view cache at startup
+      AUTORUN_ENABLED: "true"
+    volumes:
+      - storage-app:/var/www/html/storage/app
+
+volumes:
+  storage-app:
